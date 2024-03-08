@@ -223,7 +223,7 @@ h1 {
   text-transform: uppercase;
   font-family: Impact, serif;
   font-weight: bold;
-  letter-spacing: 3pxpx;
+  letter-spacing: 3px;
   color: var(--color-3); }
 
 .skill {
