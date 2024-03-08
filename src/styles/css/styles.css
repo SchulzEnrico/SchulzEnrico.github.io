@@ -1,7 +1,7 @@
 @charset "UTF-8";
 nav {
   position: fixed;
-  top: 50px;
+  top: 27px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -214,6 +214,26 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 100; }
+
+h1 {
+  position: absolute;
+  top: -82px;
+  left: 0;
+  font-size: 5em;
+  text-transform: uppercase;
+  font-family: Impact, serif;
+  font-weight: bold;
+  letter-spacing: 3pxpx;
+  color: var(--color-3); }
+
+.skill {
+  position: absolute;
+  top: 33px;
+  left: 70px;
+  font-size: 1em;
+  letter-spacing: 6px;
+  font-weight: bold;
+  color: var(--color-41); }
 
 .container {
   width: 90%;

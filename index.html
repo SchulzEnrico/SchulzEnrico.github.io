@@ -22,7 +22,8 @@
 </head>
 <body>
 <header>
-
+    <h1>ES</h1>
+    <p id="skill" class="skill"></p>
     <nav class="mobile-nav">
         <a href="#" onclick="toggleActive(this)">Welcome</a>
         <a href="#" onclick="toggleActive(this)">
@@ -32,8 +33,13 @@
         <a href="#" onclick="toggleActive(this)">Projects</a>
         <a href="#" onclick="toggleActive(this)">Who are you?</a>
     </nav>
+
 </header>
+
+
 <div class="landing-container">
+
+
     <div class="landing-picture-container">
         <img src="./media/4.png" alt="és" class="es">
     </div>
@@ -47,6 +53,7 @@
     <span class="burger-line"></span>
     <span class="burger-line"></span>
 </div>
+
 <footer>
     LinkedIn | GitHub | Mail | Phone
 </footer>
@@ -109,6 +116,37 @@
             $el.ripples('drop', x, y, dropRadius, strength);
         }, 400);
     });
+
+    // JavaScript code for continuous and irregular text animation of skills
+    const skills = [ '.WebDesigner', '.WebDeveloper', '.ProductOwner', '.ScrumMaster', '.ProjectManager']; // List of skills
+    let currentIndex = 0; // Index of the current skill
+
+    // Function to display the next skill with variable delay
+    function displayNextSkill() {
+        const skillElement = document.getElementById('skill');
+        const currentSkill = skills[currentIndex];
+        const currentText = skillElement.textContent;
+
+        if (currentText.length < currentSkill.length) {
+            skillElement.textContent = currentSkill.substring(0, currentText.length + 1);
+            const delay = Math.random() * 200 + 100; // Random delay between 100ms and 300ms
+            setTimeout(displayNextSkill, delay);
+        } else {
+            const delay = Math.random() * 2000 + 1000; // Random delay between 1000ms and 3000ms
+            setTimeout(nextSkill, delay);
+        }
+    }
+
+    // Function to display the next skill
+    function nextSkill() {
+        currentIndex = (currentIndex + 1) % skills.length; // Reset the index if the end of the list is reached
+        document.getElementById('skill').textContent = '';
+        setTimeout(displayNextSkill, 0); // Start the animation for the next skill immediately
+    }
+
+    // Call the function to display the first skill
+    displayNextSkill();
+</script>
 </script>
 </body>
 </html>
