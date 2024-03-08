@@ -1,0 +1,84 @@
+@charset "UTF-8";
+nav {
+  position: fixed;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  nav a {
+    position: relative;
+    text-decoration: none;
+    font-family: Typewriter, ui-monospace, monospace, sans-serif;
+    color: var(--color-22);
+    margin: 0 1.5rem;
+    transition: text-shadow 50ms ease, color 50ms ease;
+    letter-spacing: 3px; }
+    nav a img#nav-chuck {
+      /* Selektiere das Bild */
+      width: 50px;
+      /* Gib die gewünschte Breite */
+      height: auto;
+      /* Autohöhe beibehalten, um das Bild zu skalieren */
+      opacity: .5;
+      transition: transform 0.3s ease;
+      /* Füge eine Übergangseigenschaft hinzu */ }
+    nav a:hover {
+      animation: bounce 0.8s 1;
+      font-weight: bold;
+      color: var(--color-41); }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
+    nav a:hover img#nav-chuck {
+      /* Bewahre die Drehung nur auf das Bild */
+      transform: rotate(360deg);
+      /* Drehe um 360 Grad */ }
+    nav a.active {
+      /* Hier wieder die Stile für das aktive Element */
+      color: var(--color-3);
+      font-weight: bold;
+      transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1);
+      animation: mirrorRotate 1s forwards; }
+      nav a.active img#nav-chuck {
+        transform: none;
+        /* Stelle sicher, dass das Bild nicht rotiert, wenn das Element aktiv ist */ }
+    nav a:hover:not(:focus), nav a:active:not(.active) {
+      animation: rotate 1s 1; }
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg); }
+  50% {
+    transform: rotateY(180deg); }
+  100% {
+    transform: rotateY(0deg); } }
+  nav a:not(.active):focus {
+    color: var(--color-41);
+    outline: none;
+    transform: rotateX(180deg);
+    border-bottom: 1px solid var(--color-31); }
+  nav a.active:focus {
+    color: white;
+    outline: none;
+    border-bottom: 1px solid var(--color-31); }
+
+@keyframes mirrorRotate {
+  0% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
+  50% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg); }
+  100% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
+    @keyframes bounce {
+      0% {
+        transform: translateY(0); }
+      50% {
+        transform: translateY(-0.75rem); }
+      100% {
+        transform: translateY(0); } }
+    animation: bounce 0.5s 1; } }
+
+/*# sourceMappingURL=navigation.css.map */

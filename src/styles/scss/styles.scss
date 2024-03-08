@@ -1,0 +1,152 @@
+// styles.scss
+@import 'navigation';
+
+:root {
+  font-family: Typewriter, ui-monospace, monospace, sans-serif;
+  width: 100%;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --color-0: #020202;
+  --color-00: #050505;
+  --color-01: #101010;
+  --color-1: #252526;
+  --color-2: #333334;
+  --color-21: #414144;
+  --color-22: #4a4a4d;
+  --color-23: #626265;
+  --color-3-3: #0a0000;
+  --color-3-2: #1c0000;
+  --color-3-1: #440000;
+  --color-3: #5d0101;
+  --color-31: #830401;
+  --color-4: #7d7e83;
+  --color-41: #a7acb2;
+  --color-4-0: #c4c4c4;
+  --color-5: #011bd3;
+  --color-51: #010186;
+
+  background-color: var(--color-00);
+  color: var(--color-4);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.landing-container {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.landing-picture-container {
+  margin: 150px 0 0 -100px;
+  width: 80%; /* Adjust the width to your preference */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  overflow: hidden;
+}
+
+.es {
+  opacity: .5;
+  scale: 1.15;
+  height: 100%;
+  filter: grayscale(100%);
+  transform: scaleX(-1);
+}
+
+.greeting-container {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: fit-content; /* Adjust the width to your preference */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.greeting {
+  width: 150%;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 6px;
+  overflow: hidden;
+  background: linear-gradient(90deg,
+          var(--color-01),
+          var(--color-4),
+          var(--color-00)
+  ) no-repeat;
+  background-size: 80%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+.greeting:hover {
+  background: linear-gradient(90deg, #000, #5a5753, #000); /* Add blue gradient */
+  background-size: 80%, 100%; /* Adjust background sizes */
+  -webkit-background-clip: text, border-box; /* Clip to text and border-box */
+  -webkit-text-fill-color: var(--color-3); /* Change text color to white */
+  opacity: .8;
+  font-weight: bold;
+  animation-play-state: paused;
+}
+
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+footer {
+  color: var(--color-21);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}

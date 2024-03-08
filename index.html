@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/css/styles.css">
+    <title>es</title>
+    <style>
+        @keyframes mirrorRotate {
+            0% {
+                transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg);
+            }
+            50% {
+                transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg);
+            }
+            100% {
+                transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
+                animation: bounceUp 0.5s forwards;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="mobile-nav">
+        <a href="#" onclick="toggleActive(this)">
+            <span class="text">Welcome</span>
+        </a>
+        <a href="#" onclick="toggleActive(this)">
+            <span class="text"><img id="nav-chuck" src="./media/base_chuck.svg" alt="All about me"/></span>
+        </a>
+        <a href="#" onclick="toggleActive(this)">
+            <span class="text">Motivation</span>
+        </a>
+        <a href="#" onclick="toggleActive(this)">
+            <span class="text">Skills</span>
+        </a>
+        <a href="#" onclick="toggleActive(this)">
+            <span class="text">Projects</span>
+        </a>
+        <a href="#" onclick="toggleActive(this)">
+            <span class="text">Who are you?</span>
+        </a>
+    </nav>
+
+</header>
+<div class="landing-container">
+    <div class="landing-picture-container">
+        <img src="./media/4.png" alt="és" class="es">
+    </div>
+
+    <p class="greeting">And since you're here, allow yourself a deeper look at me</p>
+
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">
+    <div class="burger"></div>
+</div>
+
+<footer>
+    LinkedIn | GitHub | Instagram | Facebook
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="./dist/jquery.ripples.js"></script>
+<script>
+    function toggleMenu() {
+        document.body.classList.toggle('nav-open');
+    }
+
+    function toggleActive(element) {
+        const isActive = element.classList.contains('active');
+        const activeLinks = document.querySelectorAll('.active');
+        activeLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        if (!isActive) {
+            element.classList.add('active');
+        }
+    }
+
+    $(document).ready(function () {
+        try {
+            $('body').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+            });
+            $('main').ripples({
+                resolution: 128,
+                dropRadius: 10, //px
+                perturbance: 0.04,
+                interactive: false
+            });
+        } catch (e) {
+            $('.error').show().text(e);
+        }
+
+        $('.js-ripples-disable').on('click', function () {
+            $('body, main').ripples('destroy');
+            $(this).hide();
+        });
+
+        $('.js-ripples-play').on('click', function () {
+            $('body, main').ripples('play');
+        });
+
+        $('.js-ripples-pause').on('click', function () {
+            $('body, main').ripples('pause');
+        });
+
+        // Automatic drops
+        setInterval(function () {
+            const $el = $('main');
+            const x = Math.random() * $el.outerWidth();
+            const y = Math.random() * $el.outerHeight();
+            const dropRadius = 20;
+            const strength = 0.04 + Math.random() * 0.04;
+
+            $el.ripples('drop', x, y, dropRadius, strength);
+        }, 400);
+    });
+</script>
+
+
+</body>
+</html>
