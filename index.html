@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/css/styles.css">
-    <title>es</title>
+    <title>és</title>
     <style>
         @keyframes mirrorRotate {
             0% {
@@ -22,27 +22,20 @@
 </head>
 <body>
 <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
     <nav class="mobile-nav">
+        <a href="#" onclick="toggleActive(this)">Welcome</a>
         <a href="#" onclick="toggleActive(this)">
-            <span class="text">Welcome</span>
-        </a>
-        <a href="#" onclick="toggleActive(this)">
-            <span class="text"><img id="nav-chuck" src="./media/base_chuck.svg" alt="All about me"/></span>
-        </a>
-        <a href="#" onclick="toggleActive(this)">
-            <span class="text">Motivation</span>
-        </a>
-        <a href="#" onclick="toggleActive(this)">
-            <span class="text">Skills</span>
-        </a>
-        <a href="#" onclick="toggleActive(this)">
-            <span class="text">Projects</span>
-        </a>
-        <a href="#" onclick="toggleActive(this)">
-            <span class="text">Who are you?</span>
-        </a>
+            <img id="nav-chuck" src="./media/base_chuck.svg" alt="All about me"/></a>
+        <a href="#" onclick="toggleActive(this)">Motivation</a>
+        <a href="#" onclick="toggleActive(this)">Skills</a>
+        <a href="#" onclick="toggleActive(this)">Projects</a>
+        <a href="#" onclick="toggleActive(this)">Who are you?</a>
     </nav>
-
 </header>
 <div class="landing-container">
     <div class="landing-picture-container">
@@ -52,10 +45,6 @@
     <p class="greeting">And since you're here, allow yourself a deeper look at me</p>
 
 </div>
-<div class="menu-toggle" onclick="toggleMenu()">
-    <div class="burger"></div>
-</div>
-
 <footer>
     LinkedIn | GitHub | Instagram | Facebook
 </footer>
@@ -66,7 +55,6 @@
     function toggleMenu() {
         document.body.classList.toggle('nav-open');
     }
-
     function toggleActive(element) {
         const isActive = element.classList.contains('active');
         const activeLinks = document.querySelectorAll('.active');
@@ -120,7 +108,5 @@
         }, 400);
     });
 </script>
-
-
 </body>
 </html>

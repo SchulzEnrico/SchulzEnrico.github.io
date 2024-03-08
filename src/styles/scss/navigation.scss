@@ -59,7 +59,7 @@ nav {
     text-decoration: none;
     font-family: Typewriter, ui-monospace, monospace, sans-serif;
     color: var(--color-22);
-    margin: 0 1.5rem;
+    margin: 1em 1.8em;
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 3px;
 
@@ -88,7 +88,8 @@ nav {
 
       img#nav-chuck {
         transform: none; /* Stelle sicher, dass das Bild nicht rotiert, wenn das Element aktiv ist */
-      }
+        opacity: 1;
+        }
     }
 
     &:hover:not(:focus),
@@ -121,5 +122,86 @@ nav {
   100% {
     transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
     @include animate(bounce, up, null, 0.5s, 1);
+  }
+}
+
+/* Stile für den Burger */
+/* Stile für die Burger-Leiste */
+.burger-line {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-3);
+  margin: 6px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Animation für das Öffnen des Burgers */
+.nav-open .burger-line:nth-child(1) {
+  z-index: 999;
+  position: relative;
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+/* Animation für das Schließen des Burgers */
+.nav-open .burger-line:nth-child(3) {
+  z-index: 999;
+  position: relative;
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Zeige die mobile Navigation, wenn der Burger geklickt wird */
+.nav-open .mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-01);
+  padding: 50px 0; /* Platz für den Header */
+  border-bottom-left-radius: 150px;
+  outline: 1px solid var(--color-3-1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+.nav-open .mobile-nav a {
+  color: var(--color-4);
+}
+.nav-open .mobile-nav a.active {
+  color: var(--color-3);
+  font-weight: bold;
+  transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1);
+  animation: mirrorRotate 1s forwards;
+}
+
+/* Media Query für kleinere Bildschirme (maximale Bildschirmbreite von 768px) */
+@media screen and (max-width: 768px) {
+  /* Zeigen Sie den Burger-Button und verstecken Sie das normale Menü */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* Stile für größere Bildschirme (mindestens 769px Bildschirmbreite) */
+@media screen and (min-width: 769px) {
+  /* Verstecken Sie den Burger-Button und zeigen Sie das normale Menü */
+  .menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
   }
 }
