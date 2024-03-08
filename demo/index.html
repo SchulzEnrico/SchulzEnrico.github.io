@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>jQuery WebGL Ripples</title>
 <style>
@@ -173,11 +173,11 @@ $(document).ready(function() {
 
 	// Automatic drops
 	setInterval(function() {
-		var $el = $('main');
-		var x = Math.random() * $el.outerWidth();
-		var y = Math.random() * $el.outerHeight();
-		var dropRadius = 20;
-		var strength = 0.04 + Math.random() * 0.04;
+		const $el = $('main');
+		const x = Math.random() * $el.outerWidth();
+		const y = Math.random() * $el.outerHeight();
+		const dropRadius = 20;
+		const strength = 0.04 + Math.random() * 0.04;
 
 		$el.ripples('drop', x, y, dropRadius, strength);
 	}, 400);
