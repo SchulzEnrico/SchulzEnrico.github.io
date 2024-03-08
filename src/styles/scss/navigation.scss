@@ -127,10 +127,19 @@ nav {
 
 /* Stile für den Burger */
 /* Stile für die Burger-Leiste */
+
+.menu-toggle {
+  position: absolute;
+  right: 7px;
+  bottom: 80px;
+  z-index: 999;
+}
 .burger-line {
+  display: block; /* Damit die Spans standardmäßig inline sind */
   position: relative;
   width: 30px;
   height: 3px;
+  border-radius: 25px;
   background-color: var(--color-3);
   margin: 6px 0;
   transition: transform 0.3s ease;
@@ -138,7 +147,6 @@ nav {
 
 /* Animation für das Öffnen des Burgers */
 .nav-open .burger-line:nth-child(1) {
-  z-index: 999;
   position: relative;
   transform: translateY(8px) rotate(45deg);
 }
@@ -149,9 +157,8 @@ nav {
 
 /* Animation für das Schließen des Burgers */
 .nav-open .burger-line:nth-child(3) {
-  z-index: 999;
   position: relative;
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
 /* Zeige die mobile Navigation, wenn der Burger geklickt wird */
