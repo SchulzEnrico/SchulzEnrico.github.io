@@ -45,23 +45,40 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: auto;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #101010;
+}
+body::-webkit-scrollbar-corner {
+  background-color: #101010;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-3-1);
+  border: 1px solid var(--color-41);
+  border-radius: 25px;
 }
 
 header {
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0;
   width: 100%;
-  height: 200px;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 -5px 10px var(--color-22);
   z-index: 100;
 }
 
@@ -73,6 +90,7 @@ h1 {
   font-family: "Alfa Slab One", serif;
   font-style: normal;
   color: var(--color-3-1);
+  opacity: .75;
 }
 .h1-e {
   font-size: 4.9em;
@@ -88,12 +106,12 @@ h1 {
   text-shadow: 0 0 10px var(--color-01);
 }
 
-.landing-container {
+#landing-container {
   position: relative;
   padding: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: block;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -103,52 +121,35 @@ h1 {
 .es-container {
   position: absolute;
   display: flex;
-  box-shadow: 0 0 10px var(--color-4-0);
   height: 80%;
   width: 100%;
 }
 
 .es {
   position: absolute;
-  top: 7%;
+  top: 18%;
   height: 90%;
-  filter: brightness(60%);
+  filter: brightness(30%);
   transform: scaleX(-1);
 }
+.es:hover {
+  filter: brightness(55%);
+}
 
-.skills-container {
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Jede Abschnittshöhe ist mindestens so groß wie der Viewport */
   width: 100%;
-  position: relative;
-  text-align: center; /* Zentriert den Inhalt horizontal */
 }
 
-#skills-dot {
-  position: absolute;
-  font-size: 4em;
-  top: 95.6%;
-  left: 74.6%; /* Zentriert horizontal */
-  transform: translate(-50%, -50%);
-  color: var(--color-3);
+.background-color-wrapper {
+  height: 80vh;
+  padding: 25px;
+  background-color: var(--color-1);
 }
-
-.skills-wrapper {
-  position: absolute;
-  top: 87.4%;
-  left: 75%; /* Zentriert horizontal */
-  letter-spacing: 6px;
-  white-space: nowrap;
-  overflow: hidden; /* Verhindert das Überlaufen */
-}
-
-#skills {
-  font-size: 2.5em;
-  font-weight: bold;
-  display: inline-block;
-  color: var(--color-4);
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 @keyframes expandFromDot {
   0% {
     width: 0; /* Startbreite */
@@ -175,11 +176,11 @@ h1 {
 .greeting {
   position: absolute;
   width: 100%;
-  top: 45%;
-  left: 10%;
+  top: 55%;
+  left: 7%;
   text-transform: uppercase;
   font-family: Typewriter, ui-monospace, monospace, sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
   letter-spacing: 6px;
   overflow: hidden;
   background: linear-gradient(90deg,
@@ -214,19 +215,58 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 0 15px;
   width: 100%;
-  height: 50px;
+  height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 5px 10px var(--color-22);
   z-index: 100;
+}
+
+.educations-container {
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#educations-dot {
+  position: absolute;
+  bottom: 7px;
+  font-size: 3em;
+  color: var(--color-3);
+}
+
+.educations-wrapper {
+  position: absolute;
+  left: 20px;
+  bottom: -31px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#educations {
+  font-size: 2.2em;
+  font-weight: bold;
+  display: inline-block;
+  color: var(--color-23);
+  letter-spacing: 5px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 i{
   margin: 0 10px;
   color: var(--color-4-0);
   opacity: .3;
+}
+i:hover{
+  opacity: .8;
+  scale: 1.3;
+  color: var(--color-3);
 }
 
 @media only screen and (max-width: 768px) {
@@ -246,14 +286,14 @@ i{
     font-size: 4.91em;
   }
 
-  .skills-container {
+  .educations-container {
     top: 0;
     width: 100%;
     position: relative;
     text-align: center; /* Zentriert den Inhalt horizontal */
   }
 
-  #skills-dot {
+  #educations-dot {
     position: absolute;
     font-size: 3em;
     top: -2.5%;
@@ -262,7 +302,7 @@ i{
     color: var(--color-3);
   }
 
-  .skills-wrapper {
+  .educations-wrapper {
     position: absolute;
     top: -7%;
     left: 33%; /* Zentriert horizontal */
@@ -271,7 +311,7 @@ i{
     overflow: hidden; /* Verhindert das Überlaufen */
   }
 
-  #skills {
+  #educations {
     font-size: 1.3em;
     font-weight: bold;
     display: inline-block;
