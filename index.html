@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <title>és</title>
     <style>
         @keyframes mirrorRotate {
@@ -22,8 +25,7 @@
 </head>
 <body>
 <header>
-    <h1>ES</h1>
-    <p id="skill" class="skill"></p>
+    <h1><span class="h1-e">E</span><span class="h1-s">S</span></h1>
     <nav class="mobile-nav">
         <a href="#" onclick="toggleActive(this)">Welcome</a>
         <a href="#" onclick="toggleActive(this)">
@@ -33,29 +35,40 @@
         <a href="#" onclick="toggleActive(this)">Projects</a>
         <a href="#" onclick="toggleActive(this)">Who are you?</a>
     </nav>
-
 </header>
-
-
-<div class="landing-container">
-
-
-    <div class="landing-picture-container">
-        <img src="./media/4.png" alt="és" class="es">
-    </div>
-
-    <p class="greeting">Since you're already here, allow yourself a closer <span class="look-at-me">look at me</span></p>
-
-</div>
-
 <div class="menu-toggle" onclick="toggleMenu()">
     <span class="burger-line"></span>
     <span class="burger-line"></span>
     <span class="burger-line"></span>
 </div>
+<p class="greeting">Since you're already here, allow yourself a closer look at me...</p>
+<main class="landing-container">
+    <div class="es-container">
+        <img src="./media/9_2_left_sw.png" alt="és" class="es">
+
+        <div class="skills-container">
+            <div id="skills-dot" class="blink">.</div> <!-- skills-dot hinzugefügt -->
+            <div class="skills-wrapper">
+                <p id="skills"></p> <!-- skills hinzugefügt -->
+            </div>
+        </div>
+    </div>
+</main>
 
 <footer>
-    LinkedIn | GitHub | Mail | Phone
+    <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
+        <i class="fa-brands fa-linkedin fa-2xl"></i>
+    </a>
+    <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
+        <i class="fa-brands fa-square-github fa-2xl"></i>
+    </a>
+    <a href="mailto:e.mail.s@t-online.de">
+        <i class="fa-solid fa-square-envelope fa-2xl"></i>
+    </a>
+
+    <a href="tel:+4917641178225">
+        <i class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i>
+    </a>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -82,18 +95,12 @@
                 dropRadius: 20, //px
                 perturbance: 0.04,
             });
-            $('main').ripples({
-                resolution: 128,
-                dropRadius: 10, //px
-                perturbance: 0.04,
-                interactive: false
-            });
         } catch (e) {
             $('.error').show().text(e);
         }
 
         $('.js-ripples-disable').on('click', function () {
-            $('body, main').ripples('destroy');
+            $('body').ripples('destroy');
             $(this).hide();
         });
 
@@ -117,35 +124,177 @@
         }, 400);
     });
 
-    // JavaScript code for continuous and irregular text animation of skills
-    const skills = [ '.WebDesigner', '.WebDeveloper', '.ProductOwner', '.ScrumMaster', '.ProjectManager']; // List of skills
-    let currentIndex = 0; // Index of the current skill
+    // Funktion zum Aktivieren des Pipe-Cursors für den Gruß
+    async function activatePipeCursorForGreeting() {
+        const greetingElement = document.querySelector('.greeting');
+        const greetingText = greetingElement.textContent.trim();
+        let pipeCursor = createPipeCursor(); // Erstellen Sie den Pipe-Cursor
 
-    // Function to display the next skill with variable delay
-    function displayNextSkill() {
-        const skillElement = document.getElementById('skill');
-        const currentSkill = skills[currentIndex];
-        const currentText = skillElement.textContent;
+        // Hinzufügen des Pipe-Cursors zum Dokument
+        document.body.appendChild(pipeCursor);
 
-        if (currentText.length < currentSkill.length) {
-            skillElement.textContent = currentSkill.substring(0, currentText.length + 1);
-            const delay = Math.random() * 200 + 100; // Random delay between 100ms and 300ms
-            setTimeout(displayNextSkill, delay);
-        } else {
-            const delay = Math.random() * 2000 + 1000; // Random delay between 1000ms and 3000ms
-            setTimeout(nextSkill, delay);
+        // Bewegen Sie den Pipe-Cursor über jeden Buchstaben im Gruß und lösen Sie gleichzeitig Ripples aus
+        let x = 0; // Startposition des Cursors
+        const step = 0.15; // Schrittweite des Cursors (in Prozent der Buchstabenbreite)
+        const delayBetweenSteps = 70; // Wartezeit zwischen den Schritten (in Millisekunden)
+        const numIterations = 5; // Anzahl der Durchläufe durch den Text
+        for (let i = 0; i < numIterations; i++) {
+            let currentX = x;
+            for (const letter of greetingText) {
+                const letterWidth = measureLetterWidth(letter);
+                const letterRect = getLetterRect(greetingElement, currentX);
+                movePipeCursor(pipeCursor, letterRect.left + letterWidth / 2, letterRect.top + 10); // Bewegen Sie den Cursor in die Mitte des aktuellen Buchstabens
+                simulateRipplesAtPosition(letterRect.left + letterWidth / 2, letterRect.top + 20); // Simulieren Sie Ripples in der Mitte des Buchstabens
+                currentX += letterWidth * step; // Bewegen Sie den Cursor um die definierte Schrittweite
+                await wait(delayBetweenSteps); // Warten Sie zwischen jedem Schritt
+            }
+            await wait(1000); // Warten Sie 1 Sekunde zwischen den Iterationen
         }
     }
 
-    // Function to display the next skill
-    function nextSkill() {
-        currentIndex = (currentIndex + 1) % skills.length; // Reset the index if the end of the list is reached
-        document.getElementById('skill').textContent = '';
-        setTimeout(displayNextSkill, 0); // Start the animation for the next skill immediately
+
+    // Funktion zum Simulieren von Ripples an einer bestimmten Position
+    function simulateRipplesAtPosition(x, y) {
+        // Simulieren Sie den Ripples-Effekt an der angegebenen Position
+        $('body').ripples('drop', x, y, 30, 0.01); // Größere Drop-Parameter für größere und langsamere Ripples
     }
 
-    // Call the function to display the first skill
-    displayNextSkill();
+    // Rufen Sie die Funktion zum Aktivieren des Pipe-Cursors für den Gruß auf, sobald das DOM geladen ist
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aktivieren Sie den Pipe-Cursor sofort
+        activatePipeCursorForGreeting();
+
+        // Aktivieren Sie den Pipe-Cursor in regelmäßigen Abständen, um sicherzustellen, dass er unendlich durchläuft
+        setInterval(function() {
+            activatePipeCursorForGreeting();
+        }, 6500); // Rufen Sie alle 5 Sekunden die Funktion auf (oder passen Sie den Wert nach Bedarf an)
+    });
+
+    // Funktion zum Bewegen des Pipe-Cursors an eine bestimmte Position
+    function movePipeCursor(pipeCursor, x, y) {
+        pipeCursor.style.left = x + 'px';
+        pipeCursor.style.top = y + 'px';
+    }
+
+    // Funktion zum Messen der Breite eines Buchstabens
+    function measureLetterWidth(letter) {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.style.visibility = 'hidden';
+        document.body.appendChild(span);
+        const width = span.offsetWidth;
+        document.body.removeChild(span);
+        return width;
+    }
+
+    // Funktion zum Berechnen des Rechtecks eines Buchstabens im Gruß
+    function getLetterRect(greetingElement, x) {
+        const range = document.createRange();
+        const textNode = greetingElement.firstChild;
+        range.setStart(textNode, x);
+        range.setEnd(textNode, x + 1);
+        return range.getBoundingClientRect();
+    }
+
+    // Funktion zum Warten einer bestimmten Zeit in Millisekunden
+    function wait(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // Funktion zum Erstellen des Pipe-Cursors
+    function createPipeCursor() {
+        const pipeCursor = document.createElement('div');
+        pipeCursor.className = 'pipe-cursor';
+        pipeCursor.textContent = '|';
+        pipeCursor.style.position = 'fixed'; // Position relativ zum Bildschirm
+        pipeCursor.style.fontSize = '16px'; // Schriftgröße anpassen, falls erforderlich
+        return pipeCursor;
+    }
+
+    // Rufen Sie die Funktion zum Aktivieren des Pipe-Cursors für den Gruß auf, sobald das DOM geladen ist
+    document.addEventListener('DOMContentLoaded', function() {
+        activatePipeCursorForGreeting();
+    });
+
+    // JavaScript code for continuous and irregular text animation of skills
+    const skills = ['Web Designer', 'Web Developer', 'Product Owner', 'Scrum Master', 'Project Manager'];
+    const typingDelays = [10, 25, 110, 90, 10, 10, 15, 75, 10, 5, 30]; // Verzögerungen für das Tippen
+
+    let currentIndex = 0;
+
+    function generateDelays(length) {
+        const delays = [];
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * typingDelays.length);
+            const baseDelay = typingDelays[randomIndex];
+            const randomFactor = Math.random() * 0.5 + 0.75; // Zufälliger Faktor zwischen 0.75 und 1.25
+            delays.push(Math.floor(baseDelay * randomFactor)); // Zufällige Verzögerung auswählen und anpassen
+        }
+        return delays;
+    }
+
+    function displayNextSkill() {
+        const skillElement = document.getElementById('skills');
+        const currentSkill = skills[currentIndex];
+        const currentText = skillElement.textContent;
+        const remainingText = currentSkill.substring(currentText.length);
+
+        if (remainingText.length > 0) {
+            const delays = generateDelays(remainingText.length);
+            addNextCharacter(0, remainingText, delays);
+        } else {
+            setTimeout(eraseSkill, 1000);
+        }
+
+        // Unregelmäßiges Blinken hinzufügen
+        const dotElement = document.getElementById('skills-dot');
+        dotElement.style.animationDelay = `${Math.random() * 1.5}s`; // Zufällige Verzögerung zwischen 0 und 2 Sekunden
+    }
+
+    function addNextCharacter(index, remainingText, delays) {
+        const skillElement = document.getElementById('skills');
+        const nextCharacter = remainingText.charAt(index);
+        skillElement.textContent += nextCharacter;
+        skillElement.style.width = skillElement.scrollWidth + 'px'; // Breite entsprechend der Länge des Inhalts aktualisieren
+
+        if (index < remainingText.length - 1) {
+            // Zufällige Verzögerung für das nächste Zeichen hinzufügen
+            const randomDelay = Math.random() * 200 + 100;
+            setTimeout(function() {
+                addNextCharacter(index + 1, remainingText, delays);
+            }, delays[index] + randomDelay);
+        } else {
+            setTimeout(eraseSkill, 1000); // Warten Sie 1s, bevor Sie den nächsten Skill löschen
+        }
+    }
+
+    function eraseSkill() {
+        const skillElement = document.getElementById('skills');
+        const currentText = skillElement.textContent;
+
+        if (currentText.length > 0) {
+            skillElement.textContent = currentText.substring(0, currentText.length - 1);
+            skillElement.style.width = 'auto'; // Setzen Sie die Breite auf automatisch, um den Text linksbündig zu halten
+            const delay = Math.random() * 50 + 50; // Kürzere Verzögerungszeit
+            setTimeout(eraseSkill, delay);
+        } else {
+            setTimeout(nextSkill, 500); // Warten Sie 1s, bevor Sie den nächsten Skill anzeigen
+        }
+    }
+
+    function nextSkill() {
+        currentIndex = (currentIndex + 1) % skills.length;
+        const skillElement = document.getElementById('skills');
+        skillElement.textContent = ''; // Löscht den Inhalt des skills-Elements
+        skillElement.style.width = '0'; // Setzt die Breite auf 0 zurück
+        setTimeout(displayNextSkill, 0);
+    }
+
+    // Verwenden Sie die Funktion displayNextSkill, um die Animation zu starten
+    setTimeout(function() {
+        displayNextSkill();
+
+    }, 0);
 </script>
 </body>
 </html>
