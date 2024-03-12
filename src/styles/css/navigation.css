@@ -81,12 +81,10 @@ nav {
       100% {
         transform: translateY(0); } }
     animation: bounce 0.5s 1; } }
-/* Stile für den Burger */
-/* Stile für die Burger-Leiste */
 .menu-toggle {
   position: absolute;
-  right: 7px;
-  bottom: 80px;
+  right: 15px;
+  top: 8px;
   z-index: 999; }
 
 .burger-line {
