@@ -49,7 +49,7 @@
 
 nav {
   position: fixed;
-  top: 15px;
+  top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +58,7 @@ nav {
     position: relative;
     text-decoration: none;
     font-family: Typewriter, ui-monospace, monospace, sans-serif;
+    font-size: 1.25em;
     color: var(--color-22);
     margin: 1em 1.8em;
     transition: text-shadow 50ms ease, color 50ms ease;
@@ -126,9 +127,9 @@ nav {
 }
 
 .menu-toggle {
-  position: absolute;
-  right: 15px;
-  top: 8px;
+  position: relative;
+/*  right: 15px;
+  top: 8px;*/
   z-index: 999;
 }
 .burger-line {
