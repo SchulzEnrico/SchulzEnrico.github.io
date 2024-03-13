@@ -85,28 +85,29 @@ header {
 h1 {
   position: absolute;
   top: -73px;
-  left: -13px;
+  left: -19px;
   text-transform: uppercase;
   font-family: "Alfa Slab One", serif;
   font-style: normal;
   color: var(--color-3-1);
-  opacity: .75;
+  opacity: .85;
 }
 .h1-e {
+  position: absolute;
   font-size: 4.9em;
-  top: 50px;
-  text-shadow: 0 0 10px var(--color-00);
+  top: -2px;
+  text-shadow: 0 0 15px var(--color-00);
 }
 .h1-s {
   position: absolute;
   font-size: 4.9em;
-  top: -2px;
-  left: 73px;
+  top: -4px;
+  left: 72px;
   z-index: -1;
-  text-shadow: 0 0 10px var(--color-01);
+  text-shadow: 0 0 15px var(--color-00);
 }
 
-#landing-container {
+.welcome-container {
   position: relative;
   padding: 0;
   width: 100%;
@@ -127,7 +128,7 @@ h1 {
 
 .es {
   position: absolute;
-  top: 18%;
+  top: 7%;
   height: 90%;
   filter: brightness(30%);
   transform: scaleX(-1);
@@ -136,20 +137,47 @@ h1 {
   filter: brightness(55%);
 }
 
-
 .section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Jede Abschnittshöhe ist mindestens so groß wie der Viewport */
-  width: 100%;
+  padding: 50px;
+  min-height: 100vh;
+  max-width: 100vw;
 }
 
 .background-color-wrapper {
+  display: block;
   height: 80vh;
-  padding: 25px;
-  background-color: var(--color-1);
+  max-width: 100vw;
+  background-color: var(--color-01);
 }
+
+.skills-wrapper,
+.projects-wrapper {
+  margin: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding: 20px;
+  min-height: 100vh;
+  max-width: 90vw;
+}
+
+.skill,
+.project {
+    margin: 15px;
+    display: flex;
+}
+.skill i,
+.skill h3,
+.skill p{
+  margin: 0 10px;
+  color: var(--color-4-0);
+}
+
+
 @keyframes expandFromDot {
   0% {
     width: 0; /* Startbreite */
@@ -176,7 +204,7 @@ h1 {
 .greeting {
   position: absolute;
   width: 100%;
-  top: 55%;
+  top: 49%;
   left: 7%;
   text-transform: uppercase;
   font-family: Typewriter, ui-monospace, monospace, sans-serif;
@@ -192,13 +220,13 @@ h1 {
   animation: animate 6s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  text-align: center; /* Zentriert den Text horizontal */
+  text-align: center;
 }
 
 .pipe-cursor {
   position: relative;
   color: transparent;
-  top: 30%; /* Anpassen Sie die Top-Position nach Bedarf */
+  top: 30%;
 }
 
 @keyframes animate {
@@ -261,10 +289,8 @@ footer {
 i{
   margin: 0 10px;
   color: var(--color-4-0);
-  opacity: .3;
 }
 i:hover{
-  opacity: .8;
   scale: 1.3;
   color: var(--color-3);
 }
@@ -286,18 +312,18 @@ i:hover{
     font-size: 4.91em;
   }
 
-  .educations-container {
+  /*.educations-container {
     top: 0;
     width: 100%;
     position: relative;
-    text-align: center; /* Zentriert den Inhalt horizontal */
+    text-align: center; !* Zentriert den Inhalt horizontal *!
   }
 
   #educations-dot {
     position: absolute;
     font-size: 3em;
     top: -2.5%;
-    left: 29%; /* Zentriert horizontal */
+    left: 29%; !* Zentriert horizontal *!
     transform: translate(-50%, -50%);
     color: var(--color-3);
   }
@@ -305,10 +331,10 @@ i:hover{
   .educations-wrapper {
     position: absolute;
     top: -7%;
-    left: 33%; /* Zentriert horizontal */
+    left: 33%; !* Zentriert horizontal *!
     letter-spacing: 4px;
     white-space: nowrap;
-    overflow: hidden; /* Verhindert das Überlaufen */
+    overflow: hidden; !* Verhindert das Überlaufen *!
   }
 
   #educations {
@@ -318,7 +344,7 @@ i:hover{
     color: var(--color-4);
     white-space: nowrap;
     overflow: hidden;
-  }
+  }*/
 
   .greeting-container {
     position: absolute;
@@ -358,6 +384,10 @@ i:hover{
   .es {
     left: -.5%;
     filter: brightness(45%);
+  }
+
+  footer {
+    justify-content: space-around;
   }
 }
 
