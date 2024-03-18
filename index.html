@@ -25,21 +25,25 @@
 </head>
 <body>
 <header>
-    <h1><span class="h1-e">E</span><span class="h1-s">S</span></h1>
-    <nav class="mobile-nav">
-        <a href="#welcome" onclick="toggleActive(this)">Welcome</a>
-        <a href="#about-me" onclick="toggleActive(this)">
-            <img id="nav-chuck" src="./media/base_chuck.svg" alt="about me"/></a>
-        <a href="#motivation" onclick="toggleActive(this)">Motivation</a>
-        <a href="#skills" onclick="toggleActive(this)">Skills</a>
-        <a href="#projects" onclick="toggleActive(this)">Projects</a>
-        <a href="#credits" onclick="toggleActive(this)">Credits</a>
-    </nav>
+    <div class="ripples-container-large">
+        <img id="es" src="./media/es-complete_830401.svg" alt="ES"/>
+        <h1><span class="h1-enrico">Enrico</span><span class="h1-schulz">Schulz</span></h1>
+        <nav class="mobile-nav">
+            <a href="#welcome" onclick="toggleActive(this)">Welcome</a>
+            <a href="#about-me" onclick="toggleActive(this)">
+                <img id="nav-chuck" src="./media/base_chuck.svg" alt="about me"/></a>
+            <a href="#motivation" onclick="toggleActive(this)">Motivation</a>
+            <a href="#skills" onclick="toggleActive(this)">Skills</a>
+            <a href="#projects" onclick="toggleActive(this)">Projects</a>
+            <a href="#credits" onclick="toggleActive(this)">Credits</a>
+        </nav>
+    </div>
 </header>
 <main id="welcome" class="welcome-container section">
-    <div class="es-container">
-        <img src="./media/9_2_left_sw.png" alt="és" class="es">
+    <img id="es-shape" src="./media/es-smooth-shape.svg" alt="ES"/>
+    <div id="es-container" class="es-container">
         <p class="greeting">Since you're already here, allow yourself a closer look at me</p>
+        <img src="./media/9_2_left_sw.png" alt="és" class="es">
     </div>
 </main>
 <div id="about-me" class="about-me-container section">
@@ -159,7 +163,8 @@
                 <div class="project" onclick="flipCard(this)">
                     <div class="project-content">
                         <div class="project-front">
-                            <h5>Neuwagen Auslieferung BLG 2012</h5>
+                            <p class="project-year">2012</p>
+                            <h5>Neuwagen Auslieferung BLG</h5>
                         </div>
                         <div class="project-back">
                             <h6>Project Details</h6>
@@ -172,7 +177,8 @@
                 <div class="project" onclick="flipCard(this)">
                     <div class="project-content">
                         <div class="project-front">
-                            <h5>Helbingtwiete 2012</h5>
+                            <p class="project-year">2013</p>
+                            <h5>Helbingtwiete</h5>
                         </div>
                         <div class="project-back">
                             <h6>Project Details</h6>
@@ -185,65 +191,53 @@
                 <div class="project" onclick="flipCard(this)">
                     <div class="project-content">
                         <div class="project-front">
-                            <h5>Press driving event 1 2014</h5>
+                            <p class="project-year">2014</p>
+                            <h5>Press driving event 1</h5>
                         </div>
                         <div class="project-back">
                             <h6>Project Details</h6>
                             <p>Your bones don't break, mine do. That's clear.
                                 Your cells react to bacteria and viruses differently than mine.
                             </p>
-                            <a href="https://www.youtube.com/watch?v=5z3Z3v3Z3Z3"></a>
+                            <a href="https://www.youtube.com/watch?v=5z3Z3v3Z3Z3">Link</a>
                         </div>
                     </div>
                 </div>
-                    <div class="project" onclick="flipCard(this)">
-                        <div class="project-content">
-                            <div class="project-front">
-                                <h5>Big Bang Berlin 28.07.2014</h5>
-                            </div>
-                            <div class="project-back">
-                                <h6>Project Details</h6>
-                                <p>Your bones don't break, mine do. That's clear.
-                                    Your cells react to bacteria and viruses differently than mine.
-                                </p>
-                                <a href="https://www.youtube.com/watch?v=cediGvr9-Io"></a>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="project" onclick="flipCard(this)">
-                            <div class="project-content">
-                                <div class="project-front">
-                                    <h5>Press driving event 2 2015</h5>
-                                </div>
-                                <div class="project-back">
-                                    <h6>Project Details</h6>
-                                    <p>Your bones don't break, mine do. That's clear.
-                                        Your cells react to bacteria and viruses differently than mine.
-                                    </p>
-                                    <a href="https://www.youtube.com/watch?v=BvvRW_kEKPs&t=29s"></a>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="project" onclick="flipCard(this)">
-                                <div class="project-content">
-                                    <div class="project-front">
-                                        <h5>Color Gentlemen 2016</h5>
-                                    </div>
-                                    <div class="project-back">
-                                        <h6>Project Details</h6>
-                                        <p>Your bones don't break, mine do. That's clear.
-                                            Your cells react to bacteria and viruses differently than mine.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-            </div>
-            <div class="project-management-container">
-                <h3>Personal</h3>
                 <div class="project" onclick="flipCard(this)">
                     <div class="project-content">
                         <div class="project-front">
-                            <h5>Education</h5>
+                            <p class="project-year">2014</p>
+                            <h5>Big Bang Berlin</h5>
+                        </div>
+                        <div class="project-back">
+                            <h6>Project Details</h6>
+                            <p>Your bones don't break, mine do. That's clear.
+                                Your cells react to bacteria and viruses differently than mine.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=cediGvr9-Io">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project" onclick="flipCard(this)">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <p class="project-year">2015</p>
+                            <h5>Press driving event 2</h5>
+                        </div>
+                        <div class="project-back">
+                            <h6>Project Details</h6>
+                            <p>Your bones don't break, mine do. That's clear.
+                                Your cells react to bacteria and viruses differently than mine.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=BvvRW_kEKPs&t=29s">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project" onclick="flipCard(this)">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <p class="project-year">2016</p>
+                            <h5>Color Gentlemen</h5>
                         </div>
                         <div class="project-back">
                             <h6>Project Details</h6>
@@ -256,47 +250,59 @@
             </div>
             <div class="project-management-container">
                 <h3>Web Design & Development</h3>
-                        <div class="project" onclick="flipCard(this)">
-                            <div class="project-content">
-                                <div class="project-front">
-                                    <h5>Esourc(és) 2023</h5>
-                                </div>
-                                <div class="project-back">
-                                    <h6>Project Details</h6>
-                                    <p>Your bones don't break, mine do. That's clear.
-                                        Your cells react to bacteria and viruses differently than mine.
-                                    </p>
-                                </div>
-                            </div>
+                <div class="project" onclick="flipCard(this)">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <p class="project-year">2023</p>
+                            <h5>Esourc(és)</h5>
                         </div>
-                        <div class="project" onclick="flipCard(this)">
-                            <div class="project-content">
-                                <div class="project-front">
-                                    <h5>és Portfolio 2024</h5>
+                        <div class="project-back">
+                            <h6>Project Details</h6>
+                            <div class="slider">
+                                <div class="slide">
+                                    <img src="./media/slider-images/widescreen.png" alt="Image 1">
+                                    <p>Description for Image 1</p>
                                 </div>
-                                <div class="project-back">
-                                    <h6>Project Details</h6>
-                                    <p>Your bones don't break, mine do. That's clear.
-                                        Your cells react to bacteria and viruses differently than mine.
-                                    </p>
+                                <div class="slide">
+                                    <img src="" alt="Image 2">
+                                    <p>Description for Image 2</p>
                                 </div>
+                                <!-- Add more slides as needed -->
                             </div>
+                            <button onclick="prevSlide()">Previous</button>
+                            <button onclick="nextSlide()">Next</button>
+                            <a title="open Esourc(és) on Render.com" target="_blank" href="https://esource.onrender.com">check it out</a>
                         </div>
-
-
+                    </div>
+                </div>
+                <div class="project" onclick="flipCard(this)">
+                    <div class="project-content">
+                        <div class="project-front">
+                            <p class="project-year">2024</p>
+                            <h5>és Portfolio</h5>
+                        </div>
+                        <div class="project-back">
+                            <h6>Project Details</h6>
+                            <p>Your bones don't break, mine do. That's clear.
+                                Your cells react to bacteria and viruses differently than mine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div id="credits" class="credits-container section">
-    <div class="background-color-wrapper">
+    <div class="background-color-wrapper credits">
         <div class="fade"></div>
         <h2>CREDITS</h2>
         <section class="star-wars">
             <div class="crawl">
-                <div class="title">
-                    <p>Episode III</p>
-                    <h4>A New CHAPTER</h4>
+                <div class="credits-title">
+                    <p>Episode</p>
+                    <p class="episode-number">IV</p>
+                    <h4><span class="chapter-opener">the next</span><br><br>CHAPTER</h4>
                 </div>
 
                 <p> Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
@@ -310,25 +316,27 @@
 </div>
 
 <footer>
-    <div class="educations-container">
-        <div id="educations-dot" class="blink">.</div>
-        <div class="educations-wrapper">
-            <p id="educations"></p>
+    <div class="ripples-container-large">
+        <div class="educations-container">
+            <div id="educations-dot" class="blink">.</div>
+            <div class="educations-wrapper">
+                <p id="educations"></p>
+            </div>
         </div>
-    </div>
-    <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
-        <i class="fa-brands fa-linkedin fa-2xl"></i></a>
-    <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
-        <i class="fa-brands fa-square-github fa-2xl"></i></a>
-    <a href="mailto:e.mail.s@t-online.de">
-        <i class="fa-solid fa-square-envelope fa-2xl"></i></a>
-    <a href="tel:+4917641178225">
-        <i class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
+        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+        <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
+            <i class="fa-brands fa-square-github fa-2xl"></i></a>
+        <a href="mailto:e.mail.s@t-online.de">
+            <i class="fa-solid fa-square-envelope fa-2xl"></i></a>
+        <a href="tel:+4917641178225">
+            <i class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
     </div>
 </footer>
 
@@ -342,6 +350,7 @@
     function toggleMenu() {
         document.body.classList.toggle('nav-open');
     }
+
     function toggleActive(element) {
         const isActive = element.classList.contains('active');
         const activeLinks = document.querySelectorAll('.active');
@@ -361,35 +370,66 @@
             behavior: 'smooth'
         });
     }
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+    }
+
+    function prevSlide() {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+    }
+
 
     $(document).ready(function () {
         try {
             $('main').ripples({
-                resolution: 512,
+                resolution: 1080,
                 dropRadius: 20, //px
-                perturbance: 0.4,
+                perturbance: 0.03,
             });
-            $('').ripples({
-                resolution: 128,
+
+            $('.ripples-container-large').ripples({
+                resolution: 1080,
                 dropRadius: 10, //px
-                perturbance: 0.04,
-                interactive: false
+                perturbance: 0.03,
+                /*interactive: false*/
             });
+            $('.ripples-container-small').ripples({
+                resolution: 256,
+                dropRadius: 20, //px
+                perturbance: 1,
+                /*interactive: false*/
+            });
+
         } catch (e) {
             $('.error').show().text(e);
         }
 
         $('.js-ripples-disable').on('click', function () {
-            $('body').ripples('destroy');
+            $('main, .ripples-container-large, .ripples-container-small').ripples('destroy');
             $(this).hide();
         });
 
         $('.js-ripples-play').on('click', function () {
-            $('body, main').ripples('play');
+            $('header, .ripples-container-large, .ripples-container-small').ripples('play');
         });
 
         $('.js-ripples-pause').on('click', function () {
-            $('body, main').ripples('pause');
+            $('main, .ripples-container-large, .ripples-container-small').ripples('pause');
         });
 
         setInterval(function () {
@@ -400,7 +440,7 @@
             const strength = 0.04 + Math.random() * 0.04;
 
             $el.ripples('drop', x, y, dropRadius, strength);
-        }, 400);
+        }, 1000);
     });
 
     async function activatePipeCursorForGreeting() {
@@ -429,7 +469,7 @@
     }
 
     function simulateRipplesAtPosition(x, y) {
-        $('body').ripples('drop', x, y, 10, 0.01);
+        $('main').ripples('drop', x, y, 10, 0.01);
     }
 
     document.addEventListener('DOMContentLoaded', function() {
