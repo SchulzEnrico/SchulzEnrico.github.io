@@ -1,0 +1,66 @@
+.welcome-container {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.es-container {
+  position: absolute;
+  display: flex;
+  height: 70%;
+  width: 100%;
+}
+
+.es {
+  position: absolute;
+  left: 2%;
+  height: 90%;
+  filter: brightness(30%);
+  transform: scaleX(-1);
+}
+.es:hover {
+  filter: brightness(55%);
+}
+
+.greeting {
+  position: absolute;
+  width: 95%;
+  top: 49%;
+  left: 7%;
+  text-transform: uppercase;
+  font-family: Typewriter, ui-monospace, monospace, sans-serif;
+  font-size: 2em;
+  letter-spacing: 6px;
+  overflow: hidden;
+  background: linear-gradient(90deg,
+          var(--color-01),
+          var(--color-4),
+          var(--color-00)
+  ) no-repeat;
+  background-size: 80%;
+  animation: animate 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  text-align: center;
+}
+
+.pipe-cursor {
+  position: relative;
+  color: transparent;
+  top: 30%;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}

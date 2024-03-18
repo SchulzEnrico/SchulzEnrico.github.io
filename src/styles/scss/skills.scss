@@ -1,0 +1,23 @@
+
+.skills-wrapper,
+.projects-wrapper {
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  min-height: 80vh;
+  max-height: 80vh;
+  max-width: 90vw;
+}
+
+.skill {
+  margin: 15px;
+  display: flex;
+}
+.skill i,
+.skill h3,
+.skill p{
+  margin: 0 10px;
+  color: var(--color-4-0);
+}

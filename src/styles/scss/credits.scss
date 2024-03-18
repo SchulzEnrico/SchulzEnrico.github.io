@@ -1,0 +1,83 @@
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-0);
+  font-size: 200%;
+  text-align: center;
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent 0%, black 100%);
+/*  z-index: 1;*/
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 80%;
+  color: var(--color-3);
+  font-family: var(--font-2);
+  font-size: 500%;
+  font-weight: 600;
+  line-height: 150%;
+  perspective: 200px;
+  letter-spacing: 10px;
+  text-align: justify;
+}
+
+.credits-title {
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 200%;
+  color: var(--color-4);
+  letter-spacing: 10px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.credits-title .episode-number {
+  color: var(--color-3);
+}
+
+.chapter-opener {
+  color: var(--color-3);
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h2 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
