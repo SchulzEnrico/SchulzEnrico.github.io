@@ -80,8 +80,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 h2 {
-  position: absolute;
+  position: relative;
   right: 2%;
+  top: 0;
   color: var(--color-41);
   letter-spacing: 2px;
 }
@@ -94,13 +95,6 @@ h2 {
   padding: 50px;
   min-height: 100vh;
   max-width: 100vw;
-}
-
-.background-color-wrapper {
-  display: block;
-  height: 80vh;
-  max-width: 100vw;
-  background-color: transparent;
 }
 
 @media only screen and (max-width: 768px) {
