@@ -30,12 +30,14 @@
         <h1><span class="h1-enrico">Enrico</span><span class="h1-schulz">Schulz</span></h1>
         <nav class="mobile-nav">
             <a href="#welcome" onclick="toggleActive(this)">Welcome</a>
+            <a href="#motivation" onclick="toggleActive(this)">Motivation</a>
             <a href="#about-me" onclick="toggleActive(this)">
                 <img id="nav-chuck" src="./media/base_chuck.svg" alt="about me"/></a>
-            <a href="#motivation" onclick="toggleActive(this)">Motivation</a>
             <a href="#skills" onclick="toggleActive(this)">Skills</a>
             <a href="#projects" onclick="toggleActive(this)">Projects</a>
-            <a href="#credits" onclick="toggleActive(this)">Credits</a>
+            <div id="credits-nav-link">
+                <a href="#credits" onclick="toggleActive(this)">Credits</a>
+            </div>
         </nav>
     </div>
 </header>
@@ -46,22 +48,22 @@
         <img src="./media/9_2_left_sw.png" alt="és" class="es">
     </div>
 </main>
+<div id="motivation" class="motivation-container section">
+    <h2>Motivation</h2>
+    <div class=motivation-content>
+    <p>My motivation is extremely simple expressed in one sentence.</p>
+
+    <p>Nevertheless, it constantly demands everything imaginable to be able to fulfill this inner aspiration.</p>
+
+    <p>It demands everything imaginable at all times to be able to fulfill this inner aspiration.</p>
+
+    <p class="motivation-essence">"TOMORROW I WILL BE A BETTER VERSION OF YESTERDAY!"</p>
+
+    <p>I have deeply internalized this essence of my motivation and will only take a step back if I want to take a run-up.</p>
+</div>
+</div>
 <div id="about-me" class="about-me-container section">
         <h2>Who am I?</h2>
-            <p>
-                <!-- start slipsum code -->
-                Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
-                Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
-                My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
-                My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
-                My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
-                Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
-                Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
-                <!-- end slipsum code -->
-            </p>
-</div>
-<div id="motivation" class="motivation-container section">
-        <h2>Motivation</h2>
             <p>
                 <!-- start slipsum code -->
                 Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
@@ -295,15 +297,14 @@
                 }
                 categories[skill.category].push(skill);
             });
-
-            // Erstellen von Flip-Cards für jede Kategorie
+// Erstellen von Flip-Cards für jede Kategorie
             Object.entries(categories).forEach(([category, skills]) => {
                 const categoryContainer = document.createElement('div');
                 categoryContainer.id = cleanForId(category); // Bereinigten Kategorienamen als ID setzen
                 categoryContainer.classList.add('category-container'); // Klasse hinzufügen
                 categoryContainer.innerHTML = `
-                <h3>${category}</h3>
-            `;
+        <h3>${category}</h3>
+    `;
 
                 // Container für die Skills dieser Kategorie
                 const categorySkillsContainer = document.createElement('div');
@@ -323,35 +324,38 @@
                     skillElement.classList.add('skill');
                     skillElement.addEventListener('click', () => flipCard(skillElement));
                     skillElement.innerHTML = `
-                    <div class="skill-content" onclick="flipCard(this)">
-                        <div class="skill-front">
-                            <h4 class="skill-name">${skill.name}</h4>
-                            <div class="proficiency-chart" id="proficiency-chart-${skillId}"></div>
-                        </div>
-                        <div class="skill-back">
-                            <h4>${skill.name}</h4>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill" style="width: ${appliedTotalPercent}%"></div>
-                                <div class="skill-bar-value">${appliedTotalPercent.toFixed(2)}%</div>
-                                <div class="skill-bar-label">Total Applied</div>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill" style="width: ${coachGuidedAppliedPercent}%"></div>
-                                <div class="skill-bar-value">${coachGuidedAppliedPercent.toFixed(2)}%</div>
-                                <div class="skill-bar-label">Coach Guided Applied</div>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill" style="width: ${appliedUnassistedPercent}%"></div>
-                                <div class="skill-bar-value">${appliedUnassistedPercent.toFixed(2)}%</div>
-                                <div class="skill-bar-label">Applied Unassisted</div>
-                            </div>
-                            <h5>Projects</h5>
-                            <ul>
-                                ${skill.projects.map(project => `<li>${project.name} (${project.hours} hours)</li>`).join('')}
-                            </ul>
+            <div class="skill-content" onclick="flipCard(this)">
+                <div class="skill-front">
+                    <h4 class="skill-name">${skill.name}</h4>
+                    <div class="proficiency-chart" id="proficiency-chart-${skillId}"></div>
+                </div>
+                <div class="skill-back">
+                    <h4 class="skill-name">${skill.name}</h4>
+                    <div class="skill-project-use-container">
+                        <h5>Used in Projects</h5>
+                        <ul>
+                            ${skill.projects.map(project => `<li>${project.name} (${project.hours} hours)</li>`).join('')}
+                        </ul>
+                    </div>
+                   <div class="skill-bar-container">
+                        <div class="skill-bar">
+                            <span class="skill-bar-label skill-bar-label-total-applied">total applied</span>
+                                <div class="skill-bar-fill total-applied" style="width: ${appliedTotalPercent}%">
+                                    <span class="skill-bar-value">${appliedTotalPercent.toFixed(2)}%</span>
+                                </div>
+                            <span class="skill-bar-label skill-bar-label-unassisted">unassisted</span>
+                                <div class="skill-bar-fill unassisted" style="width: ${appliedUnassistedPercent}%">
+                                     <span class="skill-bar-value">${appliedUnassistedPercent.toFixed(2)}%</span>
+                                </div>
+                            <span class="skill-bar-label skill-bar-label-coach-guided">coach guided</span>
+                                <div class="skill-bar-fill coach-guided" style="width: ${coachGuidedAppliedPercent}%">
+                                    <span class="skill-bar-value">${coachGuidedAppliedPercent.toFixed(2)}%</span>
+                                </div>
                         </div>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
 
                     // Container für das Kreisdiagramm
                     const proficiencyChartContainer = skillElement.querySelector(`#proficiency-chart-${skillId}`);

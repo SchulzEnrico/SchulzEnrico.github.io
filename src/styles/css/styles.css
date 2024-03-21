@@ -131,6 +131,21 @@ nav {
     color: white;
     outline: none;
     border-bottom: 1px solid var(--color-31); }
+  nav #credits-nav-link {
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-radius: 1px 1px 3px 35px;
+    outline: 1px solid var(--color-1);
+    box-shadow: inset 2px 0 10px var(--color-3-1), 2px 2px 10px var(--color-3); }
+  nav #credits-nav-link a {
+    margin: 10px 15px 10px 25px;
+    color: var(--color-3-1);
+    font-weight: bold;
+    top: 0;
+    letter-spacing: 0; }
+  nav #credits-nav-link a:hover {
+    color: var(--color-31); }
 
 @keyframes mirrorRotate {
   0% {
@@ -275,6 +290,23 @@ nav {
     background-position: -500%; }
   100% {
     background-position: 500%; } }
+.motivation-container {
+  display: flex;
+  padding: 50px;
+  max-width: 95vw; }
+
+.motivation-content {
+  font-weight: bold; }
+
+.motivation-essence {
+  font-family: var(--font-2);
+  font-size: 225%;
+  font-weight: 600;
+  line-height: 150%;
+  perspective: 200px;
+  letter-spacing: 10px;
+  color: var(--color-3); }
+
 .skills-wrapper {
   margin: 25px;
   display: flex;
@@ -283,7 +315,8 @@ nav {
   padding: 20px;
   min-height: 78vh;
   max-height: 78vh;
-  max-width: 90vw; }
+  min-width: 95vw;
+  max-width: 95vw; }
 
 .category-container {
   display: grid;
@@ -294,8 +327,7 @@ nav {
   gap: 10px;
   /* Abstand zwischen den Karten */
   margin: 15px;
-  max-height: 80vh;
-  border: 1px solid green; }
+  max-height: 80vh; }
 
 .category-container h3 {
   margin: 0;
@@ -308,8 +340,7 @@ nav {
 .category-skills-container {
   display: grid;
   gap: 10px;
-  max-height: 80vh;
-  border: 1px solid red; }
+  max-height: 80vh; }
 
 .skill {
   perspective: 1000px;
@@ -352,58 +383,155 @@ nav {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /*display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
-  text-align: center;*/
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  overflow: hidden; }
+  border-radius: 15px; }
 
 .skill .skill-front {
   display: grid; }
 
-.skill .skill-back {
-  transform: rotateY(180deg); }
+.proficiency-chart {
+  transform: scaleX(-1);
+  position: relative;
+  left: -40px;
+  bottom: -7px;
+  scale: .3; }
 
 .skill-name {
   position: absolute;
   max-width: 65px;
   left: 2px;
-  top: -9px;
-  color: var(--color-3-2);
-  font-family: var(--font-2);
-  letter-spacing: 2px;
-  font-size: .6em;
-  padding: 2px 10px 5px 7px;
-  background-color: var(--color-00);
-  border-radius: 14px 1px 35px 1px;
-  outline: 1px solid var(--color-1);
-  text-shadow: -1px -1px 1px var(--color-41), 1px 1px 2px var(--color-41), 0 0 4px var(--color-4-0);
-  box-shadow: inset -2px -2px 10px var(--color-3-1), 2px 2px 10px var(--color-22); }
+  top: -15px;
+  font-family: var(--font-1);
+  font-size: 1em;
+  padding: 0 5px 5px 10px;
+  color: var(--color-22);
+  letter-spacing: 3px;
+  text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
 
-.proficiency-chart {
-  transform: scaleX(-1);
-  scale: .35; }
+.skill-back .skill-name {
+  grid-row: 1;
+  grid-column: 1;
+  max-width: fit-content;
+  position: absolute;
+  padding: 5px 25px 5px 15px;
+  font-size: 1.5em;
+  top: -51px;
+  left: 21px;
+  color: var(--color-0);
+  background-color: var(--color-1);
+  border-radius: 14px 1px 35px 1px;
+  outline: 2px solid var(--color-2);
+  box-shadow: inset -2px -2px 10px var(--color-2), 2px 2px 10px var(--color-21); }
+
+.skill .skill-back {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 8fr 5fr;
+  justify-items: start;
+  transform: rotateY(180deg); }
+
+.skill-project-use-container {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: left;
+  justify-self: center;
+  width: 90%;
+  height: 85%; }
+
+.skill-project-use-container h5 {
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-family: var(--font-2);
+  color: var(--color-1);
+  text-shadow: -1px -1px 1px var(--color-00), 2px 2px 2px rgba(201, 201, 201, 0.06); }
+
+.skill-bar-container {
+  grid-row: 3;
+  grid-column: 1;
+  width: 80%;
+  height: 26px;
+  position: relative;
+  top: -30px;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: start;
+  align-items: baseline;
+  justify-self: center;
+  /* border: 1px solid red;*/ }
 
 /* Stil für die Balken */
 .skill-bar {
-  width: 80%;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  margin: 5px 0; }
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 25px;
+  border: 1px solid var(--color-41);
+  outline: 3px solid var(--color-00);
+  background-color: var(--color-01);
+  border-radius: 25px;
+  box-shadow: inset -2px -2px 10px var(--color-2), inset 2px 2px 10px var(--color-2), -2px -2px 5px var(--color-4), 2px 2px 5px var(--color-4);
+  overflow: hidden;
+  /* Hinzugefügt, um das Überlappen zu ermöglichen */ }
 
 .skill-bar-fill {
+  position: absolute;
+  top: 0;
+  /* Positionierung oben setzen */
   height: 100%;
-  border-radius: 5px;
-  background-color: #4caf50; }
+  border-radius: 25px 20px 20px 25px;
+  border: 1px solid var(--color-00);
+  box-shadow: inset 0 1px 3px var(--color-4-0), inset 0 5px 10px var(--color-31), inset -1px -5px 10px var(--color-00); }
+
+.total-applied {
+  background-color: var(--color-3-3);
+  /* Farbe für total applied */
+  z-index: 1;
+  left: 0;
+  /* Positionierung für total applied */ }
+
+.unassisted {
+  background-color: var(--color-3-2);
+  /* Farbe für unassisted */
+  z-index: 2;
+  left: 0;
+  /* Positionierung für unassisted */ }
+
+.coach-guided {
+  background-color: var(--color-3-1);
+  /* Farbe für coach guided */
+  z-index: 3;
+  left: 0;
+  /* Positionierung für coach guided */ }
 
 .skill-bar-value {
-  color: var(--color-0); }
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  right: 5px;
+  color: transparent;
+  letter-spacing: 4px;
+  text-shadow: 1px -1px 0 var(--color-1), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-4-0);
+  z-index: 4;
+  /* Damit der Wert über den Balken angezeigt wird */ }
+
+.skill-bar-label-total-applied {
+  right: 0; }
+
+.skill-bar-label-unassisted {
+  right: 0; }
+
+.skill-bar-label-coach-guided {
+  right: 0; }
 
 .skill-bar-label {
-  color: var(--color-0); }
+  position: sticky;
+  /* Positionierung auf absolut ändern */
+  margin: 0;
+  right: 10px;
+  font-family: var(--font-1);
+  color: var(--color-4);
+  z-index: 4; }
 
 .projects-wrapper {
   margin: 25px;
@@ -413,7 +541,8 @@ nav {
   padding: 20px;
   min-height: 78vh;
   max-height: 78vh;
-  max-width: 90vw; }
+  min-width: 95vw;
+  max-width: 95vw; }
 
 .project-management-container {
   display: grid;
@@ -488,24 +617,25 @@ nav {
 .project-year {
   position: absolute;
   left: 3px;
-  top: -12px;
-  color: var(--color-00);
-  font-family: var(--font-2);
-  letter-spacing: 2px;
-  font-size: .9em;
+  top: -16px;
+  font-family: var(--font-1);
+  font-size: 1.2em;
   font-weight: bold;
   padding: 7px 27px 6px 15px;
   background-color: var(--color-00);
   border-radius: 14px 1px 35px 1px;
   outline: 1px solid var(--color-1);
-  text-shadow: -1px -1px 2px var(--color-23), 1px 1px 2px var(--color-23), 0 0 5px var(--color-1);
+  color: var(--color-22);
+  letter-spacing: 3px;
+  text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
   box-shadow: inset -2px -2px 10px var(--color-3-1), 2px 2px 10px var(--color-22); }
 
 .credits-wrapper {
   display: block;
   padding: 25px;
   height: 90vh;
-  max-width: 90vw; }
+  min-width: 95vw;
+  max-width: 95w; }
 
 .credits {
   padding: 0;
@@ -518,8 +648,7 @@ nav {
   text-align: center; }
 
 #credits-h2 {
-  position: sticky;
-  color: var(--color-31); }
+  position: sticky; }
 
 .fade {
   position: sticky;
@@ -646,10 +775,12 @@ footer .ripples-container-large {
 
 i {
   margin: 0 10px;
-  color: var(--color-4-0); }
+  color: var(--color-4-0);
+  opacity: .3; }
 
 i:hover {
-  scale: 1.3;
+  scale: 1.45;
+  opacity: .6;
   color: var(--color-3); }
 
 :root {
@@ -691,6 +822,7 @@ i:hover {
   color: var(--color-4); }
 
 body {
+  position: sticky;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -699,7 +831,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: auto; }
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 body::-webkit-scrollbar {
   width: 8px;

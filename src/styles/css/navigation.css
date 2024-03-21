@@ -66,6 +66,21 @@ nav {
     color: white;
     outline: none;
     border-bottom: 1px solid var(--color-31); }
+  nav #credits-nav-link {
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-radius: 1px 1px 3px 35px;
+    outline: 1px solid var(--color-1);
+    box-shadow: inset 2px 0 10px var(--color-3-1), 2px 2px 10px var(--color-3); }
+  nav #credits-nav-link a {
+    margin: 10px 15px 10px 25px;
+    color: var(--color-3-1);
+    font-weight: bold;
+    top: 0;
+    letter-spacing: 0; }
+  nav #credits-nav-link a:hover {
+    color: var(--color-31); }
 
 @keyframes mirrorRotate {
   0% {

@@ -2,8 +2,8 @@
 @import "header";
 @import 'navigation';
 @import "welcome";
-@import "about-me";
 @import "motivation";
+@import "about-me";
 @import "skills";
 @import "projects";
 @import "credits";
@@ -53,6 +53,7 @@
 }
 
 body {
+  position: sticky;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -61,7 +62,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 body::-webkit-scrollbar {
   width: 8px;

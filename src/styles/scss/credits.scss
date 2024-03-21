@@ -2,7 +2,8 @@
   display: block;
   padding: 25px;
   height: 90vh;
-  max-width: 90vw;
+  min-width: 95vw;
+  max-width: 95w;
 }
 
 .credits {
@@ -18,7 +19,6 @@
 
 #credits-h2 {
   position: sticky;
-  color: var(--color-31);
 }
 
 .fade {
