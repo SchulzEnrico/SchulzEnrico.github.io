@@ -1,0 +1,19 @@
+.motivation-container {
+  display: flex;
+  padding: 50px;
+  max-width: 95vw;
+}
+
+.motivation-content {
+  font-weight: bold;
+}
+
+.motivation-essence {
+  font-family: var(--font-2);
+  font-size: 225%;
+  font-weight: 600;
+  line-height: 150%;
+  perspective: 200px;
+  letter-spacing: 10px;
+  color: var(--color-3);
+}
