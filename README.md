@@ -1,1 +1,1 @@
-https://www.schulzenrico.github.io
+https://schulzenrico.github.io
