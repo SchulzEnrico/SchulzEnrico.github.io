@@ -69,7 +69,10 @@ nav {
   top: 10px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  /* #credits-nav-link a:hover {
+     color: var(--color-41);
+   }*/ }
   nav a {
     position: relative;
     text-decoration: none;
@@ -134,18 +137,24 @@ nav {
   nav #credits-nav-link {
     position: fixed;
     right: 0;
-    top: 0;
-    border-radius: 1px 1px 3px 35px;
-    outline: 1px solid var(--color-1);
-    box-shadow: inset 2px 0 10px var(--color-3-1), 2px 2px 10px var(--color-3); }
+    top: 9.98vh;
+    z-index: -1;
+    padding: 5px 10px 0 20px;
+    background-color: var(--color-3-2);
+    text-shadow: 1px -1px 0 var(--color-23), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-4-0);
+    border-radius: 0 0 2px 35px;
+    /*border: 1px solid var(--color-1);*/
+    box-shadow: inset 0 1px 3px var(--color-4-0), inset 0 -5px 10px var(--color-31), inset 2px 5px 10px var(--color-00);
+    opacity: .75; }
+  nav #credits-nav-link:hover {
+    background-color: var(--color-3-1);
+    opacity: 1; }
   nav #credits-nav-link a {
-    margin: 10px 15px 10px 25px;
-    color: var(--color-3-1);
+    margin: 0;
+    color: transparent;
     font-weight: bold;
     top: 0;
-    letter-spacing: 0; }
-  nav #credits-nav-link a:hover {
-    color: var(--color-31); }
+    letter-spacing: 4px; }
 
 @keyframes mirrorRotate {
   0% {
@@ -460,6 +469,19 @@ nav {
   justify-self: center;
   /* border: 1px solid red;*/ }
 
+.skill-label-container {
+  grid-row: 3;
+  grid-column: 1;
+  width: 80%;
+  height: 26px;
+  position: relative;
+  top: -30px;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: start;
+  align-items: baseline;
+  justify-self: center; }
+
 /* Stil für die Balken */
 .skill-bar {
   position: relative;
@@ -471,8 +493,7 @@ nav {
   background-color: var(--color-01);
   border-radius: 25px;
   box-shadow: inset -2px -2px 10px var(--color-2), inset 2px 2px 10px var(--color-2), -2px -2px 5px var(--color-4), 2px 2px 5px var(--color-4);
-  overflow: hidden;
-  /* Hinzugefügt, um das Überlappen zu ermöglichen */ }
+  /*  overflow: hidden; !* Hinzugefügt, um das Überlappen zu ermöglichen *!*/ }
 
 .skill-bar-fill {
   position: absolute;
@@ -482,6 +503,13 @@ nav {
   border-radius: 25px 20px 20px 25px;
   border: 1px solid var(--color-00);
   box-shadow: inset 0 1px 3px var(--color-4-0), inset 0 5px 10px var(--color-31), inset -1px -5px 10px var(--color-00); }
+
+.skill-label-fill {
+  position: absolute;
+  top: 0;
+  /* Positionierung oben setzen */
+  height: 200%;
+  z-index: 4; }
 
 .total-applied {
   background-color: var(--color-3-3);
@@ -507,31 +535,36 @@ nav {
 .skill-bar-value {
   position: absolute;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.1em;
+  top: 2px;
   right: 5px;
   color: transparent;
-  letter-spacing: 4px;
-  text-shadow: 1px -1px 0 var(--color-1), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-4-0);
+  letter-spacing: 3px;
+  text-shadow: 1px -1px 0 var(--color-22), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-4-0);
   z-index: 4;
   /* Damit der Wert über den Balken angezeigt wird */ }
 
+.skill-bar-label {
+  position: absolute;
+  color: var(--color-41);
+  font-size: .7em;
+  letter-spacing: 2px;
+  white-space: pre-line; }
+
 .skill-bar-label-total-applied {
-  right: 0; }
+  right: 10px;
+  top: 30px;
+  width: 50px; }
 
 .skill-bar-label-unassisted {
-  right: 0; }
+  right: 50%;
+  transform: translate(50%, 0);
+  top: -20px; }
 
 .skill-bar-label-coach-guided {
-  right: 0; }
-
-.skill-bar-label {
-  position: sticky;
-  /* Positionierung auf absolut ändern */
-  margin: 0;
   right: 10px;
-  font-family: var(--font-1);
-  color: var(--color-4);
-  z-index: 4; }
+  top: 30px;
+  width: 50px; }
 
 .projects-wrapper {
   margin: 25px;
@@ -635,7 +668,7 @@ nav {
   padding: 25px;
   height: 90vh;
   min-width: 95vw;
-  max-width: 95vw; }
+  max-width: 95w; }
 
 .credits {
   padding: 0;

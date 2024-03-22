@@ -108,3 +108,15 @@
               2px 2px 10px var(--color-22);
 }
 
+@media screen and (max-width: 768px) {
+  .project-management-container {
+    grid-template-columns: 1fr; /* Nur eine Spalte für mobile Ansicht */
+    max-width: 100%; /* Container passt sich der Bildschirmbreite an */
+    padding: 10px; /* Geringer seitlicher Abstand */
+  }
+
+  .project {
+    width: 100%; /* Projekte füllen die gesamte Breite des Containers */
+    max-width: 95vw; /* Keine maximale Breite für Projekte */
+  }
+}
