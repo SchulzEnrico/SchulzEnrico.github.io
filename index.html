@@ -36,7 +36,7 @@
             <a href="#skills" onclick="toggleActive(this)">Skills</a>
             <a href="#projects" onclick="toggleActive(this)">Projects</a>
             <div id="credits-nav-link">
-                <a href="#credits" onclick="toggleActive(this)">Credits</a>
+                <a href="#credits" onclick="toggleActive(this)">CREDITS</a>
             </div>
         </nav>
     </div>
@@ -337,22 +337,38 @@
                             ${skill.projects.map(project => `<li>${project.name} (${project.hours} hours)</li>`).join('')}
                         </ul>
                     </div>
-                   <div class="skill-bar-container">
+                    <div class="skill-bar-container">
                         <div class="skill-bar">
-                            <span class="skill-bar-label skill-bar-label-total-applied">total applied</span>
-                                <div class="skill-bar-fill total-applied" style="width: ${appliedTotalPercent}%">
-                                    <span class="skill-bar-value">${appliedTotalPercent.toFixed(2)}%</span>
-                                </div>
-                            <span class="skill-bar-label skill-bar-label-unassisted">unassisted</span>
-                                <div class="skill-bar-fill unassisted" style="width: ${appliedUnassistedPercent}%">
-                                     <span class="skill-bar-value">${appliedUnassistedPercent.toFixed(2)}%</span>
-                                </div>
-                            <span class="skill-bar-label skill-bar-label-coach-guided">coach guided</span>
-                                <div class="skill-bar-fill coach-guided" style="width: ${coachGuidedAppliedPercent}%">
-                                    <span class="skill-bar-value">${coachGuidedAppliedPercent.toFixed(2)}%</span>
-                                </div>
+                           <!-- <span class="skill-bar-label skill-bar-label-coach-guided">coach guided</span>-->
+                            <div class="skill-bar-fill coach-guided" style="width: ${coachGuidedAppliedPercent}%">
+                                <span class="skill-bar-value">${coachGuidedAppliedPercent.toFixed(2)}%</span>
+                            </div>
+                            <!--<span class="skill-bar-label skill-bar-label-unassisted">unassisted</span>-->
+                            <div class="skill-bar-fill unassisted" style="width: ${appliedUnassistedPercent}%">
+                                 <span class="skill-bar-value">${appliedUnassistedPercent.toFixed(2)}%</span>
+                            </div>
+                            <!--<span class="skill-bar-label skill-bar-label-total-applied">total applied</span>-->
+                            <div class="skill-bar-fill total-applied" style="width: ${appliedTotalPercent}%">
+                                <span class="skill-bar-value">${appliedTotalPercent.toFixed(2)}%</span>
+                            </div>
                         </div>
                     </div>
+
+                       <div class="skill-label-container">
+                        <div class="skill-bar">
+                            <div class="skill-label-fill coach-guided-label" style="width: ${coachGuidedAppliedPercent}%">
+                                <span class="skill-bar-label skill-bar-label-coach-guided">coach guided</span>
+                            </div>
+                            <div class="skill-label-fill unassisted-label" style="width: ${appliedUnassistedPercent}%">
+                               <span class="skill-bar-label skill-bar-label-unassisted">unassisted</span>
+                            </div>
+                            <div class="skill-label-fill total-applied-label" style="width: ${appliedTotalPercent}%">
+                                <span class="skill-bar-label skill-bar-label-total-applied">total applied</span>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         `;
