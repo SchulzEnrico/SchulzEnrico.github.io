@@ -663,12 +663,26 @@ nav {
   text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
   box-shadow: inset -2px -2px 10px var(--color-3-1), 2px 2px 10px var(--color-22); }
 
+@media screen and (max-width: 768px) {
+  .project-management-container {
+    grid-template-columns: 1fr;
+    /* Nur eine Spalte für mobile Ansicht */
+    max-width: 100%;
+    /* Container passt sich der Bildschirmbreite an */
+    padding: 10px;
+    /* Geringer seitlicher Abstand */ }
+
+  .project {
+    width: 100%;
+    /* Projekte füllen die gesamte Breite des Containers */
+    max-width: 95vw;
+    /* Keine maximale Breite für Projekte */ } }
 .credits-wrapper {
   display: block;
   padding: 25px;
   height: 90vh;
   min-width: 95vw;
-  max-width: 95w; }
+  max-width: 95vw; }
 
 .credits {
   padding: 0;
