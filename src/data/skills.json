@@ -1,0 +1,369 @@
+{
+  "categories": [
+    {
+      "name": "Web Design & Development",
+      "skills": [
+        {
+          "name": "HTML5",
+          "topics": "Lists, Tables, Forms, Media, Links, Semantics, Accessibility, SEO",
+          "proficiency": 90,
+          "coach_guided_applied": 85,
+          "applied_unassisted": 700,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 205,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 185,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 310,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "CSS3",
+          "topics": "Selectors, Box Model, Flexbox, Grid, Media Queries, Animations, Transitions, Responsive Webdesign",
+          "proficiency": 80,
+          "coach_guided_applied": 219,
+          "applied_unassisted": 710,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 400,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 50,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 260,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "Java Script",
+          "topics": "ECMAScript (ES2020), AJAX, jQuery, Array methods, Axios & Promises, Work with npm",
+          "proficiency": 65,
+          "coach_guided_applied": 230,
+          "applied_unassisted": 570,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 200,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 320,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 50,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "Type Script",
+          "topics": "Basics, Custom Types, React Callback-Types",
+          "proficiency": 60,
+          "coach_guided_applied": 50,
+          "applied_unassisted": 570,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 70,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 1,
+              "skill_use_types": "essential, training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 500,
+              "skill_use_types": "essential, training"
+            }
+          ]
+        },
+        {
+          "name": "Java",
+          "topics": "Version 21, OOP, TDD, Maven, Shell, Mockito, Lombok, Spring, MongoDB, NoSQL, Security, oAuth2",
+          "proficiency": 73,
+          "coach_guided_applied": 162,
+          "applied_unassisted": 250,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 100,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 1,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 150,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "PHP SQL",
+          "topics": "SQL, OOP, Security, Laravel",
+          "proficiency": 57,
+          "coach_guided_applied": 360,
+          "applied_unassisted": 80,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 80,
+              "skill_use_types": "training"
+            }
+          ]
+        },
+        {
+          "name": "React",
+          "topics": "Version 18.x, Vite, React-Router, Functional components, useState, useEffect",
+          "proficiency": 65,
+          "coach_guided_applied": 25,
+          "applied_unassisted": 205,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 95,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 1,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 110,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "Bootstrap",
+          "topics": "Version 4.x, Version 5.x, React Bootstrap, SCSS",
+          "proficiency": 80,
+          "coach_guided_applied": 120,
+          "applied_unassisted": 465,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 70,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 395,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "UX UI",
+          "topics": "UI design, UX improvement, Accessibility",
+          "proficiency": 90,
+          "coach_guided_applied": 100,
+          "applied_unassisted": 350,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 100,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 50,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 200,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "DevOps",
+          "topics": "Continuous integration, Continuous delivery, Hosting with render.com, Docker, Git, Github",
+          "proficiency": 60,
+          "coach_guided_applied": 35,
+          "applied_unassisted": 105,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 35,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 20,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 50,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "Web basics",
+          "topics": "APIs: REST, Web-Security Basics, HTTP & JSON, BasicAuth, oAuth2, Clean Code, AI-aided-coding",
+          "proficiency": 70,
+          "coach_guided_applied": 55,
+          "applied_unassisted": 265,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 55,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 80,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 130,
+              "skill_use_types": "essential & training"
+            }
+          ]
+        },
+        {
+          "name": "Image editing",
+          "topics": "Photoshop, Affinity, Crop pictures, Restoration, Sharpening, Coloring, Vector generation",
+          "proficiency": 90,
+          "coach_guided_applied": 160,
+          "applied_unassisted": 195,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 150,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 30,
+              "skill_use_types": "supportive & training"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 15,
+              "skill_use_types": "supportive & training"
+            }
+          ]
+        },
+        {
+          "name": "TYPO3 Wordpress",
+          "topics": "TypoScript, Website modeling, Integrate own code, User management, Child themes",
+          "proficiency": 65,
+          "coach_guided_applied": 90,
+          "applied_unassisted": 35,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 35,
+              "skill_use_types": "training"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Project Management",
+      "skills": [
+        {
+          "name": "IPMA ICB4 Level D",
+          "topics": "Practice, People, Perspective",
+          "proficiency": 89,
+          "coach_guided_applied": 578,
+          "applied_unassisted": 4450,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 1,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "Major customer vehicle delivery",
+              "hours_skill_used": 2160,
+              "skill_use_types": "essential & supportive"
+            },
+            {
+              "name": "Closure of a branch",
+              "hours_skill_used": 750,
+              "skill_use_types": "essential & training"
+            },
+            {
+              "name": "Press Driving Event Hamburg - Sylt",
+              "hours_skill_used": 120,
+              "skill_use_types": "essential & supportive"
+            },
+            {
+              "name": "Big Bang Berlin",
+              "hours_skill_used": 100,
+              "skill_use_types": "essential & supportive"
+            },
+            {
+              "name": "Press Driving Event:  Vitoria - Bilbao (Spain)",
+              "hours_skill_used": 240,
+              "skill_use_types": "essential & supportive"
+            },
+            {
+              "name": "Color Gentleman ",
+              "hours_skill_used": 1080,
+              "skill_use_types": "essential & supportive"
+            }
+          ]
+        },
+        {
+          "name": "Agil",
+          "topics": "Agile processes, Teamwork, Product Owner, Requirements management, Product development, Scrum Master, Process & project management",
+          "proficiency": 75,
+          "coach_guided_applied": 200,
+          "applied_unassisted": 260,
+          "projects": [
+            {
+              "name": "Education",
+              "hours_skill_used": 140,
+              "skill_use_types": "training"
+            },
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 30,
+              "skill_use_types": "supportive"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 90,
+              "skill_use_types": "essential, training & supportive"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
