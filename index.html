@@ -27,12 +27,11 @@
 <header>
     <div class="ripples-container-large">
         <img id="es" src="./media/es-complete_830401.svg" alt="ES"/>
-        <h1><span class="h1-enrico">Enrico</span><span class="h1-schulz">Schulz</span></h1>
+        <h1>Enrico Schulz</h1>
         <nav class="mobile-nav">
             <a href="#welcome" onclick="toggleActive(this)">Welcome</a>
             <a href="#motivation" onclick="toggleActive(this)">Motivation</a>
-            <a href="#about-me" onclick="toggleActive(this)">
-                <img id="nav-chuck" src="./media/base_chuck.svg" alt="about me"/></a>
+            <a href="#about-me" onclick="toggleActive(this)">About</a>
             <a href="#skills" onclick="toggleActive(this)">Skills</a>
             <a href="#projects" onclick="toggleActive(this)">Projects</a>
             <div id="credits-nav-link">
@@ -49,7 +48,7 @@
     </div>
 </main>
 <div id="motivation" class="motivation-container section">
-    <h2>Motivation</h2>
+    <h2><span class="section-haschtag">#</span>motivation</h2>
     <div class=motivation-content>
     <p>My motivation is extremely simple expressed in one sentence.</p>
 
@@ -58,10 +57,12 @@
     <p class="motivation-essence">"TOMORROW I WILL BE A BETTER VERSION OF YESTERDAY!"</p>
 
     <p>I have deeply internalized this essence of my motivation and will only take a step back if I want to take a run-up.</p>
+
+    <img id="nav-chuck" src="./media/base_chuck.svg" alt="about me"/>
 </div>
 </div>
-<div id="about-me" class="about-me-container section">
-        <h2>Who am I?</h2>
+<div id="about-me" class="about-container section">
+        <h2><span class="section-haschtag">#</span>about</h2>
             <p>
                 <!-- start slipsum code -->
                 Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
@@ -75,11 +76,11 @@
             </p>
 </div>
 <div id="skills" class="skills-container section">
-    <h2>Skills</h2>
+    <h2><span class="section-haschtag">#</span>skills</h2>
         <div id="skills-wrapper" class="skills-wrapper"></div>
 </div>
 <div id="projects" class="projects-container section">
-    <h2>Projects</h2>
+    <h2><span class="section-haschtag">#</span>projects</h2>
     <div class="projects-wrapper">
         <div class="project-management-container">
             <h3>Project Management</h3>
@@ -298,7 +299,7 @@
 <div id="credits" class="credits-container section">
     <div class="credits-wrapper credits">
         <div class="fade"></div>
-        <h2 id="credits-h2">CREDITS</h2>
+        <h2 id="credits-h2"><span class="section-haschtag">#</span>credits</h2>
         <section class="star-wars">
             <div class="crawl">
                 <div class="credits-title">
@@ -327,7 +328,7 @@
         <a href="mailto:e.mail.s@t-online.de">
             <i class="fa-solid fa-square-envelope fa-2xl"></i></a>
         <a href="tel:+4917641178225">
-            <i class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
+            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
 
         <div class="menu-toggle" onclick="toggleMenu()">
             <span class="burger-line"></span>
@@ -394,9 +395,9 @@
                 category["skills"].forEach(skill => {
                     const skillId = cleanForId(skill.name);
 
-                    const appliedTotalPercent = ((skill["coach_guided_applied"] + skill["applied_unassisted"]) / totalHours) * 100;
-                    const coachGuidedAppliedPercent = (skill["coach_guided_applied"] / totalHours) * 100;
-                    const appliedUnassistedPercent = (skill["applied_unassisted"] / totalHours) * 100;
+                    const appliedTotalPercent = ((skill["coach_guided_applied"] + skill["applied_unassisted"]) / totalHours) * 200;
+                    const coachGuidedAppliedPercent = (skill["coach_guided_applied"] / totalHours) * 200;
+                    const appliedUnassistedPercent = (skill["applied_unassisted"] / totalHours) * 200;
 
                     const skillElement = document.createElement('div');
                     skillElement.classList.add('skill');
@@ -418,37 +419,42 @@
                             <div class="skill-project-use-container">
                                 <h5>Used in Projects</h5>
                                 <ul>
-                                    ${skill["projects"].map(project => `<li>Name: ${project.name}</li>
-                                                                     <li>Applied: ${project["hours_skill_used"]}h</li>
-                                                                     <li>Usage Types : ${project["skill_use_types"]}</li>`).join('')}
+                                    ${skill["projects"].map(project => `<li>${project.name}
+                                                                            <ul>
+                                                                             <li>Applied: ${project["hours_skill_used"]}h</li>
+                                                                             <li>Usage: ${project["skill_use_types"]}</li>
+                                                                            </ul>
+                                                                        </li>`).join('')}
                                 </ul>
                             </div>
                             <div class="skill-bar-container">
+                            <div class="skill-bar-cover-start"></div>
                                 <div class="skill-bar">
                                     <div class="skill-bar-fill coach-guided" style="width: ${coachGuidedAppliedPercent}%">
-                                        <span class="skill-bar-value skill-bar-value-coach-guided">${coachGuidedAppliedPercent.toFixed(2)}%</span>
                                     </div>
                                     <div class="skill-bar-fill unassisted" style="width: ${appliedUnassistedPercent}%">
-                                        <span class="skill-bar-value skill-bar-value-unassisted">${appliedUnassistedPercent.toFixed(2)}%</span>
                                     </div>
                                     <div class="skill-bar-fill total-applied" style="width: ${appliedTotalPercent}%">
-                                        <span class="skill-bar-value skill-bar-value-total-applied">${appliedTotalPercent.toFixed(2)}%</span>
                                     </div>
                                 </div>
                                 <div class="skill-legend">
                                     <div class="skill-legend-item">
                                         <div>Coach Guided</div>
                                         <div class="skill-bar-fill coach-guided"></div>
+                                          <span class="skill-bar-value skill-bar-value-coach-guided">${coachGuidedAppliedPercent.toFixed(2)}%</span>
                                     </div>
                                     <div class="skill-legend-item">
                                         <div>Unassisted</div>
                                         <div class="skill-bar-fill unassisted"></div>
+                                        <span class="skill-bar-value skill-bar-value-unassisted">${appliedUnassistedPercent.toFixed(2)}%</span>
                                     </div>
                                     <div class="skill-legend-item">
                                         <div>Total Applied</div>
                                         <div class="skill-bar-fill total-applied"></div>
+                                        <span class="skill-bar-value skill-bar-value-total-applied">${appliedTotalPercent.toFixed(2)}%</span>
                                     </div>
                                 </div>
+                            <div class="skill-bar-cover-end"></div>
                             </div>
                         </div>
                     </div>
@@ -636,6 +642,7 @@
         displayNextEducation();
 
     }, 0);
+
 </script>
 </body>
 </html>
