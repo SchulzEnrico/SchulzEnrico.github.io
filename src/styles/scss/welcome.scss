@@ -1,8 +1,8 @@
 .welcome-container {
   position: relative;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: block;
   flex-direction: row;
   justify-content: space-between;
@@ -19,7 +19,7 @@
 
 .es {
   position: absolute;
-  left: 2%;
+  left: 0;
   height: 90%;
   filter: brightness(30%);
   transform: scaleX(-1);
@@ -34,8 +34,8 @@
   top: 49%;
   left: 7%;
   text-transform: uppercase;
-  font-family: Typewriter, ui-monospace, monospace, sans-serif;
-  font-size: 2em;
+  font-family: var(--font-2);
+  font-size: 1.6em;
   letter-spacing: 6px;
   overflow: hidden;
   background: linear-gradient(90deg,
@@ -48,12 +48,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   text-align: center;
-}
-
-.pipe-cursor {
-  position: relative;
-  color: transparent;
-  top: 29%;
 }
 
 @keyframes animate {

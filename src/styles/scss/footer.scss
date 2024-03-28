@@ -27,45 +27,69 @@ footer .ripples-container-large {
 
 .educations-container {
   position: fixed;
-  left: 0;
+  left: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
 }
 
+
 #educations-dot {
   position: absolute;
-  bottom: 7px;
-  font-size: 3em;
+  bottom: 1px;
+  left: -8px;
+  font-size: 4em;
+  animation: blink 2.5s infinite;
   color: var(--color-3);
+  text-shadow: 1px -1px 1px var(--color-2),
+  -1px 0 1px var(--color-00),
+  -1px -1px 1px var(--color-4-0);
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
 }
 
 .educations-wrapper {
   position: absolute;
   left: 20px;
-  bottom: -31px;
+  bottom: -37px;
   white-space: nowrap;
   overflow: hidden;
 }
 
 #educations {
-  font-size: 2.2em;
+  font-size: 2.5em;
   font-weight: bold;
   display: inline-block;
-  color: var(--color-23);
-  letter-spacing: 5px;
+  color: var(--color-4);
+  letter-spacing: 3px;
+  text-shadow: 1px -1px 1px var(--color-2),
+  -1px 0 1px var(--color-00),
+  -1px -1px 1px var(--color-4-0);
   white-space: nowrap;
   overflow: hidden;
 }
 
 i{
   margin: 0 10px;
-  color: var(--color-4-0);
-  opacity: .3;
+  color: var(--color-22);
+  letter-spacing: 3px;
+  text-shadow: 1px -1px 1px var(--color-2),
+  -1px 0 1px var(--color-00),
+  -1px -1px 1px var(--color-4-0);
+}
+
+#fa-square-phone-flip {
+  transform: scaleX(-1) rotate(90deg) ;
 }
 i:hover{
   scale: 1.45;
-  opacity: .6;
-  color: var(--color-3);
+  color: var(--color-41);
 }

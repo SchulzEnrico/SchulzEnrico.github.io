@@ -1,6 +1,10 @@
 .motivation-container {
   display: flex;
-  padding: 50px;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  min-height: 78vh;
+  min-width: 95vw;
   max-width: 95vw;
 }
 
@@ -17,3 +21,12 @@
   letter-spacing: 10px;
   color: var(--color-3);
 }
+
+  #nav-chuck { /* Selektiere das Bild */
+    width: 150px; /* Gib die gewünschte Breite */
+    height: auto; /* Autohöhe beibehalten, um das Bild zu skalieren */
+    opacity: .5;
+    transition: transform 0.3s ease; /* Füge eine Übergangseigenschaft hinzu */
+  }
+
+
