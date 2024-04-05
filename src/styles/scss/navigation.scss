@@ -70,12 +70,12 @@ nav {
     -1px -1px 1px var(--color-4-0);
 
     &:hover {
-      @include animate(bounce, up, null, 2s, 1);
+      transform: rotateX(180deg);
       font-weight: bold;
       color: var(--color-41);
     }
 
-    &.active { /* Hier wieder die Stile für das aktive Element */
+    &.active {
       color: var(--color-3);
       text-shadow: none;
       font-weight: bold;
@@ -85,14 +85,17 @@ nav {
 
     &:hover:not(:focus),
     &:active:not(.active) {
-      @include animate(rotate, up, null, 2s, 1);
+      color: var(--color-3);
+      font-weight: bold;
+      text-shadow: none;
     }
   }
 
   a:not(.active):focus {
     color: var(--color-41);
     outline: none;
-    transform: rotateX(180deg);
+    @include animate(bounce, up, null, 1s, .5);
+    font-weight: bold;
     text-shadow: none;
   }
 
@@ -131,9 +134,10 @@ nav {
     top: 0;
     letter-spacing: 4px;
   }
-
+  #credits-nav-link a:focus,
   #credits-nav-link a:hover {
-    @include animate(bounce, up, null, 1s, .5);
+    font-weight: bold;
+    color: var(--color-4)
   }
 
   #credits-nav-link a.active {

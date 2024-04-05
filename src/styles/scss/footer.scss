@@ -1,3 +1,5 @@
+@import 'navigation';
+
 footer {
   color: var(--color-21);
   position: fixed;
@@ -89,7 +91,16 @@ i{
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg) ;
 }
-i:hover{
+i:hover,
+i:active {
   scale: 1.45;
   color: var(--color-41);
+}
+
+a:focus,
+a:focus i{
+  color: var(--color-41);
+  outline: none;
+  @include animate(bounce, up, null, 1s, .5);
+  scale: 1.2;
 }

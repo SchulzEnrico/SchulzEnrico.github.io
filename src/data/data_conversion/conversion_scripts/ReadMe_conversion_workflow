@@ -1,0 +1,36 @@
+// TO EXECUTE THE SCRIPTS, THE PYTHON INTERPRETER: //
+
+        Python 3.12 (es) Python 3.12.2
+
+// TEMPORARILY UNDER: //
+
+        File/Project Structure/Project Settings/Project/SDK
+
+// MUST BE SELECTED. //
+
+// IF YOU ARE STILL IN THE MAIN FOLDER: IN THE TERMINAL WITH: //
+
+        cd src/data/data_conversion/conversion_scripts
+
+// NAVIGATE TO THE FOLDER WHERE THE SCRIPTS ARE LOCATED. //
+// AND THE SCRIPTS CAN THEN BE EXECUTED THERE WITH THE FOLLOWING COMMANDS... //
+    //FOR SKILLS USE:
+
+        python skillsXLSX_to_json_converter.py
+
+    //FOR PROJECTS USE:
+
+        python projectsXLSX_to_json_converter.py
+
+/// THEN THE CONVERTED .xlsx FILE IS FOUND AS A .json FILE IN THE ORDER data_conversion. AND IS PROCESSED FROM THE JavaScript FILES INTO index.html! ///
+
+///// !!!~~_____ IMPORTANT _____~~!!! /////
+// ONCE THE .json FILES HAVE BEEN SUCCESSFULLY CONVERTED, THE INTERPRETER MUST BE CALLED AGAIN UNDER: //
+
+        File/Project Structure/Project Settings/Project/SDK
+
+// TO: //
+
+        openjdk-21 (2) java version "21.0.1"
+
+// MUST BE RESET. //

@@ -277,7 +277,7 @@
           ]
         },
         {
-          "name": "TYPO3 Wordpress",
+          "name": "Wordpress TYPO3",
           "topics": "TypoScript, Website modeling, Integrate own code, User management, Child themes",
           "proficiency": 65,
           "coach_guided_applied": 90,
@@ -296,8 +296,8 @@
       "name": "Project Management",
       "skills": [
         {
-          "name": "IPMA ICB4 Level D",
-          "topics": "Practice, People, Perspective",
+          "name": "IPMA ICB4",
+          "topics": "Level D, Practice, People, Perspective",
           "proficiency": 89,
           "coach_guided_applied": 578,
           "applied_unassisted": 4450,
@@ -352,14 +352,23 @@
               "skill_use_types": "training"
             },
             {
-              "name": "es Portfolio",
-              "hours_skill_used": 30,
-              "skill_use_types": "supportive"
-            },
-            {
               "name": "Esourc(es)",
               "hours_skill_used": 90,
               "skill_use_types": "essential, training & supportive"
+            }
+          ]
+        },
+        {
+          "name": "Agi",
+          "topics": "Agile processes, Teamwork, Product Owner, Requirements management, Product development, Scrum Master, Process & project management",
+          "proficiency": 75,
+          "coach_guided_applied": 200,
+          "applied_unassisted": 120,
+          "projects": [
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 30,
+              "skill_use_types": "supportive"
             }
           ]
         }
