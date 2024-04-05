@@ -37,4 +37,15 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Demo files
+/demo/
+
+# Virtual Environment
 /venv/
+
+# Python Scripts
+*.py
+
+# SCSS
+/scss/
+
