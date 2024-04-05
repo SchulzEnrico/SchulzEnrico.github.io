@@ -1,0 +1,271 @@
+{
+  "categories": [
+    {
+      "name": "Project Management",
+      "projects": [
+        {
+          "name": "Major customer car delivery",
+          "year": 2012,
+          "project_details": [
+            {
+              "name_affix": "Decentralized processing of new deliveries",
+              "requirements": [
+                "Cross-company: Team management, Team mediation",
+                "Logistics",
+                "Quality control"
+              ],
+              "applied_skills": [
+                "Time management",
+                "Problem-solving"
+              ],
+              "links": [
+                {
+                  "link": "https://www.hamburg-audi.de/",
+                  "link_name": "Head client: Audi Hamburg GmbH "
+                },
+                {
+                  "link": "https://www.blg-logistics.com/standorte-deutschland/hamburg",
+                  "link_name": "Place of execution: BLG LOGISTICS GROUP AG & CO. KG"
+                },
+                {
+                  "link": "https://i-w-s.de/",
+                  "link_name": "Employer-1: IWS Servicegesellschaft"
+                },
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Employer-2: APZ GmbH"
+                },
+                {
+                  "link": "https://www.five-stars-hh.de/",
+                  "link_name": "Registration service: FiveStars"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Closure of a branch",
+          "year": 2013,
+          "project_details": [
+            {
+              "name_affix": "Dissolution and dismantling of a branch",
+              "requirements": [
+                "Project management",
+                "Communication"
+              ],
+              "applied_skills": [
+                "Leadership",
+                "Decision-making"
+              ],
+              "links": [
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Head client: APZ GmbH"
+                },
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Employer: APZ GmbH"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Press driving event - Mercedes-Benz",
+          "year": 2014,
+          "project_details": [
+            {
+              "name_affix": "V-Class  Hamburg - Sylt",
+              "requirements": [
+                "Event planning",
+                "Logistics"
+              ],
+              "applied_skills": [
+                "Team coordination",
+                "Communication"
+              ],
+              "links": [
+                {
+                  "link": "https://www.mercedes-benz.de/",
+                  "link_name": "Head client: Mercedes Benz"
+                },
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Employer: APZ GmbH"
+                },
+                {
+                  "link": "https://www.instagram.com/al.luxury.car.care/",
+                  "link_name": "Main service provider: Arben Lokaj"
+                },
+                {
+                  "link": "https://www.youtube.com/watch?v=XYZ456",
+                  "link_name": "Press Event After Movie"
+                },
+                {
+                  "link": "https://www.mercedes-benz.de/",
+                  "link_name": "Head client: Mercedes Benz"
+                },
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Employer: APZ GmbH"
+                }
+              ]
+            },
+            {
+              "name_affix": "Vito Vitoria - Bilbao (Spain)",
+              "requirements": [
+                "Event planning",
+                "Logistics"
+              ],
+              "applied_skills": [
+                "Team coordination",
+                "Communication"
+              ],
+              "links": []
+            }
+          ]
+        },
+        {
+          "name": "Big Bang Berlin - Mercedes-Benz",
+          "year": 2014,
+          "project_details": [
+            {
+              "name_affix": "World premiere Vito",
+              "requirements": [
+                "Operations coordination",
+                "Marketing"
+              ],
+              "applied_skills": [
+                "Public speaking",
+                "Presentation skills"
+              ],
+              "links": [
+                {
+                  "link": "https://www.mercedes-benz.de/",
+                  "link_name": "Head client: Mercedes Benz"
+                },
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Employer: APZ GmbH"
+                },
+                {
+                  "link": "https://www.instagram.com/al.luxury.car.care/",
+                  "link_name": "Main service provider: Arben Lokaj"
+                },
+                {
+                  "link": "https://www.youtube.com/watch?v=ABC123",
+                  "link_name": "Big Bang After Movie"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Color Gentlemen",
+          "year": 2016,
+          "project_details": [
+            {
+              "name_affix": "Converting a property into a paint shop",
+              "requirements": [
+                "Project planning",
+                "Construction"
+              ],
+              "applied_skills": [
+                "Problem-solving",
+                "Attention to detail"
+              ],
+              "links": [
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Head client: APZ GmbH"
+                },
+                {
+                  "link": "https://www.volkswagen-automobile-hamburg.de/",
+                  "link_name": "Previous tenant: Volkswagen Automobile Hamburg"
+                },
+                {
+                  "link": "https://www.bmw-hamburg.de/de/home/",
+                  "link_name": "Major customer of the client"
+                },
+                {
+                  "link": "https://www.instagram.com/al.luxury.car.care/",
+                  "link_name": "Main service provider: Arben Lokaj"
+                },
+                {
+                  "link": "https://www.kroschke.de/",
+                  "link_name": "Landlord: Christoph Kroschke GmbH"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Web Design & Development",
+      "projects": [
+        {
+          "name": "Esourc(es)",
+          "year": 2023,
+          "project_details": [
+            {
+              "name_affix": "My digital playground and knowledge source",
+              "requirements": [
+                "Web design",
+                "Web development",
+                "Ability test"
+              ],
+              "applied_skills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+              ],
+              "links": [
+                {
+                  "link": "https://esource.onrender.com",
+                  "link_name": "The daily changing result"
+                },
+                {
+                  "link": "https://www.wbstraining.de/",
+                  "link_name": "WBS Training - Web Development educators"
+                },
+                {
+                  "link": "https://www.gfn.de/",
+                  "link_name": "GFN - Web Design educators"
+                },
+                {
+                  "link": "https://www.neuefische.de/",
+                  "link_name": "neue fische - Java bootcamp educators"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "es Portfolio",
+          "year": 2024,
+          "project_details": [
+            {
+              "name_affix": "THE FACTS: My personality and the foundation behind it",
+              "requirements": [
+                "Web design",
+                "Frontend development"
+              ],
+              "applied_skills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+              ],
+              "links": [
+                {
+                  "link": "schulzenrico.github.io",
+                  "link_name": "That's me"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

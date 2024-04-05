@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>ES-Credits</title>
+</head>
+<body>
+<header>
+    <div class="ripples-container-large">
+        <img id="es" src="./media/es-complete_830401.svg" alt="ES"/>
+        <h1>Enrico Schulz</h1>
+        <nav class="mobile-nav">
+            <a href="./index.html#welcome" onclick="toggleActive(this)">Welcome</a>
+            <a href="./index.html#motivation" onclick="toggleActive(this)">Motivation</a>
+            <a href="./index.html#about-me" onclick="toggleActive(this)">About</a>
+            <a href="./index.html#skills" onclick="toggleActive(this)">Skills</a>
+            <a href="./index.html#projects" onclick="toggleActive(this)">Projects</a>
+            <div id="credits-nav-link">
+                <a href="#credits" onclick="toggleActive(this)">CREDITS</a>
+            </div>
+        </nav>
+    </div>
+</header>
+<main id="credits" class="credits-container section">
+    <div class="credits-wrapper credits">
+        <div class="fade"></div>
+        <h2 id="credits-h2"><span class="section-haschtag">#</span>credits</h2>
+        <section class="star-wars">
+            <div class="crawl">
+                <div class="credits-title">
+                    <p>Episode</p>
+                    <p class="episode-number">IV</p>
+                    <h6>a<br>next<br>CHAPTER</h6>
+                </div>
+                <p> Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+            </div>
+        </section>
+    </div>
+</main>
+<footer>
+    <div class="ripples-container-large">
+        <div class="educations-container">
+            <div id="educations-dot" class="blink">.</div>
+            <div class="educations-wrapper">
+                <p id="educations"></p>
+            </div>
+        </div>
+        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+        <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
+            <i class="fa-brands fa-square-github fa-2xl"></i></a>
+        <a href="mailto:e.mail.s@t-online.de">
+            <i class="fa-solid fa-square-envelope fa-2xl"></i></a>
+        <a href="tel:+4917641178225">
+            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="./src/javaScript/global.js"></script>
+<script src="./dist/jquery.ripples.js"></script>
+<script src="./src/javaScript/ripples.js"></script>
+<script src="./src/javaScript/education.js"></script>
+</body>
+</html>

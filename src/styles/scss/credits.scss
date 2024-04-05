@@ -18,7 +18,6 @@
   max-height: 70vh;
   min-width: 95vw;
   max-width: 95vw;
-
 }
 
 .fade {
@@ -56,9 +55,9 @@
   font-size: 600%;
   line-height: .62;
   color: var(--color-4);
-  letter-spacing: 42px;
   font-weight: 600;
   z-index: 1;
+  letter-spacing: 42px;
 }
 
 .credits-title p {
@@ -81,8 +80,8 @@ h6 {
 }
 
 .crawl {
-  position: relative; /* Geändert von "relative" zu "absolute" */
-  bottom: 0; /* Anstatt "top", "bottom" verwenden */
+  position: relative;
+  bottom: 0;
   transform-origin: 50% 100%;
   animation: crawl 50s linear;
 }

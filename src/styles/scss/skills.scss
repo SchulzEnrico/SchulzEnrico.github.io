@@ -22,9 +22,9 @@
   grid-row: 1;
   grid-column: 1 / -1;
   font-family: var(--font-2);
-  font-size: 2em;
+  font-size: 1.5em;
   max-height: 50px;
-  color: var(--color-3-1);
+  color: var(--color-3);
   letter-spacing: 8px;
   opacity: .8;
   text-shadow: 1px 0 1px var(--color-2),
@@ -44,7 +44,7 @@
 .skill {
   perspective: 1000px;
   width: 200px;
-  height: 150px;
+  height: 130px;
   border-radius: 15px;
   border: 1px solid var(--color-4);
   outline: 2px solid var(--color-22);
@@ -98,9 +98,9 @@
 .proficiency-chart {
   transform: scaleX(-1);
   position: relative;
-  bottom: -40px;
-  right: -35px;
-  scale: .5;
+  bottom: -25px;
+  right: -40px;
+  scale: .45;
 }
 
 .skill-name {
@@ -108,7 +108,7 @@
   left: 2px;
   top: -25px;
   font-family: var(--font-2);
-  font-size: 1.5em;
+  font-size: 1.45em;
   padding: 5px 5px 5px 15px;
   color: var(--color-22);
   letter-spacing: 3px;

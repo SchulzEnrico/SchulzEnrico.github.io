@@ -8,7 +8,7 @@ MIT License
 @author sirxemic / https://sirxemic.com/`
 
 export default {
-  entry: path.join(__dirname, '../src/main.js'),
+  entry: path.join(__dirname, '../src/global.js'),
   dest: path.join(__dirname, '../dist/jquery.ripples.js'),
   format: 'umd',
   plugins: [

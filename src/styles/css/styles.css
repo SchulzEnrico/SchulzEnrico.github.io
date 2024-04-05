@@ -61,9 +61,25 @@ nav {
     letter-spacing: 3px;
     text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
     nav a:hover {
-      animation: bounce 2s 1;
+      transform: rotateX(180deg);
       font-weight: bold;
       color: var(--color-41); }
+    nav a.active {
+      color: var(--color-3);
+      text-shadow: none;
+      font-weight: bold;
+      transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);
+      animation: mirrorRotate 1s forwards; }
+    nav a:hover:not(:focus), nav a:active:not(.active) {
+      color: var(--color-3);
+      font-weight: bold;
+      text-shadow: none; }
+  nav a:not(.active):focus {
+    color: var(--color-41);
+    outline: none;
+    animation: bounce 1s 0.5;
+    font-weight: bold;
+    text-shadow: none; }
 @keyframes bounce {
   0% {
     transform: translateY(0); }
@@ -71,27 +87,6 @@ nav {
     transform: translateY(-0.75rem); }
   100% {
     transform: translateY(0); } }
-    nav a.active {
-      /* Hier wieder die Stile für das aktive Element */
-      color: var(--color-3);
-      text-shadow: none;
-      font-weight: bold;
-      transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);
-      animation: mirrorRotate 1s forwards; }
-    nav a:hover:not(:focus), nav a:active:not(.active) {
-      animation: rotate 2s 1; }
-@keyframes rotate {
-  0% {
-    transform: rotateY(0deg); }
-  50% {
-    transform: rotateY(180deg); }
-  100% {
-    transform: rotateY(0deg); } }
-  nav a:not(.active):focus {
-    color: var(--color-41);
-    outline: none;
-    transform: rotateX(180deg);
-    text-shadow: none; }
   nav a.active:focus {
     color: white;
     outline: none;
@@ -119,15 +114,10 @@ nav {
     font-size: 1.3em;
     top: 0;
     letter-spacing: 4px; }
+  nav #credits-nav-link a:focus,
   nav #credits-nav-link a:hover {
-    animation: bounce 1s 0.5; }
-@keyframes bounce {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(-0.75rem); }
-  100% {
-    transform: translateY(0); } }
+    font-weight: bold;
+    color: var(--color-4); }
   nav #credits-nav-link a.active {
     color: var(--color-41);
     font-weight: bold;
@@ -294,16 +284,6 @@ nav {
   letter-spacing: 10px;
   color: var(--color-3); }
 
-#nav-chuck {
-  /* Selektiere das Bild */
-  width: 150px;
-  /* Gib die gewünschte Breite */
-  height: auto;
-  /* Autohöhe beibehalten, um das Bild zu skalieren */
-  opacity: .5;
-  transition: transform 0.3s ease;
-  /* Füge eine Übergangseigenschaft hinzu */ }
-
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -337,9 +317,9 @@ nav {
   grid-row: 1;
   grid-column: 1 / -1;
   font-family: var(--font-2);
-  font-size: 2em;
+  font-size: 1.5em;
   max-height: 50px;
-  color: var(--color-3-1);
+  color: var(--color-3);
   letter-spacing: 8px;
   opacity: .8;
   text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
@@ -355,7 +335,7 @@ nav {
 .skill {
   perspective: 1000px;
   width: 200px;
-  height: 150px;
+  height: 130px;
   border-radius: 15px;
   border: 1px solid var(--color-4);
   outline: 2px solid var(--color-22);
@@ -402,16 +382,16 @@ nav {
 .proficiency-chart {
   transform: scaleX(-1);
   position: relative;
-  bottom: -40px;
-  right: -35px;
-  scale: .5; }
+  bottom: -25px;
+  right: -40px;
+  scale: .45; }
 
 .skill-name {
   position: absolute;
   left: 2px;
   top: -25px;
   font-family: var(--font-2);
-  font-size: 1.5em;
+  font-size: 1.45em;
   padding: 5px 5px 5px 15px;
   color: var(--color-22);
   letter-spacing: 3px;
@@ -661,9 +641,9 @@ nav {
   grid-row: 1;
   grid-column: 1 / -1;
   font-family: var(--font-2);
-  font-size: 2em;
+  font-size: 1.5em;
   max-height: 50px;
-  color: var(--color-3-1);
+  color: var(--color-3);
   letter-spacing: 8px;
   opacity: .8;
   text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
@@ -737,9 +717,9 @@ nav {
   left: -15px;
   top: -16px;
   font-family: var(--font-1);
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-weight: bold;
-  padding: 7px 27px 6px 15px;
+  padding: 3px 15px 3px 15px;
   background-color: var(--color-00);
   border-radius: 14px 1px 35px 1px;
   outline: 1px solid var(--color-1);
@@ -815,9 +795,9 @@ nav {
   font-size: 600%;
   line-height: .62;
   color: var(--color-4);
-  letter-spacing: 42px;
   font-weight: 600;
-  z-index: 1; }
+  z-index: 1;
+  letter-spacing: 42px; }
 
 .credits-title p {
   padding: 0; }
@@ -836,9 +816,7 @@ h6 {
 
 .crawl {
   position: relative;
-  /* Geändert von "relative" zu "absolute" */
   bottom: 0;
-  /* Anstatt "top", "bottom" verwenden */
   transform-origin: 50% 100%;
   animation: crawl 50s linear; }
 
@@ -855,6 +833,178 @@ h6 {
   100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px); } }
+nav {
+  position: fixed;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  nav a {
+    text-decoration: none;
+    font-family: Typewriter, ui-monospace, monospace, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25em;
+    width: 10em;
+    color: var(--color-22);
+    margin: 1em .1em;
+    transition: text-shadow 50ms ease, color 50ms ease;
+    letter-spacing: 3px;
+    text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
+    nav a:hover {
+      transform: rotateX(180deg);
+      font-weight: bold;
+      color: var(--color-41); }
+    nav a.active {
+      color: var(--color-3);
+      text-shadow: none;
+      font-weight: bold;
+      transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);
+      animation: mirrorRotate 1s forwards; }
+    nav a:hover:not(:focus), nav a:active:not(.active) {
+      color: var(--color-3);
+      font-weight: bold;
+      text-shadow: none; }
+  nav a:not(.active):focus {
+    color: var(--color-41);
+    outline: none;
+    animation: bounce 1s 0.5;
+    font-weight: bold;
+    text-shadow: none; }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
+  nav a.active:focus {
+    color: white;
+    outline: none;
+    text-shadow: none; }
+  nav #credits-nav-link {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    top: 9.98vh;
+    width: 10em;
+    padding: 5px 10px 0 25px;
+    border-bottom: 1px solid var(--color-2);
+    border-left: 2px solid var(--color-1);
+    border-radius: 0 0 2px 35px;
+    background-color: var(--color-3-2);
+    box-shadow: inset 0 -5px 10px var(--color-3-1), inset -3px 5px 9px var(--color-23);
+    opacity: .85; }
+  nav #credits-nav-link:hover {
+    opacity: 1; }
+  nav #credits-nav-link a {
+    margin: 0;
+    max-width: fit-content;
+    color: var(--color-2);
+    font-size: 1.3em;
+    top: 0;
+    letter-spacing: 4px; }
+  nav #credits-nav-link a:focus,
+  nav #credits-nav-link a:hover {
+    font-weight: bold;
+    color: var(--color-4); }
+  nav #credits-nav-link a.active {
+    color: var(--color-41);
+    font-weight: bold;
+    animation: mirrorRotate 1s forwards; }
+
+@keyframes mirrorRotate {
+  0% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
+  50% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg); }
+  100% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
+    @keyframes bounce {
+      0% {
+        transform: translateY(0); }
+      50% {
+        transform: translateY(-0.75rem); }
+      100% {
+        transform: translateY(0); } }
+    animation: bounce 2.5s 1; } }
+.menu-toggle {
+  position: absolute;
+  right: 15px;
+  z-index: 999; }
+
+.burger-line {
+  display: block;
+  /* Damit die Spans standardmäßig inline sind */
+  position: relative;
+  width: 30px;
+  height: 3px;
+  border-radius: 25px;
+  background-color: var(--color-3);
+  margin: 6px 0;
+  transition: transform 0.3s ease; }
+
+/* Animation für das Öffnen des Burgers */
+.nav-open .burger-line:nth-child(1) {
+  position: relative;
+  transform: translateY(8px) rotate(45deg); }
+
+.nav-open .burger-line:nth-child(2) {
+  opacity: 0; }
+
+/* Animation für das Schließen des Burgers */
+.nav-open .burger-line:nth-child(3) {
+  position: relative;
+  transform: translateY(-10px) rotate(-45deg); }
+
+/* Zeige die mobile Navigation, wenn der Burger geklickt wird */
+.nav-open .mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-01);
+  padding: 50px 0;
+  /* Platz für den Header */
+  border-bottom-left-radius: 150px;
+  outline: 1px solid var(--color-3-1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  transition: transform 0.3s ease;
+  transform: translateX(0); }
+
+.nav-open .mobile-nav a {
+  color: var(--color-4); }
+
+.nav-open .mobile-nav a.active {
+  color: var(--color-3);
+  font-weight: bold;
+  transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1);
+  animation: mirrorRotate 1s forwards; }
+
+/* Media Query für kleinere Bildschirme (maximale Bildschirmbreite von 768px) */
+@media screen and (max-width: 768px) {
+  /* Zeigen Sie den Burger-Button und verstecken Sie das normale Menü */
+  .menu-toggle {
+    display: block; }
+
+  nav {
+    display: none; } }
+/* Stile für größere Bildschirme (mindestens 769px Bildschirmbreite) */
+@media screen and (min-width: 769px) {
+  /* Verstecken Sie den Burger-Button und zeigen Sie das normale Menü */
+  .menu-toggle {
+    display: none; }
+
+  nav {
+    display: flex; }
+
+  #credits-nav-link {
+    top: 0; } }
 footer {
   color: var(--color-21);
   position: fixed;
@@ -928,10 +1078,24 @@ i {
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg); }
 
-i:hover {
+i:hover,
+i:active {
   scale: 1.45;
   color: var(--color-41); }
 
+a:focus,
+a:focus i {
+  color: var(--color-41);
+  outline: none;
+  animation: bounce 1s 0.5;
+  scale: 1.2; }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
 :root {
   font-family: Typewriter, ui-monospace, monospace, sans-serif;
   width: 100%;
