@@ -43,9 +43,8 @@ jspm_packages
 # Virtual Environment
 /venv/
 
-# Python Scripts
-*.py
+# Python conversion files
+/src/data/data_conversion/conversion_scripts/
 
-# SCSS
-/scss/
-
+# SCSS files
+/src/styles/scss/
