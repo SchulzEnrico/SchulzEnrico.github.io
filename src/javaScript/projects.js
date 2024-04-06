@@ -14,7 +14,7 @@ fetch('./src/data/projects.json')
                 if (category["projects"]) {
                     category["projects"].forEach(project => {
                         const projectCard = document.createElement('div');
-                        projectCard.classList.add('project', 'clickable'); // Added 'clickable' class
+                        projectCard.classList.add('project', 'clickable');
                         projectCard.onclick = function() {
                             flipCard(this);
                         };
@@ -34,13 +34,13 @@ fetch('./src/data/projects.json')
 
                         // Display project name on the back
                         const projectNameBack = document.createElement('h5');
-                        projectNameBack.classList.add('project-name'); // Added 'project-name' class
+                        projectNameBack.classList.add('project-name');
                         projectNameBack.textContent = project.name;
                         projectBack.appendChild(projectNameBack);
 
                         if (project["project_details"] && project["project_details"].length > 0) {
                             const nameAffixBack = document.createElement('p');
-                            nameAffixBack.classList.add('name-affix'); // Added 'name-affix' class
+                            nameAffixBack.classList.add('name-affix');
                             nameAffixBack.textContent = project["project_details"][0]["name_affix"];
                             projectBack.appendChild(nameAffixBack);
 
@@ -48,7 +48,7 @@ fetch('./src/data/projects.json')
                             requirementsList.classList.add('project-requirements');
                             if (project["project_details"][0]["requirements"]) {
                                 const requirementsHeader = document.createElement('p');
-                                requirementsHeader.classList.add('details-header'); // Added 'details-header' class
+                                requirementsHeader.classList.add('details-header');
                                 requirementsHeader.textContent = "Project Requirements";
                                 projectBack.appendChild(requirementsHeader);
                                 project["project_details"][0]["requirements"].forEach(req => {
@@ -63,7 +63,7 @@ fetch('./src/data/projects.json')
                             appliedSkillsList.classList.add('applied-skills');
                             if (project["project_details"][0]["applied_skills"]) {
                                 const skillsHeader = document.createElement('p');
-                                skillsHeader.classList.add('details-header'); // Added 'details-header' class
+                                skillsHeader.classList.add('details-header');
                                 skillsHeader.textContent = "Applied Skills";
                                 projectBack.appendChild(skillsHeader);
                                 project["project_details"][0]["applied_skills"].forEach(skill => {
@@ -75,23 +75,39 @@ fetch('./src/data/projects.json')
                             }
                         }
 
-                        // Display links as a list
+// Display links as a list
                         const linksList = document.createElement('ul');
                         linksList.classList.add('project-links');
-                        if (project["project_details"] && project["project_details"].length > 0 && project["project_details"][0]["links"]) {
+
+                        if (Array.isArray(project["project_details"]) && project["project_details"].length > 0 && Array.isArray(project["project_details"][0]["links"])) {
                             const linksHeader = document.createElement('p');
-                            linksHeader.classList.add('details-header'); // Added 'details-header' class
+                            linksHeader.classList.add('details-header');
                             linksHeader.textContent = "Links";
                             projectBack.appendChild(linksHeader);
-                            project["project_details"][0]["links"].forEach(link => {
-                                const linkItem = document.createElement('li');
-                                const linkAnchor = document.createElement('a');
-                                linkAnchor.href = link.link;
-                                linkAnchor.textContent = link.link_name;
-                                linkItem.appendChild(linkAnchor);
-                                linksList.appendChild(linkItem);
-                            });
+
+                            const projectLinks = project["project_details"][0]["links"];
+                            if (projectLinks.length > 0) {
+                                projectLinks.forEach(link => {
+                                    const linkItem = document.createElement('li');
+                                    const linkAnchor = document.createElement('a');
+                                    linkAnchor.href = link.link;
+                                    linkAnchor.textContent = link["link_name"];
+                                    linkAnchor.target = "_blank"; // Set target attribute to open link in a new tab
+                                    linkItem.appendChild(linkAnchor);
+                                    linksList.appendChild(linkItem);
+                                });
+                            } else {
+                                const noLinksMessage = document.createElement('p');
+                                noLinksMessage.textContent = "No links available";
+                                linksList.appendChild(noLinksMessage);
+                            }
+
                             projectBack.appendChild(linksList);
+                        } else {
+                            // Handle the case where links are not available or not in the expected format
+                            const noLinksMessage = document.createElement('p');
+                            noLinksMessage.textContent = "No links available";
+                            projectBack.appendChild(noLinksMessage);
                         }
 
                         projectContent.appendChild(projectFront);
