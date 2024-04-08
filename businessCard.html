@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/css/styles.css">
+    <link rel="stylesheet" href="./src/styles/css/businessCard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>ES-Business Card</title>
+</head>
+<body>
+<header class="business-card-header">
+    <div class="ripples-container-large">
+        <h1>Enrico Schulz</h1>
+        <nav class="business-card-nav">
+            <div id="business-card-close-container">
+                <a href="./index.html#welcome" onclick="toggleActive(this)">
+                    <i class="fa-regular fa-circle-xmark business-card-close"></i>
+                </a>
+            </div>
+            <p>ENRICO SCHULZ</p>
+        </nav>
+    </div>
+</header>
+
+<main class="business-card-container ripples-container-large">
+    <div class="loading" id="portfolio">
+        <div id="professions"><span><span>Web Designer</span></span><span><span>ICB4 Level D</span></span><span><span>Product Owner</span></span><span><span>Scrum Master</span></span><span><span>Web Developer</span></span></div>
+        <div id="article">
+            <div id="content">
+                <div id="branches">
+                    <ul>
+                        <li>
+                            <div><a>Project<br>Management</a><span>Scrum IPMA</span></div>
+                        </li>
+                        <li>
+                            <div><a>Application & Web Developer</a><span>Webmaster Europe</span></div>
+                        </li>
+                        <li>
+                            <div><a>Wholesale & export merchant</a><span>IHK</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="business-card-footer">
+    <div class="ripples-container-large"></div>
+    <div class="business-card-footer-links">
+        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl"></i>Enrico Schulz</a>
+        <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
+            <i class="fa-brands fa-square-github fa-2xl"></i>SchulzEnrico</a>
+        <a href="mailto:e.mail.s@t-online.de">
+            <i class="fa-solid fa-square-envelope fa-2xl"></i>e.mail.s@t-online.de</a>
+        <a href="tel:+4917641178225">
+            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i>0176 41178225</a>
+    </div>
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script><script  src="./src/javaScript/businessCard.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="./src/javaScript/global.js"></script>
+<script src="./dist/jquery.ripples.js"></script>
+<script src="./src/javaScript/ripples.js"></script>
+</body>
+</html>

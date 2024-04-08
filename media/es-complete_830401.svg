@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%"
-     height="100%"
-     viewBox="0 0 33550 23723"
-     version="1.1"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     xml:space="preserve"
-     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(5.55556,0,0,5.55556,0,0)">
-        <g transform="matrix(5.55556,0,0,5.55556,-5444.44,-1223.17)">
-            <g id="_Image1_"
-               transform="matrix(1,0,0,0.971613,979,219.202)">
-                <g id="ES_compl_830401">
-                    <use id="_Image1_1"
-                         xlink:href="#_Image1" x="0" y="0" width="1089px" height="793px"/>
-                </g>
-            </g>
-            <g transform="matrix(0.053492,0,0,0.0451404,1244.42,643.56)">
-                <g transform="matrix(1622.21,0,0,1622.21,7260.47,1655)">
-                </g>
-                <text x="3179px" y="1655px" style="font-family:'AmericanTypewriter-Condensed', 'American Typewriter', serif;font-stretch:condensed;font-size:1622.21px;fill:rgb(167,172,178);">Enrico</text>
-            </g>
-            <g transform="matrix(0.0559173,0,0,0.0465305,1747.31,380.857)">
-                <g transform="matrix(1403.03,0,0,1403.03,4832.82,1524)">
-                </g>
-                <text x="1300px" y="1524px" style="font-family:'AmericanTypewriter-Condensed', 'American Typewriter', serif;font-stretch:condensed;font-size:1403.03px;fill:rgb(167,172,178);">Schulz</text>
+<svg width="100%" height="100%" viewBox="0 0 33550 23723" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="ES" transform="matrix(30.8642,0,0,29.9881,-30.8154,-29.8897)">
+        <g>
+            <g id="ES_compl_830401">
+                <use id="_Image1_1_" serif:id="_Image1_1" xlink:href="#_Image1" x="0" y="0" width="1089px" height="793px"/>
             </g>
         </g>
     </g>

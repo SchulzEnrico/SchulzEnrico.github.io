@@ -352,23 +352,14 @@
               "skill_use_types": "training"
             },
             {
-              "name": "Esourc(es)",
-              "hours_skill_used": 90,
-              "skill_use_types": "essential, training & supportive"
-            }
-          ]
-        },
-        {
-          "name": "Agi",
-          "topics": "Agile processes, Teamwork, Product Owner, Requirements management, Product development, Scrum Master, Process & project management",
-          "proficiency": 75,
-          "coach_guided_applied": 200,
-          "applied_unassisted": 120,
-          "projects": [
-            {
               "name": "es Portfolio",
               "hours_skill_used": 30,
               "skill_use_types": "supportive"
+            },
+            {
+              "name": "Esourc(es)",
+              "hours_skill_used": 90,
+              "skill_use_types": "essential, training & supportive"
             }
           ]
         }

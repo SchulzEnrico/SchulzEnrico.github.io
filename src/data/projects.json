@@ -10,13 +10,17 @@
             {
               "name_affix": "Decentralized processing of new deliveries",
               "requirements": [
-                "Cross-company: Team management, Team mediation",
+                "Cross-company: Team Coordination, Team mediation",
                 "Logistics",
                 "Quality control"
               ],
               "applied_skills": [
                 "Time management",
-                "Problem-solving"
+                "Quality management",
+                "Document management",
+                "Stakeholder management",
+                "Problem-solving",
+                ""
               ],
               "links": [
                 {
@@ -50,10 +54,15 @@
             {
               "name_affix": "Dissolution and dismantling of a branch",
               "requirements": [
-                "Project management",
-                "Communication"
+                "Project planning",
+                "Coordination",
+                "Purchasing processes",
+                "Fixed date of completion"
               ],
               "applied_skills": [
+                "Time management",
+                "Quality management",
+                "Stakeholder management",
                 "Leadership",
                 "Decision-making"
               ],
@@ -71,18 +80,19 @@
           ]
         },
         {
-          "name": "Press driving event - Mercedes-Benz",
+          "name": "Press driving event 1: Mercedes-Benz",
           "year": 2014,
           "project_details": [
             {
               "name_affix": "V-Class  Hamburg - Sylt",
               "requirements": [
-                "Event planning",
-                "Logistics"
+                "Subproject planning",
+                "Team-Operations Coordination"
               ],
               "applied_skills": [
                 "Team coordination",
-                "Communication"
+                "Communication",
+                "Stakeholder management"
               ],
               "links": [
                 {
@@ -100,44 +110,24 @@
                 {
                   "link": "https://www.youtube.com/watch?v=XYZ456",
                   "link_name": "Press Event After Movie"
-                },
-                {
-                  "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
-                },
-                {
-                  "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
                 }
               ]
-            },
-            {
-              "name_affix": "Vito Vitoria - Bilbao (Spain)",
-              "requirements": [
-                "Event planning",
-                "Logistics"
-              ],
-              "applied_skills": [
-                "Team coordination",
-                "Communication"
-              ],
-              "links": []
             }
           ]
         },
         {
-          "name": "Big Bang Berlin - Mercedes-Benz",
+          "name": "Big Bang Berlin: Mercedes-Benz",
           "year": 2014,
           "project_details": [
             {
               "name_affix": "World premiere Vito",
               "requirements": [
-                "Operations coordination",
-                "Marketing"
+                "Subproject planning",
+                "Team-Operations coordination"
               ],
               "applied_skills": [
-                "Public speaking",
-                "Presentation skills"
+                "Purchasing processes",
+                "Stakeholder management"
               ],
               "links": [
                 {
@@ -161,6 +151,34 @@
           ]
         },
         {
+          "name": "Press driving event 2: Mercedes-Benz",
+          "year": 2015,
+          "project_details": [
+            {
+              "name_affix": "Vito Vitoria - Bilbao (Spain)",
+              "requirements": [
+                "Subproject planning",
+                "Operations coordination"
+              ],
+              "applied_skills": [
+                "Purchasing processes",
+                "Team coordination",
+                "Stakeholder management"
+              ],
+              "links": [
+                {
+                  "link": "https://www.mercedes-benz.de/",
+                  "link_name": "Head client: Mercedes Benz"
+                },
+                {
+                  "link": "https://www.apz-carmotion.de/",
+                  "link_name": "Employer: APZ GmbH"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Color Gentlemen",
           "year": 2016,
           "project_details": [
@@ -168,11 +186,14 @@
               "name_affix": "Converting a property into a paint shop",
               "requirements": [
                 "Project planning",
-                "Construction"
+                "Operations coordination",
+                "Stakeholder management",
+                "Marketing"
               ],
               "applied_skills": [
-                "Problem-solving",
-                "Attention to detail"
+                "Purchasing processes",
+                "Stakeholder management",
+                "Problem-solving"
               ],
               "links": [
                 {
@@ -213,12 +234,19 @@
               "requirements": [
                 "Web design",
                 "Web development",
-                "Ability test"
+                "Project design",
+                "Project planning",
+                ""
               ],
               "applied_skills": [
                 "HTML",
-                "CSS",
-                "JavaScript"
+                "SCSS",
+                "TypeScript",
+                "Java",
+                "React",
+                "React Bootstrap",
+                "UX UI",
+                "DevOps"
               ],
               "links": [
                 {
@@ -249,12 +277,17 @@
               "name_affix": "THE FACTS: My personality and the foundation behind it",
               "requirements": [
                 "Web design",
-                "Frontend development"
+                "Frontend development",
+                "Project design",
+                "Project planning",
+                ""
               ],
               "applied_skills": [
                 "HTML",
                 "CSS",
-                "JavaScript"
+                "JavaScript",
+                "PythonUX UI",
+                "DevOps"
               ],
               "links": [
                 {

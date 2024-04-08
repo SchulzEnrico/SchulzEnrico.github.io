@@ -39,12 +39,3 @@ jspm_packages
 
 # Demo files
 /demo/
-
-# Virtual Environment
-/venv/
-
-# Python conversion files
-/src/data/data_conversion/conversion_scripts/
-
-# SCSS files
-/src/styles/scss/
