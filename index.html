@@ -7,21 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>ES</title>
-    <style>
-        @keyframes mirrorRotate {
-            0% {
-                transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg);
-            }
-            50% {
-                transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg);
-            }
-            100% {
-                transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
-                animation: bounceUp 0.5s forwards;
-            }
-        }
-    </style>
+    <title>Enrico Schulz</title>
 </head>
 <body>
 <header>
@@ -34,21 +20,26 @@
             <a href="#about-me" onclick="toggleActive(this)">About</a>
             <a href="#skills" onclick="toggleActive(this)">Skills</a>
             <a href="#projects" onclick="toggleActive(this)">Projects</a>
+            <div id="business-card">
+                <a href="./businessCard.html" onclick="toggleActive(this)">
+                    <i class="fa-solid fa-address-card"></i>
+                </a>
+            </div>
             <div id="credits-nav-link">
                 <a href="./credits.html" onclick="toggleActive(this)">CREDITS</a>
             </div>
         </nav>
     </div>
 </header>
-<main id="welcome" class="welcome-container section">
+<div id="welcome" class="welcome-container section ripples-container-large">
     <img id="es-shape" src="./media/es-smooth-shape.svg" alt="ES"/>
     <div id="es-container" class="es-container">
         <p class="greeting">Since you're here, allow yourself a closer look at me</p>
         <img src="./media/9_2_left_sw.png" alt="és" class="es">
     </div>
-</main>
+</div>
 <div id="motivation" class="motivation-container section">
-    <h2><span class="section-haschtag">#</span>motivation</h2>
+    <h2><span class="section-hashtag">#</span>motivation</h2>
     <div class=motivation-content>
     <p>My motivation is extremely simple expressed in one sentence.</p>
 
@@ -60,7 +51,7 @@
 </div>
 </div>
 <div id="about-me" class="about-container section">
-        <h2><span class="section-haschtag">#</span>about</h2>
+        <h2><span class="section-hashtag">#</span>about</h2>
             <p>
                 <!-- start slipsum code -->
                 Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
@@ -74,12 +65,11 @@
             </p>
 </div>
 <div id="skills" class="skills-container section">
-    <h2><span class="section-haschtag">#</span>skills</h2>
+    <h2><span class="section-hashtag">#</span>skills</h2>
         <div id="skills-wrapper" class="skills-wrapper"></div>
 </div>
 <div id="projects" class="projects-container section">
-    <h2><span class="section-haschtag">#</span>projects</h2>
-    <div class="projects-wrapper"></div>
+    <h2><span class="section-hashtag">#</span>projects</h2>
 </div>
 <footer>
     <div class="ripples-container-large">

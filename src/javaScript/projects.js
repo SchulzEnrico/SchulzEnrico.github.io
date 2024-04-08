@@ -4,12 +4,12 @@ fetch('./src/data/projects.json')
         const projectsContainer = document.getElementById('projects');
         if (data && data["categories"]) {
             data["categories"].forEach(category => {
-                const categoryContainer = document.createElement('div');
-                categoryContainer.classList.add('project-management-container');
-
                 const categoryTitle = document.createElement('h3');
                 categoryTitle.textContent = category.name;
-                categoryContainer.appendChild(categoryTitle);
+                projectsContainer.appendChild(categoryTitle);
+
+                const categoryContainer = document.createElement('div');
+                categoryContainer.classList.add('project-management-container');
 
                 if (category["projects"]) {
                     category["projects"].forEach(project => {
@@ -75,7 +75,7 @@ fetch('./src/data/projects.json')
                             }
                         }
 
-// Display links as a list
+                        // Display links as a list
                         const linksList = document.createElement('ul');
                         linksList.classList.add('project-links');
 

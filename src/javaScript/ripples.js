@@ -1,6 +1,6 @@
 $(document).ready(function () {
     try {
-        $('main').ripples({
+        $('portfolio').ripples({
             resolution: 1080,
             dropRadius: 20, //px
             perturbance: 0.03,
@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 
     setInterval(function () {
-        const $el = $('main');
+        const $el = $('portfolio');
         const x = Math.random() * $el.outerWidth();
         const y = Math.random() * $el.outerHeight();
         const dropRadius = 20;
