@@ -4,7 +4,8 @@
     <g id="ES" transform="matrix(30.8642,0,0,29.9881,-30.8154,-29.8897)">
         <g>
             <g id="ES_compl_830401">
-                <use id="_Image1_1_" serif:id="_Image1_1" xlink:href="#_Image1" x="0" y="0" width="1089px" height="793px"/>
+                <use id="_Image1_1_"
+                     xlink:href="#_Image1" x="0" y="0" width="1089px" height="793px"/>
             </g>
         </g>
     </g>
