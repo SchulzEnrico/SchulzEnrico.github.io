@@ -1,0 +1,22 @@
+.motivation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  min-height: 78vh;
+  min-width: 95vw;
+  max-width: 95vw; }
+
+.motivation-content {
+  font-weight: bold; }
+
+.motivation-essence {
+  font-family: var(--font-2);
+  font-size: 225%;
+  font-weight: 600;
+  line-height: 150%;
+  perspective: 200px;
+  letter-spacing: 10px;
+  color: var(--color-3); }
+
+/*# sourceMappingURL=motivation.css.map */

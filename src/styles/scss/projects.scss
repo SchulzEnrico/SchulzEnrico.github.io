@@ -33,6 +33,7 @@
   perspective: 1000px;
   border-radius: 15px;
   flex-shrink: 1;
+  background-color: var(--color-00);
   border: 1px solid var(--color-4);
   outline: 2px solid var(--color-22);
   box-shadow: inset 9px 9px 10px var(--color-2),
@@ -52,7 +53,7 @@
 .project.flip .project-content {
   padding: 20px;
   transform: rotateY(180deg);
-  background-color: var(--color-0);
+  background-color: var(--color-00);
   box-shadow: inset 0 0 15px var(--color-23);
   border: 2px solid var(--color-1);
   outline: 3px solid var(--color-3-2);

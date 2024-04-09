@@ -27,20 +27,24 @@
 
   --color-0: #020202;
   --color-00: #050505;
-  --color-01: #101010;
-  --color-1: #252526;
-  --color-2: #333334;
-  --color-21: #414144;
-  --color-22: #4a4a4d;
-  --color-23: #626265;
-  --color-3-3: #0a0000;
+  --color-000: #0a0a0a;
+  --color-01: #171717;
+  --color-011: #1f1e1e;
+  --color-1: #232121;
+  --color-11: #232323;
+  --color-2: #2f2f2f;
+  --color-21: #444444;
+  --color-22: #595959;
+  --color-23: #6e6e6e;
+  --color-3-3: #0e0000;
   --color-3-2: #1c0000;
-  --color-3-1: #440000;
-  --color-3: #5d0101;
-  --color-31: #830401;
-  --color-4: #7d7e83;
-  --color-41: #a7acb2;
-  --color-4-0: #c4c4c4;
+  --color-3-11: #2f0303;
+  --color-3-1: #460505;
+  --color-3: #5e0404;
+  --color-31: #8d0a06;
+  --color-4: #838383;
+  --color-41: #b4b4b4;
+  --color-4-0: #d3d3d3;
   --color-5-2: #334bf5;
   --color-5-1: #1832e3;
   --color-5: #011bd3;
@@ -48,7 +52,7 @@
   --color-52: #000b6d;
   --color-53: #000650;
 
-  background-color: var(--color-0);
+  background-color: var(--color-000);
   color: var(--color-4);
 }
 
@@ -100,7 +104,7 @@ h2 {
   top: 0;
   font-size: 5em;
   font-family: var(--font-2);
-  color: var(--color-00);
+  color: var(--color-0);
   letter-spacing: 10px;
   text-shadow: 1px 0 1px var(--color-2),
   -1px 0 1px var(--color-00),
@@ -109,8 +113,7 @@ h2 {
 
 .section-hashtag {
   font-family: var(--font-2);
-  font-size: .8em;
-  color: var(--color-3-2);
+  color: var(--color-3-11);
   text-shadow: 1px -1px 1px var(--color-2),
   -1px 0 1px var(--color-00),
   -1px -1px 1px var(--color-4-0);
