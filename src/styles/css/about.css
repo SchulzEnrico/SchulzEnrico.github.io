@@ -1,0 +1,10 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  min-height: 78vh;
+  min-width: 95vw;
+  max-width: 95vw; }
+
+/*# sourceMappingURL=about.css.map */

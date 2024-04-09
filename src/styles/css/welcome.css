@@ -7,26 +7,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .es-container {
   position: absolute;
   display: flex;
   height: 70%;
-  width: 100%;
-}
+  width: 100%; }
 
 .es {
   position: absolute;
   left: 0;
   height: 90%;
   filter: brightness(40%);
-  transform: scaleX(-1);
-}
+  transform: scaleX(-1); }
+
 .es:hover {
-  filter: brightness(70%);
-}
+  filter: brightness(70%); }
 
 .greeting {
   position: absolute;
@@ -38,23 +35,17 @@
   font-size: 1.6em;
   letter-spacing: 6px;
   overflow: hidden;
-  background: linear-gradient(90deg,
-          var(--color-01),
-          var(--color-41),
-          var(--color-00)
-  ) no-repeat;
+  background: linear-gradient(90deg, var(--color-01), var(--color-41), var(--color-00)) no-repeat;
   background-size: 80%;
   animation: animate 6s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  text-align: center;
-}
+  text-align: center; }
 
 @keyframes animate {
   0% {
-    background-position: -500%;
-  }
+    background-position: -500%; }
   100% {
-    background-position: 500%;
-  }
-}
+    background-position: 500%; } }
+
+/*# sourceMappingURL=welcome.css.map */
