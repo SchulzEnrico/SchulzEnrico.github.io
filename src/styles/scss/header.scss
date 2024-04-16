@@ -1,7 +1,7 @@
 header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -.2vw;
   padding: 0;
   width: 105%;
   height: 10vh;
@@ -25,22 +25,4 @@ header .ripples-container-large {
 
 h1 {
   visibility: hidden;
-}
-
-#es {
-  position: fixed;
-  margin: 0;
-  height: 13.5vh;
-  top: -15px;
-  left: -20px;
-  filter: brightness(65%);
-}
-
-#es-shape {
-  position: fixed;
-  margin: 0;
-  height: 14.5vh;
-  top: -18px;
-  left: -28px;
-  filter: brightness(65%);
 }

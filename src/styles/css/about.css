@@ -7,4 +7,9 @@
   min-width: 95vw;
   max-width: 95vw; }
 
+.about-container p {
+  position: relative;
+  left: 3vw;
+  margin-right: 5vw; }
+
 /*# sourceMappingURL=about.css.map */

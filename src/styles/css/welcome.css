@@ -1,6 +1,5 @@
 .welcome-container {
   position: relative;
-  padding: 0;
   width: 100vw;
   height: 100vh;
   display: block;
@@ -18,7 +17,7 @@
 .es {
   position: absolute;
   left: 0;
-  height: 90%;
+  height: 65vh;
   filter: brightness(40%);
   transform: scaleX(-1); }
 

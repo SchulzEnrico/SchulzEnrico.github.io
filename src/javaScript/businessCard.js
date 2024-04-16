@@ -59,3 +59,55 @@
     smoothScroll.init();
 
 })(window);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const branchOne = document.querySelector('.branch-one');
+    const branchTwo = document.querySelector('.branch-two');
+    const branchThree = document.querySelector('.branch-three');
+    const hoverBranchOnes = document.querySelectorAll('.hover-branch-one');
+    const hoverBranchTwos = document.querySelectorAll('.hover-branch-two');
+    const hoverBranchThrees = document.querySelectorAll('.hover-branch-three');
+
+    // Variablen für Helligkeiten und Übergangszeiten
+    const brightnessHover = '225%';
+    const brightnessReset = '100%';
+    const transitionTime = 450;
+
+    function changeBrightness(elements, brightnessValue) {
+        elements.forEach(function(element) {
+            element.style.transition = `filter ${transitionTime}ms linear`;
+            element.style.filter = `brightness(${brightnessValue})`;
+        });
+    }
+
+    function resetBrightness(elements) {
+        elements.forEach(function(element) {
+            element.style.transition = `filter ${transitionTime}ms linear`;
+            element.style.filter = `brightness(${brightnessReset})`;
+        });
+    }
+
+    branchOne.addEventListener('mouseover', function() {
+        changeBrightness(hoverBranchOnes, brightnessHover);
+    });
+
+    branchOne.addEventListener('mouseout', function() {
+        resetBrightness(hoverBranchOnes);
+    });
+
+    branchTwo.addEventListener('mouseover', function() {
+        changeBrightness(hoverBranchTwos, brightnessHover);
+    });
+
+    branchTwo.addEventListener('mouseout', function() {
+        resetBrightness(hoverBranchTwos);
+    });
+
+    branchThree.addEventListener('mouseover', function() {
+        changeBrightness(hoverBranchThrees, brightnessHover);
+    });
+
+    branchThree.addEventListener('mouseout', function() {
+        resetBrightness(hoverBranchThrees);
+    });
+});
