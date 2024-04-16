@@ -8,15 +8,22 @@
   max-width: 95vw; }
 
 .motivation-content {
+  position: relative;
+  left: 3vw;
+  margin-right: 5vw;
   font-weight: bold; }
 
 .motivation-essence {
   font-family: var(--font-2);
-  font-size: 225%;
-  font-weight: 600;
-  line-height: 150%;
-  perspective: 200px;
+  font-size: 1.7em;
+  font-weight: 400;
   letter-spacing: 10px;
-  color: var(--color-3); }
+  color: var(--color-3);
+  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
+  filter: brightness(85%); }
+
+.motivation-img {
+  position: relative;
+  height: 50vh; }
 
 /*# sourceMappingURL=motivation.css.map */

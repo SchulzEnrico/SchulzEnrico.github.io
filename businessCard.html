@@ -14,32 +14,26 @@
 <header class="business-card-header">
     <div class="ripples-container-large">
         <h1>Enrico Schulz</h1>
-        <nav class="business-card-nav">
-            <div id="business-card-close-container">
-                <a href="./index.html#welcome" onclick="toggleActive(this)">
-                    <i class="fa-regular fa-circle-xmark business-card-close"></i>
-                </a>
-            </div>
-            <p>ENRICO SCHULZ</p>
-        </nav>
+        <img id="es-business-card-logo" src="./media/es_logo_vignette.svg" alt="ES"/>
     </div>
 </header>
-
 <main class="business-card-container ripples-container-large">
+
     <div class="loading" id="portfolio">
-        <div id="professions"><span><span>Web Designer</span></span><span><span>ICB4 Level D</span></span><span><span>Product Owner</span></span><span><span>Scrum Master</span></span><span><span>Web Developer</span></span></div>
+        <div class="business-card shadow-wrapper"></div>
+        <div id="professions"><span><span class="hover-branch-three">Web Designer</span></span><span><span class="hover-branch-one hover-branch-two">ICB4 Level D</span></span><span><span class="hover-branch-one hover-branch-three">Product Owner</span></span><span><span class="hover-branch-one hover-branch-two hover-branch-three">Scrum Master</span></span><span><span class="hover-branch-three">Web Developer</span></span><span><span class="hover-branch-two">Wholesale & export</span></span></div>
         <div id="article">
             <div id="content">
                 <div id="branches">
                     <ul>
-                        <li>
+                        <li class="branch-one">
                             <div><a>Project<br>Management</a><span>Scrum IPMA</span></div>
                         </li>
-                        <li>
-                            <div><a>Application & Web Developer</a><span>Webmaster Europe</span></div>
+                        <li class="branch-two">
+                            <div><a>Management Assistent</a><span>IHK</span></div>
                         </li>
-                        <li>
-                            <div><a>Wholesale & export merchant</a><span>IHK</span></div>
+                        <li class="branch-three">
+                            <div><a>Application &<br>Web Development</a><span>Webmaster Europe</span></div>
                         </li>
                     </ul>
                 </div>
@@ -51,14 +45,17 @@
 <footer class="business-card-footer">
     <div class="ripples-container-large"></div>
     <div class="business-card-footer-links">
-        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
-            <i class="fa-brands fa-linkedin fa-2xl"></i>Enrico Schulz</a>
-        <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
-            <i class="fa-brands fa-square-github fa-2xl"></i>SchulzEnrico</a>
-        <a href="mailto:e.mail.s@t-online.de">
+        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="Visit my LinkedIn Account."  target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl"></i>enrico schulz</a>
+        <a href="https://github.com/SchulzEnrico" title="Visit my Github Account." target="_blank">
+            <i class="fa-brands fa-square-github fa-2xl"></i>schulzenrico</a>
+        <a href="mailto:e.mail.s@t-online.de" title="Write me an email.">
             <i class="fa-solid fa-square-envelope fa-2xl"></i>e.mail.s@t-online.de</a>
-        <a href="tel:+4917641178225">
-            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i>0176 41178225</a>
+        <a href="tel:+4917641178225" title="Let's have a Call.">
+            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i>0176 4117 8225</a>
+        <a id="business-card-close" href="./index.html#welcome" title="Back to my website.">
+            <i class="fa-regular fa-circle-xmark business-card-close"></i>
+        </a>
     </div>
 </footer>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script><script  src="./src/javaScript/businessCard.js"></script>
