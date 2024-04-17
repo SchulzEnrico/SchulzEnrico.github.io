@@ -1,15 +1,17 @@
 .motivation-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   padding: 20px;
   min-height: 78vh;
   min-width: 95vw;
   max-width: 95vw;
+  z-index: 0;
 }
 
 .motivation-content {
   position: relative;
+  top: 0;
   left: 3vw;
   margin-right: 5vw;
   font-weight: bold;

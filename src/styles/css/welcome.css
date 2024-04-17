@@ -1,27 +1,27 @@
 .welcome-container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
   display: block;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
 
 .es-container {
   position: absolute;
   display: flex;
-  height: 70%;
-  width: 100%; }
+  height: 70vh;
+  width: 100vw; }
 
-.es {
+#es {
   position: absolute;
   left: 0;
   height: 65vh;
   filter: brightness(40%);
-  transform: scaleX(-1); }
+  transform: scaleX(-1);
+  z-index: 102; }
 
-.es:hover {
+#es:hover {
   filter: brightness(70%); }
 
 .greeting {
@@ -46,5 +46,8 @@
     background-position: -500%; }
   100% {
     background-position: 500%; } }
+@media only screen and (max-width: 768px) {
+  .greeting {
+    top: 15%; } }
 
 /*# sourceMappingURL=welcome.css.map */
