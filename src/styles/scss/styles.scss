@@ -34,8 +34,8 @@
   --color-011: #1f1e1e;
   --color-1: #232121;
   --color-11: #232323;
-  --color-2: #2f2f2f;
-  --color-21: #444444;
+  --color-2: #2f2f31;
+  --color-21: #424244;
   --color-22: #595959;
   --color-23: #6e6e6e;
   --color-3-3: #0e0000;
@@ -55,7 +55,7 @@
   --color-53: #000650;
   --color-6: #912800;
 
-  background-color: var(--color-01);
+  background-color: var(--color-22);
   color: var(--color-4);
 }
 
@@ -137,14 +137,26 @@ h2 {
   justify-self: end;
   font-size: 5vmax;
   font-family: var(--font-2);
-  color: var(--color-0);
+/*  color: var(--color-21);*/
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-00),
+  2px 2px 0 var(--color-4),
+  1px -1px 0px var(--color-0),
+  -1px 0px 0px var(--color-0),
+  -1px -1px 0px var(--color-0),
+  1px 0px 0px var(--color-0),
+  3px 3px 0px var(--color-0),
+  -1px 2px 0px var(--color-0),
+  -1px 0px 0px var(--color-0),
+  4px 4px 10px var(--color-3-2),
+  0px -1px 0px var(--color-0);
   letter-spacing: 10px;
   filter: brightness(75%);
-  text-shadow: 1px 1px 3px var(--color-4),
+/*  text-shadow: 1px 1px 3px var(--color-4),
   4px 4px 10px var(--color-3-3),
   1px 0 1px var(--color-2),
   -1px 0 1px var(--color-00),
-  -1px -1px 1px var(--color-4-0);
+  -1px -1px 1px var(--color-4-0);*/
   z-index: 0;
 }
 
@@ -154,13 +166,20 @@ h2 {
   right: -2.25vmax;
   font-size: 6.5vmax;
   font-family: var(--font-2);
-  color: var(--color-3-11);
+/*  color: var(--color-3-11);*/
   transform: perspective(1000px) rotateY(50deg);
-  text-shadow: 1px 1px 5px var(--color-4),
-  1px -1px 1px var(--color-2),
-  -1px 0 1px var(--color-00),
-  -1px -1px 1px var(--color-4-0),
-  3px 10px 5px var(--color-00);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-11),
+  2px 2px 0 var(--color-4),
+  1px -1px 0px var(--color-0),
+  -1px 0px 0px var(--color-0),
+  -1px -1px 0px var(--color-0),
+  1px 0px 0px var(--color-0),
+  3px 3px 0px var(--color-0),
+  -1px 2px 0px var(--color-0),
+  -1px 0px 0px var(--color-0),
+  4px 4px 10px var(--color-3-2),
+  0px -1px 0px var(--color-0);
   z-index: -1;
 }
 
@@ -201,14 +220,22 @@ h2 {
   position: fixed;
   margin: 0;
   bottom: 0;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   display: inline-block;
-  color: var(--color-41);
   letter-spacing: 3px;
-  text-shadow: 1px -1px 1px var(--color-2),
-  -1px 0 1px var(--color-00),
-  -1px -1px 1px var(--color-4-0);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-2),
+  2px 2px 0 var(--color-41),
+  1px -1px 0px var(--color-3-2),
+  -1px 0px 0px var(--color-3-2),
+  -1px -1px 0px var(--color-3-2),
+  1px 0px 0px var(--color-3-2),
+  3px 3px 0px var(--color-3-2),
+  -1px 2px 0px var(--color-3-2),
+  -1px 0px 0px var(--color-3-2),
+  3px 3px 3px var(--color-31),
+  0px -1px 0px var(--color-3-2);
   white-space: nowrap;
   overflow: hidden;
 }

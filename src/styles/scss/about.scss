@@ -17,5 +17,19 @@
   align-items: start;
   left: 5vw;
   max-width: 90vw;
+  font-size: 1rem;
   font-weight: bold;
+  letter-spacing: 3px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-4),
+  1px 1px 0 var(--color-0),
+  1px -1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -1px -1px 0 var(--color-0),
+  1px 0 0 var(--color-0),
+  2px 2px 0 var(--color-0),
+  -1px 1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  2px 2px 5px var(--color-0),
+  0 -1px 0 var(--color-0);
 }

@@ -22,7 +22,7 @@
   font-size: 3.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-011),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 0 var(--color-4),
   1px -1px 0px var(--color-0),
   -1px 0px 0px var(--color-0),
@@ -31,6 +31,7 @@
   3px 3px 0px var(--color-0),
   -1px 2px 0px var(--color-0),
   -1px 0px 0px var(--color-0),
+  3px 3px 3px var(--color-41),
   0px -1px 0px var(--color-0);
 }
 
@@ -98,7 +99,7 @@
   letter-spacing: 3px;
   margin: 35px 15px 0 15px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 0 var(--color-41),
   1px -1px 0px var(--color-0),
   -1px 0px 0px var(--color-0),
@@ -107,6 +108,7 @@
   3px 3px 0px var(--color-0),
   -1px 2px 0px var(--color-0),
   -1px 0px 0px var(--color-0),
+  3px 3px 5px var(--color-3),
   0px -1px 0px var(--color-0);
 }
 
@@ -123,17 +125,24 @@
   left: -15px;
   top: -16px;
   font-family: var(--font-1);
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
-  padding: 0 15px;
+  padding: 0 25px 0 15px;
   background-color: var(--color-00);
   border-radius: 14px 1px 35px 1px;
   outline: 1px solid var(--color-1);
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px -1px 1px var(--color-2),
-  -1px 0 1px var(--color-00),
-  -1px -1px 1px var(--color-4-0);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-000),
+  2px 2px 0 var(--color-41),
+  1px -1px 0px var(--color-0),
+  -1px 0px 0px var(--color-0),
+  -1px -1px 0px var(--color-0),
+  1px 0px 0px var(--color-0),
+  3px 3px 0px var(--color-0),
+  -1px 2px 0px var(--color-0),
+  -1px 0px 0px var(--color-0),
+  0px -1px 0px var(--color-0);
   box-shadow: inset -2px -2px 10px var(--color-3-1),
               2px 2px 10px var(--color-22);
 }

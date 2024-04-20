@@ -30,6 +30,14 @@ h1 {
   header {
     max-width: 100vw;
     box-shadow: 0 2vh 1vh var(--color-0); } }
+@keyframes mirrorRotate {
+  0% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
+  50% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg); }
+  100% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
+    /*@include animate(bounce, up, null, 2.5s, 1);*/ } }
 nav {
   position: fixed;
   width: 100vw;
@@ -48,26 +56,22 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-22), 1px 2px 0 var(--color-4-0), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-22), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
-      font-weight: bold;
-      color: var(--color-41); }
+      color: transparent;
+      text-shadow: 1px 1px 0 var(--color-3-1), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
     nav a.active {
       font-weight: bold;
-      /*     transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);*/
       animation: mirrorRotate 1s forwards;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-2), 0 0 0 var(--color-41), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
-    nav a:hover:not(:focus), nav a:active:not(.active) {
-      color: var(--color-3-1);
-      font-weight: bold; }
+      text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 5px 5px var(--color-31), 0 -1px 0 var(--color-0); }
   nav a:not(.active):focus {
-    color: var(--color-41);
     outline: none;
     animation: bounce 1s 0.5;
     font-weight: bold;
-    text-shadow: none; }
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-3-1), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
 @keyframes bounce {
   0% {
     transform: translateY(0); }
@@ -76,9 +80,19 @@ nav {
   100% {
     transform: translateY(0); } }
   nav a.active:focus {
-    color: var(--color-4-0);
     outline: none;
-    text-shadow: none; }
+    font-weight: bold;
+    animation: bounce 1s 0.5;
+    scale: 1.5;
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-41), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
   nav #es-nav-logo {
     margin: 0;
     transition: transform 0.5s ease;
@@ -90,14 +104,9 @@ nav {
     animation: none; }
   nav #es-nav-logo.active img {
     transform: scale(1.2); }
-  nav i:hover {
+  nav .footer-links-container a:hover {
     scale: 1.2;
     color: var(--color-4-0); }
-
-.business-card-container a:hover {
-  color: var(--color-41);
-  animation: none;
-  transform: none; }
 
 #business-card-nav-link,
 #credits-nav-link {
@@ -165,26 +174,12 @@ nav {
 @media only screen and (min-height: 50vh) {
   .scroll-to-top.show {
     display: block; } }
-@keyframes mirrorRotate {
-  0% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
-  50% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg); }
-  100% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
-    @keyframes bounce {
-      0% {
-        transform: translateY(0); }
-      50% {
-        transform: translateY(-0.75rem); }
-      100% {
-        transform: translateY(0); } }
-    animation: bounce 2.5s 1; } }
 .menu-toggle {
   position: absolute;
   right: 15px;
   z-index: 9999; }
 
+/* Stile für den Burger-Button */
 .burger-line {
   display: block;
   position: relative;
@@ -195,6 +190,7 @@ nav {
   margin: 6px 0;
   transition: transform 0.3s ease; }
 
+/* Stile für den Burger-Button bei geöffnetem Navigationsbereich */
 .nav-open .burger-line:nth-child(1) {
   position: relative;
   transform: translateY(8px) rotate(45deg); }
@@ -206,6 +202,7 @@ nav {
   position: relative;
   transform: translateY(-10px) rotate(-45deg); }
 
+/* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -223,14 +220,11 @@ nav {
   transition: transform 0.3s ease;
   transform: translateX(0); }
 
-.nav-open .mobile-nav a {
-  color: var(--color-4); }
-
+/* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav a.active {
   color: var(--color-3);
   font-weight: bold;
-  transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1);
-  animation: mirrorRotate 1s forwards; }
+  animation: none; }
 
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -292,7 +286,7 @@ nav {
   font-size: 1.6em;
   letter-spacing: 6px;
   overflow: hidden;
-  background: linear-gradient(90deg, var(--color-01), var(--color-41), var(--color-00)) no-repeat;
+  background: linear-gradient(90deg, var(--color-0), var(--color-3-3), var(--color-3-2), var(--color-21), var(--color-23), var(--color-41), var(--color-23), var(--color-21), var(--color-3-2), var(--color-3-3), var(--color-0)) no-repeat;
   background-size: 80%;
   animation: animate 6s linear infinite;
   -webkit-background-clip: text;
@@ -324,15 +318,23 @@ nav {
   align-items: start;
   left: 5vw;
   max-width: 90vw;
-  font-weight: bold; }
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-4), 1px 2px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 5px 5px 7px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .motivation-essence {
   font-family: var(--font-2);
-  font-size: 1.7em;
-  font-weight: 400;
-  letter-spacing: 10px;
-  color: var(--color-3);
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 8px;
+  /*  color: var(--color-3-11);*/
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 7px var(--color-4-0), 0px -1px 0px var(--color-0);
+  /*  text-shadow: 1px 0 1px var(--color-2),
+    -1px 0 1px var(--color-00),
+    -1px -1px 1px var(--color-4-0);*/
   filter: brightness(85%); }
 
 .motivation-img {
@@ -358,7 +360,11 @@ nav {
   align-items: start;
   left: 5vw;
   max-width: 90vw;
-  font-weight: bold; }
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-4), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .skills-container {
   display: flex;
@@ -388,7 +394,7 @@ nav {
   font-size: 3.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-011), 2px 1px 0 var(--color-21), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 3px var(--color-41), 0px -1px 0px var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -457,12 +463,12 @@ nav {
   position: absolute;
   left: 2px;
   top: -25px;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 1.45em;
   padding: 5px 5px 5px 15px;
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-41); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .skill-back .skill-name {
   grid-row: 1;
@@ -470,12 +476,11 @@ nav {
   min-width: fit-content;
   position: absolute;
   padding: 5px 25px 5px 15px;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   letter-spacing: 4px;
   font-size: 1.5em;
   top: -61px;
   left: 31px;
-  color: var(--color-22);
   background-color: var(--color-0);
   border-radius: 14px 1px 35px 1px;
   outline: 2px solid var(--color-2);
@@ -504,11 +509,11 @@ nav {
 .topics-container h5,
 .skill-project-use-container h5 {
   margin: 0;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 1.3em;
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-41); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .topics-container ul {
   margin: 0; }
@@ -517,9 +522,9 @@ nav {
   font-weight: bold;
   font-size: 1.15em;
   margin-bottom: 5px;
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px -1px 0 var(--color-23), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-4-0); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .skill-project-use-container {
   position: relative;
@@ -724,7 +729,7 @@ nav {
   font-size: 3.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 3px var(--color-41), 0px -1px 0px var(--color-0); }
 
 .project {
   min-width: 300px;
@@ -784,7 +789,7 @@ nav {
   letter-spacing: 3px;
   margin: 35px 15px 0 15px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .project-front p {
   margin: 15px; }
@@ -797,15 +802,15 @@ nav {
   left: -15px;
   top: -16px;
   font-family: var(--font-1);
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
-  padding: 0 15px;
+  padding: 0 25px 0 15px;
   background-color: var(--color-00);
   border-radius: 14px 1px 35px 1px;
   outline: 1px solid var(--color-1);
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0);
   box-shadow: inset -2px -2px 10px var(--color-3-1), 2px 2px 10px var(--color-22); }
 
 @media screen and (max-width: 768px) {
@@ -932,6 +937,14 @@ h6 {
 .credits-i:hover {
   color: var(--color-3-2); }
 
+@keyframes mirrorRotate {
+  0% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
+  50% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg); }
+  100% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
+    /*@include animate(bounce, up, null, 2.5s, 1);*/ } }
 nav {
   position: fixed;
   width: 100vw;
@@ -950,26 +963,22 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-22), 1px 2px 0 var(--color-4-0), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-22), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
-      font-weight: bold;
-      color: var(--color-41); }
+      color: transparent;
+      text-shadow: 1px 1px 0 var(--color-3-1), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
     nav a.active {
       font-weight: bold;
-      /*     transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);*/
       animation: mirrorRotate 1s forwards;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-2), 0 0 0 var(--color-41), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
-    nav a:hover:not(:focus), nav a:active:not(.active) {
-      color: var(--color-3-1);
-      font-weight: bold; }
+      text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 5px 5px var(--color-31), 0 -1px 0 var(--color-0); }
   nav a:not(.active):focus {
-    color: var(--color-41);
     outline: none;
     animation: bounce 1s 0.5;
     font-weight: bold;
-    text-shadow: none; }
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-3-1), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
 @keyframes bounce {
   0% {
     transform: translateY(0); }
@@ -978,9 +987,19 @@ nav {
   100% {
     transform: translateY(0); } }
   nav a.active:focus {
-    color: var(--color-4-0);
     outline: none;
-    text-shadow: none; }
+    font-weight: bold;
+    animation: bounce 1s 0.5;
+    scale: 1.5;
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-41), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
   nav #es-nav-logo {
     margin: 0;
     transition: transform 0.5s ease;
@@ -992,14 +1011,9 @@ nav {
     animation: none; }
   nav #es-nav-logo.active img {
     transform: scale(1.2); }
-  nav i:hover {
+  nav .footer-links-container a:hover {
     scale: 1.2;
     color: var(--color-4-0); }
-
-.business-card-container a:hover {
-  color: var(--color-41);
-  animation: none;
-  transform: none; }
 
 #business-card-nav-link,
 #credits-nav-link {
@@ -1067,26 +1081,12 @@ nav {
 @media only screen and (min-height: 50vh) {
   .scroll-to-top.show {
     display: block; } }
-@keyframes mirrorRotate {
-  0% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
-  50% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg); }
-  100% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
-    @keyframes bounce {
-      0% {
-        transform: translateY(0); }
-      50% {
-        transform: translateY(-0.75rem); }
-      100% {
-        transform: translateY(0); } }
-    animation: bounce 2.5s 1; } }
 .menu-toggle {
   position: absolute;
   right: 15px;
   z-index: 9999; }
 
+/* Stile für den Burger-Button */
 .burger-line {
   display: block;
   position: relative;
@@ -1097,6 +1097,7 @@ nav {
   margin: 6px 0;
   transition: transform 0.3s ease; }
 
+/* Stile für den Burger-Button bei geöffnetem Navigationsbereich */
 .nav-open .burger-line:nth-child(1) {
   position: relative;
   transform: translateY(8px) rotate(45deg); }
@@ -1108,6 +1109,7 @@ nav {
   position: relative;
   transform: translateY(-10px) rotate(-45deg); }
 
+/* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -1125,14 +1127,11 @@ nav {
   transition: transform 0.3s ease;
   transform: translateX(0); }
 
-.nav-open .mobile-nav a {
-  color: var(--color-4); }
-
+/* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav a.active {
   color: var(--color-3);
   font-weight: bold;
-  transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1);
-  animation: mirrorRotate 1s forwards; }
+  animation: none; }
 
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -1192,19 +1191,23 @@ i {
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg); }
 
-/*footer a:hover,
-footer a:active,
-footer i:active {
+footer a:hover {
   scale: 1.2;
-  color: var(--color-41);
-}*/
-/*footer a:focus,
-footer a:focus i{
+  color: var(--color-41); }
+
+footer a:focus,
+footer a:focus i {
   color: var(--color-41);
   outline: none;
-  @include animate(bounce, up, null, 1s, .5);
-  scale: 1.2;
-}*/
+  animation: bounce 1s 0.5;
+  scale: 1.2; }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0); } }
 @media only screen and (max-width: 768px) {
   footer {
     max-width: 100vw;
@@ -1231,8 +1234,8 @@ footer a:focus i{
   --color-011: #1f1e1e;
   --color-1: #232121;
   --color-11: #232323;
-  --color-2: #2f2f2f;
-  --color-21: #444444;
+  --color-2: #2f2f31;
+  --color-21: #424244;
   --color-22: #595959;
   --color-23: #6e6e6e;
   --color-3-3: #0e0000;
@@ -1251,7 +1254,7 @@ footer a:focus i{
   --color-52: #000b6d;
   --color-53: #000650;
   --color-6: #912800;
-  background-color: var(--color-01);
+  background-color: var(--color-22);
   color: var(--color-4); }
 
 body {
@@ -1327,10 +1330,16 @@ h2 {
   justify-self: end;
   font-size: 5vmax;
   font-family: var(--font-2);
-  color: var(--color-0);
+  /*  color: var(--color-21);*/
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 4px 4px 10px var(--color-3-2), 0px -1px 0px var(--color-0);
   letter-spacing: 10px;
   filter: brightness(75%);
-  text-shadow: 1px 1px 3px var(--color-4), 4px 4px 10px var(--color-3-3), 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
+  /*  text-shadow: 1px 1px 3px var(--color-4),
+    4px 4px 10px var(--color-3-3),
+    1px 0 1px var(--color-2),
+    -1px 0 1px var(--color-00),
+    -1px -1px 1px var(--color-4-0);*/
   z-index: 0; }
 
 .section-hashtag {
@@ -1339,9 +1348,10 @@ h2 {
   right: -2.25vmax;
   font-size: 6.5vmax;
   font-family: var(--font-2);
-  color: var(--color-3-11);
+  /*  color: var(--color-3-11);*/
   transform: perspective(1000px) rotateY(50deg);
-  text-shadow: 1px 1px 5px var(--color-4), 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0), 3px 10px 5px var(--color-00);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 4px 4px 10px var(--color-3-2), 0px -1px 0px var(--color-0);
   z-index: -1; }
 
 .educations-container {
@@ -1376,12 +1386,12 @@ h2 {
   position: fixed;
   margin: 0;
   bottom: 0;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   display: inline-block;
-  color: var(--color-41);
   letter-spacing: 3px;
-  text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-2), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-3-2), -1px 0px 0px var(--color-3-2), -1px -1px 0px var(--color-3-2), 1px 0px 0px var(--color-3-2), 3px 3px 0px var(--color-3-2), -1px 2px 0px var(--color-3-2), -1px 0px 0px var(--color-3-2), 3px 3px 3px var(--color-31), 0px -1px 0px var(--color-3-2);
   white-space: nowrap;
   overflow: hidden; }
 

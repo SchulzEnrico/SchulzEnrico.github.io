@@ -41,20 +41,18 @@ i{
   transform: scaleX(-1) rotate(90deg) ;
 }
 
-/*footer a:hover,
-footer a:active,
-footer i:active {
+footer a:hover {
   scale: 1.2;
   color: var(--color-41);
-}*/
+}
 
-/*footer a:focus,
+footer a:focus,
 footer a:focus i{
   color: var(--color-41);
   outline: none;
   @include animate(bounce, up, null, 1s, .5);
   scale: 1.2;
-}*/
+}
 
 @media only screen and (max-width: 768px) {
   footer {
