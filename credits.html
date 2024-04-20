@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/css/styles.css">
+    <link rel="stylesheet" href="./src/styles/css/credits.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>ES-Credits</title>
@@ -11,12 +12,14 @@
 <body>
 <header>
     <div class="ripples-container-large">
-        <img id="es-logo" src="./media/es_logo3.svg" alt="ES"/>
         <h1>Enrico Schulz</h1>
         <nav class="mobile-nav">
+            <div id="business-card-nav-link">
+                <a href="./businessCard.html" onclick="toggleActive(this)">B-CARD</a>
+            </div>
             <a href="./index.html#welcome" onclick="toggleActive(this)">Welcome</a>
             <a href="./index.html#motivation" onclick="toggleActive(this)">Motivation</a>
-            <a href="./index.html#about-me" onclick="toggleActive(this)">About</a>
+            <a href="./index.html#about-me" onclick="toggleActive(this)" id="es-nav-logo"><img id="es-logo" src="./media/es_logo_vignette.svg" alt="ES"/></a>
             <a href="./index.html#skills" onclick="toggleActive(this)">Skills</a>
             <a href="./index.html#projects" onclick="toggleActive(this)">Projects</a>
             <div id="credits-nav-link">
@@ -26,11 +29,11 @@
     </div>
 </header>
 <div id="credits" class="credits-container section ripples-container-large">
-    <div class="shadow-wrapper"></div>
+    <div class="shadow-wrapper-start"></div>
+    <div class="shadow-wrapper-end"></div>
     <div class="credits-wrapper credits">
         <div class="fade"></div>
-        <h2 id="credits-h2"><span class="section-hashtag">#</span>Credits</h2>
-        <section class="star-wars">
+           <section class="star-wars">
             <div class="crawl">
                 <div class="credits-title">
                     <p>Episode</p>
@@ -43,21 +46,16 @@
     </div>
 </div>
 <footer>
+    <h2 id="credits-h2"><span class="section-hashtag">#</span>Credits</h2>
     <div class="ripples-container-large">
-        <div class="educations-container">
-            <div id="educations-dot" class="blink">.</div>
-            <div class="educations-wrapper">
-                <p id="educations"></p>
-            </div>
-        </div>
-        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
-            <i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
-            <i class="fa-brands fa-square-github fa-2xl"></i></a>
-        <a href="mailto:e.mail.s@t-online.de">
-            <i class="fa-solid fa-square-envelope fa-2xl"></i></a>
-        <a href="tel:+4917641178225">
-            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
+        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="Visit my LinkedIn account." target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl credits-i"></i></a>
+        <a href="https://github.com/SchulzEnrico" title="Visit my Github account." target="_blank">
+            <i class="fa-brands fa-square-github fa-2xl credits-i"></i></a>
+        <a href="mailto:e.mail.s@t-online.de" title="Write me an email.">
+            <i class="fa-solid fa-square-envelope fa-2xl credits-i"></i></a>
+        <a href="tel:+4917641178225" title="Let's have a Call.">
+            <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl credits-i"></i></a>
 
         <div class="menu-toggle" onclick="toggleMenu()">
             <span class="burger-line"></span>

@@ -1,10 +1,17 @@
 @charset "UTF-8";
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: start; }
+
 .skills-wrapper {
   position: relative;
   display: flex;
   justify-content: start;
   align-items: start;
-  flex-flow: column; }
+  flex-flow: column;
+  max-width: 90vw;
+  left: 5vw; }
 
 .category-container {
   position: relative;
@@ -12,22 +19,19 @@
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
-  min-width: 500px; }
+  /*  min-width: 500px;*/ }
 
 .category-container h3 {
-  margin: 0 1rem;
-  font-family: var(--font-2);
-  font-size: 2vmax;
-  max-height: 50px;
-  color: var(--color-3-1);
+  margin: 1rem 0 0;
+  font-family: var(--font-1);
+  font-size: 3.5rem;
   letter-spacing: 8px;
-  opacity: .8;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-011), 2px 1px 0 var(--color-21), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
 
 .category-skills-container {
   position: relative;
-  margin: 1rem;
-  left: 2vw;
+  margin: .3rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,7 +41,7 @@
   perspective: 1000px;
   width: 200px;
   height: 115px;
-  margin: 15px;
+  margin: 0.5rem;
   background-color: var(--color-0);
   border-radius: 15px;
   border: 1px solid var(--color-4);

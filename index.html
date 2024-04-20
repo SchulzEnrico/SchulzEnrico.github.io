@@ -12,26 +12,24 @@
 <body>
 <header>
     <div class="ripples-container-large">
-        <img id="es-logo" src="./media/es_logo3.svg" alt="ES"/>
         <h1>Enrico Schulz</h1>
         <nav class="mobile-nav">
+            <div id="business-card-nav-link">
+                <a href="./businessCard.html">B-CARD</a>
+            </div>
             <a href="#welcome" onclick="toggleActive(this)">Welcome</a>
             <a href="#motivation" onclick="toggleActive(this)">Motivation</a>
-            <a href="#about-me" onclick="toggleActive(this)">About</a>
+            <a href="#about-me" onclick="toggleActive(this)" id="es-nav-logo"><img id="es-logo" src="./media/es_logo3.svg" alt="ES"/></a>
             <a href="#skills" onclick="toggleActive(this)">Skills</a>
             <a href="#projects" onclick="toggleActive(this)">Projects</a>
-            <div id="business-card">
-                <a href="./businessCard.html" onclick="toggleActive(this)">
-                    <i class="fa-solid fa-address-card"></i>
-                </a>
-            </div>
             <div id="credits-nav-link">
-                <a href="./credits.html" onclick="toggleActive(this)">CREDITS</a>
+                <a href="./credits.html">CREDITS</a>
             </div>
         </nav>
     </div>
 </header>
-<!--<div class="shadow-wrapper"></div>-->
+<div class="shadow-wrapper-start"></div>
+<div class="shadow-wrapper-end"></div>
 <div id="welcome" class="welcome-container ripples-container-large section">
     <div id="es-container" class="es-container">
         <p class="greeting">Since you're here, allow yourself a closer look at me</p>
@@ -52,18 +50,20 @@
 </div>
 </div>
 <div id="about-me" class="about-container section">
-   <h2> <span class="section-hashtag">#</span>About</h2>
-            <p>
-                <!-- start slipsum code -->
-                Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
-                Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
-                My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
-                My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
-                My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
-                Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
-                Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
-                <!-- end slipsum code -->
-            </p>
+    <h2> <span class="section-hashtag">#</span>About</h2>
+    <div class="about-me-content">
+        <p>
+            <!-- start slipsum code -->
+            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+            My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
+            My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
+            My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?
+            Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+            Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
+            <!-- end slipsum code -->
+        </p>
+    </div>
 </div>
 <div id="skills" class="skills-container section">
     <h2><span class="section-hashtag">#</span>Skills</h2>
@@ -79,25 +79,24 @@
         <p id="educations"></p>
     </div>
 </div>
-
 <footer>
     <div class="ripples-container-large">
         <div class="footer-links-container">
-            <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="visit LinkedIn" target="_blank">
+            <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="Visit my LinkedIn account." target="_blank">
                 <i class="fa-brands fa-linkedin fa-2xl"></i></a>
-            <a href="https://github.com/SchulzEnrico" title="visit Github" target="_blank">
+            <a href="https://github.com/SchulzEnrico" title="Visit my Github account." target="_blank">
                 <i class="fa-brands fa-square-github fa-2xl"></i></a>
-            <a href="mailto:e.mail.s@t-online.de">
+            <a href="mailto:e.mail.s@t-online.de" title="Write me an email.">
                 <i class="fa-solid fa-square-envelope fa-2xl"></i></a>
-            <a href="tel:+4917641178225">
+            <a href="tel:+4917641178225" title="Let's have a Call.">
                 <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i></a>
         </div>
+            <a href="#" class="scroll-to-top" title="Go to top"><i class="fa-solid fa-angles-up"></i></a>
         <div class="menu-toggle" onclick="toggleMenu()">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
             <span class="burger-line"></span>
         </div>
-
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>

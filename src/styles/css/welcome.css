@@ -16,7 +16,7 @@
 #es {
   position: absolute;
   left: 0;
-  height: 65vh;
+  height: 70vh;
   filter: brightness(40%);
   transform: scaleX(-1);
   z-index: 102; }
