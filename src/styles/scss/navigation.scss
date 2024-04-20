@@ -49,45 +49,62 @@
 
 nav {
   position: fixed;
-  top: 1vmax;
+  width: 100vw;
+  top: 3vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 
   a {
     text-decoration: none;
     font-family: var(--font-1);
     display: flex;
     justify-content: center;
-    font-size: 1.25vw;
-    width: 10vw;
-    color: var(--color-4);
-    margin: 1vh .5vw;
+    font-size: 1.5rem;
+    width: 20vw;
+    margin: 2.75vh .5vw 0 .5vw;
     transition: text-shadow 50ms ease, color 50ms ease;
-    letter-spacing: 3px;
-    text-shadow: 1px -1px 1px var(--color-2),
-    -1px 0 1px var(--color-00),
-    -1px -1px 1px var(--color-4-0);
+    letter-spacing: 8px;
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-22),
+    1px 2px 0 var(--color-4-0),
+    1px -1px 0px var(--color-0),
+    -1px 0px 0px var(--color-0),
+    -1px -1px 0px var(--color-0),
+    1px 0px 0px var(--color-0),
+    3px 3px 0px var(--color-0),
+    -1px 2px 0px var(--color-0),
+    -1px 0px 0px var(--color-0),
+    0px -1px 0px var(--color-0);
 
     &:hover {
-      transform: rotateX(180deg);
+      transform: scale(1.2);
       font-weight: bold;
       color: var(--color-41);
     }
 
     &.active {
-      color: var(--color-3);
-      text-shadow: none;
       font-weight: bold;
-      transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);
+ /*     transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);*/
       animation: mirrorRotate 1s forwards;
+      color: transparent;
+      text-shadow: 1px 1px 0 var(--color-2),
+      0 0 0 var(--color-41),
+      2px 2px 0 var(--color-41),
+      1px -1px 0px var(--color-0),
+      -1px 0px 0px var(--color-0),
+      -1px -1px 0px var(--color-0),
+      1px 0px 0px var(--color-0),
+      3px 3px 0px var(--color-0),
+      -1px 2px 0px var(--color-0),
+      -1px 0px 0px var(--color-0),
+      0px -1px 0px var(--color-0);
     }
 
     &:hover:not(:focus),
     &:active:not(.active) {
-      color: var(--color-3);
+      color: var(--color-3-1);
       font-weight: bold;
-      text-shadow: none;
     }
   }
 
@@ -105,64 +122,109 @@ nav {
     text-shadow: none;
   }
 
-  #business-card {
-    position: fixed;
-    right: 0;
+  #es-nav-logo {
+    margin: 0;
+    transition: transform 0.5s ease;
+    animation: none;
   }
 
-  .fa-address-card {
-    color: var(--color-21);
-    font-size: 1.5em;
-    text-shadow: 1px -1px 1px var(--color-21),
-    -1px 0 1px var(--color-00),
-    -1px -1px 1px var(--color-4-0);
+  #es-nav-logo:hover,
+  #es-nav-logo:focus,
+  #es-nav-logo.active {
+    scale: 1.2;
+    animation: none;
   }
 
-  #business-card a:hover {
-    scale: 1.3;
-    color: var(--color-41);
-    transform: rotateX(0deg);
+  #es-nav-logo.active img {
+    transform: scale(1.2);
   }
 
-  #credits-nav-link {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    right: 0;
-    top: 9.98vh;
-    width: 10em;
-    padding: 5px 10px 0 25px;
-    border-bottom: 1px solid var(--color-2);
-    border-left: 2px solid var(--color-1);
-    border-radius: 0 0 2px 35px;
-    background-color: var(--color-3-2);
-    box-shadow:
-    inset 0 -5px 10px var(--color-3-1),
-    inset -3px 5px 9px var(--color-23);
-    opacity: .85;
+  i:hover {
+    scale: 1.2;
+    color: var(--color-4-0);
   }
-  #credits-nav-link:hover {
+}
+
+.business-card-container a:hover {
+  color: var(--color-41);
+  animation: none;
+  transform: none;
+}
+
+#business-card-nav-link,
+#credits-nav-link {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  width: 7rem;
+  padding: 5px 10px 0 25px;
+  border-bottom: 1px solid var(--color-2);
+  border-left: 2px solid var(--color-1);
+  border-radius: 0 0 2px 35px;
+  background-color: var(--color-3-2);
+  box-shadow:
+          inset 0 -5px 10px var(--color-3-1),
+          inset -3px 5px 9px var(--color-23);
+  opacity: .5;
+}
+#business-card-nav-link {
+  left: 0;
+  padding: 5px 20px 0 15px;
+  border-left: 2px solid var(--color-1);
+  border-radius: 0 2px 35px 0 ;
+  box-shadow:
+          inset 0 5px 10px var(--color-3-1),
+          inset 3px 5px 9px var(--color-23);
+}
+#business-card-nav-link:hover,
+#credits-nav-link:hover {
   opacity: 1;
 }
 
-  #credits-nav-link a {
-    margin: 0;
-    max-width: fit-content;
-    color: var(--color-4);
-    font-size: 1.3em;
-    top: 0;
-    letter-spacing: 4px;
-  }
-  #credits-nav-link a:focus,
-  #credits-nav-link a:hover {
-    font-weight: bold;
-    color: var(--color-4)
-  }
+#business-card-nav-link a,
+#credits-nav-link a {
+  margin: 0;
+  max-width: fit-content;
+  color: var(--color-4);
+  font-size: 1.3rem;
+  top: 0;
+  letter-spacing: 5px;
+}
+#business-card-nav-link a:focus,
+#business-card-nav-link a:hover,
+#credits-nav-link a:focus,
+#credits-nav-link a:hover {
+  font-weight: bold;
+  color: var(--color-4);
+  transform: none;
+}
 
-  #credits-nav-link a.active {
-    color: var(--color-41);
-    font-weight: bold;
-    animation: mirrorRotate 1s forwards;
+#business-card-nav-link a.active,
+#credits-nav-link a.active {
+  color: var(--color-41);
+  font-weight: bold;
+  animation: none;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 7vh;
+  right: 3.75vw;
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+}
+
+@media only screen and (min-height: 50vh) {
+  .scroll-to-top.show {
+    display: block;
   }
 }
 
@@ -185,7 +247,7 @@ nav {
   z-index: 9999;
 }
 .burger-line {
-  display: block; /* Damit die Spans standardmäßig inline sind */
+  display: block;
   position: relative;
   width: 30px;
   height: 3px;
@@ -195,7 +257,6 @@ nav {
   transition: transform 0.3s ease;
 }
 
-/* Animation für das Öffnen des Burgers */
 .nav-open .burger-line:nth-child(1) {
   position: relative;
   transform: translateY(8px) rotate(45deg);
@@ -205,20 +266,19 @@ nav {
   opacity: 0;
 }
 
-/* Animation für das Schließen des Burgers */
 .nav-open .burger-line:nth-child(3) {
   position: relative;
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Zeige die mobile Navigation, wenn der Burger geklickt wird */
+
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: var(--color-01);
-  padding: 50px 0; /* Platz für den Header */
+  padding: 50px 0;
   border-bottom-left-radius: 150px;
   outline: 1px solid var(--color-3-1);
   position: fixed;
@@ -239,9 +299,7 @@ nav {
   animation: mirrorRotate 1s forwards;
 }
 
-/* Media Query für kleinere Bildschirme (maximale Bildschirmbreite von 768px) */
 @media screen and (max-width: 768px) {
-  /* Zeigen Sie den Burger-Button und verstecken Sie das normale Menü */
   .menu-toggle {
     display: block;
   }

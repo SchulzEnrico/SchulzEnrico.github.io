@@ -1,27 +1,32 @@
 @charset "UTF-8";
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: start; }
+
 .project-management-container {
   position: relative;
-  left: 2vw;
+  left: 5vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  max-width: 100%;
+  max-width: 90vw;
   padding: 10px; }
 
 .projects-container h3 {
-  margin: 0 1rem;
-  font-family: var(--font-2);
-  font-size: 2vmax;
-  max-height: 50px;
-  color: var(--color-3-1);
+  position: relative;
+  left: 5vw;
+  margin: 1rem 0 0;
+  font-family: var(--font-1);
+  font-size: 3.5rem;
   letter-spacing: 8px;
-  opacity: .8;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
 
 .project {
   min-width: 300px;
   min-height: 160px;
-  margin: 15px;
+  margin: 0.5rem;
   perspective: 1000px;
   border-radius: 15px;
   flex-shrink: 1;
@@ -72,11 +77,11 @@
 
 .project-front h5 {
   font-size: 1.5rem;
-  color: var(--color-22);
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   letter-spacing: 3px;
   margin: 35px 15px 0 15px;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-000), -1px -1px 1px var(--color-4-0); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
 
 .project-front p {
   margin: 15px; }

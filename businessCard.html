@@ -13,14 +13,15 @@
 <body>
 <header class="business-card-header">
     <div class="ripples-container-large">
+        <a class="business-card-close" href="./index.html#welcome" title="Back to my website.">
+            <i class="fa-regular fa-circle-xmark business-card-close"></i>
+        </a>
         <h1>Enrico Schulz</h1>
         <img id="es-business-card-logo" src="./media/es_logo_vignette.svg" alt="ES"/>
     </div>
 </header>
-<main class="business-card-container ripples-container-large">
-
+<main id="business-card" class="business-card-container ripples-container-large">
     <div class="loading" id="portfolio">
-        <div class="business-card shadow-wrapper"></div>
         <div id="professions"><span><span class="hover-branch-three">Web Designer</span></span><span><span class="hover-branch-one hover-branch-two">ICB4 Level D</span></span><span><span class="hover-branch-one hover-branch-three">Product Owner</span></span><span><span class="hover-branch-one hover-branch-two hover-branch-three">Scrum Master</span></span><span><span class="hover-branch-three">Web Developer</span></span><span><span class="hover-branch-two">Wholesale & export</span></span></div>
         <div id="article">
             <div id="content">
@@ -42,20 +43,16 @@
     </div>
 </main>
 
-<footer class="business-card-footer">
-    <div class="ripples-container-large"></div>
+<footer class="business-card-footer ripples-container-large">
     <div class="business-card-footer-links">
-        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="Visit my LinkedIn Account."  target="_blank">
+        <a href="https://linkedin.com/in/enrico-schulz-021a2428a" title="Visit my LinkedIn account."  target="_blank">
             <i class="fa-brands fa-linkedin fa-2xl"></i>enrico schulz</a>
-        <a href="https://github.com/SchulzEnrico" title="Visit my Github Account." target="_blank">
+        <a href="https://github.com/SchulzEnrico" title="Visit my Github account." target="_blank">
             <i class="fa-brands fa-square-github fa-2xl"></i>schulzenrico</a>
         <a href="mailto:e.mail.s@t-online.de" title="Write me an email.">
             <i class="fa-solid fa-square-envelope fa-2xl"></i>e.mail.s@t-online.de</a>
         <a href="tel:+4917641178225" title="Let's have a Call.">
             <i id="fa-square-phone-flip" class="fa-solid fa-square-phone-flip fa-flip-vertical fa-2xl"></i>0176 4117 8225</a>
-        <a id="business-card-close" href="./index.html#welcome" title="Back to my website.">
-            <i class="fa-regular fa-circle-xmark business-card-close"></i>
-        </a>
     </div>
 </footer>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script><script  src="./src/javaScript/businessCard.js"></script>
