@@ -27,7 +27,7 @@
   font-size: 3.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-011), 2px 1px 0 var(--color-21), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 0px -1px 0px var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 3px var(--color-41), 0px -1px 0px var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -96,12 +96,12 @@
   position: absolute;
   left: 2px;
   top: -25px;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 1.45em;
   padding: 5px 5px 5px 15px;
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-41); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .skill-back .skill-name {
   grid-row: 1;
@@ -109,12 +109,11 @@
   min-width: fit-content;
   position: absolute;
   padding: 5px 25px 5px 15px;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   letter-spacing: 4px;
   font-size: 1.5em;
   top: -61px;
   left: 31px;
-  color: var(--color-22);
   background-color: var(--color-0);
   border-radius: 14px 1px 35px 1px;
   outline: 2px solid var(--color-2);
@@ -143,11 +142,11 @@
 .topics-container h5,
 .skill-project-use-container h5 {
   margin: 0;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 1.3em;
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px 0 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-41); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .topics-container ul {
   margin: 0; }
@@ -156,9 +155,9 @@
   font-weight: bold;
   font-size: 1.15em;
   margin-bottom: 5px;
-  color: var(--color-22);
   letter-spacing: 3px;
-  text-shadow: 1px -1px 0 var(--color-23), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-4-0); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0px var(--color-0), -1px 0px 0px var(--color-0), -1px -1px 0px var(--color-0), 1px 0px 0px var(--color-0), 3px 3px 0px var(--color-0), -1px 2px 0px var(--color-0), -1px 0px 0px var(--color-0), 3px 3px 5px var(--color-3), 0px -1px 0px var(--color-0); }
 
 .skill-project-use-container {
   position: relative;

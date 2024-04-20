@@ -38,9 +38,17 @@
   letter-spacing: 6px;
   overflow: hidden;
   background: linear-gradient(90deg,
-          var(--color-01),
+          var(--color-0),
+          var(--color-3-3),
+          var(--color-3-2),
+          var(--color-21),
+          var(--color-23),
           var(--color-41),
-          var(--color-00)
+          var(--color-23),
+          var(--color-21),
+          var(--color-3-2),
+          var(--color-3-3),
+          var(--color-0)
   ) no-repeat;
   background-size: 80%;
   animation: animate 6s linear infinite;

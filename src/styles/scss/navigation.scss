@@ -47,6 +47,19 @@
   animation: #{$animation} #{$duration} $repeat;
 }
 
+@keyframes mirrorRotate {
+  0% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg);
+  }
+  50% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg);
+  }
+  100% {
+    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
+    /*@include animate(bounce, up, null, 2.5s, 1);*/
+  }
+}
+
 nav {
   position: fixed;
   width: 100vw;
@@ -68,58 +81,85 @@ nav {
     color: transparent;
     text-shadow: 1px 1px 0 var(--color-22),
     1px 2px 0 var(--color-4-0),
-    1px -1px 0px var(--color-0),
-    -1px 0px 0px var(--color-0),
-    -1px -1px 0px var(--color-0),
-    1px 0px 0px var(--color-0),
-    3px 3px 0px var(--color-0),
-    -1px 2px 0px var(--color-0),
-    -1px 0px 0px var(--color-0),
-    0px -1px 0px var(--color-0);
+    1px -1px 0 var(--color-0),
+    -1px 0 0 var(--color-0),
+    -1px -1px 0 var(--color-0),
+    1px 0 0 var(--color-0),
+    3px 3px 0 var(--color-0),
+    -1px 2px 0 var(--color-0),
+    -1px 0 0 var(--color-0),
+    0 -1px 0 var(--color-0);
 
     &:hover {
       transform: scale(1.2);
-      font-weight: bold;
-      color: var(--color-41);
+      color: transparent;
+      text-shadow: 1px 1px 0 var(--color-3-1),
+      1px 2px 0 var(--color-4-0),
+      1px -1px 0 var(--color-0),
+      -1px 0 0 var(--color-0),
+      -1px -1px 0 var(--color-0),
+      1px 0 0 var(--color-0),
+      3px 3px 0 var(--color-0),
+      -1px 2px 0 var(--color-0),
+      -1px 0 0 var(--color-0),
+      3px 3px 4px var(--color-4-0),
+      0 -1px 0 var(--color-0);
     }
 
     &.active {
       font-weight: bold;
- /*     transform: rotateX(180deg) rotateZ(180deg) scaleX(-1);*/
       animation: mirrorRotate 1s forwards;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-2),
-      0 0 0 var(--color-41),
-      2px 2px 0 var(--color-41),
-      1px -1px 0px var(--color-0),
-      -1px 0px 0px var(--color-0),
-      -1px -1px 0px var(--color-0),
-      1px 0px 0px var(--color-0),
-      3px 3px 0px var(--color-0),
-      -1px 2px 0px var(--color-0),
-      -1px 0px 0px var(--color-0),
-      0px -1px 0px var(--color-0);
-    }
-
-    &:hover:not(:focus),
-    &:active:not(.active) {
-      color: var(--color-3-1);
-      font-weight: bold;
+      text-shadow: 1px 1px 0 var(--color-3-1),
+      0 0 0 var(--color-22),
+      2px 2px 0 var(--color-4),
+      1px -1px 0 var(--color-0),
+      -1px 0 0 var(--color-0),
+      -1px -1px 0 var(--color-0),
+      1px 0 0 var(--color-0),
+      3px 3px 0 var(--color-0),
+      -1px 2px 0 var(--color-0),
+      -1px 0 0 var(--color-0),
+      2px 5px 5px var(--color-31),
+      0 -1px 0 var(--color-0);
     }
   }
 
   a:not(.active):focus {
-    color: var(--color-41);
     outline: none;
     @include animate(bounce, up, null, 1s, .5);
     font-weight: bold;
-    text-shadow: none;
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-3-1),
+    1px 2px 0 var(--color-4-0),
+    1px -1px 0 var(--color-0),
+    -1px 0 0 var(--color-0),
+    -1px -1px 0 var(--color-0),
+    1px 0 0 var(--color-0),
+    3px 3px 0 var(--color-0),
+    -1px 2px 0 var(--color-0),
+    -1px 0 0 var(--color-0),
+    3px 3px 4px var(--color-4-0),
+    0 -1px 0 var(--color-0);
   }
 
   a.active:focus {
-    color: var(--color-4-0);
     outline: none;
-    text-shadow: none;
+    font-weight: bold;
+    @include animate(bounce, up, null, 1s, .5);
+    scale: 1.5;
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-3-1),
+    0 0 0 var(--color-41),
+    2px 2px 0 var(--color-41),
+    1px -1px 0 var(--color-0),
+    -1px 0 0 var(--color-0),
+    -1px -1px 0 var(--color-0),
+    1px 0 0 var(--color-0),
+    3px 3px 0 var(--color-0),
+    -1px 2px 0 var(--color-0),
+    -1px 0 0 var(--color-0),
+    0 -1px 0 var(--color-0);
   }
 
   #es-nav-logo {
@@ -139,16 +179,10 @@ nav {
     transform: scale(1.2);
   }
 
-  i:hover {
+.footer-links-container a:hover{
     scale: 1.2;
     color: var(--color-4-0);
   }
-}
-
-.business-card-container a:hover {
-  color: var(--color-41);
-  animation: none;
-  transform: none;
 }
 
 #business-card-nav-link,
@@ -228,24 +262,14 @@ nav {
   }
 }
 
-@keyframes mirrorRotate {
-  0% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg);
-  }
-  50% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(90deg);
-  }
-  100% {
-    transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
-    @include animate(bounce, up, null, 2.5s, 1);
-  }
-}
-
 .menu-toggle {
   position: absolute;
   right: 15px;
   z-index: 9999;
 }
+
+
+/* Stile für den Burger-Button */
 .burger-line {
   display: block;
   position: relative;
@@ -257,6 +281,7 @@ nav {
   transition: transform 0.3s ease;
 }
 
+/* Stile für den Burger-Button bei geöffnetem Navigationsbereich */
 .nav-open .burger-line:nth-child(1) {
   position: relative;
   transform: translateY(8px) rotate(45deg);
@@ -271,7 +296,7 @@ nav {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-
+/* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -289,14 +314,12 @@ nav {
   transition: transform 0.3s ease;
   transform: translateX(0);
 }
-.nav-open .mobile-nav a {
-  color: var(--color-4);
-}
+
+/* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav a.active {
   color: var(--color-3);
   font-weight: bold;
-  transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1);
-  animation: mirrorRotate 1s forwards;
+  animation: none;
 }
 
 @media screen and (max-width: 768px) {
