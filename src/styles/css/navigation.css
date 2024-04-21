@@ -29,7 +29,7 @@ nav {
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-3-1), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
+      text-shadow: 0 1px 1px var(--color-0), 1px 1px 0 var(--color-41), 1px -1px 0 var(--color-41), -1px 0 0 var(--color-41), -1px -1px 0 var(--color-41), 1px 0 0 var(--color-41), 2px 2px 0 var(--color-4-0), 2px 0 0 var(--color-41), -1px 1px 0 var(--color-41), -1px 2px 0 var(--color-41), 0 -1px 0 var(--color-41); }
     nav a.active {
       font-weight: bold;
       animation: mirrorRotate 1s forwards;
@@ -40,7 +40,7 @@ nav {
     animation: bounce 1s 0.5;
     font-weight: bold;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-3-1), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-3), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
 @keyframes bounce {
   0% {
     transform: translateY(0); }
@@ -63,18 +63,31 @@ nav {
   100% {
     transform: translateY(0); } }
   nav #es-nav-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
     margin: 0;
     transition: transform 0.5s ease;
     animation: none; }
+  nav .about-link-label {
+    position: fixed;
+    z-index: 1;
+    font-size: 1.2rem; }
+  nav #es-nav-logo:hover .about-link-label,
+  nav #es-nav-logo.active .about-link-label {
+    text-shadow: 1px 1px 0 var(--color-4), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+  nav #es-nav-logo img {
+    margin: 0; }
   nav #es-nav-logo:hover,
   nav #es-nav-logo:focus,
   nav #es-nav-logo.active {
-    scale: 1.2;
+    scale: 1.1;
     animation: none; }
   nav #es-nav-logo.active img {
-    transform: scale(1.2); }
+    transform: scale(1.1); }
   nav .footer-links-container a:hover {
-    scale: 1.2;
+    scale: 1.1;
     color: var(--color-4-0); }
 
 #business-card-nav-link,

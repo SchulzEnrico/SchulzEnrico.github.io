@@ -51,14 +51,13 @@ fetch('./src/data/skills.json')
                                 <ul>
                                     ${skill["projects"].map(project => `<li>${project.name}
                                                                             <ul>
-                                                                             <li>Applied: ${project["hours_skill_used"]}h</li>
-                                                                             <li>Usage: ${project["skill_use_types"]}</li>
+                                                                             <li>Applied: <span class="usage-data">${project["hours_skill_used"]}h</span></li>
+                                                                             <li>Usage: <span class="usage-data">${project["skill_use_types"]}</span></li>
                                                                             </ul>
                                                                         </li>`).join('')}
                                 </ul>
                             </div>
                             <div class="skill-bar-container">
-                            <div class="skill-bar-cover-start"></div>
                                 <div class="skill-bar">
                                     <div class="skill-bar-fill coach-guided" style="width: ${coachGuidedAppliedPercent}%">
                                     </div>
@@ -69,22 +68,21 @@ fetch('./src/data/skills.json')
                                 </div>
                                 <div class="skill-legend">
                                     <div class="skill-legend-item">
-                                        <div>Coach Guided</div>
+                                        <div class="skill-legend-label">Coach Guided</div>
                                         <div class="skill-bar-fill coach-guided"></div>
                                           <span class="skill-bar-value skill-bar-value-coach-guided">${coachGuidedAppliedPercent.toFixed(2)}%</span>
                                     </div>
                                     <div class="skill-legend-item">
-                                        <div>Unassisted</div>
+                                        <div class="skill-legend-label">Unassisted</div>
                                         <div class="skill-bar-fill unassisted"></div>
                                         <span class="skill-bar-value skill-bar-value-unassisted">${appliedUnassistedPercent.toFixed(2)}%</span>
                                     </div>
                                     <div class="skill-legend-item">
-                                        <div>Total Applied</div>
+                                        <div class="skill-legend-label">Total Applied</div>
                                         <div class="skill-bar-fill total-applied"></div>
                                         <span class="skill-bar-value skill-bar-value-total-applied">${appliedTotalPercent.toFixed(2)}%</span>
                                     </div>
                                 </div>
-                            <div class="skill-bar-cover-end"></div>
                             </div>
                         </div>
                     </div>
