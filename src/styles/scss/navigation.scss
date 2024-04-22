@@ -250,17 +250,26 @@ nav {
 #credits-nav-link a {
   margin: 0;
   max-width: fit-content;
-  color: var(--color-4);
   font-size: 1.3rem;
   top: 0;
   letter-spacing: 5px;
 }
-#business-card-nav-link a:focus,
-#business-card-nav-link a:hover,
-#credits-nav-link a:focus,
-#credits-nav-link a:hover {
+#business-card-nav-link:focus a,
+#business-card-nav-link:hover a,
+#credits-nav-link:focus a,
+#credits-nav-link:hover a {
   font-weight: bold;
-  color: var(--color-4);
+  text-shadow: 0 1px 1px var(--color-3-1),
+  1px 1px 0 var(--color-22),
+  1px -1px 0 var(--color-22),
+  -1px 0 0 var(--color-22),
+  -1px -1px 0 var(--color-22),
+  1px 0 0 var(--color-22),
+  2px 2px 0 var(--color-41),
+  2px 0 0 var(--color-22),
+  -1px 1px 0 var(--color-22),
+  -1px 2px 0 var(--color-22),
+  0 -1px 0 var(--color-22);
   transform: none;
 }
 
@@ -296,7 +305,6 @@ nav {
   right: 15px;
   z-index: 9999;
 }
-
 
 /* Stile für den Burger-Button */
 .burger-line {

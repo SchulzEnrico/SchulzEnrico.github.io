@@ -4,24 +4,31 @@
   justify-content: center;
   align-items: start; }
 
+.projects-wrapper {
+  position: relative;
+  top: 5vh;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-flow: column;
+  max-width: 90vw; }
+
 .project-management-container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  max-width: 90vw;
-  left: 5vw;
-  padding: 10px; }
+  left: 5vw; }
 
 .projects-container h3 {
   position: relative;
   left: 5vw;
   margin: 1rem 0 0;
   font-family: var(--font-1);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-2), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -56,7 +63,7 @@
   position: fixed;
   top: 12.5vh;
   left: 0;
-  z-index: 1; }
+  z-index: 2; }
 
 .project .project-front,
 .project .project-back {
@@ -81,30 +88,6 @@
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
-.project-back h5 {
-  position: fixed;
-  top: 0;
-  left: 3vw;
-  margin: 0;
-  font-size: 3rem; }
-
-.name-affix {
-  position: fixed;
-  top: 4rem;
-  left: 3vw;
-  margin: 0;
-  font-size: 1.5rem;
-  font-family: var(--font-2);
-  letter-spacing: 3px;
-  color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
-
-.project-front p {
-  margin: 15px; }
-
-.project .project-back {
-  transform: rotateY(180deg); }
-
 .project-year {
   position: fixed;
   left: -16px;
@@ -121,14 +104,102 @@
   text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23);
   box-shadow: 3px 6px 1px var(--color-3-11), 6px 6px 15px var(--color-22); }
 
+.project-front p {
+  margin: 15px; }
+
+.project .project-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  transform: rotateY(180deg); }
+
+.project-back h5 {
+  position: fixed;
+  top: 0;
+  left: 3vw;
+  margin: 0;
+  font-size: 3rem;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.name-affix {
+  position: fixed;
+  top: 4rem;
+  left: 3vw;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: var(--font-2);
+  letter-spacing: 3px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-requirements-container,
+.applied-skills-container,
+.project-links-container {
+  position: relative;
+  top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: -1.5rem;
+  padding-top: 1.5rem; }
+
+.details-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: var(--font-2);
+  margin: 0 0.5rem 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-links-container .details-header {
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-requirements-list,
+.applied-skills-list,
+.project-links-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+  padding-left: 0; }
+
+.project-requirements-list li,
+.applied-skills-list li,
+.project-links-list li {
+  position: relative;
+  padding-left: 30px;
+  justify-items: start;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-0), 1px 2px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 0 -1px 0 var(--color-4); }
+
+.project-links-list li a {
+  text-decoration: none;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-00), 1px 2px 0 var(--color-23), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 0 -1px 0 var(--color-23); }
+
+.project-back ul li:before {
+  content: "o";
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
 @media screen and (max-width: 768px) {
   .project-management-container {
     grid-template-columns: 1fr;
-    /* Nur eine Spalte für mobile Ansicht */
     max-width: 100%;
-    /* Container passt sich der Bildschirmbreite an */
-    padding: 10px;
-    /* Geringer seitlicher Abstand */ }
+    padding: 10px; }
 
   .project {
     width: 100%;

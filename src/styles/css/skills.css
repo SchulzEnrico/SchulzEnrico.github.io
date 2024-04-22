@@ -23,10 +23,10 @@
 .category-container h3 {
   margin: 1rem 0 0;
   font-family: var(--font-1);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-2), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -130,10 +130,8 @@
   grid-column: 1;
   grid-row: 2;
   justify-self: center;
-  /* Ändern Sie die Ausrichtung */
   height: 90%;
-  width: 75%;
-  /* Breite auf 100% setzen */ }
+  width: 75%; }
 
 .topics-container h5,
 .skill-project-use-container h5 {
@@ -165,15 +163,11 @@
   flex-wrap: wrap;
   gap: 10px;
   grid-column: 2;
-  /* Ändern Sie die Grid-Spaltenpositionierung */
   grid-row: 2;
-  /* Ändern Sie die Grid-Zeilenpositionierung */
   text-align: left;
   justify-self: center;
-  /* Ändern Sie die Ausrichtung */
   height: 95%;
-  width: 90%;
-  /* Breite auf 100% setzen */ }
+  width: 90%; }
 
 .skill-project-use-container ul {
   display: grid;

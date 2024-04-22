@@ -1,12 +1,12 @@
 fetch('./src/data/projects.json')
     .then(response => response.json())
     .then(data => {
-        const projectsContainer = document.getElementById('projects');
+        const projectsWrapper = document.getElementById('projects-wrapper'); // Verwende das projects-wrapper-Element
         if (data && data["categories"]) {
             data["categories"].forEach(category => {
                 const categoryTitle = document.createElement('h3');
                 categoryTitle.textContent = category.name;
-                projectsContainer.appendChild(categoryTitle);
+                projectsWrapper.appendChild(categoryTitle); // Hänge den Kategorietitel an das projects-wrapper-Element an
 
                 const categoryContainer = document.createElement('div');
                 categoryContainer.classList.add('project-management-container');
@@ -39,75 +39,72 @@ fetch('./src/data/projects.json')
                         projectBack.appendChild(projectNameBack);
 
                         if (project["project_details"] && project["project_details"].length > 0) {
-                            const nameAffixBack = document.createElement('p');
-                            nameAffixBack.classList.add('name-affix');
-                            nameAffixBack.textContent = project["project_details"][0]["name_affix"];
-                            projectBack.appendChild(nameAffixBack);
+                            const projectDetails = project["project_details"][0];
 
-                            const requirementsList = document.createElement('ul');
-                            requirementsList.classList.add('project-requirements');
-                            if (project["project_details"][0]["requirements"]) {
-                                const requirementsHeader = document.createElement('p');
-                                requirementsHeader.classList.add('details-header');
-                                requirementsHeader.textContent = "Project Requirements";
-                                projectBack.appendChild(requirementsHeader);
-                                project["project_details"][0]["requirements"].forEach(req => {
-                                    const requirementItem = document.createElement('li');
-                                    requirementItem.textContent = req;
-                                    requirementsList.appendChild(requirementItem);
-                                });
-                                projectBack.appendChild(requirementsList);
+                            // Funktion zum Erstellen eines umschließenden Div-Elements
+                            function createDetailsContainer(headerText, items, containerClass) {
+                                if (items && items.length > 0) {
+                                    const container = document.createElement('div');
+                                    const list = document.createElement('ul');
+                                    list.classList.add(containerClass + '-list');
+
+                                    const header = document.createElement('p');
+                                    header.classList.add('details-header');
+                                    header.textContent = headerText;
+
+                                    items.forEach(item => {
+                                        const listItem = document.createElement('li');
+                                        // Überprüfen, ob das Element ein Link ist
+                                        if (item.link && item["link_name"]) {
+                                            const link = document.createElement('a');
+                                            link.href = item.link;
+                                            link.textContent = item["link_name"];
+                                            link.target = "_blank"; // Öffnet den Link in einem neuen Tab
+                                            listItem.appendChild(link);
+                                        } else {
+                                            listItem.textContent = item;
+                                        }
+                                        list.appendChild(listItem);
+                                    });
+
+                                    container.classList.add(containerClass + '-container');
+                                    container.appendChild(header);
+                                    container.appendChild(list);
+                                    return container;
+                                }
+                                return null;
                             }
 
-                            const appliedSkillsList = document.createElement('ul');
-                            appliedSkillsList.classList.add('applied-skills');
-                            if (project["project_details"][0]["applied_skills"]) {
-                                const skillsHeader = document.createElement('p');
-                                skillsHeader.classList.add('details-header');
-                                skillsHeader.textContent = "Applied Skills";
-                                projectBack.appendChild(skillsHeader);
-                                project["project_details"][0]["applied_skills"].forEach(skill => {
-                                    const skillItem = document.createElement('li');
-                                    skillItem.textContent = skill;
-                                    appliedSkillsList.appendChild(skillItem);
-                                });
-                                projectBack.appendChild(appliedSkillsList);
-                            }
-                        }
-
-                        // Display links as a list
-                        const linksList = document.createElement('ul');
-                        linksList.classList.add('project-links');
-
-                        if (Array.isArray(project["project_details"]) && project["project_details"].length > 0 && Array.isArray(project["project_details"][0]["links"])) {
-                            const linksHeader = document.createElement('p');
-                            linksHeader.classList.add('details-header');
-                            linksHeader.textContent = "Links";
-                            projectBack.appendChild(linksHeader);
-
-                            const projectLinks = project["project_details"][0]["links"];
-                            if (projectLinks.length > 0) {
-                                projectLinks.forEach(link => {
-                                    const linkItem = document.createElement('li');
-                                    const linkAnchor = document.createElement('a');
-                                    linkAnchor.href = link.link;
-                                    linkAnchor.textContent = link["link_name"];
-                                    linkAnchor.target = "_blank"; // Set target attribute to open link in a new tab
-                                    linkItem.appendChild(linkAnchor);
-                                    linksList.appendChild(linkItem);
-                                });
-                            } else {
-                                const noLinksMessage = document.createElement('p');
-                                noLinksMessage.textContent = "No links available";
-                                linksList.appendChild(noLinksMessage);
+                            // Erstellen und Hinzufügen des Divs für Name Affix
+                            if (projectDetails["name_affix"]) {
+                                const nameAffixBack = document.createElement('p');
+                                nameAffixBack.classList.add('name-affix');
+                                nameAffixBack.textContent = projectDetails["name_affix"];
+                                projectBack.appendChild(nameAffixBack);
                             }
 
-                            projectBack.appendChild(linksList);
+                            // Erstellen und Hinzufügen des Divs für Project Requirements
+                            const requirementsContainer = createDetailsContainer("Project Requirements", projectDetails["requirements"], 'project-requirements');
+                            if (requirementsContainer) {
+                                projectBack.appendChild(requirementsContainer);
+                            }
+
+                            // Erstellen und Hinzufügen des Divs für Applied Skills
+                            const appliedSkillsContainer = createDetailsContainer("Applied Skills", projectDetails["applied_skills"], 'applied-skills');
+                            if (appliedSkillsContainer) {
+                                projectBack.appendChild(appliedSkillsContainer);
+                            }
+
+                            // Erstellen und Hinzufügen des Divs für Project Links
+                            const linksContainer = createDetailsContainer("Links", projectDetails.links, 'project-links');
+                            if (linksContainer) {
+                                projectBack.appendChild(linksContainer);
+                            }
                         } else {
-                            // Handle the case where links are not available or not in the expected format
-                            const noLinksMessage = document.createElement('p');
-                            noLinksMessage.textContent = "No links available";
-                            projectBack.appendChild(noLinksMessage);
+                            // Handle the case where project details are not available
+                            const noDetailsMessage = document.createElement('p');
+                            noDetailsMessage.textContent = "No project details available";
+                            projectBack.appendChild(noDetailsMessage);
                         }
 
                         projectContent.appendChild(projectFront);
@@ -117,7 +114,7 @@ fetch('./src/data/projects.json')
                     });
                 }
 
-                projectsContainer.appendChild(categoryContainer);
+                projectsWrapper.appendChild(categoryContainer); // Hänge die Kategoriecontainer an das projects-wrapper-Element an
             });
         } else {
             console.error('Fehler beim Abrufen der Projekte: Keine Kategorien in den Daten gefunden');

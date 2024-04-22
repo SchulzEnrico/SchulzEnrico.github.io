@@ -1,26 +1,21 @@
 .about-container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  left: 5vw;
-  max-width: 90vw;
-  min-height: 78vh;
-  min-width: 95vw; }
+  justify-content: start;
+  max-width: 90vw; }
 
 .about-me-content {
+  left: 5vw;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  left: 5vw;
   max-width: 90vw;
   font-size: 1rem;
-  font-weight: bold;
+  /* font-weight: bold;*/
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-4), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
 /*# sourceMappingURL=about.css.map */
