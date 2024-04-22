@@ -25,10 +25,10 @@
 .category-container h3 {
   margin: 1rem 0 0;
   font-family: var(--font-1);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-2),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -164,9 +164,9 @@
   left: 3%;
   grid-column: 1;
   grid-row: 2;
-  justify-self: center; /* Ändern Sie die Ausrichtung */
+  justify-self: center;
   height: 90%;
-  width: 75%; /* Breite auf 100% setzen */
+  width: 75%;
 }
 
 .topics-container h5,
@@ -219,14 +219,14 @@
   flex-direction: row;
   justify-content: start;
   align-items: start;
-  flex-wrap: wrap; // Erlaubt das Umbruch der Container
-  gap: 10px; // Abstand zwischen den ul-Elementen
-  grid-column: 2; /* Ändern Sie die Grid-Spaltenpositionierung */
-  grid-row: 2; /* Ändern Sie die Grid-Zeilenpositionierung */
+  flex-wrap: wrap;
+  gap: 10px;
+  grid-column: 2;
+  grid-row: 2;
   text-align: left;
-  justify-self: center; /* Ändern Sie die Ausrichtung */
+  justify-self: center;
   height: 95%;
-  width: 90%; /* Breite auf 100% setzen */
+  width: 90%;
 }
 
 .skill-project-use-container ul {
@@ -254,10 +254,10 @@
 }
 
 .skill-project-use-container ul ul {
-    font-family: var(--font-1);
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
+  font-family: var(--font-1);
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
 }
 
 .usage-data {
@@ -300,8 +300,8 @@
   background-color: var(--color-01);
   border-radius: 25px;
   box-shadow:
-  inset 0 8px 25px var(--color-21),
-  inset 5px -8px 25px var(--color-21);
+          inset 0 8px 25px var(--color-21),
+          inset 5px -8px 25px var(--color-21);
   overflow: hidden; /* Hinzugefügt, um das Überlappen zu ermöglichen */
 }
 

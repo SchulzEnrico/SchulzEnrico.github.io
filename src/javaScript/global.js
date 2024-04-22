@@ -43,3 +43,34 @@ $(document).ready(function() {
     });
 });
 
+// Diese Funktion steuert die Sichtbarkeit der Projects-Sektion basierend auf dem Status der Skills-Sektion
+function toggleProjectsVisibility(isSkillsOpen) {
+    const projectsSection = document.getElementById('projects');
+    if (isSkillsOpen) {
+        projectsSection.style.display = 'none'; // Verstecke die Projects-Sektion, wenn die Skills-Sektion geöffnet ist
+    } else {
+        projectsSection.style.display = 'block'; // Zeige die Projects-Sektion, wenn die Skills-Sektion geschlossen ist
+    }
+}
+
+// Diese Funktion wird aufgerufen, wenn die Skills-Sektion geöffnet oder geschlossen wird
+function toggleSkills(isOpen) {
+    const skillsSection = document.getElementById('skills');
+    if (isOpen) {
+        skillsSection.classList.add('open'); // Füge der Skills-Sektion die Klasse 'open' hinzu, um anzuzeigen, dass sie geöffnet ist
+        toggleProjectsVisibility(true); // Verstecke die Projects-Sektion, wenn die Skills-Sektion geöffnet wird
+    } else {
+        skillsSection.classList.remove('open'); // Entferne die Klasse 'open' von der Skills-Sektion, um anzuzeigen, dass sie geschlossen ist
+        toggleProjectsVisibility(false); // Zeige die Projects-Sektion, wenn die Skills-Sektion geschlossen wird
+    }
+}
+
+// Füge einen Event-Listener hinzu, um zu überwachen, ob die Skills-Sektion geöffnet oder geschlossen wird
+const skillsSection = document.getElementById('skills');
+skillsSection.addEventListener('click', function() {
+    const isOpen = this.classList.contains('open');
+    toggleSkills(!isOpen);
+});
+
+// Initialisierung: Stelle sicher, dass die Projects-Sektion sichtbar ist, wenn die Seite geladen wird
+toggleProjectsVisibility(false);

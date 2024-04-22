@@ -10,7 +10,8 @@
             {
               "name_affix": "Decentralized processing of new deliveries",
               "requirements": [
-                "Cross-company: Team Coordination, Team mediation",
+                "Team Coordination",
+                "Team mediation",
                 "Logistics",
                 "Quality control"
               ],
