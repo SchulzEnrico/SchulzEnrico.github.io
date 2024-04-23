@@ -20,6 +20,17 @@ function toggleActive(element) {
     }
 }
 
+// Finde alle Links in der mobilen Navigation
+const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+// Schleife durch jeden Link und füge einen Event-Listener hinzu
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Schließe die Navigation, indem du die Klasse 'nav-open' entfernst
+        document.querySelector('.nav-open').classList.remove('nav-open');
+    });
+});
+
 function scrollToSection(section) {
     section.scrollIntoView({
         behavior: 'smooth'
