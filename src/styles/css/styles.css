@@ -11,6 +11,9 @@ header {
   box-shadow: 0 25px 25px var(--color-0);
   z-index: 100; }
 
+#es-mobile-logo {
+  display: none; }
+
 header .ripples-container-large {
   position: fixed;
   top: 0;
@@ -28,8 +31,17 @@ h1 {
 
 @media only screen and (max-width: 768px) {
   header {
+    position: fixed;
     max-width: 100vw;
-    box-shadow: 0 2vh 1vh var(--color-0); } }
+    box-shadow: 0 2vh 1vh var(--color-0); }
+
+  #es-mobile-logo {
+    position: fixed;
+    top: 1vh;
+    justify-self: center;
+    display: flex;
+    width: 50vw;
+    filter: brightness(80%); } }
 @keyframes mirrorRotate {
   0% {
     transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
@@ -106,8 +118,10 @@ nav {
     z-index: 1;
     font-size: 1.2rem; }
   nav #es-nav-logo:hover .about-link-label,
+  nav #es-nav-logo:focus .about-link-label,
   nav #es-nav-logo.active .about-link-label {
-    text-shadow: 1px 1px 0 var(--color-4), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+    font-weight: lighter;
+    text-shadow: 1px 1px 0 var(--color-31), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
   nav #es-nav-logo img {
     margin: 0; }
   nav #es-nav-logo:hover,
@@ -115,8 +129,6 @@ nav {
   nav #es-nav-logo.active {
     scale: 1.1;
     animation: none; }
-  nav #es-nav-logo.active img {
-    transform: scale(1.1); }
   nav .footer-links-container a:hover {
     scale: 1.1;
     color: var(--color-4-0); }
@@ -135,7 +147,7 @@ nav {
   border-radius: 0 0 2px 35px;
   background-color: var(--color-3-2);
   box-shadow: inset 0 -5px 10px var(--color-3-1), inset -3px 5px 9px var(--color-23);
-  opacity: .5; }
+  opacity: .65; }
 
 #business-card-nav-link {
   left: 0;
@@ -161,7 +173,7 @@ nav {
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 0 1px 1px var(--color-3-1), 1px 1px 0 var(--color-22), 1px -1px 0 var(--color-22), -1px 0 0 var(--color-22), -1px -1px 0 var(--color-22), 1px 0 0 var(--color-22), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-22), -1px 1px 0 var(--color-22), -1px 2px 0 var(--color-22), 0 -1px 0 var(--color-22);
+  text-shadow: 0 1px 1px var(--color-3), 1px 1px 0 var(--color-23), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 2px 0 var(--color-23), 0 -1px 0 var(--color-23);
   transform: none; }
 
 #business-card-nav-link a.active,
@@ -188,7 +200,9 @@ nav {
     display: block; } }
 .menu-toggle {
   position: absolute;
-  right: 15px;
+  right: 7.5vw;
+  /*bottom: calc(4vh - 3.75rem);*/
+  bottom: 4vh;
   z-index: 9999; }
 
 /* Stile für den Burger-Button */
@@ -218,42 +232,96 @@ nav {
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--color-01);
-  padding: 50px 0;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding: 1vw;
   border-bottom-left-radius: 150px;
-  outline: 1px solid var(--color-3-1);
+  border-top-left-radius: 150px;
+  background-color: var(--color-21);
+  box-shadow: inset 5px 5px 35px var(--color-0), inset 5px -5px 35px var(--color-0);
+  border: 3px solid var(--color-3);
+  outline: 1px solid var(--color-23);
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 60%;
+  top: 22vh;
+  right: -1vw;
+  width: 52.5vw;
+  height: 55vh;
   transition: transform 0.3s ease;
   transform: translateX(0); }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav a.active {
-  color: var(--color-3);
-  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
   animation: none; }
 
 @media screen and (max-width: 768px) {
   .menu-toggle {
-    display: block; }
+    display: block;
+    bottom: 4vh; }
 
   nav {
     display: none; }
 
   nav a {
-    font-size: 3.25vw; }
+    position: relative;
+    display: flex;
+    justify-content: end;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    right: 3vw;
+    top: -5vh;
+    width: fit-content;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
-  #business-card {
+  .about-link-label {
+    z-index: 0; }
+
+  a#es-nav-logo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 4vh 0 2vh 0;
+    text-decoration: none;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+    right: 5px;
+    width: 100px;
+    transition: text-shadow 50ms ease, color 50ms ease;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+
+  #es-nav-logo img {
+    display: none !important; }
+
+  #business-card-nav-link {
     display: none; }
 
   #credits-nav-link {
-    position: absolute;
-    top: 0; } }
+    top: 75%;
+    right: 3vw;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    width: 25vw;
+    opacity: 1; }
+
+  #credits-nav-link a {
+    font-size: 1rem;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+
+  .scroll-to-top {
+    left: 5vw;
+    width: 20px;
+    height: 20px;
+    bottom: 2vh; }
+
+  .scroll-to-top i {
+    text-shadow: none;
+    font-size: 2.5rem;
+    color: var(--color-3); } }
 /* Stile für größere Bildschirme (mindestens 769px Bildschirmbreite) */
 @media screen and (min-width: 769px) {
   /* Verstecken Sie den Burger-Button und zeigen Sie das normale Menü */
@@ -312,7 +380,13 @@ nav {
     background-position: 500%; } }
 @media only screen and (max-width: 768px) {
   .greeting {
-    top: 15%; } }
+    top: 15%; }
+
+  .es-container {
+    top: 20vh; }
+
+  #es {
+    height: 60vh; } }
 .motivation-container {
   display: flex;
   justify-content: center;
@@ -352,6 +426,19 @@ nav {
   position: relative;
   height: 50vh; }
 
+@media only screen and (max-width: 768px) {
+  .motivation-container {
+    max-height: 60vh; }
+
+  .motivation-content {
+    max-width: 85vw;
+    left: 8vw;
+    font-size: .75rem;
+    letter-spacing: 3px; }
+
+  .motivation-essence {
+    font-size: 1.5rem;
+    letter-spacing: 5px; } }
 .about-container {
   display: flex;
   flex-direction: column;
@@ -372,6 +459,9 @@ nav {
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
+@media only screen and (max-width: 768px) {
+  .about-me-content {
+    left: 7.5vw; } }
 .skills-container {
   display: flex;
   justify-content: center;
@@ -456,10 +546,21 @@ nav {
 
 .proficiency-chart {
   transform: scaleX(-1);
-  position: relative;
-  bottom: -10px;
-  right: -40px;
-  scale: .45; }
+  position: fixed;
+  bottom: -27.5%;
+  right: -10%;
+  scale: .55; }
+
+.proficiency {
+  position: fixed;
+  bottom: 23%;
+  right: -2.5%;
+  font-family: var(--font-2);
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  color: transparent;
+  transform: translate(-50%, -50%) rotate(180deg) scaleY(-1);
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 2px 2px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .skill-name {
   position: fixed;
@@ -513,7 +614,7 @@ nav {
   font-size: 2.25rem;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .topics-container ul {
   margin: 0; }
@@ -553,6 +654,12 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
   color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-name {
+  text-decoration: underline; }
+
+.skill-project-use-container ul li li {
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
 .skill-project-use-container ul ul {
@@ -562,18 +669,15 @@ nav {
   list-style-type: none; }
 
 .usage-data {
+  font-size: 1.1rem;
   font-family: var(--font-2);
-  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
 
 .skill-bar-container {
   grid-row: 1;
-  /* Behalten Sie die Grid-Zeilenpositionierung bei */
   grid-column: 2 / span 2;
-  /* Ändern Sie die Grid-Spaltenpositionierung */
   width: 90%;
-  /* Breite auf 100% setzen */
   position: relative;
-  /* Setzen Sie die Position auf relativ */
   height: 26px;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
@@ -581,7 +685,6 @@ nav {
   align-items: baseline;
   justify-self: end; }
 
-/* Stil für die Balken */
 .skill-bar {
   position: relative;
   align-content: center;
@@ -593,8 +696,7 @@ nav {
   background-color: var(--color-01);
   border-radius: 25px;
   box-shadow: inset 0 8px 25px var(--color-21), inset 5px -8px 25px var(--color-21);
-  overflow: hidden;
-  /* Hinzugefügt, um das Überlappen zu ermöglichen */ }
+  overflow: hidden; }
 
 .skill-bar-fill {
   position: relative;
@@ -605,17 +707,13 @@ nav {
 
 .total-applied {
   background-color: var(--color-3-1);
-  /* Farbe für total applied */
   z-index: 3;
-  left: 0;
-  /* Positionierung für total applied */ }
+  left: 0; }
 
 .unassisted {
   background-color: var(--color-1);
-  /* Farbe für unassisted */
   z-index: 2;
-  left: 0;
-  /* Positionierung für unassisted */ }
+  left: 0; }
 
 .coach-guided {
   background-color: var(--color-41);
@@ -633,17 +731,14 @@ nav {
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4);
-  z-index: 4;
-  /* Damit der Wert über den Balken angezeigt wird */ }
+  z-index: 4; }
 
 .skill-legend {
   position: absolute;
   font-weight: bold;
   top: 4rem;
   right: 2.5vw;
-  /* Ändern Sie den Abstand zum linken Rand */
   width: 100%;
-  /* Breite auf 100% setzen */
   display: flex;
   justify-content: end; }
 
@@ -678,15 +773,40 @@ nav {
     display: inline-block;
     flex-direction: column;
     align-items: stretch;
-    max-width: 98vw;
-    min-width: 98vw; }
+    max-width: 98%;
+    min-width: 98%; }
+
+  .category-container h3 {
+    margin-left: 4.5vw;
+    font-size: 1.75rem; }
 
   .category-skills-container {
     max-height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 100vw; } }
+    max-width: 97%; }
+
+  .skill {
+    max-width: 36vw;
+    padding-top: 10px; }
+
+  .skill-name {
+    font-size: .8rem; }
+
+  .proficiency-chart {
+    position: fixed;
+    bottom: -27.5%;
+    right: 0;
+    scale: .55; }
+
+  .proficiency {
+    right: -4%;
+    font-size: 1.7rem; }
+
+  .skill-bar-container {
+    display: none; } }
 .projects-container {
   display: flex;
   justify-content: center;
@@ -741,7 +861,7 @@ nav {
   padding: 20px;
   transform: rotateY(180deg);
   background-color: var(--color-00);
-  box-shadow: inset 0 0 20 var(--color-23);
+  box-shadow: inset 0 0 20px var(--color-23);
   border: 1px solid var(--color-4-0);
   outline: 5px solid var(--color-3-1);
   width: 96vw;
@@ -789,7 +909,7 @@ nav {
   outline: 4px solid var(--color-00);
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23);
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23);
   box-shadow: 3px 6px 1px var(--color-3-11), 6px 6px 15px var(--color-22); }
 
 .project-front p {
@@ -808,7 +928,7 @@ nav {
   left: 3vw;
   margin: 0;
   font-size: 3rem;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
 .name-affix {
   position: fixed;
@@ -894,7 +1014,11 @@ nav {
     /* Projekte füllen die gesamte Breite des Containers */
     /*    max-width: 95vw; !* Keine maximale Breite für Projekte *!*/
     max-width: 95%;
-    /* Keine maximale Breite für Projekte */ } }
+    /* Keine maximale Breite für Projekte */ }
+
+  .projects-container h3 {
+    margin-left: 6vw;
+    font-size: 1.75rem; } }
 #credits {
   width: 100vw;
   background-color: var(--color-000); }
@@ -926,6 +1050,19 @@ nav {
   min-width: 100vw;
   max-width: 100vw;
   z-index: -1; }
+
+.credits-close {
+  position: fixed;
+  left: 1.5vw;
+  color: var(--color-21);
+  transition: color 50ms ease;
+  transform: none; }
+
+.credits-close i {
+  position: relative;
+  font-size: 2rem;
+  margin-top: .5vh;
+  text-shadow: 1px -2px 1px var(--color-21), -2px 0 1px var(--color-00), -2px -1px 1px var(--color-4-0); }
 
 .fade {
   position: relative;
@@ -997,13 +1134,44 @@ h6 {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px); } }
 .credits-i {
-  color: var(--color-0);
+  color: var(--color-00);
   scale: 1.25;
-  margin: 0 3.5vw; }
+  margin: 0 5vw; }
 
 .credits-i:hover {
   color: var(--color-3-2); }
 
+@media only screen and (max-width: 768px) {
+  #credits-h2 {
+    font-size: 1rem;
+    position: fixed;
+    margin: 0;
+    left: 21.5vw;
+    top: 11.5vh; }
+
+  #credits-h2 .section-hashtag {
+    font-size: 1.2rem; }
+
+  .credits-close {
+    left: 7vw; }
+
+  .star-wars {
+    font-size: 300%;
+    letter-spacing: 5px; }
+
+  .credits-title {
+    font-size: 300%;
+    font-weight: 600; }
+
+  .episode-number {
+    font-size: 300%; }
+
+  .credits-title > h6 {
+    font-size: 175%;
+    color: var(--color-3-1); }
+
+  .menu-toggle {
+    display: none; } }
 @keyframes mirrorRotate {
   0% {
     transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(0deg); }
@@ -1080,8 +1248,10 @@ nav {
     z-index: 1;
     font-size: 1.2rem; }
   nav #es-nav-logo:hover .about-link-label,
+  nav #es-nav-logo:focus .about-link-label,
   nav #es-nav-logo.active .about-link-label {
-    text-shadow: 1px 1px 0 var(--color-4), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+    font-weight: lighter;
+    text-shadow: 1px 1px 0 var(--color-31), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
   nav #es-nav-logo img {
     margin: 0; }
   nav #es-nav-logo:hover,
@@ -1089,8 +1259,6 @@ nav {
   nav #es-nav-logo.active {
     scale: 1.1;
     animation: none; }
-  nav #es-nav-logo.active img {
-    transform: scale(1.1); }
   nav .footer-links-container a:hover {
     scale: 1.1;
     color: var(--color-4-0); }
@@ -1109,7 +1277,7 @@ nav {
   border-radius: 0 0 2px 35px;
   background-color: var(--color-3-2);
   box-shadow: inset 0 -5px 10px var(--color-3-1), inset -3px 5px 9px var(--color-23);
-  opacity: .5; }
+  opacity: .65; }
 
 #business-card-nav-link {
   left: 0;
@@ -1135,7 +1303,7 @@ nav {
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 0 1px 1px var(--color-3-1), 1px 1px 0 var(--color-22), 1px -1px 0 var(--color-22), -1px 0 0 var(--color-22), -1px -1px 0 var(--color-22), 1px 0 0 var(--color-22), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-22), -1px 1px 0 var(--color-22), -1px 2px 0 var(--color-22), 0 -1px 0 var(--color-22);
+  text-shadow: 0 1px 1px var(--color-3), 1px 1px 0 var(--color-23), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 2px 0 var(--color-23), 0 -1px 0 var(--color-23);
   transform: none; }
 
 #business-card-nav-link a.active,
@@ -1162,7 +1330,9 @@ nav {
     display: block; } }
 .menu-toggle {
   position: absolute;
-  right: 15px;
+  right: 7.5vw;
+  /*bottom: calc(4vh - 3.75rem);*/
+  bottom: 4vh;
   z-index: 9999; }
 
 /* Stile für den Burger-Button */
@@ -1192,42 +1362,96 @@ nav {
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--color-01);
-  padding: 50px 0;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding: 1vw;
   border-bottom-left-radius: 150px;
-  outline: 1px solid var(--color-3-1);
+  border-top-left-radius: 150px;
+  background-color: var(--color-21);
+  box-shadow: inset 5px 5px 35px var(--color-0), inset 5px -5px 35px var(--color-0);
+  border: 3px solid var(--color-3);
+  outline: 1px solid var(--color-23);
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 60%;
+  top: 22vh;
+  right: -1vw;
+  width: 52.5vw;
+  height: 55vh;
   transition: transform 0.3s ease;
   transform: translateX(0); }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav a.active {
-  color: var(--color-3);
-  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
   animation: none; }
 
 @media screen and (max-width: 768px) {
   .menu-toggle {
-    display: block; }
+    display: block;
+    bottom: 4vh; }
 
   nav {
     display: none; }
 
   nav a {
-    font-size: 3.25vw; }
+    position: relative;
+    display: flex;
+    justify-content: end;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    right: 3vw;
+    top: -5vh;
+    width: fit-content;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
-  #business-card {
+  .about-link-label {
+    z-index: 0; }
+
+  a#es-nav-logo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 4vh 0 2vh 0;
+    text-decoration: none;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+    right: 5px;
+    width: 100px;
+    transition: text-shadow 50ms ease, color 50ms ease;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+
+  #es-nav-logo img {
+    display: none !important; }
+
+  #business-card-nav-link {
     display: none; }
 
   #credits-nav-link {
-    position: absolute;
-    top: 0; } }
+    top: 75%;
+    right: 3vw;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    width: 25vw;
+    opacity: 1; }
+
+  #credits-nav-link a {
+    font-size: 1rem;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+
+  .scroll-to-top {
+    left: 5vw;
+    width: 20px;
+    height: 20px;
+    bottom: 2vh; }
+
+  .scroll-to-top i {
+    text-shadow: none;
+    font-size: 2.5rem;
+    color: var(--color-3); } }
 /* Stile für größere Bildschirme (mindestens 769px Bildschirmbreite) */
 @media screen and (min-width: 769px) {
   /* Verstecken Sie den Burger-Button und zeigen Sie das normale Menü */
@@ -1290,11 +1514,17 @@ footer a:focus i {
     transform: translateY(0); } }
 @media only screen and (max-width: 768px) {
   footer {
+    position: fixed;
+    bottom: 0;
     max-width: 100vw;
-    box-shadow: 0 -2vh 1vh var(--color-0); } }
+    height: 12vh;
+    box-shadow: 0 -2vh 1vh var(--color-0); }
+
+  footer i {
+    bottom: 4vh; } }
 :root {
   font-family: Typewriter, ui-monospace, monospace, sans-serif;
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   line-height: 1.5;
   font-weight: 400;
@@ -1368,9 +1598,8 @@ body::-webkit-scrollbar-thumb {
 .shadow-wrapper-start,
 .shadow-wrapper-end {
   position: fixed;
-  top: 10vh;
-  left: -.3vw;
-  min-height: 85vh;
+  top: 0;
+  min-height: 100vh;
   min-width: 100vw;
   max-width: 100vw;
   box-shadow: inset 50px 0 25px var(--color-0);
@@ -1424,8 +1653,8 @@ h2 {
   z-index: -1; }
 
 .educations-container {
-  margin: 0;
   position: fixed;
+  margin: 0;
   left: 0;
   bottom: 0;
   display: flex;
@@ -1470,23 +1699,36 @@ h2 {
   25%, 75% {
     opacity: 0; } }
 @media only screen and (max-width: 768px) {
+  root {
+    max-width: 100vw; }
+
+  body {
+    max-width: 100vw; }
+
   h1 {
     scale: 0.7;
     top: -91px;
     left: -30px; }
 
   h2 {
-    position: absolute;
-    margin: 0 10vw 0 0;
-    top: 0; }
+    position: relative;
+    display: block;
+    width: 90vw;
+    font-size: 2rem;
+    top: 0;
+    left: 0;
+    text-align: left; }
 
   .section {
-    max-height: fit-content !important; }
+    max-width: 100vw;
+    min-height: 75vh; }
 
   .shadow-wrapper-start {
+    max-height: 100vh;
     box-shadow: inset 5vw 0 2.5vw var(--color-0); }
 
   .shadow-wrapper-end {
+    max-height: 100vh;
     box-shadow: inset -5vw 0 2.5vw var(--color-0); }
 
   .greeting-container {
@@ -1516,33 +1758,28 @@ h2 {
       background-size: 100% 0; }
     100% {
       background-size: 100% 100%; } }
-  .es {
-    left: -.5%;
-    filter: brightness(45%); }
-
   .educations-container {
     position: fixed;
     height: 1.2rem;
-    bottom: 4rem;
+    bottom: 10vh;
     width: 100vw;
     z-index: 10000; }
 
   #educations-dot {
-    position: fixed;
     margin: 0;
-    left: 0;
-    bottom: 3.05rem;
+    left: 2vw;
+    bottom: 8.5vh;
     font-size: 2rem; }
 
   .educations-wrapper {
-    left: 1rem;
+    left: 6vw;
     white-space: nowrap;
     overflow: hidden; }
 
   #educations {
     margin: 0;
     font-size: 1rem;
-    bottom: 3.6rem; }
+    bottom: 10vh; }
 
   footer {
     position: fixed;

@@ -47,7 +47,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-01);
+  background-color: var(--color-00);
   min-height: 85vh;
   max-height: 85vh;
   min-width: 100vw;
@@ -67,14 +67,20 @@
 }
 .business-card-close i {
   position: relative;
+  font-size: 2rem;
   margin-top: .5vh;
+  text-shadow: 1px -2px 1px var(--color-21),
+  -2px 0 1px var(--color-00),
+  -2px -1px 1px var(--color-4-0);
 }
 
 .business-card-close:hover {
   transform: none;
 }
+
 .business-card-close:hover i {
   color: var(--color-3);
+  scale: 1.5;
 }
 
 .business-card-footer {
@@ -99,28 +105,57 @@
 }
 
 .business-card-footer a {
-    margin-top: 1vh;
-    text-decoration: none;
-    z-index: 101;
-    font-family: var(--font-1);
-    display: flex;
-    justify-content: start;
-    align-items: baseline;
-    font-size: 1.15rem;
-    min-height: fit-content;
-    color: var(--color-23);
-    letter-spacing: 8px;
-    text-shadow: 1px -1px 1px var(--color-22),
-    -1px 0 1px var(--color-00),
-    -1px -1px 1px var(--color-4-0);
+  margin-top: 1vh;
+  text-decoration: none;
+  z-index: 101;
+  font-family: var(--font-1);
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+  font-size: 1.15rem;
+  font-weight: bold;
+  min-height: fit-content;
+  letter-spacing: 8px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-0),
+  1px 2px 0 var(--color-41),
+  1px -1px 0 var(--color-4),
+  -1px 0 0 var(--color-4),
+  -1px -1px 0 var(--color-4),
+  1px 0 0 var(--color-4),
+  2px 2px 0 var(--color-4),
+  -1px 2px 0 var(--color-4),
+  -1px 0 0 var(--color-4),
+  0 -1px 0 var(--color-4);
+}
+
+
+.business-card-footer a:hover {
+  color: transparent;
+  font-family: var(--font-2);
+  text-shadow: 1px 1px 0 var(--color-0),
+  2px 2px 0 var(--color-41),
+  1px -1px 0 var(--color-23),
+  -1px 0 0 var(--color-23),
+  -1px -1px 0 var(--color-23),
+  1px 0 0 var(--color-23),
+  2px 2px 0 var(--color-23),
+  -1px 2px 0 var(--color-23),
+  -1px 0 0 var(--color-23),
+  3px 3px 5px var(--color-3),
+  0 -1px 0 var(--color-23);
 }
 
 .business-card-footer i {
   bottom: 0;
-  font-size: 3rem;
-  color: var(--color-21);
+  font-size: 2.5rem;
+  color: var(--color-4);
 }
 
+.business-card-footer i:hover {
+  scale: 1;
+  color: var(--color-4-0);
+}
 #portfolio {
   height: 75vh;
   position: absolute;
@@ -155,7 +190,6 @@
   text-shadow: 1px -1px 1px var(--color-2),
   -1px 0 1px var(--color-00),
   -1px -1px 1px var(--color-4-0);
-
 }
 
 #professions span:nth-child(1) span {
@@ -199,6 +233,20 @@
   perspective: 100vw;
   perspective-origin: 50%;
   will-change: perspective-origin;
+}
+#article::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+#article::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#article::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+#article::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: none;
 }
 
 #content {
@@ -293,7 +341,7 @@
   text-decoration: none;
   position: relative;
   z-index: 2;
-  color: var(--color-21);
+  color: var(--color-1);
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 14px;

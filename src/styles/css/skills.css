@@ -83,10 +83,21 @@
 
 .proficiency-chart {
   transform: scaleX(-1);
-  position: relative;
-  bottom: -10px;
-  right: -40px;
-  scale: .45; }
+  position: fixed;
+  bottom: -27.5%;
+  right: -10%;
+  scale: .55; }
+
+.proficiency {
+  position: fixed;
+  bottom: 23%;
+  right: -2.5%;
+  font-family: var(--font-2);
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  color: transparent;
+  transform: translate(-50%, -50%) rotate(180deg) scaleY(-1);
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 2px 2px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .skill-name {
   position: fixed;
@@ -140,7 +151,7 @@
   font-size: 2.25rem;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .topics-container ul {
   margin: 0; }
@@ -180,6 +191,12 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: transparent;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-name {
+  text-decoration: underline; }
+
+.skill-project-use-container ul li li {
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
 .skill-project-use-container ul ul {
@@ -189,18 +206,15 @@
   list-style-type: none; }
 
 .usage-data {
+  font-size: 1.1rem;
   font-family: var(--font-2);
-  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
 
 .skill-bar-container {
   grid-row: 1;
-  /* Behalten Sie die Grid-Zeilenpositionierung bei */
   grid-column: 2 / span 2;
-  /* Ändern Sie die Grid-Spaltenpositionierung */
   width: 90%;
-  /* Breite auf 100% setzen */
   position: relative;
-  /* Setzen Sie die Position auf relativ */
   height: 26px;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
@@ -208,7 +222,6 @@
   align-items: baseline;
   justify-self: end; }
 
-/* Stil für die Balken */
 .skill-bar {
   position: relative;
   align-content: center;
@@ -220,8 +233,7 @@
   background-color: var(--color-01);
   border-radius: 25px;
   box-shadow: inset 0 8px 25px var(--color-21), inset 5px -8px 25px var(--color-21);
-  overflow: hidden;
-  /* Hinzugefügt, um das Überlappen zu ermöglichen */ }
+  overflow: hidden; }
 
 .skill-bar-fill {
   position: relative;
@@ -232,17 +244,13 @@
 
 .total-applied {
   background-color: var(--color-3-1);
-  /* Farbe für total applied */
   z-index: 3;
-  left: 0;
-  /* Positionierung für total applied */ }
+  left: 0; }
 
 .unassisted {
   background-color: var(--color-1);
-  /* Farbe für unassisted */
   z-index: 2;
-  left: 0;
-  /* Positionierung für unassisted */ }
+  left: 0; }
 
 .coach-guided {
   background-color: var(--color-41);
@@ -260,17 +268,14 @@
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4);
-  z-index: 4;
-  /* Damit der Wert über den Balken angezeigt wird */ }
+  z-index: 4; }
 
 .skill-legend {
   position: absolute;
   font-weight: bold;
   top: 4rem;
   right: 2.5vw;
-  /* Ändern Sie den Abstand zum linken Rand */
   width: 100%;
-  /* Breite auf 100% setzen */
   display: flex;
   justify-content: end; }
 
@@ -305,14 +310,39 @@
     display: inline-block;
     flex-direction: column;
     align-items: stretch;
-    max-width: 98vw;
-    min-width: 98vw; }
+    max-width: 98%;
+    min-width: 98%; }
+
+  .category-container h3 {
+    margin-left: 4.5vw;
+    font-size: 1.75rem; }
 
   .category-skills-container {
     max-height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 100vw; } }
+    max-width: 97%; }
+
+  .skill {
+    max-width: 36vw;
+    padding-top: 10px; }
+
+  .skill-name {
+    font-size: .8rem; }
+
+  .proficiency-chart {
+    position: fixed;
+    bottom: -27.5%;
+    right: 0;
+    scale: .55; }
+
+  .proficiency {
+    right: -4%;
+    font-size: 1.7rem; }
+
+  .skill-bar-container {
+    display: none; } }
 
 /*# sourceMappingURL=skills.css.map */

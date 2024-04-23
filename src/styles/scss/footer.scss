@@ -57,8 +57,15 @@ footer a:focus i{
 
 @media only screen and (max-width: 768px) {
   footer {
+    position: fixed;
+    bottom: 0;
     max-width: 100vw;
+    height: 12vh;
     box-shadow: 0 -2vh 1vh var(--color-0)/*,
     inset 0 2px 7px var(--color-41)*/;
+  }
+
+  footer i {
+    bottom: 4vh;
   }
 }

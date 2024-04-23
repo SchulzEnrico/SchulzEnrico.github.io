@@ -48,6 +48,12 @@
     background-position: 500%; } }
 @media only screen and (max-width: 768px) {
   .greeting {
-    top: 15%; } }
+    top: 15%; }
+
+  .es-container {
+    top: 20vh; }
+
+  #es {
+    height: 60vh; } }
 
 /*# sourceMappingURL=welcome.css.map */
