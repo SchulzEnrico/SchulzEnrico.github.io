@@ -48,8 +48,8 @@ fetch('./src/data/skills.json')
                             </div>
                             <div class="skill-project-use-container">
                                 <h5>Used in Projects</h5>
-                                <ul>
-                                    ${skill["projects"].map(project => `<li>${project.name}
+                                <ul class="project-list">
+                                    ${skill["projects"].map(project => `<li> <span class="project-name">${project.name}</span>
                                                                             <ul>
                                                                              <li>Applied: <span class="usage-data">${project["hours_skill_used"]}h</span></li>
                                                                              <li>Usage: <span class="usage-data">${project["skill_use_types"]}</span></li>
@@ -120,7 +120,7 @@ function drawProficiencyChart(container, proficiency) {
     circleBackground.setAttribute("cx", "65"); // Horizontal zentriert
     circleBackground.setAttribute("cy", "65"); // Vertikal zentriert
     circleBackground.setAttribute("r", radius.toString());
-    circleBackground.setAttribute("stroke", "#252526");
+    circleBackground.setAttribute("stroke", "#424244");
     circleBackground.setAttribute("stroke-width", "10");
     circleBackground.setAttribute("fill", "none");
     group.appendChild(circleBackground);
@@ -130,7 +130,7 @@ function drawProficiencyChart(container, proficiency) {
     circleProgress.setAttribute("cx", "65"); // Horizontal zentriert
     circleProgress.setAttribute("cy", "65"); // Vertikal zentriert
     circleProgress.setAttribute("r", radius.toString());
-    circleProgress.setAttribute("stroke", "#440000");
+    circleProgress.setAttribute("stroke", "#2f0303");
     circleProgress.setAttribute("stroke-width", "10");
     circleProgress.setAttribute("fill", "none");
     circleProgress.setAttribute("stroke-dasharray", `${circumference} ${circumference}`);
@@ -138,9 +138,17 @@ function drawProficiencyChart(container, proficiency) {
     circleProgress.setAttribute("stroke-linecap", "round"); // Runde Seiten des Kreises
     group.appendChild(circleProgress);
 
+    // Div für Text erstellen
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("proficiency");
+    textDiv.textContent = `${proficiency}%`;
+    textDiv.setAttribute("title", "proficiency");
+    container.appendChild(textDiv);
+
     // Gruppen-Element dem SVG-Element hinzufügen
     svg.appendChild(group);
 
     // SVG dem Container hinzufügen
     container.appendChild(svg);
 }
+

@@ -61,4 +61,18 @@
   height: 50vh;
 }
 
-
+@media only screen and (max-width: 768px) {
+  .motivation-container {
+    max-height: 60vh;
+  }
+  .motivation-content {
+    max-width: 85vw;
+    left: 8vw;
+    font-size: .75rem;
+    letter-spacing: 3px;
+  }
+  .motivation-essence {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+}

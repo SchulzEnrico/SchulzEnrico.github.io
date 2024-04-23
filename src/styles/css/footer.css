@@ -75,8 +75,10 @@ nav {
     z-index: 1;
     font-size: 1.2rem; }
   nav #es-nav-logo:hover .about-link-label,
+  nav #es-nav-logo:focus .about-link-label,
   nav #es-nav-logo.active .about-link-label {
-    text-shadow: 1px 1px 0 var(--color-4), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+    font-weight: lighter;
+    text-shadow: 1px 1px 0 var(--color-31), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
   nav #es-nav-logo img {
     margin: 0; }
   nav #es-nav-logo:hover,
@@ -84,8 +86,6 @@ nav {
   nav #es-nav-logo.active {
     scale: 1.1;
     animation: none; }
-  nav #es-nav-logo.active img {
-    transform: scale(1.1); }
   nav .footer-links-container a:hover {
     scale: 1.1;
     color: var(--color-4-0); }
@@ -104,7 +104,7 @@ nav {
   border-radius: 0 0 2px 35px;
   background-color: var(--color-3-2);
   box-shadow: inset 0 -5px 10px var(--color-3-1), inset -3px 5px 9px var(--color-23);
-  opacity: .5; }
+  opacity: .65; }
 
 #business-card-nav-link {
   left: 0;
@@ -130,7 +130,7 @@ nav {
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 0 1px 1px var(--color-3-1), 1px 1px 0 var(--color-22), 1px -1px 0 var(--color-22), -1px 0 0 var(--color-22), -1px -1px 0 var(--color-22), 1px 0 0 var(--color-22), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-22), -1px 1px 0 var(--color-22), -1px 2px 0 var(--color-22), 0 -1px 0 var(--color-22);
+  text-shadow: 0 1px 1px var(--color-3), 1px 1px 0 var(--color-23), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 2px 0 var(--color-23), 0 -1px 0 var(--color-23);
   transform: none; }
 
 #business-card-nav-link a.active,
@@ -157,7 +157,9 @@ nav {
     display: block; } }
 .menu-toggle {
   position: absolute;
-  right: 15px;
+  right: 7.5vw;
+  /*bottom: calc(4vh - 3.75rem);*/
+  bottom: 4vh;
   z-index: 9999; }
 
 /* Stile für den Burger-Button */
@@ -187,42 +189,95 @@ nav {
 .nav-open .mobile-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--color-01);
-  padding: 50px 0;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1vw;
   border-bottom-left-radius: 150px;
-  outline: 1px solid var(--color-3-1);
+  border-top-left-radius: 150px;
+  background-color: var(--color-21);
+  box-shadow: inset 5px 5px 35px var(--color-0), inset 5px -5px 35px var(--color-0);
+  border: 3px solid var(--color-3);
+  outline: 1px solid var(--color-23);
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 60%;
+  top: 22vh;
+  right: -1vw;
+  width: 52.5vw;
+  height: 55vh;
   transition: transform 0.3s ease;
   transform: translateX(0); }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .nav-open .mobile-nav a.active {
-  color: var(--color-3);
-  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
   animation: none; }
 
 @media screen and (max-width: 768px) {
   .menu-toggle {
-    display: block; }
+    display: block;
+    bottom: 4vh; }
 
   nav {
     display: none; }
 
   nav a {
-    font-size: 3.25vw; }
+    position: relative;
+    display: flex;
+    justify-content: end;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    right: 3vw;
+    top: -5vh;
+    width: fit-content;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
-  #business-card {
+  .about-link-label {
+    z-index: 0; }
+
+  a#es-nav-logo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 4vh 0 2vh 0;
+    text-decoration: none;
+    font-family: var(--font-1);
+    display: flex;
+    justify-content: center;
+    right: 5px;
+    width: 100px;
+    transition: text-shadow 50ms ease, color 50ms ease;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+
+  #es-nav-logo img {
+    display: none !important; }
+
+  #business-card-nav-link {
     display: none; }
 
   #credits-nav-link {
-    position: absolute;
-    top: 0; } }
+    top: 75%;
+    right: 3vw;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    width: 25vw;
+    opacity: 1; }
+
+  #credits-nav-link a {
+    font-size: 1rem;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+
+  .scroll-to-top {
+    left: 5vw;
+    width: 20px;
+    height: 20px;
+    bottom: 2vh; }
+
+  .scroll-to-top i {
+    text-shadow: none;
+    font-size: 2.5rem;
+    color: var(--color-3); } }
 /* Stile für größere Bildschirme (mindestens 769px Bildschirmbreite) */
 @media screen and (min-width: 769px) {
   /* Verstecken Sie den Burger-Button und zeigen Sie das normale Menü */
@@ -285,7 +340,13 @@ footer a:focus i {
     transform: translateY(0); } }
 @media only screen and (max-width: 768px) {
   footer {
+    position: fixed;
+    bottom: 0;
     max-width: 100vw;
-    box-shadow: 0 -2vh 1vh var(--color-0); } }
+    height: 12vh;
+    box-shadow: 0 -2vh 1vh var(--color-0); }
+
+  footer i {
+    bottom: 4vh; } }
 
 /*# sourceMappingURL=footer.css.map */

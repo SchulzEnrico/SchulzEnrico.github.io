@@ -34,6 +34,22 @@
   z-index: -1;
 }
 
+.credits-close {
+  position: fixed;
+  left: 1.5vw;
+  color: var(--color-21);
+  transition: color 50ms ease;
+  transform: none;
+}
+.credits-close i {
+  position: relative;
+  font-size: 2rem;
+  margin-top: .5vh;
+  text-shadow: 1px -2px 1px var(--color-21),
+  -2px 0 1px var(--color-00),
+  -2px -1px 1px var(--color-4-0);
+}
+
 .fade {
   position: relative;
   min-width: 100vw;
@@ -118,10 +134,49 @@ h6 {
 }
 
 .credits-i {
-  color: var(--color-0);
+  color: var(--color-00);
   scale: 1.25;
-  margin: 0 3.5vw;
+  margin: 0 5vw;
 }
 .credits-i:hover {
   color: var(--color-3-2);
+}
+
+@media only screen and (max-width: 768px){
+  #credits-h2 {
+    font-size: 1rem;
+    position: fixed;
+    margin: 0;
+    left: 21.5vw;
+    top: 11.5vh;
+  }
+  #credits-h2 .section-hashtag {
+    font-size: 1.2rem;
+  }
+
+  .credits-close {
+    left: 7vw;
+  }
+
+  .star-wars {
+    font-size: 300%;
+    letter-spacing: 5px;
+  }
+
+  .credits-title {
+    font-size: 300%;
+    font-weight: 600;
+  }
+
+  .episode-number {
+    font-size: 300%;
+  }
+
+  .credits-title > h6 {
+    font-size: 175%;
+    color: var(--color-3-1);
+  }
+  .menu-toggle {
+    display: none;
+  }
 }

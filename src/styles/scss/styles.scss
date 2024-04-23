@@ -12,7 +12,7 @@
 
 :root {
   font-family: Typewriter, ui-monospace, monospace, sans-serif;
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   line-height: 1.5;
   font-weight: 400;
@@ -91,9 +91,8 @@ body::-webkit-scrollbar-thumb {
 .shadow-wrapper-start,
 .shadow-wrapper-end {
   position: fixed;
-  top: 10vh;
-  left: -.3vw;
-  min-height: 85vh;
+  top: 0;
+  min-height: 100vh;
   min-width: 100vw;
   max-width: 100vw;
   box-shadow: inset 50px 0 25px var(--color-0);
@@ -173,8 +172,8 @@ h2 {
 }
 
 .educations-container {
-  margin: 0;
   position: fixed;
+  margin: 0;
   left: 0;
   bottom: 0;
   display: flex;
@@ -241,6 +240,14 @@ h2 {
 
 @media only screen and (max-width: 768px) {
 
+  root {
+    max-width: 100vw;
+  }
+
+  body {
+    max-width: 100vw;
+  }
+
   h1 {
     scale: 0.7;
     top: -91px;
@@ -248,21 +255,27 @@ h2 {
   }
 
   h2 {
-    position: absolute;
-    margin: 0 10vw 0 0;
+    position: relative;
+    display: block;
+    width: 90vw;
+    font-size: 2rem;
     top: 0;
-
+    left: 0;
+    text-align: left;
   }
 
   .section {
-    max-height: fit-content !important;
+    max-width: 100vw;
+    min-height: 75vh;
   }
 
   .shadow-wrapper-start {
-      box-shadow: inset 5vw 0 2.5vw var(--color-0);
+    max-height: 100vh;
+    box-shadow: inset 5vw 0 2.5vw var(--color-0);
   }
 
   .shadow-wrapper-end {
+    max-height: 100vh;
     box-shadow: inset -5vw 0 2.5vw var(--color-0);
   }
 
@@ -299,32 +312,25 @@ h2 {
     100% {
       background-size: 100% 100%;
     }
-
-  }
-
-  .es {
-    left: -.5%;
-    filter: brightness(45%);
   }
 
   .educations-container {
     position: fixed;
     height: 1.2rem;
-    bottom: 4rem;
+    bottom: 10vh;
     width: 100vw;
     z-index: 10000;
   }
 
   #educations-dot {
-    position: fixed;
     margin: 0;
-    left: 0;
-    bottom: 3.05rem;
+    left: 2vw;
+    bottom: 8.5vh;
     font-size: 2rem;
   }
 
   .educations-wrapper {
-    left: 1rem;
+    left: 6vw;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -332,7 +338,7 @@ h2 {
   #educations {
     margin: 0;
     font-size: 1rem;
-    bottom: 3.6rem;
+    bottom: 10vh;
   }
 
   footer {

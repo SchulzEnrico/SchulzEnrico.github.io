@@ -18,4 +18,8 @@
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
+@media only screen and (max-width: 768px) {
+  .about-me-content {
+    left: 7.5vw; } }
+
 /*# sourceMappingURL=about.css.map */
