@@ -234,7 +234,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  text-align: right;
   padding: 1vw;
   border-bottom-left-radius: 150px;
   border-top-left-radius: 150px;
@@ -1364,7 +1363,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  text-align: right;
   padding: 1vw;
   border-bottom-left-radius: 150px;
   border-top-left-radius: 150px;
