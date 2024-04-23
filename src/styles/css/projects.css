@@ -28,7 +28,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -201,6 +201,9 @@
     max-width: 100%;
     padding: 10px; }
 
+  .projects-wrapper {
+    top: 1vh; }
+
   .project {
     width: 100%;
     /* Projekte füllen die gesamte Breite des Containers */
@@ -209,7 +212,55 @@
     /* Keine maximale Breite für Projekte */ }
 
   .projects-container h3 {
-    margin-left: 6vw;
-    font-size: 1.75rem; } }
+    margin: 0 0 0 6vw;
+    font-size: 1.75rem; }
+
+  .project.flip .project-content {
+    max-width: 96vw !important;
+    height: 66vh; }
+
+  .project .project-back {
+    flex-direction: column;
+    justify-content: flex-start; }
+
+  .project.flip {
+    top: 12vh; }
+
+  .project-back h5 {
+    font-size: 1rem;
+    left: 10%;
+    flex-wrap: wrap; }
+
+  .name-affix {
+    font-size: 0.75rem;
+    top: 2rem;
+    left: 10%;
+    flex-wrap: wrap; }
+
+  .project-requirements-container,
+  .applied-skills-container,
+  .project-links-container {
+    position: relative;
+    top: 8vh;
+    left: 2rem;
+    align-items: start;
+    margin-top: 0;
+    padding-top: .3rem; }
+
+  .details-header {
+    font-size: .75rem;
+    margin: 0; }
+
+  .project-requirements-list li,
+  .applied-skills-list li,
+  .project-links-list li,
+  .project-links-list li a {
+    text-align: start;
+    font-size: .6rem;
+    text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+
+  .project-back ul li:before {
+    width: 5px;
+    height: 5px; } }
 
 /*# sourceMappingURL=projects.css.map */

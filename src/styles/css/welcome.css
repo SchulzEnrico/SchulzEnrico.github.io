@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .welcome-container {
   position: relative;
   display: block;
@@ -47,8 +48,27 @@
   100% {
     background-position: 500%; } }
 @media only screen and (max-width: 768px) {
+  .greeting-container {
+    position: absolute;
+    width: 100vw;
+    left: 62.5%; }
+
   .greeting {
-    top: 15%; }
+    position: absolute;
+    font-size: medium;
+    width: 35%;
+    top: 15%;
+    left: 53%;
+    display: block;
+    /* Jedes Wort in einer separaten Zeile anzeigen */
+    text-align: start;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--color-0), var(--color-0), var(--color-4-0), var(--color-0), var(--color-0)) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    animation: animate 10s linear forwards;
+    line-height: 2.5;
+    /* Erhöht den Abstand zwischen den Zeilen */ }
 
   .es-container {
     top: 20vh; }

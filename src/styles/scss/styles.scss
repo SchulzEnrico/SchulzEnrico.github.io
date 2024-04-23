@@ -55,7 +55,7 @@
   --color-53: #000650;
   --color-6: #912800;
 
-  background-color: var(--color-21);
+  background-color: var(--color-22);
   color: var(--color-4);
 }
 
@@ -242,10 +242,12 @@ h2 {
 
   root {
     max-width: 100vw;
+    max-height: fit-content;
   }
 
   body {
     max-width: 100vw;
+    background-color: var(--color-22);
   }
 
   h1 {
@@ -262,6 +264,7 @@ h2 {
     top: 0;
     left: 0;
     text-align: left;
+    margin: 0 6vw .3vh 0;
   }
 
   .section {
@@ -277,32 +280,6 @@ h2 {
   .shadow-wrapper-end {
     max-height: 100vh;
     box-shadow: inset -5vw 0 2.5vw var(--color-0);
-  }
-
-  .greeting-container {
-    position: absolute;
-    width: 100vw;
-    left: 60%;
-  }
-
-  .greeting {
-    position: absolute;
-    font-size: medium;
-    width: 35%;
-    top: 10%;
-    left: 53%;
-    display: block; /* Jedes Wort in einer separaten Zeile anzeigen */
-    text-align: start;
-    overflow: hidden;
-    background: linear-gradient(180deg,
-            var(--color-22),
-            var(--color-23),
-            var(--color-4-0)
-    ) no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    animation: animate 6s linear infinite;
-    line-height: 3; /* Erhöht den Abstand zwischen den Zeilen */
   }
 
   @keyframes animate {
