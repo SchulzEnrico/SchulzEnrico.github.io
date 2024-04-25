@@ -3,7 +3,10 @@ function flipCard(card) {
 }
 
 function toggleMenu() {
-    document.body.classList.toggle('nav-open');
+    const navOpenElement = document.querySelector('.nav-open');
+    if (navOpenElement) {
+        navOpenElement.classList.toggle('nav-open');
+    }
 }
 
 function toggleActive(element) {
