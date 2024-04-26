@@ -61,27 +61,17 @@
 .business-card-close {
   position: fixed;
   left: 1.5vw;
-  color: var(--color-21);
-  transition: color 50ms ease;
   transform: none;
 }
 .business-card-close i {
   position: relative;
-  font-size: 2rem;
   margin-top: .5vh;
-  text-shadow: 1px -2px 1px var(--color-21),
-  -2px 0 1px var(--color-00),
-  -2px -1px 1px var(--color-4-0);
 }
 
 .business-card-close:hover {
   transform: none;
 }
 
-.business-card-close:hover i {
-  color: var(--color-3);
-  scale: 1.5;
-}
 
 .business-card-footer {
   position: fixed;

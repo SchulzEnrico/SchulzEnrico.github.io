@@ -33,15 +33,18 @@ fetch('./src/data/skills.json')
                 skillElement.classList.add('skill');
                 skillElement.addEventListener('click', () => flipCard(skillElement));
                 skillElement.innerHTML = `
-                    <div class="skill-content" onclick="flipCard(this)">
+                    <div class="skill-content">
                         <div class="skill-front">
                             <h4 class="skill-name">${skill.name}</h4>
                             <div class="proficiency-chart" id="proficiency-chart-${skillId}"></div>
                         </div>
                         <div class="skill-back">
                             <h4 class="skill-name">${skill.name}</h4>
-                                <div class="topics-container">
-                                <h5>Topics</h5>
+                             <button id="skill-close-button" class="close-button">
+                               <i class="fa-regular fa-circle-xmark i-close skill-close"></i>
+                            </button>
+                            <div class="topics-container">
+                            <h5>Topics</h5>
                                 <ul>
                                     ${skill["topics"].split(',').map(topic => `<li>${topic.trim()}</li>`).join('')}
                                 </ul>
@@ -91,6 +94,17 @@ fetch('./src/data/skills.json')
                 const proficiencyChartContainer = skillElement.querySelector(`#proficiency-chart-${skillId}`);
                 drawProficiencyChart(proficiencyChartContainer, skill["proficiency"]);
 
+                const skillBack = skillElement.querySelector('.skill-back');
+                skillBack.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Verhindere das Bubbling des Klickereignisses
+                });
+
+                const closeButton = skillElement.querySelector('.close-button');
+
+                closeButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    flipCard(skillElement);
+                });
                 categorySkillsContainer.appendChild(skillElement);
             });
 

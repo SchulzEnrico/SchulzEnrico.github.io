@@ -33,15 +33,11 @@
 .credits-close {
   position: fixed;
   left: 1.5vw;
-  color: var(--color-21);
-  transition: color 50ms ease;
   transform: none; }
 
 .credits-close i {
   position: relative;
-  font-size: 2rem;
-  margin-top: .5vh;
-  text-shadow: 1px -2px 1px var(--color-21), -2px 0 1px var(--color-00), -2px -1px 1px var(--color-4-0); }
+  margin-top: .5vh; }
 
 .fade {
   position: relative;
