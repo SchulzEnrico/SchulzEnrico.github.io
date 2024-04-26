@@ -108,11 +108,20 @@
   margin: 15px; }
 
 .project .project-back {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: start;
   transform: rotateY(180deg); }
+
+#project-close-button {
+  position: fixed;
+  top: 1vh;
+  right: 1vw;
+  font-size: 2rem;
+  color: var(--color-4);
+  z-index: 3; }
 
 .project-back h5 {
   position: fixed;
@@ -132,6 +141,34 @@
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-details {
+  position: fixed;
+  top: 9rem;
+  left: 5vw;
+  height: 55vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: -1.5rem;
+  padding-top: 1.5rem;
+  overflow: scroll; }
+
+.project-details::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+.project-details::-webkit-scrollbar-track {
+  background-color: var(--color-000); }
+
+.project-details::-webkit-scrollbar-corner {
+  background-color: var(--color-000); }
+
+.project-details::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4-0);
+  border-radius: 25px; }
 
 .project-requirements-container,
 .applied-skills-container,

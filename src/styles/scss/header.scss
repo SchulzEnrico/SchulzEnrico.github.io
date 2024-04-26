@@ -15,6 +15,16 @@ header {
   display: none;
 }
 
+#es-credits-logo {
+  position: fixed;
+  top: 1vh;
+  justify-self: center;
+  display: flex;
+  height: 12.5vh;
+  filter: brightness(80%);
+}
+
+
 header .ripples-container-large {
   position: fixed;
   top: 0;

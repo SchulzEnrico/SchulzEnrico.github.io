@@ -1,9 +1,29 @@
-function flipCard(card) {
-    card.classList.toggle('flip');
+function flipCard(cardElement, projectContent, skillContent) {
+    if (cardElement.classList.contains("flip")) {
+        cardElement.classList.remove("flip");
+        if (projectContent) {
+            projectContent.style.backfaceVisibility = "hidden";
+        }
+        if (skillContent) {
+            skillContent.style.backfaceVisibility = "hidden";
+        }
+        toggleProjectsVisibility(false);
+    } else {
+        cardElement.classList.add("flip");
+        if (projectContent) {
+            projectContent.style.backfaceVisibility = "visible";
+        }
+        if (skillContent) {
+            skillContent.style.backfaceVisibility = "visible";
+        }
+    }
 }
 
 function toggleMenu() {
-    document.body.classList.toggle('nav-open');
+    const navOpenElement = document.querySelector('.nav-open');
+    if (navOpenElement) {
+        navOpenElement.classList.toggle('nav-open');
+    }
 }
 
 function toggleActive(element) {
@@ -53,7 +73,6 @@ $(document).ready(function() {
         toggleActive(document.querySelector('.active'));
     });
 });
-
 // Diese Funktion steuert die Sichtbarkeit der Projects-Sektion basierend auf dem Status der Skills-Sektion
 function toggleProjectsVisibility(isSkillsOpen) {
     const projectsSection = document.getElementById('projects');
@@ -85,3 +104,16 @@ skillsSection.addEventListener('click', function() {
 
 // Initialisierung: Stelle sicher, dass die Projects-Sektion sichtbar ist, wenn die Seite geladen wird
 toggleProjectsVisibility(false);
+
+// Event-Listener für den "Close" Button in den Skills hinzufügen
+document.addEventListener('click', function(event) {
+    const closeButton = event.target.closest('.close-button');
+    if (closeButton) {
+        const skillElement = closeButton.closest('.skill');
+        if (skillElement) {
+            flipCard(skillElement);
+            toggleProjectsVisibility(true); // Zeige die Projects-Sektion, wenn der "Close" Button in den Skills geklickt wird
+        }
+    }
+});
+

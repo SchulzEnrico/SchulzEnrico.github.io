@@ -1,5 +1,24 @@
 @charset "UTF-8";
+/*BUTTONS*/
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+.close-button {
+  background-color: transparent;
+  border: none;
+  color: transparent; }
+
+/*ICONS*/
+.i-close {
+  font-size: 2rem;
+  color: transparent;
+  text-shadow: 1px -2px 1px var(--color-21), -2px 0 1px var(--color-00), -2px -1px 1px var(--color-4-0); }
+
+.i-close:hover {
+  color: var(--color-3);
+  filter: brightness(250%);
+  scale: 1.25;
+  transition: scale 250ms ease, color 500ms ease, brightness 5000ms ease; }
+
+/*SHADOWS*/
 header {
   position: fixed;
   top: 0;
@@ -13,6 +32,14 @@ header {
 
 #es-mobile-logo {
   display: none; }
+
+#es-credits-logo {
+  position: fixed;
+  top: 1vh;
+  justify-self: center;
+  display: flex;
+  height: 12.5vh;
+  filter: brightness(80%); }
 
 header .ripples-container-large {
   position: fixed;
@@ -467,19 +494,22 @@ nav {
   left: 5vw;
   position: relative;
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   max-width: 90vw;
   font-size: 1rem;
-  /* font-weight: bold;*/
+  font-weight: bold;
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
 @media only screen and (max-width: 768px) {
   .about-me-content {
-    left: 7.5vw; } }
+    left: 7.5vw;
+    font-size: .85rem;
+    max-width: 87vw !important; } }
 .skills-container {
   display: flex;
   justify-content: center;
@@ -553,7 +583,7 @@ nav {
 
 .skill .skill-front,
 .skill .skill-back {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -608,6 +638,7 @@ nav {
   box-shadow: inset -2px -2px 10px var(--color-2), 2px 2px 10px var(--color-21); }
 
 .skill .skill-back {
+  position: absolute;
   padding: 10px;
   display: grid;
   grid-template-columns: 2fr 10fr;
@@ -615,9 +646,17 @@ nav {
   justify-items: start;
   transform: rotateY(180deg); }
 
+#skill-close-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  color: var(--color-4);
+  z-index: 3; }
+
 .topics-container {
   position: relative;
-  top: 2.5%;
+  top: 0;
   left: 3%;
   grid-column: 1;
   grid-row: 2;
@@ -647,7 +686,7 @@ nav {
 
 .skill-project-use-container {
   position: relative;
-  top: 10%;
+  top: 7%;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -658,8 +697,24 @@ nav {
   grid-row: 2;
   text-align: left;
   justify-self: center;
-  height: 95%;
-  width: 90%; }
+  height: 55vh;
+  width: 100%;
+  overflow: scroll; }
+
+.skill-project-use-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+.skill-project-use-container::-webkit-scrollbar-track {
+  background-color: var(--color-00); }
+
+.skill-project-use-container::-webkit-scrollbar-corner {
+  background-color: var(--color-00); }
+
+.skill-project-use-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4-0);
+  border-radius: 25px; }
 
 .skill-project-use-container ul {
   display: grid;
@@ -692,10 +747,11 @@ nav {
   text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
 
 .skill-bar-container {
+  position: relative;
+  margin-right: 1rem;
   grid-row: 1;
   grid-column: 2 / span 2;
-  width: 90%;
-  position: relative;
+  width: 85%;
   height: 26px;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
@@ -951,11 +1007,20 @@ nav {
   margin: 15px; }
 
 .project .project-back {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: start;
   transform: rotateY(180deg); }
+
+#project-close-button {
+  position: fixed;
+  top: 1vh;
+  right: 1vw;
+  font-size: 2rem;
+  color: var(--color-4);
+  z-index: 3; }
 
 .project-back h5 {
   position: fixed;
@@ -975,6 +1040,34 @@ nav {
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+
+.project-details {
+  position: fixed;
+  top: 9rem;
+  left: 5vw;
+  height: 55vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: -1.5rem;
+  padding-top: 1.5rem;
+  overflow: scroll; }
+
+.project-details::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+.project-details::-webkit-scrollbar-track {
+  background-color: var(--color-000); }
+
+.project-details::-webkit-scrollbar-corner {
+  background-color: var(--color-000); }
+
+.project-details::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4-0);
+  border-radius: 25px; }
 
 .project-requirements-container,
 .applied-skills-container,
@@ -1140,15 +1233,11 @@ nav {
 .credits-close {
   position: fixed;
   left: 1.5vw;
-  color: var(--color-21);
-  transition: color 50ms ease;
   transform: none; }
 
 .credits-close i {
   position: relative;
-  font-size: 2rem;
-  margin-top: .5vh;
-  text-shadow: 1px -2px 1px var(--color-21), -2px 0 1px var(--color-00), -2px -1px 1px var(--color-4-0); }
+  margin-top: .5vh; }
 
 .fade {
   position: relative;
@@ -1670,10 +1759,10 @@ body::-webkit-scrollbar {
   height: 8px; }
 
 body::-webkit-scrollbar-track {
-  background-color: #101010; }
+  background-color: var(--color-00); }
 
 body::-webkit-scrollbar-corner {
-  background-color: #101010; }
+  background-color: var(--color-00); }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-3);
@@ -1803,12 +1892,12 @@ h2 {
     width: 90vw;
     font-size: 2rem;
     top: 0;
-    left: 0;
+    left: 2vw;
     text-align: left;
     margin: 0 6vw .3vh 0; }
 
   .section {
-    max-width: 100vw;
+    max-width: 90vw;
     min-height: 75vh; }
 
   .shadow-wrapper-start {
