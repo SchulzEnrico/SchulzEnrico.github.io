@@ -681,7 +681,7 @@ nav {
   margin-bottom: 5px;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
 
 .skill-project-use-container {
   position: relative;
@@ -742,6 +742,7 @@ nav {
 
 .usage-data {
   font-size: 1.1rem;
+  letter-spacing: 2px;
   font-family: var(--font-2);
   text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
 
@@ -842,6 +843,7 @@ nav {
 @media only screen and (max-width: 768px) {
   .category-container {
     position: relative;
+    left: 1vw;
     margin: 0;
     display: inline-block;
     flex-direction: column;
@@ -921,12 +923,11 @@ nav {
     background-color: var(--color-00); }
 
   .topics-container::-webkit-scrollbar-thumb {
-    background-color: var(--color-3);
-    border: 1px solid var(--color-4);
-    border-radius: 25px; }
+    border: 1px solid var(--color-4); }
 
   .topics-container h5,
   .skill-project-use-container h5 {
+    position: fixed;
     padding: 3px;
     text-align: center;
     z-index: 1;
@@ -934,11 +935,10 @@ nav {
     min-width: 75vw;
     max-width: 75vw;
     background-color: var(--color-000);
-    box-shadow: inset 0 0 15px var(--color-4);
+    box-shadow: inset 0 0 15px var(--color-22);
     border: 1px solid var(--color-4);
     outline: 2px solid var(--color-3-11);
     border-radius: 7px;
-    position: fixed;
     font-size: 1.5rem;
     text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
@@ -986,20 +986,24 @@ nav {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
   .skill-project-use-container ul li {
     margin-top: 1rem;
     font-size: 1.2rem; }
 
   .skill-project-use-container ul ul {
-    margin-top: .1rem; }
+    line-height: 10px;
+    margin-top: .5rem; }
 
   .skill-project-use-container ul ul li {
+    font-size: .9rem;
     margin: .05rem 0 0 0; }
 
   .usage-data {
-    font-size: .75rem; }
+    font-size: .8rem;
+    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-4); }
 
   .skill-bar-container {
     display: none; } }
@@ -1164,10 +1168,10 @@ nav {
   height: 8px; }
 
 .project-details::-webkit-scrollbar-track {
-  background-color: var(--color-000); }
+  background-color: transparent; }
 
 .project-details::-webkit-scrollbar-corner {
-  background-color: var(--color-000); }
+  background-color: transparent; }
 
 .project-details::-webkit-scrollbar-thumb {
   background-color: var(--color-3);
@@ -1222,7 +1226,7 @@ nav {
   text-shadow: 1px 1px 0 var(--color-0), 1px 2px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 0 -1px 0 var(--color-4); }
 
 .project-links-list li a {
-  text-decoration: none;
+  text-decoration: underline;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-00), 1px 2px 0 var(--color-23), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 0 -1px 0 var(--color-23); }
 
@@ -1243,59 +1247,87 @@ nav {
   .projects-wrapper {
     top: 1vh; }
 
-  .project {
-    width: 100%;
-    /* Projekte füllen die gesamte Breite des Containers */
-    /*    max-width: 95vw; !* Keine maximale Breite für Projekte *!*/
-    max-width: 95%;
-    /* Keine maximale Breite für Projekte */ }
-
   .projects-container h3 {
     margin: 0 0 0 6vw;
     font-size: 1.75rem; }
 
+  .project.flip {
+    top: 11vh !important; }
+
   .project.flip .project-content {
-    max-width: 96vw !important;
-    height: 66vh; }
+    padding: 0;
+    max-width: 92vw !important;
+    min-height: 72.5vh !important;
+    max-height: 72.5vh !important; }
 
   .project .project-back {
     flex-direction: column;
     justify-content: flex-start; }
 
-  .project.flip {
-    top: 12vh; }
-
   .project-back h5 {
-    font-size: 1rem;
-    left: 10%;
+    position: relative;
+    font-size: 1.5rem;
+    top: .2rem;
+    max-width: 77.5vw;
+    left: 3vw;
+    right: 6vw;
     flex-wrap: wrap; }
 
   .name-affix {
-    font-size: 0.75rem;
-    top: 2rem;
-    left: 10%;
+    margin: 0;
+    position: relative;
+    max-width: 80vw;
+    top: .4rem;
+    left: 3vw;
+    right: 5vw;
+    font-size: 1rem;
     flex-wrap: wrap; }
+
+  .project-details {
+    flex-direction: column;
+    max-width: 82.5vw;
+    max-height: 53.5vh !important;
+    padding-right: 2vw; }
+
+  .project-details::-webkit-scrollbar {
+    width: .6vh;
+    height: .6vh; }
+
+  .project-details::-webkit-scrollbar-thumb {
+    border: 1px solid var(--color-4); }
 
   .project-requirements-container,
   .applied-skills-container,
   .project-links-container {
     position: relative;
-    top: 8vh;
-    left: 2rem;
+    top: 1vh;
+    left: .2rem;
     align-items: start;
     margin-top: 0;
-    padding-top: .3rem; }
+    padding-top: .3rem;
+    min-width: 83.5vw;
+    max-width: 83.5vw;
+    flex-wrap: wrap; }
 
   .details-header {
-    font-size: .75rem;
-    margin: 0; }
+    display: block;
+    min-width: 80vw;
+    max-width: 80vw;
+    margin: 0;
+    border-radius: 7px;
+    font-size: 1.3rem;
+    background-color: var(--color-000);
+    box-shadow: inset 0 0 10px var(--color-22);
+    border: 1px solid var(--color-4);
+    outline: 2px solid var(--color-3-11); }
 
   .project-requirements-list li,
   .applied-skills-list li,
   .project-links-list li,
   .project-links-list li a {
     text-align: start;
-    font-size: .6rem;
+    font-size: .9rem;
+    padding-left: 20px;
     text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
   .project-back ul li:before {
@@ -1926,7 +1958,7 @@ h2 {
   font-family: var(--font-2);
   transform: perspective(1000px) rotateY(50deg);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-0);
   z-index: -1; }
 
 .educations-container {
@@ -1995,7 +2027,7 @@ h2 {
     width: 90vw;
     font-size: 2rem;
     top: 0;
-    left: 2vw;
+    left: 3vw;
     text-align: left;
     margin: 0 6vw .3vh 0; }
 
