@@ -10,7 +10,6 @@ footer {
   background-color: var(--color-0);
   box-shadow: 0 -25px 25px var(--color-0)/*,
               inset 0 2px 7px var(--color-41)*/;
-  z-index: 1000;
 }
 
 footer .ripples-container-large {
@@ -22,7 +21,6 @@ footer .ripples-container-large {
   display: flex;
   justify-content: center;
   align-items: end;
-  z-index: 1000;
 }
 
 footer i{

@@ -40,9 +40,11 @@ fetch('./src/data/skills.json')
                         </div>
                         <div class="skill-back">
                             <h4 class="skill-name">${skill.name}</h4>
+                            <div class="skill-close-button-container">
                              <button id="skill-close-button" class="close-button">
                                <i class="fa-regular fa-circle-xmark i-close skill-close"></i>
                             </button>
+                            </div>
                             <div class="topics-container">
                             <h5>Topics</h5>
                                 <ul>
