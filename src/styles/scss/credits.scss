@@ -138,14 +138,24 @@ h6 {
 
 @media only screen and (max-width: 768px){
   #credits-h2 {
-    font-size: 1rem;
-    position: fixed;
-    margin: 0;
-    left: 21.5vw;
-    top: 11.5vh;
+    top: -1rem;
+    font-size: 2rem;
+    letter-spacing: 7px;
+    text-shadow: 1px 1px 0 var(--color-000),
+    2px 2px 0 var(--color-4),
+    1px -1px 0 var(--color-01),
+    -1px 0 0 var(--color-01),
+    -1px -1px 0 var(--color-01),
+    1px 0 0 var(--color-01),
+    3px 3px 0 var(--color-01),
+    -1px 2px 0 var(--color-01),
+    -1px 0 0 var(--color-01),
+    4px 4px 10px var(--color-3-2),
+    0 -1px 0 var(--color-01);
+
   }
   #credits-h2 .section-hashtag {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
 
   .credits-close {

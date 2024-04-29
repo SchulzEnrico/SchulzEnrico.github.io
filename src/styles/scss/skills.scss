@@ -133,6 +133,9 @@
 
 .skill-name {
   position: fixed;
+
+  backface-visibility: hidden;
+
   left: 2px;
   top: -25px;
   font-family: var(--font-2);
@@ -554,6 +557,9 @@
   }
 
   .skill-back .skill-name {
+
+    backface-visibility: hidden;
+
     outline: 2px solid var(--color-1);
     top: -40px;
     left: 12px;
@@ -609,8 +615,9 @@
     display: block;
     min-width: 75vw;
     max-width: 75vw;
-    background-color: var(--color-000);
-    box-shadow: inset 0 0 15px var(--color-22);
+    background-color: var(--color-21);
+    box-shadow: inset 7px 7px 40px var(--color-0),
+                inset -7px -7px 40px var(--color-0);
     border: 1px solid var(--color-4);
     outline: 2px solid var(--color-3-11);
     border-radius: 7px;

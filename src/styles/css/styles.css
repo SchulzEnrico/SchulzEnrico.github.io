@@ -615,6 +615,7 @@ nav {
 
 .skill-name {
   position: fixed;
+  backface-visibility: hidden;
   left: 2px;
   top: -25px;
   font-family: var(--font-2);
@@ -917,6 +918,7 @@ nav {
     max-height: 72.5vh !important; }
 
   .skill-back .skill-name {
+    backface-visibility: hidden;
     outline: 2px solid var(--color-1);
     top: -40px;
     left: 12px; }
@@ -964,8 +966,8 @@ nav {
     display: block;
     min-width: 75vw;
     max-width: 75vw;
-    background-color: var(--color-000);
-    box-shadow: inset 0 0 15px var(--color-22);
+    background-color: var(--color-21);
+    box-shadow: inset 7px 7px 40px var(--color-0), inset -7px -7px 40px var(--color-0);
     border: 1px solid var(--color-4);
     outline: 2px solid var(--color-3-11);
     border-radius: 7px;
@@ -1485,14 +1487,13 @@ h6 {
 
 @media only screen and (max-width: 768px) {
   #credits-h2 {
-    font-size: 1rem;
-    position: fixed;
-    margin: 0;
-    left: 21.5vw;
-    top: 11.5vh; }
+    top: -1rem;
+    font-size: 2rem;
+    letter-spacing: 7px;
+    text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-01), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-01); }
 
   #credits-h2 .section-hashtag {
-    font-size: 1.2rem; }
+    font-size: 2.5rem; }
 
   .credits-close {
     left: 7vw; }
@@ -1906,7 +1907,7 @@ footer a:focus i {
   --color-52: #000b6d;
   --color-53: #000650;
   --color-6: #912800;
-  background-color: var(--color-22);
+  background-color: var(--color-0);
   color: var(--color-4); }
 
 body {
@@ -1920,7 +1921,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  background-color: var(--color-22); }
 
 body::-webkit-scrollbar {
   width: 8px;
@@ -2049,6 +2051,11 @@ h2 {
     max-width: 100vw;
     background-color: var(--color-22); }
 
+  /*  @media (orientation: landscape) {
+      body {
+        transform: rotate(0deg); !* Ein Hack, um das Drehen zu verhindern (((FUNKTIONIERT SO ABER NICHT)))*!
+      }
+    }*/
   h1 {
     scale: 0.7;
     top: -91px;
