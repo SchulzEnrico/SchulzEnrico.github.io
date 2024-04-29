@@ -72,7 +72,7 @@ body {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: var(--color-22);
+  background-color: var(--color-0);
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -88,6 +88,10 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--color-3);
   border: 1px solid var(--color-4-0);
   border-radius: 25px;
+}
+
+.background-color-wrapper {
+  background-color: var(--color-22);
 }
 
 .shadow-wrapper-start,
@@ -249,7 +253,6 @@ h2 {
 
   body {
     max-width: 100vw;
-    background-color: var(--color-22);
   }
 
 /*  @media (orientation: landscape) {

@@ -220,6 +220,22 @@
   height: 90%;
   width: 75%;
 }
+.topics-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.topics-container::-webkit-scrollbar-track {
+  background-color: var(--color-00);
+}
+.topics-container::-webkit-scrollbar-corner {
+  background-color: var(--color-00);
+}
+.topics-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4-0);
+  border-radius: 25px;
+}
+
 
 .topics-container h5,
 .skill-project-use-container h5 {
@@ -595,15 +611,10 @@
     width: .6vh;
     height: .6vh;
   }
-  .topics-container::-webkit-scrollbar-track {
-    background-color: var(--color-00);
-  }
-  .topics-container::-webkit-scrollbar-corner {
-    background-color: var(--color-00);
-  }
   .topics-container::-webkit-scrollbar-thumb {
     border: 1px solid var(--color-4);
   }
+
 
 
   .topics-container h5,
