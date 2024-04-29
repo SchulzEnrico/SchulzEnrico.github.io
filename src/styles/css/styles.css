@@ -222,15 +222,14 @@ nav {
   text-decoration: none;
   transition: opacity 0.4s ease; }
 
-@media only screen and (min-height: 50vh) {
-  .scroll-to-top.show {
-    display: block; } }
 .menu-toggle {
   position: absolute;
   right: 7.5vw;
   /*bottom: calc(4vh - 3.75rem);*/
   bottom: 4vh;
-  z-index: 9999; }
+  height: 30px;
+  width: 30px;
+  cursor: pointer; }
 
 /* Stile für den Burger-Button */
 .burger-line {
@@ -256,7 +255,8 @@ nav {
   transform: translateY(-10px) rotate(-45deg); }
 
 /* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.nav-open .mobile-nav {
+.mobile-nav.nav-open {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -268,7 +268,6 @@ nav {
   box-shadow: inset 5px 5px 35px var(--color-0), inset 5px -5px 35px var(--color-0);
   border: 2px solid var(--color-3);
   outline: 1px solid var(--color-23);
-  position: fixed;
   top: 22vh;
   right: -1vw;
   width: 52.5vw;
@@ -277,14 +276,18 @@ nav {
   transform: translateX(0); }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.nav-open .mobile-nav a.active {
+.mobile-nav.nav-open a.active {
   text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
   animation: none; }
 
+@media only screen and (min-height: 50vh) {
+  .scroll-to-top.show {
+    display: block; } }
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    bottom: 4vh; }
+    bottom: 4vh;
+    z-index: 1000000000000000000000 !important; }
 
   nav {
     display: none; }
@@ -646,17 +649,31 @@ nav {
   justify-items: start;
   transform: rotateY(180deg); }
 
-#skill-close-button {
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-size: 2rem;
-  z-index: 3; }
+.skill-close-button-container {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 2;
+  max-height: 2.2rem;
+  min-width: 3rem;
+  top: -1.85rem;
+  right: -1.25rem;
+  padding: 10px 5px 5px 20px;
+  font-family: var(--font-1);
+  justify-items: center;
+  letter-spacing: 4px;
+  background-color: var(--color-00);
+  border-radius: 1px 14px 1px 35px;
+  outline: 2px solid var(--color-2);
+  box-shadow: inset 2px -2px 8px var(--color-2), -2px 2px 10px var(--color-21); }
+
+#skill-close-button .i-close {
+  font-size: 1.5rem;
+  z-index: 3;
+  text-shadow: 1px -2px 1px var(--color-4), -1px 0 1px var(--color-1), -1px -1px 1px var(--color-4-0); }
 
 .topics-container {
   position: relative;
-  top: 0;
-  left: 3vw;
+  top: -10vh;
   grid-column: 1;
   grid-row: 2;
   justify-self: center;
@@ -685,7 +702,8 @@ nav {
 
 .skill-project-use-container {
   position: relative;
-  top: 7%;
+  left: 2.5vw;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -870,6 +888,15 @@ nav {
   .skill-name {
     font-size: .8rem; }
 
+  .skill.skill-back .skill-name {
+    font-size: .6rem; }
+
+  .skill-close-button-container {
+    outline: 2px solid var(--color-1);
+    font-size: 1.5em;
+    top: -.5rem;
+    right: 0.15rem; }
+
   .proficiency-chart {
     position: fixed;
     bottom: -27.5%;
@@ -894,9 +921,12 @@ nav {
     top: -40px;
     left: 12px; }
 
-  #skill-close-button {
+  .skill-close-button-container {
+    padding: 5px 3px 3px 20px; }
+
+  #skill-close-button i {
     top: 1vh;
-    right: 1.25vw; }
+    right: 1vw; }
 
   .i-close {
     font-size: 1.5rem;
@@ -1152,10 +1182,9 @@ nav {
 
 .project-details {
   position: fixed;
-  top: 9rem;
   left: 5vw;
   height: 55vh;
-  width: 90vw;
+  width: 85vw;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -1183,6 +1212,7 @@ nav {
 .project-links-container {
   position: relative;
   top: 10rem;
+  margin-right: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1284,7 +1314,9 @@ nav {
     flex-wrap: wrap; }
 
   .project-details {
+    position: relative;
     flex-direction: column;
+    top: 3.5vh;
     max-width: 82.5vw;
     max-height: 53.5vh !important;
     padding-right: 2vw; }
@@ -1635,15 +1667,14 @@ nav {
   text-decoration: none;
   transition: opacity 0.4s ease; }
 
-@media only screen and (min-height: 50vh) {
-  .scroll-to-top.show {
-    display: block; } }
 .menu-toggle {
   position: absolute;
   right: 7.5vw;
   /*bottom: calc(4vh - 3.75rem);*/
   bottom: 4vh;
-  z-index: 9999; }
+  height: 30px;
+  width: 30px;
+  cursor: pointer; }
 
 /* Stile für den Burger-Button */
 .burger-line {
@@ -1669,7 +1700,8 @@ nav {
   transform: translateY(-10px) rotate(-45deg); }
 
 /* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.nav-open .mobile-nav {
+.mobile-nav.nav-open {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1681,7 +1713,6 @@ nav {
   box-shadow: inset 5px 5px 35px var(--color-0), inset 5px -5px 35px var(--color-0);
   border: 2px solid var(--color-3);
   outline: 1px solid var(--color-23);
-  position: fixed;
   top: 22vh;
   right: -1vw;
   width: 52.5vw;
@@ -1690,14 +1721,18 @@ nav {
   transform: translateX(0); }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.nav-open .mobile-nav a.active {
+.mobile-nav.nav-open a.active {
   text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
   animation: none; }
 
+@media only screen and (min-height: 50vh) {
+  .scroll-to-top.show {
+    display: block; } }
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    bottom: 4vh; }
+    bottom: 4vh;
+    z-index: 1000000000000000000000 !important; }
 
   nav {
     display: none; }
@@ -1777,8 +1812,7 @@ footer {
   width: 100vw;
   height: 3rem;
   background-color: var(--color-0);
-  box-shadow: 0 -25px 25px var(--color-0);
-  z-index: 1000; }
+  box-shadow: 0 -25px 25px var(--color-0); }
 
 footer .ripples-container-large {
   position: fixed;
@@ -1788,8 +1822,7 @@ footer .ripples-container-large {
   height: 4.5rem;
   display: flex;
   justify-content: center;
-  align-items: end;
-  z-index: 1000; }
+  align-items: end; }
 
 footer i {
   position: relative;

@@ -293,18 +293,14 @@ nav {
   transition: opacity 0.4s ease;
 }
 
-@media only screen and (min-height: 50vh) {
-  .scroll-to-top.show {
-    display: block;
-  }
-}
-
 .menu-toggle {
   position: absolute;
   right: 7.5vw;
   /*bottom: calc(4vh - 3.75rem);*/
   bottom: 4vh;
-  z-index: 9999;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 
 /* Stile für den Burger-Button */
@@ -335,7 +331,8 @@ nav {
 }
 
 /* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.nav-open .mobile-nav {
+.mobile-nav.nav-open {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,17 +345,17 @@ nav {
               inset 5px -5px 35px var(--color-0);
   border: 2px solid var(--color-3);
   outline: 1px solid var(--color-23);
-  position: fixed;
   top: 22vh;
   right: -1vw;
   width: 52.5vw;
   height: 55vh;
   transition: transform 0.3s ease;
   transform: translateX(0);
+
 }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.nav-open .mobile-nav a.active {
+.mobile-nav.nav-open a.active {
   text-shadow: 1px 1px 0 var(--color-3-1),
   1px 1px 0 var(--color-0),
   1px -1px 0 var(--color-0),
@@ -373,10 +370,17 @@ nav {
   animation: none;
 }
 
+@media only screen and (min-height: 50vh) {
+  .scroll-to-top.show {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
     bottom: 4vh;
+    z-index: 1000000000000000000000 !important;
   }
 
   nav {
@@ -453,6 +457,7 @@ nav {
     width: 25vw;
     opacity: 1;
   }
+
   #credits-nav-link a {
     font-size: 1rem;
     text-shadow: 1px 1px 0 var(--color-21),
@@ -492,7 +497,5 @@ nav {
   nav {
     display: flex;
   }
-
-
 
 }

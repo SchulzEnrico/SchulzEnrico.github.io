@@ -143,10 +143,9 @@
 
 .project-details {
   position: fixed;
-  top: 9rem;
   left: 5vw;
   height: 55vh;
-  width: 90vw;
+  width: 85vw;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -174,6 +173,7 @@
 .project-links-container {
   position: relative;
   top: 10rem;
+  margin-right: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -275,7 +275,9 @@
     flex-wrap: wrap; }
 
   .project-details {
+    position: relative;
     flex-direction: column;
+    top: 3.5vh;
     max-width: 82.5vw;
     max-height: 53.5vh !important;
     padding-right: 2vw; }
