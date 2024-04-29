@@ -1360,9 +1360,11 @@ nav {
   .project-links-list li,
   .project-links-list li a {
     text-align: start;
+    font-weight: bold;
     font-size: .9rem;
     padding-left: 20px;
-    text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-0), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
 
   .project-back ul li:before {
     width: 5px;
