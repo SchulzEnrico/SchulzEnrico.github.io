@@ -101,7 +101,6 @@
 
 .skill-name {
   position: fixed;
-  backface-visibility: hidden;
   left: 2px;
   top: -25px;
   font-family: var(--font-2);
@@ -412,6 +411,18 @@
   .skill.flip {
     top: 10vh !important; }
 
+  .skill.flip .skill-front {
+    /* Stelle sicher, dass die Vorderseite der Karte sichtbar ist, wenn die Karte umgedreht wird */
+    transform: rotateY(0deg); }
+
+  .skill.flip .skill-back {
+    /* Stelle sicher, dass die Rückseite der Karte unsichtbar ist, wenn die Karte umgedreht wird */
+    transform: rotateY(180deg); }
+
+  .skill.flip .skill-name {
+    /* Stelle sicher, dass der Name der Fähigkeit auf der Vorderseite sichtbar ist, wenn die Karte umgedreht wird */
+    display: block; }
+
   .skill.flip .skill-content {
     padding: 0;
     max-width: 92vw !important;
@@ -419,7 +430,6 @@
     max-height: 72.5vh !important; }
 
   .skill-back .skill-name {
-    backface-visibility: hidden;
     outline: 2px solid var(--color-1);
     top: -40px;
     left: 12px; }
