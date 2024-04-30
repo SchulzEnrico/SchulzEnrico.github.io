@@ -164,7 +164,7 @@ nav {
 /* Stile für den Burger-Button */
 .burger-line {
   display: block;
-  position: relative;
+  /*position: relative;*/
   width: 30px;
   height: 3px;
   border-radius: 25px;
@@ -216,8 +216,7 @@ nav {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    bottom: 4vh;
-    z-index: 1000000000000000000000 !important; }
+    bottom: 4vh; }
 
   nav {
     display: none; }

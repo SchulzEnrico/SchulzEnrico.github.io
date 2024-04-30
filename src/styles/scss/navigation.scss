@@ -351,7 +351,6 @@ nav {
   height: 55vh;
   transition: transform 0.3s ease;
   transform: translateX(0);
-
 }
 
 /* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
@@ -380,7 +379,6 @@ nav {
   .menu-toggle {
     display: block;
     bottom: 4vh;
-    z-index: 1000000000000000000000 !important;
   }
 
   nav {

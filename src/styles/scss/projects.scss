@@ -472,7 +472,7 @@
   }
 
   .project-links-container .details-header {
-    text-shadow: 1px 1px 0 var(--color-3-11),
+    text-shadow: 1px 1px 0 var(--color-3-1),
     2px 2px 0 var(--color-41),
     1px -1px 0 var(--color-21),
     -1px 0 0 var(--color-21),
@@ -508,21 +508,20 @@
   }
 
   .project-links-list li a {
-    text-shadow: 1px 1px 0 var(--color-3-1),
-    2px 1px 0 var(--color-41),
-    1px -1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    -1px -1px 0 var(--color-4),
-    1px 0 0 var(--color-4),
-    -1px 2px 0 var(--color-4),
-    2px 2px 0 var(--color-4),
-    -1px 1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    2px 2px 5px var(--color-4),
-    0 -1px 0 var(--color-4);
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-41),
+    2px 1px 0 var(--color-0),
+    1px -1px 0 var(--color-3-11),
+    -1px 0 0 var(--color-3-11),
+    -1px -1px 0 var(--color-3-11),
+    1px 0 0 var(--color-3-11),
+    -1px 2px 0 var(--color-3-11),
+    2px 2px 0 var(--color-3-11),
+    -1px 1px 0 var(--color-3-11),
+    -1px 0 0 var(--color-3-11),
+    2px 2px 5px var(--color-3-11),
+    0 -1px 0 var(--color-3-11);
   }
-
-
 
   .project-back ul li:before {
     width: 5px;
