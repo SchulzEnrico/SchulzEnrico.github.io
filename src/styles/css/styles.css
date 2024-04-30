@@ -286,8 +286,7 @@ nav {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    bottom: 4vh;
-    z-index: 1000000000000000000000 !important; }
+    bottom: 4vh; }
 
   nav {
     display: none; }
@@ -507,6 +506,10 @@ nav {
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-41), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+
+.about-me-content a {
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
 
 @media only screen and (max-width: 768px) {
   .about-me-content {
@@ -1345,7 +1348,8 @@ nav {
     bottom: 1.5vh;
     max-width: 82.5vw;
     max-height: 53.5vh !important;
-    padding-right: 2vw; }
+    padding-right: 2vw;
+    overflow-x: hidden; }
 
   .project-details::-webkit-scrollbar {
     width: .6vh;
@@ -1382,7 +1386,7 @@ nav {
     text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
   .project-links-container .details-header {
-    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+    text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
   .project-requirements-list li,
   .applied-skills-list li,
@@ -1395,7 +1399,8 @@ nav {
     text-shadow: 1px 1px 0 var(--color-0), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
 
   .project-links-list li a {
-    text-shadow: 1px 1px 0 var(--color-3-1), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
+    color: transparent;
+    text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
 
   .project-back ul li:before {
     width: 5px;
@@ -1765,8 +1770,7 @@ nav {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    bottom: 4vh;
-    z-index: 1000000000000000000000 !important; }
+    bottom: 4vh; }
 
   nav {
     display: none; }

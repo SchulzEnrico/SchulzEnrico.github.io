@@ -19,19 +19,12 @@ function flipCard(cardElement, projectContent, skillContent) {
     }
 }
 
-/*
-function toggleMenu() {
-    const navOpenElement = document.querySelector('.nav-open');
-    if (navOpenElement) {
-        navOpenElement.classList.toggle('nav-open');
-    }
-}
-*/
 
 function toggleMenu() {
     const nav = document.querySelector('nav.mobile-nav');
     nav.classList.toggle('nav-open');
 }
+
 
 function toggleActive(element) {
     const isActive = element.classList.contains('active');
