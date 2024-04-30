@@ -1345,7 +1345,8 @@ nav {
     bottom: 1.5vh;
     max-width: 82.5vw;
     max-height: 53.5vh !important;
-    padding-right: 2vw; }
+    padding-right: 2vw;
+    overflow-x: hidden; }
 
   .project-details::-webkit-scrollbar {
     width: .6vh;
