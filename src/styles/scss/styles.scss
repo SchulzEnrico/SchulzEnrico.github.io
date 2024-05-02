@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .background-color-wrapper {
-  background-color: var(--color-21);
+  background-color: var(--color-22);
 }
 
 .shadow-wrapper-start,
@@ -194,14 +194,14 @@ h2 {
 #educations-dot {
   position: fixed;
   margin: 0;
-  left: .4rem;
-  bottom: -1rem;
+  left: .55rem;
+  bottom: -.8rem;
   font-size: 4rem;
   animation: blink 2.5s infinite;
   color: var(--color-31);
   text-shadow: 1px -1px 1px var(--color-2),
-  -1px 0 1px var(--color-00),
-  -1px -1px 1px var(--color-4-0);
+              1px 0 1px var(--color-00),
+              1px 1px 1px var(--color-4-0);
 }
 
 .educations-wrapper {
@@ -221,17 +221,17 @@ h2 {
   display: inline-block;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-01),
+  text-shadow: 1px 1px 0 var(--color-000),
   2px 2px 0 var(--color-4-0),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  3px 3px 0 var(--color-3-1),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  3px 3px 3px var(--color-31),
-  0 -1px 0 var(--color-23);
+  1px -1px 0 var(--color-2),
+  -1px 0 0 var(--color-2),
+  -1px -1px 0 var(--color-2),
+  1px 0 0 var(--color-2),
+  3px 3px 0 var(--color-2),
+  -1px 2px 0 var(--color-2),
+  -1px 0 0 var(--color-2),
+  -3px 0 4px var(--color-3-1),
+  -2px -1px 0 var(--color-2);
   white-space: nowrap;
   overflow: hidden;
 }

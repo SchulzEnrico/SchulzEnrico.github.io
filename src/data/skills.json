@@ -100,6 +100,20 @@
           ]
         },
         {
+          "name": "Python",
+          "topics": "Convert xlsx into json",
+          "proficiency": 15,
+          "coach_guided_applied": 0,
+          "applied_unassisted": 10,
+          "projects": [
+            {
+              "name": "es Portfolio",
+              "hours_skill_used": 12,
+              "skill_use_types": "essential, training"
+            }
+          ]
+        },
+        {
           "name": "Java",
           "topics": "Version 21, OOP, TDD, Maven, Shell, Mockito, Lombok, Spring, MongoDB, NoSQL, Security, oAuth2",
           "proficiency": 73,
@@ -254,7 +268,7 @@
         },
         {
           "name": "Image editing",
-          "topics": "Photoshop, Affinity, Crop pictures, Restoration, Sharpening, Coloring, Vector generation",
+          "topics": "Photoshop, Affinity, Photopea, Crop pictures, Restoration, Sharpening, Coloring, Vector generation",
           "proficiency": 90,
           "coach_guided_applied": 160,
           "applied_unassisted": 195,
@@ -277,8 +291,8 @@
           ]
         },
         {
-          "name": "Wordpress TYPO3",
-          "topics": "TypoScript, Website modeling, Integrate own code, User management, Child themes",
+          "name": "CMS",
+          "topics": "TYPO3, WordPress, TypoScript, Website modeling, Integrate own code, User management, Child themes",
           "proficiency": 65,
           "coach_guided_applied": 90,
           "applied_unassisted": 35,
@@ -353,7 +367,7 @@
             },
             {
               "name": "es Portfolio",
-              "hours_skill_used": 30,
+              "hours_skill_used": 50,
               "skill_use_types": "supportive"
             },
             {
