@@ -28,7 +28,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -201,11 +201,7 @@
 }
 
 #skill-close-button .i-close{
-  font-size: 1.5rem;
   z-index: 3;
-  text-shadow: 1px -2px 1px var(--color-4),
-  -1px 0 1px var(--color-1),
-  -1px -1px 1px var(--color-4-0);
 }
 
 .topics-container {
@@ -601,9 +597,6 @@
 
   .i-close {
     font-size: 1.5rem;
-    text-shadow: 1px -1px 1px var(--color-23),
-    -1px 0 1px var(--color-1),
-    -1px -1px 1px var(--color-4-0);
   }
 
   .topics-container {

@@ -30,7 +30,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -263,31 +263,31 @@
   font-size: 1.6rem;
   font-weight: bold;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1),
+  text-shadow: 1px 1px 0 var(--color-0),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  2px 2px 0 var(--color-23),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-23);
+  0 -1px 0 var(--color-21);
 }
 
 .project-links-container .details-header {
-  text-shadow: 1px 1px 0 var(--color-0),
+  text-shadow: 1px 1px 0 var(--color-3-1),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  2px 2px 0 var(--color-23),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-23);
+  0 -1px 0 var(--color-21);
 
 }
 
@@ -325,18 +325,19 @@
 }
 
 .project-links-list li a {
-  text-shadow: 1px 1px 0 var(--color-3-1),
-  2px 1px 0 var(--color-41),
-  1px -1px 0 var(--color-4),
-  -1px 0 0 var(--color-4),
-  -1px -1px 0 var(--color-4),
-  1px 0 0 var(--color-4),
-  -1px 2px 0 var(--color-4),
-  2px 2px 0 var(--color-4),
-  -1px 1px 0 var(--color-4),
-  -1px 0 0 var(--color-4),
-  2px 2px 5px var(--color-4),
-  0 -1px 0 var(--color-4);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41),
+  2px 1px 0 var(--color-0),
+  1px -1px 0 var(--color-3-11),
+  -1px 0 0 var(--color-3-11),
+  -1px -1px 0 var(--color-3-11),
+  1px 0 0 var(--color-3-11),
+  -1px 2px 0 var(--color-3-11),
+  2px 2px 0 var(--color-3-11),
+  -1px 1px 0 var(--color-3-11),
+  -1px 0 0 var(--color-3-11),
+  2px 2px 5px var(--color-3-11),
+  0 -1px 0 var(--color-3-11);
 }
 
 .project-back ul li:before {
@@ -471,20 +472,6 @@
     0 -1px 0 var(--color-21);
   }
 
-  .project-links-container .details-header {
-    text-shadow: 1px 1px 0 var(--color-3-1),
-    2px 2px 0 var(--color-41),
-    1px -1px 0 var(--color-21),
-    -1px 0 0 var(--color-21),
-    -1px -1px 0 var(--color-21),
-    1px 0 0 var(--color-21),
-    3px 3px 0 var(--color-21),
-    -1px 2px 0 var(--color-21),
-    -1px 0 0 var(--color-21),
-    3px 3px 5px var(--color-3),
-    0 -1px 0 var(--color-21);
-  }
-
   .project-requirements-list li,
   .applied-skills-list li,
   .project-links-list li {
@@ -493,34 +480,6 @@
     font-size: .9rem;
     padding-left: 20px;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-0),
-    2px 1px 0 var(--color-4-0),
-    1px -1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    -1px -1px 0 var(--color-4),
-    1px 0 0 var(--color-4),
-    -1px 2px 0 var(--color-4),
-    2px 2px 0 var(--color-4),
-    -1px 1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    2px 2px 5px var(--color-4),
-    0 -1px 0 var(--color-4);
-  }
-
-  .project-links-list li a {
-    color: transparent;
-    text-shadow: 1px 1px 0 var(--color-41),
-    2px 1px 0 var(--color-0),
-    1px -1px 0 var(--color-3-11),
-    -1px 0 0 var(--color-3-11),
-    -1px -1px 0 var(--color-3-11),
-    1px 0 0 var(--color-3-11),
-    -1px 2px 0 var(--color-3-11),
-    2px 2px 0 var(--color-3-11),
-    -1px 1px 0 var(--color-3-11),
-    -1px 0 0 var(--color-3-11),
-    2px 2px 5px var(--color-3-11),
-    0 -1px 0 var(--color-3-11);
   }
 
   .project-back ul li:before {

@@ -17,6 +17,7 @@
   max-width: 90vw;
   font-size: 1.6rem;
   font-weight: bold;
+  line-height: 1.2;
   letter-spacing: 5px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-41),
@@ -37,7 +38,6 @@
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 8px;
-/*  color: var(--color-3-11);*/
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-3),
   2px 2px 0 var(--color-4),
@@ -50,9 +50,6 @@
   -1px 0 0 var(--color-0),
   3px 3px 7px var(--color-3),
   0 -1px 0 var(--color-0);
-/*  text-shadow: 1px 0 1px var(--color-2),
-  -1px 0 1px var(--color-00),
-  -1px -1px 1px var(--color-4-0);*/
   filter: brightness(85%);
 }
 
@@ -71,6 +68,7 @@
     font-size: .75rem;
     letter-spacing: 3px;
   }
+
   .motivation-essence {
     font-size: 1.5rem;
     letter-spacing: 5px;

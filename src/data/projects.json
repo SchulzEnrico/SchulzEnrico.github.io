@@ -10,39 +10,39 @@
             {
               "name_affix": "Decentralized processing of new deliveries",
               "requirements": [
-                "Team Coordination",
-                "Team mediation",
+                "Cross-company: Team Coordination, Team mediation",
                 "Logistics",
                 "Quality control"
               ],
               "applied_skills": [
+                "Project planning",
                 "Time management",
-                "Quality management",
+                "Quality management and control",
                 "Document management",
                 "Stakeholder management",
-                "Problem-solving",
-                ""
+                "Service provider coordination",
+                "Problem-solving"
               ],
               "links": [
                 {
                   "link": "https://www.hamburg-audi.de/",
-                  "link_name": "Head client: Audi Hamburg GmbH "
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.blg-logistics.com/standorte-deutschland/hamburg",
-                  "link_name": "Place of execution: BLG LOGISTICS GROUP AG & CO. KG"
+                  "link_name": "Place Of Execution"
                 },
                 {
                   "link": "https://i-w-s.de/",
-                  "link_name": "Employer-1: IWS Servicegesellschaft"
+                  "link_name": "Employer-1"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer-2: APZ GmbH"
+                  "link_name": "Employer-2"
                 },
                 {
                   "link": "https://www.five-stars-hh.de/",
-                  "link_name": "Registration service: FiveStars"
+                  "link_name": "Registration Service"
                 }
               ]
             }
@@ -61,20 +61,22 @@
                 "Fixed date of completion"
               ],
               "applied_skills": [
+                "Project planning",
                 "Time management",
-                "Quality management",
                 "Stakeholder management",
                 "Leadership",
+                "Negotiations",
+                "Service provider coordination",
                 "Decision-making"
               ],
               "links": [
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Head client: APZ GmbH"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 }
               ]
             }
@@ -91,22 +93,26 @@
                 "Team-Operations Coordination"
               ],
               "applied_skills": [
+                "Project planning",
                 "Team coordination",
+                "Time management",
+                "Quality management and control",
                 "Communication",
+                "Negotiations",
                 "Stakeholder management"
               ],
               "links": [
                 {
                   "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 },
                 {
                   "link": "https://www.instagram.com/al.luxury.car.care/",
-                  "link_name": "Main service provider: Arben Lokaj"
+                  "link_name": "Main Service Provider"
                 },
                 {
                   "link": "https://www.youtube.com/watch?v=XYZ456",
@@ -127,21 +133,31 @@
                 "Team-Operations coordination"
               ],
               "applied_skills": [
+                "Project planning",
                 "Purchasing processes",
+                "Team coordination",
+                "Quality management and control",
+                "Time management",
+                "Communication",
+                "Negotiations",
                 "Stakeholder management"
               ],
               "links": [
                 {
                   "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 },
                 {
                   "link": "https://www.instagram.com/al.luxury.car.care/",
-                  "link_name": "Main service provider: Arben Lokaj"
+                  "link_name": "Main Service Provider"
+                },
+                {
+                  "link": "https://kraftwerkberlin.de/de/",
+                  "link_name": "Place Of Execution"
                 },
                 {
                   "link": "https://www.youtube.com/watch?v=ABC123",
@@ -162,18 +178,27 @@
                 "Operations coordination"
               ],
               "applied_skills": [
+                "Project planning",
                 "Purchasing processes",
                 "Team coordination",
+                "Time management",
+                "Quality management and control",
+                "Communication",
+                "Negotiations",
                 "Stakeholder management"
               ],
               "links": [
                 {
                   "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
+                  "link_name": "Head Client"
+                },
+                {
+                  "link": "https://group.mercedes-benz.com/unternehmen/standorte/produktionsnetzwerk-vitoria.html",
+                  "link_name": "Place Of Execution"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 }
               ]
             }
@@ -187,35 +212,120 @@
               "name_affix": "Converting a property into a paint shop",
               "requirements": [
                 "Project planning",
+                "Process design",
                 "Operations coordination",
                 "Stakeholder management",
-                "Marketing"
+                "Marketing",
+                "Expanding truck fleet"
               ],
               "applied_skills": [
+                "Project planning",
                 "Purchasing processes",
                 "Stakeholder management",
+                "Process design and management",
+                "Negotiations",
+                "Service provider coordination",
                 "Problem-solving"
               ],
               "links": [
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Head client: APZ GmbH"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.volkswagen-automobile-hamburg.de/",
-                  "link_name": "Previous tenant: Volkswagen Automobile Hamburg"
+                  "link_name": "Previous Tenant"
                 },
                 {
                   "link": "https://www.bmw-hamburg.de/de/home/",
-                  "link_name": "Major customer of the client"
+                  "link_name": "Major Customer"
                 },
                 {
                   "link": "https://www.instagram.com/al.luxury.car.care/",
-                  "link_name": "Main service provider: Arben Lokaj"
+                  "link_name": "Main Service Provider"
                 },
                 {
                   "link": "https://www.kroschke.de/",
-                  "link_name": "Landlord: Christoph Kroschke GmbH"
+                  "link_name": "Landlord"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Personal",
+      "projects": [
+        {
+          "name": "Self-fulfillment through Education",
+          "year": "17-23",
+          "project_details": [
+            {
+              "name_affix": "Realization of personal goals to create a solid professional foundation",
+              "requirements": [
+                "Retraining with a commercial background",
+                "Certification as project manager IPMA ICB4",
+                "Certification as Scrum Master",
+                "Certification as Prooduct Owner",
+                "Certification as Web Designer",
+                "Certification as Full Stack Developer",
+                "Improve your English skills to B2 level"
+              ],
+              "applied_skills": [
+                "Project planning",
+                "Exhausting intrinsic motivation",
+                "Determination",
+                "Willingness to learn"
+              ],
+              "links": [
+                {
+                  "link": "https://umschulung-grone.de/",
+                  "link_name": "Training Company - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://melloc.de/",
+                  "link_name": "Training Employer 1 - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://www.medias-reiseservice.de/",
+                  "link_name": "Training Employer 2 - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://www.ihk.de/",
+                  "link_name": "Certifying Organization - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://cbm-projektmanagement.de/",
+                  "link_name": "Training Company - Project management hybrid"
+                },
+                {
+                  "link": "https://www.gpm-ipma.de/",
+                  "link_name": "Certifying Organization - IPMA ICB4"
+                },
+                {
+                  "link": "https://www.scrum.org/",
+                  "link_name": "Certifying Organization - Agile PM"
+                },
+                {
+                  "link": "https://www.wbstraining.de/",
+                  "link_name": "Training Company - Web Development and English"
+                },
+                {
+                  "link": "https://www.gfn.de/",
+                  "link_name": "Training Company - Wed Design"
+                },
+                {
+                  "link": "https://de.webmasters-europe.org/",
+                  "link_name": "Certifying Organization - Web Design and Development"
+                },
+                {
+                  "link": "https://www.pearson.de/",
+                  "link_name": "Certifying Organization - Englisch"
+                },
+                {
+                  "link": "https://www.neuefische.de/",
+                  "link_name": "Training and Certifying Organization - Java Development"
                 }
               ]
             }
@@ -241,30 +351,30 @@
               ],
               "applied_skills": [
                 "HTML",
-                "SCSS",
+                "CSS",
                 "TypeScript",
                 "Java",
                 "React",
                 "React Bootstrap",
                 "UX UI",
-                "DevOps"
+                "DevOps, Agil PM"
               ],
               "links": [
                 {
                   "link": "https://esource.onrender.com",
-                  "link_name": "The daily changing result"
+                  "link_name": "Demo on Render (long loading time)"
                 },
                 {
                   "link": "https://www.wbstraining.de/",
-                  "link_name": "WBS Training - Web Development educators"
+                  "link_name": "Web Development Company"
                 },
                 {
                   "link": "https://www.gfn.de/",
-                  "link_name": "GFN - Web Design educators"
+                  "link_name": "Web Design Company"
                 },
                 {
                   "link": "https://www.neuefische.de/",
-                  "link_name": "neue fische - Java bootcamp educators"
+                  "link_name": " Java Bootcamp Company"
                 }
               ]
             }
@@ -285,15 +395,16 @@
               ],
               "applied_skills": [
                 "HTML",
-                "CSS",
+                "SCSS",
                 "JavaScript",
-                "PythonUX UI",
-                "DevOps"
+                "Python",
+                "UX UI",
+                "DevOps, Agil PM"
               ],
               "links": [
                 {
                   "link": "schulzenrico.github.io",
-                  "link_name": "That's me"
+                  "link_name": "You are already here"
                 }
               ]
             }

@@ -27,7 +27,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -193,10 +193,10 @@
   font-size: 1.6rem;
   font-weight: bold;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .project-links-container .details-header {
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .project-requirements-list,
 .applied-skills-list,
@@ -221,7 +221,8 @@
   text-shadow: 1px 1px 0 var(--color-0), 1px 2px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 0 -1px 0 var(--color-4); }
 
 .project-links-list li a {
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
 
 .project-back ul li:before {
   content: "o";
@@ -322,9 +323,6 @@
     outline: 2px solid var(--color-3-11);
     text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
-  .project-links-container .details-header {
-    text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
-
   .project-requirements-list li,
   .applied-skills-list li,
   .project-links-list li {
@@ -332,12 +330,7 @@
     font-weight: bold;
     font-size: .9rem;
     padding-left: 20px;
-    color: transparent;
-    text-shadow: 1px 1px 0 var(--color-0), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
-
-  .project-links-list li a {
-    color: transparent;
-    text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+    color: transparent; }
 
   .project-back ul li:before {
     width: 5px;
