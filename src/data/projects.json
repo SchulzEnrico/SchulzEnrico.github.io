@@ -9,6 +9,7 @@
           "project_details": [
             {
               "name_affix": "Decentralized processing of new deliveries",
+              "description": "The number of vehicles sold by Audi Hamburg constantly exceeded the site's manageable space capacities. For this reason, decentralized technical and optical vehicle preparation for vehicle delivery was carried out at the BLG Hamburg site. From there, the vehicles were delivered to the customer. Operational duration:  10 month",
               "requirements": [
                 "Cross-company: Team Coordination, Team mediation",
                 "Logistics",
@@ -54,6 +55,7 @@
           "project_details": [
             {
               "name_affix": "Dissolution and dismantling of a branch",
+              "description": "Due to the sale of the rented property, the site had to be closed and dismantled. This meant dismantling and storing a paint shop and a car wash, as well as dismantling all the modifications to the property required for operation. Operational duration:  3 month",
               "requirements": [
                 "Project planning",
                 "Coordination",
@@ -88,6 +90,7 @@
           "project_details": [
             {
               "name_affix": "V-Class  Hamburg - Sylt",
+              "description": "For the press driving event of the Mercedes-Benz V-Class, the vehicles had to be prepared for the next press representatives at Hamburg Airport after the tour was completed. The special challenges were: The vehicles were not allowed to be washed with chemicals there and there was only a time window of about 30 minutes in which the refueling of the vehicles had to take place (the gas station was 2km away). Operational duration: 2 week",
               "requirements": [
                 "Subproject planning",
                 "Team-Operations Coordination"
@@ -128,6 +131,7 @@
           "project_details": [
             {
               "name_affix": "World premiere Vito",
+              "description": "The world premiere of the Mercedes-Benz Vito took place at Kraftwerk Berlin. The vehicles required for this had to be prepared on site and maintained throughout the event. This was a particular challenge: Due to the constant construction of the event, there were no fixed workstations and the air was constantly highly contaminated with dust. Operational duration: 1 week",
               "requirements": [
                 "Subproject planning",
                 "Team-Operations coordination"
@@ -173,6 +177,7 @@
           "project_details": [
             {
               "name_affix": "Vito Vitoria - Bilbao (Spain)",
+              "description": "For the Mercedes-Benz Vito press driving event, the vehicles had to be completely reconditioned during the night after the technical inspection by the mechanics' team at the plant in Vitoria. They then had to be taken to the parking lot of the hotel where the press staff spent the night. There were special challenges: The team provided was not trained for this job and of the 25 team members, only the team leader spoke English. Operational duration: 3 weeks",
               "requirements": [
                 "Subproject planning",
                 "Operations coordination"
@@ -210,6 +215,7 @@
           "project_details": [
             {
               "name_affix": "Converting a property into a paint shop",
+              "description": "The acquisition of a new major customer made it necessary to rent a property and additional premises. The property had to be gutted and converted into a fully functional paint shop. The external site had to be leveled and secured. This was to be used to store the used car stock. There were particular challenges: The entire electrical system in the property had to be renewed. There were only 3 months until the customer's first vehicles arrived for processing. Operational duration: 6 month",
               "requirements": [
                 "Project planning",
                 "Process design",
@@ -263,6 +269,7 @@
           "project_details": [
             {
               "name_affix": "Realization of personal goals to create a solid professional foundation",
+              "description": "My vision was to create a well-founded and complete realignment of my professional skills, building on existing skills. One that fully reflects my personality and meets my own expectations of the world of work. ",
               "requirements": [
                 "Retraining with a commercial background",
                 "Certification as project manager IPMA ICB4",
@@ -342,12 +349,12 @@
           "project_details": [
             {
               "name_affix": "My digital playground and knowledge source",
+              "description": "Designed for use on a 49\" widescreen monitor. This application is used by me as a digital playground, for testing UX and UI as well as styles, personal scrum board, development support, knowledge base, topic-related bookmark management and display, on several resizable panels next to each other, in just one browser tab. However, the application possibilities are as unlimited as there are websites that can be displayed in an iframe. The current status is the prototype for an upcoming rebuild, which should then also have a user login so that everyone can set up their own \"thing\" as they need it for their needs. Loading the application on render.com will take some time, as this is only a free account. I currently only use the application locally myself.",
               "requirements": [
                 "Web design",
                 "Web development",
                 "Project design",
-                "Project planning",
-                ""
+                "Project planning"
               ],
               "applied_skills": [
                 "HTML",
@@ -386,12 +393,12 @@
           "project_details": [
             {
               "name_affix": "THE FACTS: My personality and the foundation behind it",
+              "description": "If you have come this far and are actually reading this. I don't need to explain what you're seeing and what this project is for. THAT'S ME! Many thanks to you for really daring to take such a deep look.",
               "requirements": [
                 "Web design",
                 "Frontend development",
                 "Project design",
-                "Project planning",
-                ""
+                "Project planning"
               ],
               "applied_skills": [
                 "HTML",
