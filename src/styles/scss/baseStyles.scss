@@ -9,13 +9,13 @@
 .i-close{
   font-size: 2rem;
   color: transparent;
-  text-shadow: 1px -2px 1px var(--color-23),
+  text-shadow: 1px -2px 1px var(--color-3),
   -2px 0 1px var(--color-1),
   -2px -1px 1px var(--color-4-0);
 }
 .i-close:hover{
   color: var(--color-3);
-  filter: brightness(250%);
+  filter: brightness(150%);
   scale: 1.25;
   transition: scale 250ms ease,
               color 500ms ease,

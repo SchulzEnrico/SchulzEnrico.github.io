@@ -10,11 +10,11 @@
 .i-close {
   font-size: 2rem;
   color: transparent;
-  text-shadow: 1px -2px 1px var(--color-23), -2px 0 1px var(--color-1), -2px -1px 1px var(--color-4-0); }
+  text-shadow: 1px -2px 1px var(--color-3), -2px 0 1px var(--color-1), -2px -1px 1px var(--color-4-0); }
 
 .i-close:hover {
   color: var(--color-3);
-  filter: brightness(250%);
+  filter: brightness(150%);
   scale: 1.25;
   transition: scale 250ms ease, color 500ms ease, brightness 5000ms ease; }
 
@@ -452,6 +452,7 @@ nav {
   max-width: 90vw;
   font-size: 1.6rem;
   font-weight: bold;
+  line-height: 1.2;
   letter-spacing: 5px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-41), 1px 2px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 5px 5px 7px var(--color-0), 0 -1px 0 var(--color-0); }
@@ -461,12 +462,8 @@ nav {
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 8px;
-  /*  color: var(--color-3-11);*/
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 7px var(--color-3), 0 -1px 0 var(--color-0);
-  /*  text-shadow: 1px 0 1px var(--color-2),
-    -1px 0 1px var(--color-00),
-    -1px -1px 1px var(--color-4-0);*/
   filter: brightness(85%); }
 
 .motivation-img {
@@ -543,7 +540,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -670,9 +667,7 @@ nav {
   box-shadow: inset 2px -2px 8px var(--color-2), -2px 2px 10px var(--color-21); }
 
 #skill-close-button .i-close {
-  font-size: 1.5rem;
-  z-index: 3;
-  text-shadow: 1px -2px 1px var(--color-4), -1px 0 1px var(--color-1), -1px -1px 1px var(--color-4-0); }
+  z-index: 3; }
 
 .topics-container {
   position: relative;
@@ -959,8 +954,7 @@ nav {
     right: 1vw; }
 
   .i-close {
-    font-size: 1.5rem;
-    text-shadow: 1px -1px 1px var(--color-23), -1px 0 1px var(--color-1), -1px -1px 1px var(--color-4-0); }
+    font-size: 1.5rem; }
 
   .topics-container {
     top: 7vh;
@@ -1069,33 +1063,33 @@ nav {
 .projects-wrapper {
   position: relative;
   top: 5vh;
+  left: 5vw;
   display: flex;
+  flex-direction: column;
   justify-content: start;
-  align-items: start;
-  flex-flow: column;
+  align-items: flex-start;
   max-width: 90vw; }
 
 .project-management-container {
   position: relative;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start;
-  left: 5vw; }
+  justify-content: start; }
 
 .projects-container h3 {
   position: relative;
-  left: 5vw;
   margin: 1rem 0 0;
   font-family: var(--font-1);
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
-  min-width: 300px;
-  min-height: 160px;
+  min-width: 250px;
+  min-height: 145px;
   margin: 0.5rem;
   border-radius: 15px;
   flex-shrink: 1;
@@ -1143,7 +1137,7 @@ nav {
 
 .project-front h5,
 .project-back h5 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: var(--font-2);
   letter-spacing: 3px;
   margin: 35px 15px 0 15px;
@@ -1203,15 +1197,58 @@ nav {
   font-size: 1.5rem;
   font-family: var(--font-2);
   letter-spacing: 3px;
-  background-color: var(--color-00);
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23);
   z-index: 3; }
 
+.project-description {
+  position: fixed;
+  top: 7rem;
+  left: 3vw;
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: .5rem;
+  background-color: var(--color-21);
+  box-shadow: inset 7px 7px 40px var(--color-0), inset -7px -7px 40px var(--color-0);
+  border: 1px solid var(--color-4);
+  outline: 2px solid var(--color-3-11);
+  border-radius: 15px;
+  font-family: var(--font-1);
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11);
+  overflow: scroll; }
+
+.project-description::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+.project-description::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.project-description::-webkit-scrollbar-corner {
+  background-color: transparent; }
+
+.project-description::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4-0);
+  border-radius: 25px; }
+
+.project-description p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem; }
+
 .project-details {
   position: fixed;
   left: 5vw;
-  height: 55vh;
+  top: 17rem;
+  height: 45vh;
   width: 85vw;
   display: flex;
   flex-direction: row;
@@ -1239,7 +1276,6 @@ nav {
 .applied-skills-container,
 .project-links-container {
   position: relative;
-  top: 10rem;
   margin-right: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -1255,11 +1291,12 @@ nav {
   margin: 0 0.5rem 0;
   font-size: 1.6rem;
   font-weight: bold;
+  letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .project-links-container .details-header {
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .project-requirements-list,
 .applied-skills-list,
@@ -1274,9 +1311,10 @@ nav {
 .applied-skills-list li,
 .project-links-list li {
   position: relative;
+  text-align: left;
   padding-left: 30px;
   justify-items: start;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin-bottom: 5px;
   letter-spacing: 3px;
   font-weight: bold;
@@ -1284,7 +1322,8 @@ nav {
   text-shadow: 1px 1px 0 var(--color-0), 1px 2px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 0 -1px 0 var(--color-4); }
 
 .project-links-list li a {
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
 
 .project-back ul li:before {
   content: "o";
@@ -1342,6 +1381,11 @@ nav {
     font-size: 1rem;
     flex-wrap: wrap; }
 
+  .project-description {
+    max-width: 77.5vw;
+    top: 10rem;
+    left: 5vw; }
+
   .project-details {
     position: fixed;
     flex-direction: column;
@@ -1385,9 +1429,6 @@ nav {
     outline: 2px solid var(--color-3-11);
     text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
-  .project-links-container .details-header {
-    text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
-
   .project-requirements-list li,
   .applied-skills-list li,
   .project-links-list li {
@@ -1395,12 +1436,7 @@ nav {
     font-weight: bold;
     font-size: .9rem;
     padding-left: 20px;
-    color: transparent;
-    text-shadow: 1px 1px 0 var(--color-0), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), -1px 2px 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 1px 0 var(--color-4), -1px 0 0 var(--color-4), 2px 2px 5px var(--color-4), 0 -1px 0 var(--color-4); }
-
-  .project-links-list li a {
-    color: transparent;
-    text-shadow: 1px 1px 0 var(--color-41), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+    color: transparent; }
 
   .project-back ul li:before {
     width: 5px;
@@ -1959,7 +1995,8 @@ body {
   justify-content: center;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: var(--color-0); }
+  background-color: var(--color-0);
+  transition: filter 0.5s ease; }
 
 body::-webkit-scrollbar {
   width: 8px;
@@ -1977,7 +2014,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px; }
 
 .background-color-wrapper {
-  background-color: var(--color-22); }
+  background-color: var(--color-21); }
 
 .shadow-wrapper-start,
 .shadow-wrapper-end {
@@ -2090,11 +2127,6 @@ h2 {
   body {
     max-width: 100vw; }
 
-  /*  @media (orientation: landscape) {
-      body {
-        transform: rotate(0deg); !* Ein Hack, um das Drehen zu verhindern (((FUNKTIONIERT SO ABER NICHT)))*!
-      }
-    }*/
   h1 {
     scale: 0.7;
     top: -91px;

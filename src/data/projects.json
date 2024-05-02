@@ -9,40 +9,41 @@
           "project_details": [
             {
               "name_affix": "Decentralized processing of new deliveries",
+              "description": "The number of vehicles sold by Audi Hamburg constantly exceeded the site's manageable space capacities. For this reason, decentralized technical and optical vehicle preparation for vehicle delivery was carried out at the BLG Hamburg site. From there, the vehicles were delivered to the customer. Operational duration:  10 month",
               "requirements": [
-                "Team Coordination",
-                "Team mediation",
+                "Cross-company: Team Coordination, Team mediation",
                 "Logistics",
                 "Quality control"
               ],
               "applied_skills": [
+                "Project planning",
                 "Time management",
-                "Quality management",
+                "Quality management and control",
                 "Document management",
                 "Stakeholder management",
-                "Problem-solving",
-                ""
+                "Service provider coordination",
+                "Problem-solving"
               ],
               "links": [
                 {
                   "link": "https://www.hamburg-audi.de/",
-                  "link_name": "Head client: Audi Hamburg GmbH "
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.blg-logistics.com/standorte-deutschland/hamburg",
-                  "link_name": "Place of execution: BLG LOGISTICS GROUP AG & CO. KG"
+                  "link_name": "Place Of Execution"
                 },
                 {
                   "link": "https://i-w-s.de/",
-                  "link_name": "Employer-1: IWS Servicegesellschaft"
+                  "link_name": "Employer-1"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer-2: APZ GmbH"
+                  "link_name": "Employer-2"
                 },
                 {
                   "link": "https://www.five-stars-hh.de/",
-                  "link_name": "Registration service: FiveStars"
+                  "link_name": "Registration Service"
                 }
               ]
             }
@@ -54,6 +55,7 @@
           "project_details": [
             {
               "name_affix": "Dissolution and dismantling of a branch",
+              "description": "Due to the sale of the rented property, the site had to be closed and dismantled. This meant dismantling and storing a paint shop and a car wash, as well as dismantling all the modifications to the property required for operation. Operational duration:  3 month",
               "requirements": [
                 "Project planning",
                 "Coordination",
@@ -61,20 +63,22 @@
                 "Fixed date of completion"
               ],
               "applied_skills": [
+                "Project planning",
                 "Time management",
-                "Quality management",
                 "Stakeholder management",
                 "Leadership",
+                "Negotiations",
+                "Service provider coordination",
                 "Decision-making"
               ],
               "links": [
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Head client: APZ GmbH"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 }
               ]
             }
@@ -86,27 +90,32 @@
           "project_details": [
             {
               "name_affix": "V-Class  Hamburg - Sylt",
+              "description": "For the press driving event of the Mercedes-Benz V-Class, the vehicles had to be prepared for the next press representatives at Hamburg Airport after the tour was completed. The special challenges were: The vehicles were not allowed to be washed with chemicals there and there was only a time window of about 30 minutes in which the refueling of the vehicles had to take place (the gas station was 2km away). Operational duration: 2 week",
               "requirements": [
                 "Subproject planning",
                 "Team-Operations Coordination"
               ],
               "applied_skills": [
+                "Project planning",
                 "Team coordination",
+                "Time management",
+                "Quality management and control",
                 "Communication",
+                "Negotiations",
                 "Stakeholder management"
               ],
               "links": [
                 {
                   "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 },
                 {
                   "link": "https://www.instagram.com/al.luxury.car.care/",
-                  "link_name": "Main service provider: Arben Lokaj"
+                  "link_name": "Main Service Provider"
                 },
                 {
                   "link": "https://www.youtube.com/watch?v=XYZ456",
@@ -122,26 +131,37 @@
           "project_details": [
             {
               "name_affix": "World premiere Vito",
+              "description": "The world premiere of the Mercedes-Benz Vito took place at Kraftwerk Berlin. The vehicles required for this had to be prepared on site and maintained throughout the event. This was a particular challenge: Due to the constant construction of the event, there were no fixed workstations and the air was constantly highly contaminated with dust. Operational duration: 1 week",
               "requirements": [
                 "Subproject planning",
                 "Team-Operations coordination"
               ],
               "applied_skills": [
+                "Project planning",
                 "Purchasing processes",
+                "Team coordination",
+                "Quality management and control",
+                "Time management",
+                "Communication",
+                "Negotiations",
                 "Stakeholder management"
               ],
               "links": [
                 {
                   "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 },
                 {
                   "link": "https://www.instagram.com/al.luxury.car.care/",
-                  "link_name": "Main service provider: Arben Lokaj"
+                  "link_name": "Main Service Provider"
+                },
+                {
+                  "link": "https://kraftwerkberlin.de/de/",
+                  "link_name": "Place Of Execution"
                 },
                 {
                   "link": "https://www.youtube.com/watch?v=ABC123",
@@ -157,23 +177,33 @@
           "project_details": [
             {
               "name_affix": "Vito Vitoria - Bilbao (Spain)",
+              "description": "For the Mercedes-Benz Vito press driving event, the vehicles had to be completely reconditioned during the night after the technical inspection by the mechanics' team at the plant in Vitoria. They then had to be taken to the parking lot of the hotel where the press staff spent the night. There were special challenges: The team provided was not trained for this job and of the 25 team members, only the team leader spoke English. Operational duration: 3 weeks",
               "requirements": [
                 "Subproject planning",
                 "Operations coordination"
               ],
               "applied_skills": [
+                "Project planning",
                 "Purchasing processes",
                 "Team coordination",
+                "Time management",
+                "Quality management and control",
+                "Communication",
+                "Negotiations",
                 "Stakeholder management"
               ],
               "links": [
                 {
                   "link": "https://www.mercedes-benz.de/",
-                  "link_name": "Head client: Mercedes Benz"
+                  "link_name": "Head Client"
+                },
+                {
+                  "link": "https://group.mercedes-benz.com/unternehmen/standorte/produktionsnetzwerk-vitoria.html",
+                  "link_name": "Place Of Execution"
                 },
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Employer: APZ GmbH"
+                  "link_name": "Employer"
                 }
               ]
             }
@@ -185,37 +215,124 @@
           "project_details": [
             {
               "name_affix": "Converting a property into a paint shop",
+              "description": "The acquisition of a new major customer made it necessary to rent a property and additional premises. The property had to be gutted and converted into a fully functional paint shop. The external site had to be leveled and secured. This was to be used to store the used car stock. There were particular challenges: The entire electrical system in the property had to be renewed. There were only 3 months until the customer's first vehicles arrived for processing. Operational duration: 6 month",
               "requirements": [
                 "Project planning",
+                "Process design",
                 "Operations coordination",
                 "Stakeholder management",
-                "Marketing"
+                "Marketing",
+                "Expanding truck fleet"
               ],
               "applied_skills": [
+                "Project planning",
                 "Purchasing processes",
                 "Stakeholder management",
+                "Process design and management",
+                "Negotiations",
+                "Service provider coordination",
                 "Problem-solving"
               ],
               "links": [
                 {
                   "link": "https://www.apz-carmotion.de/",
-                  "link_name": "Head client: APZ GmbH"
+                  "link_name": "Head Client"
                 },
                 {
                   "link": "https://www.volkswagen-automobile-hamburg.de/",
-                  "link_name": "Previous tenant: Volkswagen Automobile Hamburg"
+                  "link_name": "Previous Tenant"
                 },
                 {
                   "link": "https://www.bmw-hamburg.de/de/home/",
-                  "link_name": "Major customer of the client"
+                  "link_name": "Major Customer"
                 },
                 {
                   "link": "https://www.instagram.com/al.luxury.car.care/",
-                  "link_name": "Main service provider: Arben Lokaj"
+                  "link_name": "Main Service Provider"
                 },
                 {
                   "link": "https://www.kroschke.de/",
-                  "link_name": "Landlord: Christoph Kroschke GmbH"
+                  "link_name": "Landlord"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Personal",
+      "projects": [
+        {
+          "name": "Self-fulfillment through Education",
+          "year": "17-23",
+          "project_details": [
+            {
+              "name_affix": "Realization of personal goals to create a solid professional foundation",
+              "description": "My vision was to create a well-founded and complete realignment of my professional skills, building on existing skills. One that fully reflects my personality and meets my own expectations of the world of work. ",
+              "requirements": [
+                "Retraining with a commercial background",
+                "Certification as project manager IPMA ICB4",
+                "Certification as Scrum Master",
+                "Certification as Prooduct Owner",
+                "Certification as Web Designer",
+                "Certification as Full Stack Developer",
+                "Improve your English skills to B2 level"
+              ],
+              "applied_skills": [
+                "Project planning",
+                "Exhausting intrinsic motivation",
+                "Determination",
+                "Willingness to learn"
+              ],
+              "links": [
+                {
+                  "link": "https://umschulung-grone.de/",
+                  "link_name": "Training Company - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://melloc.de/",
+                  "link_name": "Training Employer 1 - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://www.medias-reiseservice.de/",
+                  "link_name": "Training Employer 2 - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://www.ihk.de/",
+                  "link_name": "Certifying Organization - Wholesale & export merchant"
+                },
+                {
+                  "link": "https://cbm-projektmanagement.de/",
+                  "link_name": "Training Company - Project management hybrid"
+                },
+                {
+                  "link": "https://www.gpm-ipma.de/",
+                  "link_name": "Certifying Organization - IPMA ICB4"
+                },
+                {
+                  "link": "https://www.scrum.org/",
+                  "link_name": "Certifying Organization - Agile PM"
+                },
+                {
+                  "link": "https://www.wbstraining.de/",
+                  "link_name": "Training Company - Web Development and English"
+                },
+                {
+                  "link": "https://www.gfn.de/",
+                  "link_name": "Training Company - Wed Design"
+                },
+                {
+                  "link": "https://de.webmasters-europe.org/",
+                  "link_name": "Certifying Organization - Web Design and Development"
+                },
+                {
+                  "link": "https://www.pearson.de/",
+                  "link_name": "Certifying Organization - Englisch"
+                },
+                {
+                  "link": "https://www.neuefische.de/",
+                  "link_name": "Training and Certifying Organization - Java Development"
                 }
               ]
             }
@@ -232,39 +349,39 @@
           "project_details": [
             {
               "name_affix": "My digital playground and knowledge source",
+              "description": "Designed for use on a 49\" widescreen monitor. This application is used by me as a digital playground, for testing UX and UI as well as styles, personal scrum board, development support, knowledge base, topic-related bookmark management and display, on several resizable panels next to each other, in just one browser tab. However, the application possibilities are as unlimited as there are websites that can be displayed in an iframe. The current status is the prototype for an upcoming rebuild, which should then also have a user login so that everyone can set up their own \"thing\" as they need it for their needs. Loading the application on render.com will take some time, as this is only a free account. I currently only use the application locally myself.",
               "requirements": [
                 "Web design",
                 "Web development",
                 "Project design",
-                "Project planning",
-                ""
+                "Project planning"
               ],
               "applied_skills": [
                 "HTML",
-                "SCSS",
+                "CSS",
                 "TypeScript",
                 "Java",
                 "React",
                 "React Bootstrap",
                 "UX UI",
-                "DevOps"
+                "DevOps, Agil PM"
               ],
               "links": [
                 {
                   "link": "https://esource.onrender.com",
-                  "link_name": "The daily changing result"
+                  "link_name": "Demo on Render (long loading time)"
                 },
                 {
                   "link": "https://www.wbstraining.de/",
-                  "link_name": "WBS Training - Web Development educators"
+                  "link_name": "Web Development Company"
                 },
                 {
                   "link": "https://www.gfn.de/",
-                  "link_name": "GFN - Web Design educators"
+                  "link_name": "Web Design Company"
                 },
                 {
                   "link": "https://www.neuefische.de/",
-                  "link_name": "neue fische - Java bootcamp educators"
+                  "link_name": " Java Bootcamp Company"
                 }
               ]
             }
@@ -276,24 +393,25 @@
           "project_details": [
             {
               "name_affix": "THE FACTS: My personality and the foundation behind it",
+              "description": "If you have come this far and are actually reading this. I don't need to explain what you're seeing and what this project is for. THAT'S ME! Many thanks to you for really daring to take such a deep look.",
               "requirements": [
                 "Web design",
                 "Frontend development",
                 "Project design",
-                "Project planning",
-                ""
+                "Project planning"
               ],
               "applied_skills": [
                 "HTML",
-                "CSS",
+                "SCSS",
                 "JavaScript",
-                "PythonUX UI",
-                "DevOps"
+                "Python",
+                "UX UI",
+                "DevOps, Agil PM"
               ],
               "links": [
                 {
                   "link": "schulzenrico.github.io",
-                  "link_name": "That's me"
+                  "link_name": "You are already here"
                 }
               ]
             }

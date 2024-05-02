@@ -7,30 +7,30 @@
 .projects-wrapper {
   position: relative;
   top: 5vh;
+  left: 5vw;
   display: flex;
+  flex-direction: column;
   justify-content: start;
-  align-items: start;
-  flex-flow: column;
+  align-items: flex-start;
   max-width: 90vw;
 }
 
 .project-management-container {
   position: relative;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  left: 5vw;
 }
 
 .projects-container h3 {
   position: relative;
-  left: 5vw;
   margin: 1rem 0 0;
   font-family: var(--font-1);
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -45,8 +45,8 @@
 
 .project {
   perspective: 1000px;
-  min-width: 300px;
-  min-height: 160px;
+  min-width: 250px;
+  min-height: 145px;
   margin: 0.5rem;
   border-radius: 15px;
   flex-shrink: 1;
@@ -99,7 +99,7 @@
 
 .project-front h5,
 .project-back h5 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: var(--font-2);
   letter-spacing: 3px;
   margin: 35px 15px 0 15px;
@@ -197,7 +197,6 @@
   font-size: 1.5rem;
   font-family: var(--font-2);
   letter-spacing: 3px;
-  background-color: var(--color-00);
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-0),
   2px 2px 0 var(--color-41),
@@ -213,10 +212,70 @@
   z-index: 3;
 }
 
+
+.project-description {
+  position: fixed;
+  top: 7rem;
+  left: 3vw;
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding:.5rem;
+  background-color: var(--color-21);
+  box-shadow: inset 7px 7px 40px var(--color-0),
+  inset -7px -7px 40px var(--color-0);
+  border: 1px solid var(--color-4);
+  outline: 2px solid var(--color-3-11);
+  border-radius: 15px;
+  font-family: var(--font-1);
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41),
+  2px 1px 0 var(--color-0),
+  1px -1px 0 var(--color-3-11),
+  -1px 0 0 var(--color-3-11),
+  -1px -1px 0 var(--color-3-11),
+  1px 0 0 var(--color-3-11),
+  -1px 2px 0 var(--color-3-11),
+  2px 2px 0 var(--color-3-11),
+  -1px 1px 0 var(--color-3-11),
+  -1px 0 0 var(--color-3-11),
+  2px 2px 5px var(--color-3-11),
+  0 -1px 0 var(--color-3-11);
+  overflow: scroll;
+}
+.project-description::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.project-description::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.project-description::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.project-description::-webkit-scrollbar-thumb {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4-0);
+  border-radius: 25px;
+}
+
+
+.project-description p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
 .project-details {
   position: fixed;
   left: 5vw;
-  height: 55vh;
+  top: 17rem;
+  height: 45vh;
   width: 85vw;
   display: flex;
   flex-direction: row;
@@ -245,7 +304,6 @@
 .applied-skills-container,
 .project-links-container {
   position: relative;
-  top: 10rem;
   margin-right: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -262,32 +320,33 @@
   margin: 0 0.5rem 0;
   font-size: 1.6rem;
   font-weight: bold;
+  letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1),
+  text-shadow: 1px 1px 0 var(--color-0),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  2px 2px 0 var(--color-23),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-23);
+  0 -1px 0 var(--color-21);
 }
 
 .project-links-container .details-header {
-  text-shadow: 1px 1px 0 var(--color-0),
+  text-shadow: 1px 1px 0 var(--color-3-11),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  2px 2px 0 var(--color-23),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-23);
+  0 -1px 0 var(--color-21);
 
 }
 
@@ -305,9 +364,10 @@
 .applied-skills-list li,
 .project-links-list li {
   position: relative;
+  text-align: left;
   padding-left: 30px;
   justify-items: start;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin-bottom: 5px;
   letter-spacing: 3px;
   font-weight: bold;
@@ -325,18 +385,19 @@
 }
 
 .project-links-list li a {
-  text-shadow: 1px 1px 0 var(--color-3-1),
-  2px 1px 0 var(--color-41),
-  1px -1px 0 var(--color-4),
-  -1px 0 0 var(--color-4),
-  -1px -1px 0 var(--color-4),
-  1px 0 0 var(--color-4),
-  -1px 2px 0 var(--color-4),
-  2px 2px 0 var(--color-4),
-  -1px 1px 0 var(--color-4),
-  -1px 0 0 var(--color-4),
-  2px 2px 5px var(--color-4),
-  0 -1px 0 var(--color-4);
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-41),
+  2px 1px 0 var(--color-0),
+  1px -1px 0 var(--color-3-11),
+  -1px 0 0 var(--color-3-11),
+  -1px -1px 0 var(--color-3-11),
+  1px 0 0 var(--color-3-11),
+  -1px 2px 0 var(--color-3-11),
+  2px 2px 0 var(--color-3-11),
+  -1px 1px 0 var(--color-3-11),
+  -1px 0 0 var(--color-3-11),
+  2px 2px 5px var(--color-3-11),
+  0 -1px 0 var(--color-3-11);
 }
 
 .project-back ul li:before {
@@ -414,6 +475,12 @@
     flex-wrap: wrap;
   }
 
+  .project-description {
+    max-width: 77.5vw;
+    top: 10rem;
+    left: 5vw;
+  }
+
   .project-details {
     position: fixed;
     flex-direction: column;
@@ -471,20 +538,6 @@
     0 -1px 0 var(--color-21);
   }
 
-  .project-links-container .details-header {
-    text-shadow: 1px 1px 0 var(--color-3-1),
-    2px 2px 0 var(--color-41),
-    1px -1px 0 var(--color-21),
-    -1px 0 0 var(--color-21),
-    -1px -1px 0 var(--color-21),
-    1px 0 0 var(--color-21),
-    3px 3px 0 var(--color-21),
-    -1px 2px 0 var(--color-21),
-    -1px 0 0 var(--color-21),
-    3px 3px 5px var(--color-3),
-    0 -1px 0 var(--color-21);
-  }
-
   .project-requirements-list li,
   .applied-skills-list li,
   .project-links-list li {
@@ -493,34 +546,6 @@
     font-size: .9rem;
     padding-left: 20px;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-0),
-    2px 1px 0 var(--color-4-0),
-    1px -1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    -1px -1px 0 var(--color-4),
-    1px 0 0 var(--color-4),
-    -1px 2px 0 var(--color-4),
-    2px 2px 0 var(--color-4),
-    -1px 1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    2px 2px 5px var(--color-4),
-    0 -1px 0 var(--color-4);
-  }
-
-  .project-links-list li a {
-    color: transparent;
-    text-shadow: 1px 1px 0 var(--color-41),
-    2px 1px 0 var(--color-0),
-    1px -1px 0 var(--color-3-11),
-    -1px 0 0 var(--color-3-11),
-    -1px -1px 0 var(--color-3-11),
-    1px 0 0 var(--color-3-11),
-    -1px 2px 0 var(--color-3-11),
-    2px 2px 0 var(--color-3-11),
-    -1px 1px 0 var(--color-3-11),
-    -1px 0 0 var(--color-3-11),
-    2px 2px 5px var(--color-3-11),
-    0 -1px 0 var(--color-3-11);
   }
 
   .project-back ul li:before {

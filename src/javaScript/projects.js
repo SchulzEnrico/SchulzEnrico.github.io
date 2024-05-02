@@ -91,6 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                 createDetailsContainer("Applied Skills", projectDetails["applied_skills"], 'applied-skills');
                                 createDetailsContainer("Links", projectDetails.links, 'project-links');
 
+                                // Erstellen und Hinzufügen der Beschreibung auf der Rückseite des Projekt-Divs
+                                if (projectDetails["description"]) {
+                                    const descriptionDiv = document.createElement('div');
+                                    descriptionDiv.classList.add('project-description');
+                                    const descriptionParagraph = document.createElement('p');
+                                    descriptionParagraph.textContent = projectDetails["description"];
+                                    descriptionDiv.appendChild(descriptionParagraph);
+                                    projectBack.appendChild(descriptionDiv);
+                                }
+
                                 projectBack.appendChild(projectDetailsDiv);
                             } else {
                                 // Handle the case where project details are not available
