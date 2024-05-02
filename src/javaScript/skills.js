@@ -136,7 +136,7 @@ function drawProficiencyChart(container, proficiency) {
     circleBackground.setAttribute("cx", "65"); // Horizontal zentriert
     circleBackground.setAttribute("cy", "65"); // Vertikal zentriert
     circleBackground.setAttribute("r", radius.toString());
-    circleBackground.setAttribute("stroke", "#424244");
+    circleBackground.setAttribute("stroke", "#6e6e6e");
     circleBackground.setAttribute("stroke-width", "10");
     circleBackground.setAttribute("fill", "none");
     group.appendChild(circleBackground);
@@ -146,7 +146,7 @@ function drawProficiencyChart(container, proficiency) {
     circleProgress.setAttribute("cx", "65"); // Horizontal zentriert
     circleProgress.setAttribute("cy", "65"); // Vertikal zentriert
     circleProgress.setAttribute("r", radius.toString());
-    circleProgress.setAttribute("stroke", "#2f0303");
+    circleProgress.setAttribute("stroke", "#460505");
     circleProgress.setAttribute("stroke-width", "10");
     circleProgress.setAttribute("fill", "none");
     circleProgress.setAttribute("stroke-dasharray", `${circumference} ${circumference}`);
