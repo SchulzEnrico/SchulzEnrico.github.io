@@ -151,7 +151,6 @@
 
 .project .project-back {
   position: absolute;
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -223,10 +222,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding:.5rem;
+  padding:1rem;
   background-color: var(--color-21);
-  box-shadow: inset 7px 7px 40px var(--color-0),
-  inset -7px -7px 40px var(--color-0);
+  box-shadow: inset 7px 7px 40px var(--color-000),
+  inset -7px -7px 40px var(--color-000);
   border: 1px solid var(--color-4);
   outline: 2px solid var(--color-3-11);
   border-radius: 15px;
@@ -234,18 +233,17 @@
   font-weight: bold;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-41),
-  2px 1px 0 var(--color-0),
-  1px -1px 0 var(--color-3-11),
-  -1px 0 0 var(--color-3-11),
-  -1px -1px 0 var(--color-3-11),
-  1px 0 0 var(--color-3-11),
-  -1px 2px 0 var(--color-3-11),
-  2px 2px 0 var(--color-3-11),
-  -1px 1px 0 var(--color-3-11),
-  -1px 0 0 var(--color-3-11),
-  2px 2px 5px var(--color-3-11),
-  0 -1px 0 var(--color-3-11);
+  text-shadow: 1px 1px 0 var(--color-2),
+  2px 2px 0 var(--color-41),
+  1px -1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -1px -1px 0 var(--color-0),
+  1px 0 0 var(--color-0),
+  3px 3px 0 var(--color-0),
+  -1px 2px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -2px 0 3px var(--color-3-1),
+  0 -1px 0 var(--color-0);
   overflow: scroll;
 }
 .project-description::-webkit-scrollbar {
@@ -438,6 +436,11 @@
     font-size: 1.75rem;
   }
 
+  .project {
+    min-width: 78.5vw !important;
+    max-width: 80vw !important;
+  }
+
   .project.flip {
     top: 11vh !important;
   }
@@ -459,9 +462,22 @@
     font-size: 1.5rem;
     top: .2rem;
     max-width: 77.5vw;
-    left: 3vw;
-    right: 6vw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
     flex-wrap: wrap;
+    text-shadow: 1px 1px 0 var(--color-0),
+    2px 2px 0 var(--color-41),
+    1px -1px 0 var(--color-23),
+    -1px 0 0 var(--color-23),
+    -1px -1px 0 var(--color-23),
+    1px 0 0 var(--color-23),
+    2px 2px 0 var(--color-23),
+    -1px 2px 0 var(--color-23),
+    -1px 0 0 var(--color-23),
+    3px 3px 5px var(--color-3),
+    0 -1px 0 var(--color-23);
+
   }
 
   .name-affix {
@@ -469,24 +485,43 @@
     position: relative;
     max-width: 80vw;
     top: .4rem;
-    left: 3vw;
-    right: 5vw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
     font-size: 1rem;
     flex-wrap: wrap;
+    text-align: center;
+    text-shadow: 1px 1px 0 var(--color-3-1),
+    2px 2px 0 var(--color-41),
+    1px -1px 0 var(--color-23),
+    -1px 0 0 var(--color-23),
+    -1px -1px 0 var(--color-23),
+    1px 0 0 var(--color-23),
+    2px 2px 0 var(--color-23),
+    -1px 2px 0 var(--color-23),
+    -1px 0 0 var(--color-23),
+    3px 3px 5px var(--color-3),
+    0 -1px 0 var(--color-23);
   }
 
   .project-description {
+    position: relative;
     max-width: 77.5vw;
-    top: 10rem;
+    top: 1rem;
     left: 5vw;
+    z-index: 2;
   }
 
   .project-details {
-    position: fixed;
+    position: relative;
+    padding-top: 0;
+    margin-top: 0;
+    top: 1.75rem;
     flex-direction: column;
     bottom: 1.5vh;
     max-width: 82.5vw;
-    max-height: 53.5vh !important;
+    min-height: 40vh !important;
+    max-height: 41vh !important;
     padding-right: 2vw;
     overflow-x: hidden;
   }
@@ -502,7 +537,6 @@
   .applied-skills-container,
   .project-links-container {
     position: relative;
-    top: 1vh;
     left: .2rem;
     align-items: start;
     margin-top: 0;
@@ -514,12 +548,13 @@
 
   .details-header {
     display: block;
+    top: 0;
     min-width: 79vw;
     max-width: 79vw;
     margin: 0;
     padding: 3px;
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     background-color: var(--color-21);
     box-shadow: inset 7px 7px 40px var(--color-0),
     inset -7px -7px 40px var(--color-0);
@@ -541,6 +576,7 @@
   .project-requirements-list li,
   .applied-skills-list li,
   .project-links-list li {
+    top: 0;
     text-align: start;
     font-weight: bold;
     font-size: .9rem;
