@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .background-color-wrapper {
-  background-color: var(--color-22);
+  background-color: var(--color-011);
 }
 
 .shadow-wrapper-start,
@@ -221,17 +221,17 @@ h2 {
   display: inline-block;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-000),
-  2px 2px 0 var(--color-4-0),
-  1px -1px 0 var(--color-2),
-  -1px 0 0 var(--color-2),
-  -1px -1px 0 var(--color-2),
-  1px 0 0 var(--color-2),
-  3px 3px 0 var(--color-2),
-  -1px 2px 0 var(--color-2),
-  -1px 0 0 var(--color-2),
-  -3px 0 4px var(--color-3-1),
-  -2px -1px 0 var(--color-2);
+  text-shadow: 1px 1px 0 var(--color-11),
+  2px 2px 0 var(--color-4),
+  1px -1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -1px -1px 0 var(--color-0),
+  1px 0 0 var(--color-0),
+  3px 3px 0 var(--color-0),
+  -1px 2px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  3px 3px 5px var(--color-31),
+  0 -1px 0 var(--color-0);
   white-space: nowrap;
   overflow: hidden;
 }

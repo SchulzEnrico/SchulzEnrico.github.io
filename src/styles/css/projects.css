@@ -27,7 +27,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -36,10 +36,10 @@
   margin: 0.5rem;
   border-radius: 15px;
   flex-shrink: 1;
-  background-color: var(--color-000);
+  background-color: var(--color-00);
   border: 5px solid var(--color-00);
-  outline: 1px solid var(--color-4-0);
-  box-shadow: inset 0 0 15px var(--color-22), 0 0 20px var(--color-0); }
+  outline: 1px solid var(--color-4);
+  box-shadow: inset 0 0 15px var(--color-22), 3px 3px 10px var(--color-21), -1px 0 20px var(--color-21); }
 
 .project .project-content {
   width: 100%;
@@ -53,7 +53,7 @@
   transform: rotateY(180deg);
   background-color: var(--color-00);
   box-shadow: inset 0 0 20px var(--color-23);
-  border: 1px solid var(--color-4-0);
+  border: 1px solid var(--color-41);
   outline: 5px solid var(--color-3-1);
   width: 96vw;
   height: 74vh; }
@@ -108,17 +108,36 @@
 
 .project .project-back {
   position: absolute;
+  right: 0;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: start;
   transform: rotateY(180deg); }
 
-#project-close-button {
+.project-close-button-container {
   position: fixed;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  min-width: 4rem;
+  top: -1rem;
+  right: -1rem;
+  z-index: 10000001;
+  padding: 10px 5px 5px 20px;
+  font-family: var(--font-1);
+  justify-items: center;
+  letter-spacing: 4px;
+  background-color: var(--color-00);
+  border-radius: 1px 14px 1px 35px;
+  outline: 2px solid var(--color-2);
+  box-shadow: inset 2px -2px 8px var(--color-2), -2px 2px 10px var(--color-21); }
+
+#project-close-button {
+  position: relative;
   top: 1vh;
-  right: 1vw;
-  font-size: 2rem;
+  right: .5rem;
+  font-size: 1.75rem;
   color: var(--color-4);
   z-index: 3; }
 
@@ -317,14 +336,20 @@
     flex-direction: column;
     justify-content: flex-start; }
 
+  .project-close-button-container {
+    max-width: 2.5rem !important; }
+
+  #project-close-button {
+    position: relative;
+    top: .25rem;
+    right: .5rem; }
+
   .project-back h5 {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     top: .2rem;
-    max-width: 77.5vw;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
+    max-width: 50vw !important;
+    text-align: left;
     flex-wrap: wrap;
     text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
@@ -333,9 +358,9 @@
     position: relative;
     max-width: 80vw;
     top: .4rem;
-    font-size: 1rem;
+    font-size: .9rem;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
     text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
   .project-description {

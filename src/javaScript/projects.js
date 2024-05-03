@@ -29,11 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
                             const projectBack = document.createElement('div');
                             projectBack.classList.add('project-back');
 
+                            const closeButtonContainer = document.createElement('div'); // Container für den Schließen-Button
+                            closeButtonContainer.classList.add('project-close-button-container');
+
                             const closeButton = document.createElement('button');
                             closeButton.classList.add('close-button');
                             closeButton.id = 'project-close-button';
                             closeButton.innerHTML = '<i class="fa-regular fa-circle-xmark i-close project-close"></i>';
                             closeButton.addEventListener('click', () => flipCard(projectCard));
+
+                            closeButtonContainer.appendChild(closeButton); // Den Button dem Container hinzufügen
 
                             // Display project name on the back
                             const projectNameBack = document.createElement('h5');
@@ -111,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                             projectContent.appendChild(projectFront);
                             projectContent.appendChild(projectBack);
-                            projectBack.appendChild(closeButton);
+                            projectBack.appendChild(closeButtonContainer); // Den Button-Container dem Rückseite-Div hinzufügen
 
                             projectCard.appendChild(projectContent);
                             categoryContainer.appendChild(projectCard);
