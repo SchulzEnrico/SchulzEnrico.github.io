@@ -136,7 +136,7 @@ function drawProficiencyChart(container, proficiency) {
     circleBackground.setAttribute("cx", "65"); // Horizontal zentriert
     circleBackground.setAttribute("cy", "65"); // Vertikal zentriert
     circleBackground.setAttribute("r", radius.toString());
-    circleBackground.setAttribute("stroke", "#6e6e6e");
+    circleBackground.setAttribute("stroke", "#424244");
     circleBackground.setAttribute("stroke-width", "10");
     circleBackground.setAttribute("fill", "none");
     group.appendChild(circleBackground);
