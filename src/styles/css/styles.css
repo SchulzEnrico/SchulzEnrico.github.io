@@ -540,7 +540,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -555,11 +555,11 @@ nav {
   width: 200px;
   height: 115px;
   margin: 0.5rem;
-  background-color: var(--color-000);
+  background-color: var(--color-00);
   border-radius: 15px;
   border: 4px solid var(--color-00);
-  outline: 1px solid var(--color-41);
-  box-shadow: inset 0 0 13px var(--color-22), 3px 5px 20px var(--color-0), -1px 0 20px var(--color-0); }
+  outline: 1px solid var(--color-4);
+  box-shadow: inset 0 0 13px var(--color-22), 3px 3px 10px var(--color-21), -1px 0 20px var(--color-21); }
 
 .skill .skill-content {
   width: 100%;
@@ -1087,7 +1087,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -1096,10 +1096,10 @@ nav {
   margin: 0.5rem;
   border-radius: 15px;
   flex-shrink: 1;
-  background-color: var(--color-000);
+  background-color: var(--color-00);
   border: 5px solid var(--color-00);
-  outline: 1px solid var(--color-41);
-  box-shadow: inset 0 0 15px var(--color-22), 3px 5px 20px var(--color-0), -1px 0 20px var(--color-0); }
+  outline: 1px solid var(--color-4);
+  box-shadow: inset 0 0 15px var(--color-22), 3px 3px 10px var(--color-21), -1px 0 20px var(--color-21); }
 
 .project .project-content {
   width: 100%;
@@ -2063,7 +2063,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px; }
 
 .background-color-wrapper {
-  background-color: var(--color-22); }
+  background-color: var(--color-011); }
 
 .shadow-wrapper-start,
 .shadow-wrapper-end {
