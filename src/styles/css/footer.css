@@ -25,7 +25,8 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-22), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
+    font-weight: bold;
+    text-shadow: 1px 1px 1px var(--color-11), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-000), -1px 0 0 var(--color-000), -1px -1px 0 var(--color-000), 1px 0 0 var(--color-000), 3px 3px 0 var(--color-000), -1px 2px 0 var(--color-000), -1px 0 0 var(--color-000), 0 0 5px var(--color-3), 0 -1px 0 var(--color-000); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
@@ -73,7 +74,9 @@ nav {
   nav .about-link-label {
     position: fixed;
     z-index: 1;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
   nav #es-nav-logo:hover .about-link-label,
   nav #es-nav-logo:focus .about-link-label,
   nav #es-nav-logo.active .about-link-label {
@@ -115,6 +118,7 @@ nav {
 
 #business-card-nav-link:hover,
 #credits-nav-link:hover {
+  background-color: var(--color-3-11);
   opacity: 1; }
 
 #business-card-nav-link a,
@@ -123,14 +127,16 @@ nav {
   max-width: fit-content;
   font-size: 1.3rem;
   top: 0;
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 0 6px var(--color-31), 0 -1px 0 var(--color-0); }
 
 #business-card-nav-link:focus a,
 #business-card-nav-link:hover a,
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 0 1px 1px var(--color-3), 1px 1px 0 var(--color-23), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-41), 2px 0 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 2px 0 var(--color-23), 0 -1px 0 var(--color-23);
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0);
   transform: none; }
 
 #business-card-nav-link a.active,
@@ -164,7 +170,7 @@ nav {
 /* Stile für den Burger-Button */
 .burger-line {
   display: block;
-  /*position: relative;*/
+  position: relative;
   width: 30px;
   height: 3px;
   border-radius: 25px;
