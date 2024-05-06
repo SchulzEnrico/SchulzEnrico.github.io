@@ -1,0 +1,59 @@
+.documents-container {
+  display: flex;
+  justify-content: center;
+  align-items: start; }
+
+.docs-container {
+  top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
+
+.docs-container a {
+  color: transparent; }
+
+.docs-container div {
+  margin: 1rem; }
+
+#es-documents-logo {
+  position: fixed;
+  height: 18.5vh;
+  top: 10.25vh;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(75%); }
+
+.documents-close {
+  position: fixed;
+  left: 1.5vw;
+  transform: none; }
+
+.documents-close i {
+  position: relative;
+  margin-top: .5vh; }
+
+.documents-wrapper {
+  top: 20vh;
+  position: relative;
+  padding-bottom: 5rem;
+  left: 5vw;
+  display: flex;
+  max-width: 90vw; }
+
+.documents-category {
+  font-family: var(--font-2);
+  list-style-type: none;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+
+/*# sourceMappingURL=documents.css.map */

@@ -511,6 +511,8 @@
   }
 
   .project-close-button-container {
+    justify-content: center;
+    align-content: center;
     min-width: 2rem;
     max-width: 2rem;
     min-height: 2rem;
@@ -519,8 +521,6 @@
 
   #project-close-button {
     position: relative;
-    top: -.25rem;
-    right: .5rem;
   }
 
   .project-back h5 {

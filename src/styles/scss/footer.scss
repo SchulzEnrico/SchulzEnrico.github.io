@@ -8,8 +8,7 @@ footer {
   width: 100vw;
   height: 3rem;
   background-color: var(--color-0);
-  box-shadow: 0 -25px 25px var(--color-0)/*,
-              inset 0 2px 7px var(--color-41)*/;
+  box-shadow: 0 -25px 25px var(--color-0);
 }
 
 footer .ripples-container-large {
@@ -37,6 +36,11 @@ footer i{
 
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg) ;
+}
+
+.fa-folder-open {
+  font-size: 2rem;
+  bottom: 1.1vh;
 }
 
 footer i:hover,
