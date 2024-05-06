@@ -66,8 +66,12 @@ footer a:focus i{
     box-shadow: 0 -2vh 1vh var(--color-0)/*,
     inset 0 2px 7px var(--color-41)*/;
   }
+  .fa-folder-open {
+    bottom: 3.55vh;
+  }
 
   footer i {
+    margin: 0 5px;
     bottom: 4vh;
   }
 }
