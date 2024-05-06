@@ -89,7 +89,7 @@
   min-height: fit-content;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-0), 1px 2px 0 var(--color-41), 1px -1px 0 var(--color-4), -1px 0 0 var(--color-4), -1px -1px 0 var(--color-4), 1px 0 0 var(--color-4), 2px 2px 0 var(--color-4), -1px 2px 0 var(--color-4), -1px 0 0 var(--color-4), 0 -1px 0 var(--color-4); }
+  text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
 .business-card-footer a:hover {
   color: transparent;

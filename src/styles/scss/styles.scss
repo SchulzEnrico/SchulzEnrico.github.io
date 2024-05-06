@@ -28,26 +28,26 @@
   --font-1: Typewriter, ui-monospace, monospace, sans-serif;
   --font-2: 'Alfa Slab One', cursive;
 
-  --color-0: #020202;
-  --color-00: #050505;
-  --color-000: #101010;
-  --color-01: #171717;
-  --color-011: #1f1e1e;
-  --color-1: #232121;
-  --color-11: #232323;
-  --color-2: #2f2f31;
-  --color-21: #424244;
-  --color-22: #595959;
-  --color-23: #6e6e6e;
+  --color-0: #010105;
+  --color-00: #0a0a0c;
+  --color-000: #0f0f11;
+  --color-01: #151518;
+  --color-011: #1e1e21;
+  --color-1: #272728;
+  --color-11: #313133;
+  --color-2: #37373a;
+  --color-21: #49494d;
+  --color-22: #5a5a5d;
+  --color-23: #6a6a6c;
   --color-3-3: #170101;
   --color-3-2: #230101;
   --color-3-11: #340404;
   --color-3-1: #460505;
   --color-3: #5e0404;
   --color-31: #8d0a06;
-  --color-4: #838383;
-  --color-41: #b4b4b4;
-  --color-4-0: #d3d3d3;
+  --color-4: #7f7f83;
+  --color-41: #b3b3b6;
+  --color-4-0: #d0d0d5;
   --color-5-2: #334bf5;
   --color-5-1: #1832e3;
   --color-5: #011bd3;
@@ -132,13 +132,13 @@ body::-webkit-scrollbar-thumb {
 
 h2 {
   position: absolute;
-  margin: 0 6vw 6vh 0;
+  margin: 0 3vw 6vh 0;
   padding: 0;
-  bottom: 0;
+  top: 9vh;
   right: 0;
   text-align: start;
   justify-self: end;
-  font-size: 5vmax;
+  font-size: 4vmax;
   font-family: var(--font-2);
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-00),
@@ -161,7 +161,7 @@ h2 {
   position: relative;
   top: -1vmax;
   right: -2.25vmax;
-  font-size: 6.5vmax;
+  font-size: 5.5vmax;
   font-family: var(--font-2);
   transform: perspective(1000px) rotateY(50deg);
   color: transparent;
@@ -195,11 +195,11 @@ h2 {
   position: fixed;
   margin: 0;
   left: .55rem;
-  bottom: -.8rem;
+  bottom: -.9rem;
   font-size: 4rem;
   animation: blink 2.5s infinite;
-  color: var(--color-4);
-  text-shadow: 1px -1px 1px var(--color-2),
+  color: transparent;
+  text-shadow: 1px -1px 1px var(--color-3-1),
               1px 1px 0 var(--color-00),
               2px 1px 1px var(--color-4-0);
 }
@@ -222,8 +222,8 @@ h2 {
   display: inline-block;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11),
-  2px 2px 0 var(--color-41),
+  text-shadow: 1px 1px 0 var(--color-011),
+  2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
   -1px -1px 0 var(--color-0),
@@ -231,7 +231,7 @@ h2 {
   3px 3px 0 var(--color-0),
   -1px 2px 0 var(--color-0),
   -1px 0 0 var(--color-0),
-  0 0 6px var(--color-41),
+  3px 3px 3px var(--color-4),
   0 -1px 0 var(--color-0);
   white-space: nowrap;
   overflow: hidden;

@@ -26,7 +26,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -41,11 +41,11 @@
   width: 200px;
   height: 115px;
   margin: 0.5rem;
-  background-color: var(--color-00);
+  background-color: var(--color-0);
   border-radius: 15px;
-  border: 4px solid var(--color-00);
-  outline: 1px solid var(--color-4);
-  box-shadow: inset 0 0 13px var(--color-22), 3px 3px 10px var(--color-21), -1px 0 20px var(--color-21); }
+  border: 4px solid var(--color-0);
+  outline: 1px solid var(--color-23);
+  box-shadow: inset 0 0 13px var(--color-22), -2px -2px 5px var(--color-3-2), 2px 2px 1px var(--color-4), 5px 5px 15px var(--color-00), -5px -5px 15px var(--color-00); }
 
 .skill .skill-content {
   width: 100%;
@@ -75,6 +75,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  right: 0;
   backface-visibility: hidden;
   border-radius: 15px; }
 
@@ -113,23 +115,28 @@
 .skill-back .skill-name {
   grid-row: 1;
   grid-column: 1;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
   min-width: fit-content;
   position: absolute;
   padding: 5px 25px 5px 15px;
-  font-family: var(--font-1);
+  font-family: var(--font-2);
   letter-spacing: 4px;
   font-size: 1.5em;
-  top: -61px;
-  left: 31px;
-  background-color: var(--color-00);
+  top: -41px;
+  left: -9px;
+  background-color: var(--color-01);
   border-radius: 14px 1px 35px 1px;
-  outline: 2px solid var(--color-2);
-  box-shadow: inset -2px -2px 10px var(--color-2), 2px 2px 10px var(--color-21); }
+  box-shadow: inset -2px -2px 7px var(--color-0), 3px 3px 6px var(--color-0); }
 
 .skill .skill-back {
   position: absolute;
   padding: 10px;
   display: grid;
+  width: 97vw;
+  height: 76vh;
+  background-color: var(--color-01);
+  box-shadow: inset 2px 2px 25px var(--color-0), inset -2px -2px 25px var(--color-0);
   grid-template-columns: 2fr 10fr;
   grid-template-rows: 2fr 10fr;
   justify-items: start;
@@ -141,23 +148,23 @@
   grid-column: 2;
   max-height: 2.2rem;
   min-width: 3rem;
-  top: -1.85rem;
-  right: -1.25rem;
+  top: -10px;
+  right: 0;
   padding: 10px 5px 5px 20px;
   font-family: var(--font-1);
   justify-items: center;
   letter-spacing: 4px;
-  background-color: var(--color-00);
+  background-color: var(--color-01);
   border-radius: 1px 14px 1px 35px;
-  outline: 2px solid var(--color-2);
-  box-shadow: inset 2px -2px 8px var(--color-2), -2px 2px 10px var(--color-21); }
+  box-shadow: inset 2px -2px 8px var(--color-0), -3px 3px 8px var(--color-0); }
 
 #skill-close-button .i-close {
   z-index: 3; }
 
 .topics-container {
   position: relative;
-  top: -10vh;
+  left: -2.5rem;
+  top: -4rem;
   grid-column: 1;
   grid-row: 2;
   justify-self: center;
@@ -169,10 +176,10 @@
   height: 8px; }
 
 .topics-container::-webkit-scrollbar-track {
-  background-color: var(--color-00); }
+  background-color: transparent; }
 
 .topics-container::-webkit-scrollbar-corner {
-  background-color: var(--color-00); }
+  background-color: transparent; }
 
 .topics-container::-webkit-scrollbar-thumb {
   background-color: var(--color-3);
@@ -195,9 +202,9 @@
   font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 5px;
-  letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-4), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 1px var(--color-2), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-00), -1px 0 0 var(--color-00), -1px -1px 0 var(--color-00), 1px 0 0 var(--color-00), 3px 3px 0 var(--color-00), -1px 2px 0 var(--color-00), -1px 0 0 var(--color-00), 0 0 5px var(--color-3), 0 -1px 0 var(--color-00); }
 
 .skill-project-use-container {
   position: relative;
@@ -222,10 +229,10 @@
   height: 8px; }
 
 .skill-project-use-container::-webkit-scrollbar-track {
-  background-color: var(--color-00); }
+  background-color: transparent; }
 
 .skill-project-use-container::-webkit-scrollbar-corner {
-  background-color: var(--color-00); }
+  background-color: transparent; }
 
 .skill-project-use-container::-webkit-scrollbar-thumb {
   background-color: var(--color-3);
@@ -243,13 +250,14 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .project-name {
   text-decoration: underline; }
 
 .skill-project-use-container ul li li {
-  text-shadow: 1px 1px 0 var(--color-4), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 1px var(--color-2), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-00), -1px 0 0 var(--color-00), -1px -1px 0 var(--color-00), 1px 0 0 var(--color-00), 3px 3px 0 var(--color-00), -1px 2px 0 var(--color-00), -1px 0 0 var(--color-00), 0 0 5px var(--color-3), 0 -1px 0 var(--color-00); }
 
 .skill-project-use-container ul ul {
   font-family: var(--font-1);
@@ -261,7 +269,7 @@
   font-size: 1.1rem;
   letter-spacing: 2px;
   font-family: var(--font-2);
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .skill-bar-container {
   position: relative;
@@ -280,7 +288,7 @@
   position: relative;
   align-content: center;
   margin: 3px 0;
-  width: 98%;
+  width: 90%;
   height: 3.75rem;
   border: 1px solid var(--color-41);
   outline: 3px solid var(--color-00);
@@ -319,17 +327,17 @@
   top: 0;
   left: .2rem;
   font-size: 1.2rem;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   color: transparent;
   font-family: var(--font-2);
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23);
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21);
   z-index: 4; }
 
 .skill-legend {
   position: absolute;
   font-weight: bold;
   top: 4rem;
-  right: 2.5vw;
+  right: 8rem;
   width: 100%;
   display: flex;
   justify-content: end; }
@@ -337,7 +345,8 @@
 .skill-legend-label {
   font-size: 1rem;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-4), 2px 1px 0 var(--color-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 0 var(--color-4), 1px 2px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 5px 5px 7px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .skill-legend-item {
   position: relative;
