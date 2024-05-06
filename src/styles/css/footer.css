@@ -240,7 +240,8 @@ nav {
     text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
   .about-link-label {
-    z-index: 0; }
+    z-index: 0;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0) !important; }
 
   a#es-nav-logo {
     font-size: 1rem;
@@ -356,7 +357,11 @@ footer a:focus i {
     height: 12vh;
     box-shadow: 0 -2vh 1vh var(--color-0); }
 
+  .fa-folder-open {
+    bottom: 3.55vh; }
+
   footer i {
+    margin: 0 5px;
     bottom: 4vh; } }
 
 /*# sourceMappingURL=footer.css.map */

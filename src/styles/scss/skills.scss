@@ -148,15 +148,15 @@
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-00),
   2px 2px 0 var(--color-4),
-  1px -1px 0 var(--color-1),
-  -1px 0 0 var(--color-1),
-  -1px -1px 0 var(--color-1),
-  1px 0 0 var(--color-1),
-  3px 3px 0 var(--color-1),
-  -1px 2px 0 var(--color-1),
-  -1px 0 0 var(--color-1),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-1);
+  0 -1px 0 var(--color-21);
 }
 
 .skill-back .skill-name {
@@ -183,7 +183,7 @@
   display: grid;
   width: 97vw;
   height: 76vh;
-  background-color: var(--color-01);
+  background-color: var(--color-011);
   box-shadow: inset 2px 2px 25px var(--color-0),
   inset -2px -2px 25px var(--color-0);
   grid-template-columns: 2fr 10fr;
@@ -368,6 +368,7 @@
 }
 
 .usage-data {
+  display: flex;
   font-size: 1.1rem;
   letter-spacing: 2px;
   font-family: var(--font-2);
@@ -610,7 +611,7 @@
   }
 
   #skill-close-button i {
-    top: 1vh;
+    top: .5vh;
     right: 1vw;
   }
 
@@ -619,7 +620,7 @@
   }
 
   .topics-container {
-    top: 7vh;
+    top: 8.5vh;
     left: 6vw;
     grid-row: 1;
     min-height: 20vh;
@@ -743,8 +744,8 @@
   }
 
   .skill-project-use-container ul ul {
-    line-height: 10px;
-    margin-top: .5rem;
+    margin-top: 0;
+    border: 1px solid var(--color-4);
   }
 
   .skill-project-use-container ul ul li {

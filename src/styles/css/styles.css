@@ -310,7 +310,8 @@ nav {
     text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
   .about-link-label {
-    z-index: 0; }
+    z-index: 0;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0) !important; }
 
   a#es-nav-logo {
     font-size: 1rem;
@@ -630,7 +631,7 @@ nav {
   padding: 5px 5px 5px 15px;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-1), -1px 0 0 var(--color-1), -1px -1px 0 var(--color-1), 1px 0 0 var(--color-1), 3px 3px 0 var(--color-1), -1px 2px 0 var(--color-1), -1px 0 0 var(--color-1), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-1); }
+  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .skill-back .skill-name {
   grid-row: 1;
@@ -654,7 +655,7 @@ nav {
   display: grid;
   width: 97vw;
   height: 76vh;
-  background-color: var(--color-01);
+  background-color: var(--color-011);
   box-shadow: inset 2px 2px 25px var(--color-0), inset -2px -2px 25px var(--color-0);
   grid-template-columns: 2fr 10fr;
   grid-template-rows: 2fr 10fr;
@@ -785,6 +786,7 @@ nav {
   list-style-type: none; }
 
 .usage-data {
+  display: flex;
   font-size: 1.1rem;
   letter-spacing: 2px;
   font-family: var(--font-2);
@@ -962,14 +964,14 @@ nav {
     right: 2px; }
 
   #skill-close-button i {
-    top: 1vh;
+    top: .5vh;
     right: 1vw; }
 
   .i-close {
     font-size: 1.5rem; }
 
   .topics-container {
-    top: 7vh;
+    top: 8.5vh;
     left: 6vw;
     grid-row: 1;
     min-height: 20vh;
@@ -1054,8 +1056,8 @@ nav {
     font-size: 1.2rem; }
 
   .skill-project-use-container ul ul {
-    line-height: 10px;
-    margin-top: .5rem; }
+    margin-top: 0;
+    border: 1px solid var(--color-4); }
 
   .skill-project-use-container ul ul li {
     font-size: .9rem;
@@ -1155,7 +1157,7 @@ nav {
   letter-spacing: 3px;
   margin: 25px 15px 0 15px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-1), -1px 0 0 var(--color-1), -1px -1px 0 var(--color-1), 1px 0 0 var(--color-1), 3px 3px 0 var(--color-1), -1px 2px 0 var(--color-1), -1px 0 0 var(--color-1), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-1); }
+  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
 .project-year {
   position: fixed;
@@ -1179,7 +1181,7 @@ nav {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: var(--color-01);
+  background-color: var(--color-011);
   box-shadow: inset 2px 2px 25px var(--color-0), inset -2px -2px 25px var(--color-0);
   display: flex;
   flex-direction: row;
@@ -1414,8 +1416,7 @@ nav {
     justify-content: flex-start; }
 
   .project-close-button-container {
-    justify-content: center;
-    align-content: center;
+    padding: 5px 5px 10px 20px;
     min-width: 2rem;
     max-width: 2rem;
     min-height: 2rem;
@@ -1492,11 +1493,11 @@ nav {
     padding: 3px;
     border-radius: 7px;
     font-size: 1.25rem;
-    background-color: var(--color-0);
+    background-color: var(--color-000);
     box-shadow: inset 0 0 10px var(--color-21);
     border: 1px solid var(--color-4);
     outline: 2px solid var(--color-3-11);
-    text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
 
   .project-requirements-list li,
   .applied-skills-list li,
@@ -1904,7 +1905,8 @@ nav {
     text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
   .about-link-label {
-    z-index: 0; }
+    z-index: 0;
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0) !important; }
 
   a#es-nav-logo {
     font-size: 1rem;
@@ -2020,7 +2022,11 @@ footer a:focus i {
     height: 12vh;
     box-shadow: 0 -2vh 1vh var(--color-0); }
 
+  .fa-folder-open {
+    bottom: 3.55vh; }
+
   footer i {
+    margin: 0 5px;
     bottom: 4vh; } }
 :root {
   font-family: Typewriter, ui-monospace, monospace, sans-serif;
@@ -2265,7 +2271,8 @@ h2 {
   #educations {
     margin: 0;
     font-size: 1rem;
-    bottom: 10vh; }
+    bottom: 10vh;
+    text-shadow: 1px 1px 0 var(--color-2), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
   footer {
     position: fixed;
