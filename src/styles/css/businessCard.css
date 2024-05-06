@@ -55,9 +55,6 @@
   position: relative;
   margin-top: .5vh; }
 
-.business-card-close:hover {
-  transform: none; }
-
 .business-card-footer {
   position: fixed;
   display: flex;

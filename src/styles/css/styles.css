@@ -1414,15 +1414,15 @@ nav {
     justify-content: flex-start; }
 
   .project-close-button-container {
+    justify-content: center;
+    align-content: center;
     min-width: 2rem;
     max-width: 2rem;
     min-height: 2rem;
     max-height: 2rem; }
 
   #project-close-button {
-    position: relative;
-    top: -.25rem;
-    right: .5rem; }
+    position: relative; }
 
   .project-back h5 {
     position: relative;
@@ -1989,6 +1989,10 @@ footer i {
 
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg); }
+
+.fa-folder-open {
+  font-size: 2rem;
+  bottom: 1.1vh; }
 
 footer i:hover,
 footer a:hover {

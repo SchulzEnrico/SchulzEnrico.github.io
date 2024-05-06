@@ -326,6 +326,10 @@ footer i {
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg); }
 
+.fa-folder-open {
+  font-size: 2rem;
+  bottom: 1.1vh; }
+
 footer i:hover,
 footer a:hover {
   scale: 1.3;
