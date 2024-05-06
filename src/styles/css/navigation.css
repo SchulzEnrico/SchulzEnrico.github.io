@@ -26,7 +26,7 @@ nav {
     letter-spacing: 8px;
     color: transparent;
     font-weight: bold;
-    text-shadow: 1px 1px 1px var(--color-11), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-000), -1px 0 0 var(--color-000), -1px -1px 0 var(--color-000), 1px 0 0 var(--color-000), 3px 3px 0 var(--color-000), -1px 2px 0 var(--color-000), -1px 0 0 var(--color-000), 0 0 5px var(--color-3), 0 -1px 0 var(--color-000); }
+    text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
@@ -136,7 +136,7 @@ nav {
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0);
   transform: none; }
 
 #business-card-nav-link a.active,
