@@ -3,7 +3,8 @@
   background-color: var(--color-000); }
 
 #credits-h2 {
-  top: 18vh; }
+  top: 11vh;
+  right: 1vw; }
 
 .credits-wrapper {
   display: flex;

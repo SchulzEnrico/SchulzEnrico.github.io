@@ -28,7 +28,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-1),
+  text-shadow: 1px 1px 0 var(--color-11),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -162,8 +162,7 @@
 .skill-back .skill-name {
   grid-row: 1;
   grid-column: 1;
-  min-height: 2.5rem;
-  max-height: 2.5rem;
+  max-height: 2.2rem;
   min-width: fit-content;
   position: absolute;
   padding: 5px 25px 5px 15px;
@@ -562,13 +561,6 @@
     font-size: .6rem;
   }
 
-  .skill-close-button-container {
-    outline: 2px solid var(--color-1);
-    font-size: 1.5em;
-    top: -.5rem;
-    right: 0.15rem;
-  }
-
   .proficiency-chart {
     position: fixed;
     bottom: -27.5%;
@@ -592,29 +584,29 @@
 
   .skill.flip .skill-back {
     /* Stelle sicher, dass die Rückseite der Karte unsichtbar ist, wenn die Karte umgedreht wird */
+    padding: 0;
+    max-width: 96vw !important;
+    min-height: 74vh !important;
+    max-height: 74vh !important;
     transform: rotateY(180deg);
   }
 
   .skill.flip .skill-name {
     /* Stelle sicher, dass der Name der Fähigkeit auf der Vorderseite sichtbar ist, wenn die Karte umgedreht wird */
     display: block;
+    top: -30px;
+    left: 2px;
   }
 
   .skill.flip .skill-content {
     padding: 0;
-    max-width: 92vw !important;
-    min-height: 72.5vh !important;
-    max-height: 72.5vh !important;
   }
 
-  .skill-back .skill-name {
-    outline: 2px solid var(--color-1);
-    top: -40px;
-    left: 12px;
-  }
 
   .skill-close-button-container {
-    padding: 5px 3px 3px 20px;
+    padding: 10px 3px 3px 20px;
+    top: 2px;
+    right: 2px;
   }
 
   #skill-close-button i {

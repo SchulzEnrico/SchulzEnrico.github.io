@@ -5,6 +5,7 @@
 
 .projects-wrapper {
   position: relative;
+  padding-bottom: 5rem;
   top: 5vh;
   left: 5vw;
   display: flex;
@@ -27,7 +28,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -344,11 +345,14 @@
     justify-content: flex-start; }
 
   .project-close-button-container {
-    max-width: 2.5rem !important; }
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem; }
 
   #project-close-button {
     position: relative;
-    top: .25rem;
+    top: -.25rem;
     right: .5rem; }
 
   .project-back h5 {
@@ -436,8 +440,13 @@
     color: transparent; }
 
   .project-back ul li:before {
-    font-size: .75rem;
+    top: 0;
+    font-size: 1rem;
     width: 5px;
-    height: 5px; } }
+    height: 5px; }
+
+  .project-back .project-links-list li:before {
+    top: .35rem;
+    font-size: .5rem; } }
 
 /*# sourceMappingURL=projects.css.map */
