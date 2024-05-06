@@ -96,7 +96,7 @@ nav {
     letter-spacing: 8px;
     color: transparent;
     font-weight: bold;
-    text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
@@ -546,7 +546,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -635,8 +635,7 @@ nav {
 .skill-back .skill-name {
   grid-row: 1;
   grid-column: 1;
-  min-height: 2.5rem;
-  max-height: 2.5rem;
+  max-height: 2.2rem;
   min-width: fit-content;
   position: absolute;
   padding: 5px 25px 5px 15px;
@@ -923,12 +922,6 @@ nav {
   .skill.skill-back .skill-name {
     font-size: .6rem; }
 
-  .skill-close-button-container {
-    outline: 2px solid var(--color-1);
-    font-size: 1.5em;
-    top: -.5rem;
-    right: 0.15rem; }
-
   .proficiency-chart {
     position: fixed;
     bottom: -27.5%;
@@ -948,25 +941,25 @@ nav {
 
   .skill.flip .skill-back {
     /* Stelle sicher, dass die Rückseite der Karte unsichtbar ist, wenn die Karte umgedreht wird */
+    padding: 0;
+    max-width: 96vw !important;
+    min-height: 74vh !important;
+    max-height: 74vh !important;
     transform: rotateY(180deg); }
 
   .skill.flip .skill-name {
     /* Stelle sicher, dass der Name der Fähigkeit auf der Vorderseite sichtbar ist, wenn die Karte umgedreht wird */
-    display: block; }
+    display: block;
+    top: -30px;
+    left: 2px; }
 
   .skill.flip .skill-content {
-    padding: 0;
-    max-width: 92vw !important;
-    min-height: 72.5vh !important;
-    max-height: 72.5vh !important; }
-
-  .skill-back .skill-name {
-    outline: 2px solid var(--color-1);
-    top: -40px;
-    left: 12px; }
+    padding: 0; }
 
   .skill-close-button-container {
-    padding: 5px 3px 3px 20px; }
+    padding: 10px 3px 3px 20px;
+    top: 2px;
+    right: 2px; }
 
   #skill-close-button i {
     top: 1vh;
@@ -1081,6 +1074,7 @@ nav {
 
 .projects-wrapper {
   position: relative;
+  padding-bottom: 5rem;
   top: 5vh;
   left: 5vw;
   display: flex;
@@ -1103,7 +1097,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -1420,11 +1414,14 @@ nav {
     justify-content: flex-start; }
 
   .project-close-button-container {
-    max-width: 2.5rem !important; }
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
+    max-height: 2rem; }
 
   #project-close-button {
     position: relative;
-    top: .25rem;
+    top: -.25rem;
     right: .5rem; }
 
   .project-back h5 {
@@ -1512,15 +1509,21 @@ nav {
     color: transparent; }
 
   .project-back ul li:before {
-    font-size: .75rem;
+    top: 0;
+    font-size: 1rem;
     width: 5px;
-    height: 5px; } }
+    height: 5px; }
+
+  .project-back .project-links-list li:before {
+    top: .35rem;
+    font-size: .5rem; } }
 #credits {
   width: 100vw;
   background-color: var(--color-000); }
 
 #credits-h2 {
-  top: 18vh; }
+  top: 11vh;
+  right: 1vw; }
 
 .credits-wrapper {
   display: flex;
@@ -1687,7 +1690,7 @@ nav {
     letter-spacing: 8px;
     color: transparent;
     font-weight: bold;
-    text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
@@ -2091,7 +2094,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px; }
 
 .background-color-wrapper {
-  background-color: var(--color-011); }
+  background-color: var(--color-2); }
 
 .shadow-wrapper-start,
 .shadow-wrapper-end {
@@ -2188,7 +2191,7 @@ h2 {
   display: inline-block;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-011), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0);
   white-space: nowrap;
   overflow: hidden; }
 
