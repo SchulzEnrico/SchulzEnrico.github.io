@@ -8,6 +8,8 @@ function flipCard(cardElement, projectContent, skillContent) {
             skillContent.style.backfaceVisibility = "hidden";
         }
         toggleProjectsVisibility(false);
+        // Entferne die body-scroll-lock-Klasse, wenn die Karte geschlossen wird
+        document.body.classList.remove('body-scroll-lock');
     } else {
         cardElement.classList.add("flip");
         if (projectContent) {
@@ -16,6 +18,8 @@ function flipCard(cardElement, projectContent, skillContent) {
         if (skillContent) {
             skillContent.style.backfaceVisibility = "visible";
         }
+        // Füge die body-scroll-lock-Klasse hinzu, wenn die Karte geöffnet wird
+        document.body.classList.add('body-scroll-lock');
     }
 }
 

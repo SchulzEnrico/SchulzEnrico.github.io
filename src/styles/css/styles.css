@@ -654,7 +654,7 @@ nav {
   padding: 10px;
   display: grid;
   width: 97vw;
-  height: 76vh;
+  height: 75vh;
   background-color: var(--color-011);
   box-shadow: inset 2px 2px 25px var(--color-0), inset -2px -2px 25px var(--color-0);
   grid-template-columns: 2fr 10fr;
@@ -941,12 +941,18 @@ nav {
     /* Stelle sicher, dass die Vorderseite der Karte sichtbar ist, wenn die Karte umgedreht wird */
     transform: rotateY(0deg); }
 
+  .skill.flip .skill-content {
+    padding: 0;
+    max-width: 94vw !important;
+    min-height: 72.5vh !important;
+    max-height: 72.5vh !important; }
+
   .skill.flip .skill-back {
     /* Stelle sicher, dass die Rückseite der Karte unsichtbar ist, wenn die Karte umgedreht wird */
     padding: 0;
-    max-width: 96vw !important;
-    min-height: 74vh !important;
-    max-height: 74vh !important;
+    max-width: 100%;
+    min-height: 100% !important;
+    max-height: 100% !important;
     transform: rotateY(180deg); }
 
   .skill.flip .skill-name {
@@ -954,9 +960,6 @@ nav {
     display: block;
     top: -30px;
     left: 2px; }
-
-  .skill.flip .skill-content {
-    padding: 0; }
 
   .skill-close-button-container {
     padding: 10px 3px 3px 20px;
@@ -1014,11 +1017,11 @@ nav {
 
   .topics-container ul li {
     margin: .5rem 0 0 0;
-    font-size: .75rem; }
+    font-size: 1rem; }
 
   .topics-container ul li:before {
-    content: "O";
-    font-size: .65rem;
+    content: "\272A";
+    font-size: .85rem;
     position: relative;
     text-align: center;
     margin-right: 4px;
@@ -1030,7 +1033,7 @@ nav {
     grid-column: 1;
     top: 7.5vh;
     left: 6vw;
-    max-height: 41vh;
+    max-height: 43vh;
     min-width: 83.5vw;
     max-width: 83.5vw; }
 
@@ -1056,8 +1059,7 @@ nav {
     font-size: 1.2rem; }
 
   .skill-project-use-container ul ul {
-    margin-top: 0;
-    border: 1px solid var(--color-4); }
+    margin-top: 0; }
 
   .skill-project-use-container ul ul li {
     font-size: .9rem;
@@ -1412,6 +1414,9 @@ nav {
     max-height: 72.5vh !important; }
 
   .project .project-back {
+    max-width: 100%;
+    min-height: 100% !important;
+    max-height: 100% !important;
     flex-direction: column;
     justify-content: flex-start; }
 
@@ -2105,6 +2110,9 @@ body::-webkit-scrollbar-thumb {
 
 .background-color-wrapper {
   background-color: var(--color-2); }
+
+.body-scroll-lock {
+  overflow: hidden; }
 
 .shadow-wrapper-start,
 .shadow-wrapper-end {
