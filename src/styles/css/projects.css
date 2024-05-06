@@ -341,6 +341,9 @@
     max-height: 72.5vh !important; }
 
   .project .project-back {
+    max-width: 100%;
+    min-height: 100% !important;
+    max-height: 100% !important;
     flex-direction: column;
     justify-content: flex-start; }
 

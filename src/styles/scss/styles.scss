@@ -95,6 +95,10 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--color-2);
 }
 
+.body-scroll-lock {
+  overflow: hidden;
+}
+
 .shadow-wrapper-start,
 .shadow-wrapper-end {
   position: fixed;
@@ -109,7 +113,6 @@ body::-webkit-scrollbar-thumb {
 .shadow-wrapper-end {
   box-shadow: inset -50px 0 25px var(--color-0);
 }
-
 
 #es-logo {
   height: 12.3vh;
