@@ -66,10 +66,18 @@
   0 -1px 0 var(--color-0);
 }
 
+.documents-wrapper a {
+  display: flex;
+}
+
+.documents-wrapper i {
+  margin-right: .5rem;
+}
+
 .documents-category {
   font-family: var(--font-2);
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-size: 1.75rem;
   font-weight: bold;
   color: transparent;
@@ -85,6 +93,7 @@
   3px 3px 5px var(--color-3),
   0 -1px 0 var(--color-21);
 }
+
 
 @media screen and (max-width: 768px) {
   .docs-container {
