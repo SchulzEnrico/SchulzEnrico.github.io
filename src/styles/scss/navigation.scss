@@ -56,7 +56,6 @@
   }
   100% {
     transform: scale(1.5) rotateX(180deg) rotateZ(180deg) scaleX(-1) rotateY(180deg);
-    /*@include animate(bounce, up, null, 2.5s, 1);*/
   }
 }
 
@@ -321,14 +320,12 @@ nav {
 .menu-toggle {
   position: absolute;
   right: 7.5vw;
-  /*bottom: calc(4vh - 3.75rem);*/
   bottom: 4vh;
   height: 30px;
   width: 30px;
   cursor: pointer;
 }
 
-/* Stile für den Burger-Button */
 .burger-line {
   display: block;
   position: relative;
@@ -340,7 +337,6 @@ nav {
   transition: transform 0.3s ease;
 }
 
-/* Stile für den Burger-Button bei geöffnetem Navigationsbereich */
 .nav-open .burger-line:nth-child(1) {
   position: relative;
   transform: translateY(8px) rotate(45deg);
@@ -355,7 +351,6 @@ nav {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Stile für den mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
 .mobile-nav.nav-open {
   position: fixed;
   display: flex;
@@ -378,8 +373,7 @@ nav {
   transform: translateX(0);
 }
 
-/* Stile für den aktiven Link im mobilen Navigationsbereich bei geöffnetem Navigationsbereich */
-.mobile-nav.nav-open a.active {
+.mobile-nav.nav-open a.active{
   text-shadow: 1px 1px 0 var(--color-3-1),
   1px 1px 0 var(--color-0),
   1px -1px 0 var(--color-0),
@@ -458,20 +452,24 @@ nav {
     justify-content: center;
     right: 5px;
     width: 100px;
-    transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 5px;
     text-transform: capitalize;
-    text-shadow: 1px 1px 0 var(--color-21),
-    2px 2px 0 var(--color-4),
+  }
+
+  a#es-nav-logo.active {
+    text-shadow: 1px 1px 0 var(--color-3-1),
+    1px 1px 0 var(--color-0),
     1px -1px 0 var(--color-0),
     -1px 0 0 var(--color-0),
     -1px -1px 0 var(--color-0),
     1px 0 0 var(--color-0),
-    3px 3px 0 var(--color-0),
-    -1px 2px 0 var(--color-0),
+    2px 2px 0 var(--color-0),
+    -1px 1px 0 var(--color-0),
     -1px 0 0 var(--color-0),
-    3px 3px 3px var(--color-41),
+    2px 2px 5px var(--color-0),
     0 -1px 0 var(--color-0);
+    animation: none;
+    scale: none;
   }
 
   #es-nav-logo img {
@@ -521,9 +519,7 @@ nav {
   }
 }
 
-/* Stile für größere Bildschirme (mindestens 769px Bildschirmbreite) */
 @media screen and (min-width: 769px) {
-  /* Verstecken Sie den Burger-Button und zeigen Sie das normale Menü */
   .menu-toggle {
     display: none;
   }
@@ -531,5 +527,4 @@ nav {
   nav {
     display: flex;
   }
-
 }

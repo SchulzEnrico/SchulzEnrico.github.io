@@ -514,15 +514,16 @@
   }
 
   .project-close-button-container {
-    padding: 5px 5px 10px 20px;
-    min-width: 2rem;
-    max-width: 2rem;
-    min-height: 2rem;
-    max-height: 2rem;
+    padding: 10px 3px 3px 20px;
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
   }
 
-  #project-close-button {
-    position: relative;
+  #project-close-button i{
+    top: .5vh;
+    right: 1vw;
   }
 
   .project-back h5 {
@@ -647,14 +648,18 @@
   }
 
   .project-back ul li:before {
-    top: 0;
     font-size: 1rem;
+    position: relative;
+    text-align: center;
+    margin-right: 5px;
+    top: 0;
+    left: 0;
     width: 5px;
     height: 5px;
   }
 
   .project-back .project-links-list li:before {
-    top: .35rem;
+ /*   top: .35rem;*/
     font-size: .5rem;
   }
 }
