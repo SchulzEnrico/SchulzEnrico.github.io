@@ -182,7 +182,7 @@
   padding: 10px;
   display: grid;
   width: 97vw;
-  height: 75vh;
+  height: 76vh;
   background-color: var(--color-011);
   box-shadow: inset 2px 2px 25px var(--color-0),
   inset -2px -2px 25px var(--color-0);
@@ -298,7 +298,7 @@
   text-align: left;
   justify-self: center;
   height: 55vh;
-  width: 77.5vw;
+  width: 75vw;
   overflow: scroll;
 }
 .skill-project-use-container::-webkit-scrollbar {
@@ -399,7 +399,6 @@
   justify-self: end;
 }
 
-
 .skill-bar {
   position: relative;
   align-content: center;
@@ -441,9 +440,9 @@
 }
 
 .coach-guided {
-  background-color: var(--color-41); /* Farbe für coach guided */
+  background-color: var(--color-41);
   z-index: 1;
-  left: 0; /* Positionierung für coach guided */
+  left: 0;
 }
 
 .skill-bar-value {
@@ -579,7 +578,6 @@
   }
 
   .skill.flip .skill-front {
-    /* Stelle sicher, dass die Vorderseite der Karte sichtbar ist, wenn die Karte umgedreht wird */
     transform: rotateY(0deg);
   }
 
@@ -591,7 +589,6 @@
   }
 
   .skill.flip .skill-back {
-    /* Stelle sicher, dass die Rückseite der Karte unsichtbar ist, wenn die Karte umgedreht wird */
     padding: 0;
     max-width: 100%;
     min-height: 100% !important;
@@ -600,7 +597,6 @@
   }
 
   .skill.flip .skill-name {
-    /* Stelle sicher, dass der Name der Fähigkeit auf der Vorderseite sichtbar ist, wenn die Karte umgedreht wird */
     display: block;
     top: -30px;
     left: 2px;
@@ -687,7 +683,8 @@
     font-size: .85rem;
     position: relative;
     text-align: center;
-    margin-right: 4px;
+    margin-right: 5px;
+    top: -1px;
     left: 0;
     color: transparent;
     text-shadow: 1px 1px 0 var(--color-2),
@@ -757,20 +754,19 @@
   .usage-data {
     font-size: .8rem;
     text-shadow: 1px 1px 0 var(--color-3-11),
-    2px 2px 0 var(--color-4-0),
-    1px -1px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
-    -1px -1px 0 var(--color-4),
-    1px 0 0 var(--color-4),
-    2px 2px 0 var(--color-4),
-    -1px 2px 0 var(--color-4),
-    -1px 0 0 var(--color-4),
+    2px 2px 0 var(--color-41),
+    1px -1px 0 var(--color-23),
+    -1px 0 0 var(--color-23),
+    -1px -1px 0 var(--color-23),
+    1px 0 0 var(--color-23),
+    2px 2px 0 var(--color-23),
+    -1px 2px 0 var(--color-23),
+    -1px 0 0 var(--color-23),
     3px 3px 5px var(--color-3),
-    0 -1px 0 var(--color-4);
+    0 -1px 0 var(--color-23);
   }
 
   .skill-bar-container {
     display: none;
   }
-
 }

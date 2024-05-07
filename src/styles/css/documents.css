@@ -1,3 +1,6 @@
+.documents-background-color-wrapper {
+  background-color: var(--color-000); }
+
 .documents-container {
   display: flex;
   justify-content: center;
@@ -6,7 +9,7 @@
 .docs-container {
   position: relative;
   max-width: 90vw;
-  top: 5vh; }
+  top: 3vh; }
 
 .docs-container a {
   color: transparent; }
@@ -32,6 +35,15 @@
   position: relative;
   margin-top: .5vh; }
 
+.documents-category {
+  font-family: var(--font-2);
+  list-style-type: none;
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-2), -1px 0 0 var(--color-2), -1px -1px 0 var(--color-2), 1px 0 0 var(--color-2), 3px 3px 0 var(--color-2), -1px 2px 0 var(--color-2), -1px 0 0 var(--color-2), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-2); }
+
 .documents-wrapper {
   position: relative;
   top: 3vh;
@@ -42,26 +54,24 @@
   flex-direction: row;
   justify-content: start;
   align-items: start;
+  font-family: var(--font-2);
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 5px;
-  color: transparent;
-  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
 
 .documents-wrapper a {
-  display: flex; }
+  display: flex;
+  opacity: .75;
+  transition: scale .75s ease; }
 
 .documents-wrapper i {
-  margin-right: .5rem; }
+  margin: .2rem 1rem 0 0;
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
 
-.documents-category {
-  font-family: var(--font-2);
-  list-style-type: none;
-  margin: 0 0 1rem 0;
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+.documents-wrapper a:hover {
+  opacity: 1;
+  scale: 1.15; }
 
 @media screen and (max-width: 768px) {
   .docs-container {
