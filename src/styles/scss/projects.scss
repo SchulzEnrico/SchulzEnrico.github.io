@@ -26,12 +26,12 @@
 
 .projects-container h3 {
   position: relative;
-  margin: 1rem 0 0;
+  margin: 1rem 0 0 0;
   font-family: var(--font-1);
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-11),
+  text-shadow: 1px 1px 0 var(--color-22),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -48,7 +48,7 @@
   perspective: 1000px;
   min-width: 250px;
   min-height: 145px;
-  margin: 0.5rem;
+  margin: 1.5rem;
   border-radius: 15px;
   flex-shrink: 1;
   background-color: var(--color-0);
@@ -490,6 +490,7 @@
   }
 
   .project {
+    margin: 1.5rem .5rem;
     min-width: 78.5vw !important;
     max-width: 80vw !important;
   }
@@ -514,7 +515,7 @@
   }
 
   .project-close-button-container {
-    padding: 10px 3px 3px 20px;
+/*    padding: 10px 3px 3px 20px;*/
     min-width: 2.5rem;
     max-width: 2.5rem;
     min-height: 2.5rem;
