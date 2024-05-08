@@ -1,4 +1,5 @@
 @import "baseStyles";
+@import "fonts";
 @import "header";
 @import 'navigation';
 @import "welcome";
@@ -11,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 :root {
-  font-family: Typewriter, ui-monospace, monospace, sans-serif;
+  font-family: Orbitron, ui-monospace, monospace, sans-serif;
   width: 100vw;
   height: fit-content;
   line-height: 1.5;
@@ -24,8 +25,13 @@
   margin: 0;
   padding: 0;
 
-  --font-1: Typewriter, ui-monospace, monospace, sans-serif;
-  --font-2: 'Alfa Slab One', cursive;
+  --font-1: Orbitron, ui-monospace, monospace, sans-serif;
+  --font-2: Expansiva, ui-monospace, monospace, sans-serif;
+  --font-3: Distant Galaxy, 'Alfa Slab One', ui-monospace, monospace, sans-serif;
+  --font-4: Arenq, RollandinEmilie, ui-monospace, monospace, sans-serif;
+  --font-5: 'Alfa Slab One',ui-monospace, monospace, sans-serif;
+  --font-6: Electrum, ui-monospace, monospace, sans-serif;
+  --font-7: Pilo-Thin, ui-monospace, monospace, sans-serif;
 
   --color-0: #010105;
   --color-00: #0a0a0c;
@@ -91,7 +97,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .background-color-wrapper {
-  background-color: var(--color-23);
+  background-color: var(--color-22);
 }
 
 .body-scroll-lock {
@@ -141,19 +147,20 @@ h2 {
   text-align: start;
   justify-self: end;
   font-size: 4vmax;
-  font-family: var(--font-2);
+/*  font-weight: bold;*/
+  font-family: var(--font-4);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-0),
-  2px 2px 0 var(--color-4),
-  1px -1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  -1px -1px 0 var(--color-0),
-  1px 0 0 var(--color-0),
-  3px 3px 0 var(--color-0),
-  -1px 2px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  4px 4px 10px var(--color-3-2),
-  0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-4),
+  2px 2px 0 var(--color-41),
+  1px -1px 0 var(--color-22),
+  -1px 0 0 var(--color-22),
+  -1px -1px 0 var(--color-22),
+  1px 0 0 var(--color-22),
+  3px 3px 0 var(--color-22),
+  -1px 2px 0 var(--color-22),
+  -1px 0 0 var(--color-22),
+  4px 4px 5px var(--color-3-1),
+  0 -1px 0 var(--color-22);
   letter-spacing: 10px;
   filter: brightness(75%);
   z-index: 0;
@@ -164,10 +171,10 @@ h2 {
   top: -1vmax;
   right: -2.25vmax;
   font-size: 5.5vmax;
-  font-family: var(--font-2);
+  font-family: var(--font-7);
   transform: perspective(1000px) rotateY(50deg);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1),
+  text-shadow: 1px 1px 0 var(--color-31),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -219,12 +226,13 @@ h2 {
   position: fixed;
   margin: 0;
   bottom: 0;
-  font-size: 2.2rem;
+  font-family: var(--font-2);
+  font-size: 1.6rem;
   font-weight: bold;
   display: inline-block;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-2),
+  text-shadow: 1px 1px 0 var(--color-1),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
