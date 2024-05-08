@@ -37,9 +37,6 @@
   src: url("../../fonts/expansiva/Expansiva_bold.otf") format("opentype");
   font-weight: bold; }
 @font-face {
-  font-family: Enter-sansman;
-  src: url("../../fonts/enter-sansman/entsans.ttf") format("truetype"); }
-@font-face {
   font-family: Electrum;
   src: url("../../fonts/Electrum-Exp/OTF/ElectrumADFExp-Regular.otf") format("opentype");
   font-weight: normal; }
