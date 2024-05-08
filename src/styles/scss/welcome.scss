@@ -32,8 +32,9 @@
   width: 95%;
   top: 49%;
   left: 7%;
+  font-weight: bold;
   text-transform: uppercase;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   font-size: 1.6em;
   letter-spacing: 6px;
   overflow: hidden;
@@ -74,7 +75,7 @@
     width: 35%;
     top: 15%;
     left: 53%;
-    display: block; /* Jedes Wort in einer separaten Zeile anzeigen */
+    display: block;
     text-align: start;
     overflow: hidden;
     background: linear-gradient(180deg,

@@ -27,7 +27,7 @@
 .projects-container h3 {
   position: relative;
   margin: 1rem 0 0 0;
-  font-family: var(--font-1);
+  font-family: var(--font-2);
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
@@ -46,7 +46,7 @@
 
 .project {
   perspective: 1000px;
-  min-width: 250px;
+  min-width: 300px;
   min-height: 145px;
   margin: 1.5rem;
   border-radius: 15px;
@@ -76,13 +76,13 @@
   box-shadow: inset 0 0 20px var(--color-23);
   border: 1px solid var(--color-41);
   outline: 5px solid var(--color-3-1);
-  width: 96vw;
-  height: 74vh;
+  width: 95vw;
+  height: 75vh;
 }
 
 .project.flip {
   position: fixed;
-  top: 12.5vh;
+  top: 9.85vh;
   left: 0;
   z-index: 2;
 }
@@ -105,21 +105,21 @@
 .project-front h5,
 .project-back h5 {
   font-size: 1.37rem;
-  font-family: var(--font-2);
+  font-family: var(--font-1);
   letter-spacing: 3px;
   margin: 25px 15px 0 15px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-00),
-  2px 2px 0 var(--color-4),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  text-shadow: 1px 1px 0 var(--color-0),
+  2px 2px 2px var(--color-4),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 3px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  3px 3px 10px var(--color-41),
+  0 -1px 0 var(--color-011);
 }
 
 .project-year {
@@ -135,16 +135,16 @@
   letter-spacing: 3px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-3-11),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  2px 2px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  2px 2px 2px var(--color-4),
+  1px -1px 2px var(--color-011),
+  -1px 0 2px var(--color-011),
+  -1px -1px 3px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 0 var(--color-4),
+  -1px 2px 2px var(--color-011),
+  -1px 0 0 var(--color-011),
+  2px 2px 5px var(--color-4-0),
+  0 -1px 0 var(--color-011);
   box-shadow: inset -3px -3px 7px var(--color-2),
               2px 2px 7px var(--color-2);
 }
@@ -157,9 +157,9 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-color: var(--color-011);
-  box-shadow: inset 2px 2px 25px var(--color-0),
-              inset -2px -2px 25px var(--color-0);
+  background-color: var(--color-00);
+  box-shadow: inset 2px 2px 25px var(--color-11),
+              inset -2px -2px 25px var(--color-11);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -179,10 +179,10 @@
   font-family: var(--font-1);
   justify-items: center ;
   letter-spacing: 4px;
-  background-color: var(--color-01);
+  background-color: var(--color-000);
   border-radius: 1px 14px 1px 35px;
-  box-shadow: inset 2px -2px 8px var(--color-0),
-  -3px 3px 8px var(--color-0);
+  box-shadow: inset 2px -2px 8px var(--color-011),
+  -3px 3px 8px var(--color-011);
 }
 
 #project-close-button {
@@ -198,57 +198,58 @@
   position: fixed;
   min-width: 80vw;
   max-width: 90vw;
-  top: 0;
+  top: 1rem;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
   margin: 0;
   font-size: 3rem;
-  text-shadow: 1px 1px 0 var(--color-3-11),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  2px 2px 0 var(--color-23),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-23);
+  text-shadow: 1px 1px 0 var(--color-00),
+  2px 2px 2px var(--color-4),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 3px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  2px 2px 5px var(--color-3),
+  0 -1px 0 var(--color-011);
   z-index: 3;
 }
 
 .name-affix {
   position: fixed;
   padding-bottom: .5rem;
-  top: 4rem;
-  min-width: 80vw;
-  max-width: 90vw;
+  top: 5rem;
+  min-width: 90vw;
+  max-width: 95vw;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: var(--font-2);
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-0),
+  font-weight: bold;
+  text-shadow: 1px 1px 0 var(--color-3-11),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
-  -1px -1px 0 var(--color-23),
-  1px 0 0 var(--color-23),
-  2px 2px 0 var(--color-23),
-  -1px 2px 0 var(--color-23),
-  -1px 0 0 var(--color-23),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-23);
+  0 -1px 0 var(--color-21);
   z-index: 3;
 }
 
 .project-description {
   position: fixed;
-  top: 7rem;
+  top: 8rem;
   left: 3vw;
   width: 90vw;
   height: 10vh;
@@ -258,8 +259,8 @@
   align-items: center;
   padding:1rem;
   background-color: var(--color-11);
-  box-shadow: inset 7px 7px 40px var(--color-00),
-  inset -7px -7px 40px var(--color-00),
+  box-shadow: inset 9px 9px 40px var(--color-00),
+  inset -9px -9px 40px var(--color-00),
             0 0 10px var(--color-41);
   border: 1px solid var(--color-4);
   outline: 2px solid var(--color-3-11);
@@ -268,17 +269,17 @@
   font-weight: bold;
   letter-spacing: 4px;
   color: transparent;
-  text-shadow: 1px 1px 1px var(--color-2),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-00),
-  -1px 0 0 var(--color-00),
-  -1px -1px 0 var(--color-00),
-  1px 0 0 var(--color-00),
-  3px 3px 0 var(--color-00),
-  -1px 2px 0 var(--color-00),
-  -1px 0 0 var(--color-00),
-  0 0 5px var(--color-3),
-  0 -1px 0 var(--color-00);
+  text-shadow: 1px 1px 0 var(--color-0),
+  2px 2px 3px var(--color-23),
+  1px -1px 3px var(--color-1),
+  -1px 0 3px var(--color-1),
+  -1px -1px 3px var(--color-1),
+  1px 0 0 var(--color-1),
+  3px 3px 0 var(--color-23),
+  -1px 2px 3px var(--color-1),
+  -1px 0 0 var(--color-1),
+  2px 2px 3px var(--color-41),
+  0 -1px 0 var(--color-1);
   overflow: scroll;
 }
 .project-description::-webkit-scrollbar {
@@ -306,7 +307,7 @@
 .project-details {
   position: fixed;
   left: 5vw;
-  top: 17rem;
+  top: 18rem;
   height: 45vh;
   width: 90vw;
   display: flex;
@@ -368,17 +369,17 @@
 }
 
 .project-links-container .details-header {
-  text-shadow: 1px 1px 0 var(--color-0),
+  text-shadow: 1px 1px 0 var(--color-01),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
+  1px -1px 0 var(--color-011),
+  -1px 0 0 var(--color-011),
+  -1px -1px 0 var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 0 var(--color-011),
+  -1px 2px 0 var(--color-011),
+  -1px 0 0 var(--color-011),
   3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  0 -1px 0 var(--color-011);
 
 }
 
@@ -404,7 +405,7 @@
   letter-spacing: 4px;
   font-weight: bold;
   color: transparent;
-  text-shadow: 1px 1px 1px var(--color-2),
+  text-shadow: 1px 1px 1px var(--color-11),
   2px 2px 0 var(--color-41),
   1px -1px 0 var(--color-00),
   -1px 0 0 var(--color-00),
@@ -419,7 +420,20 @@
 
 .project-links-list li a {
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-1),
+  text-shadow: 1px 1px 0 var(--color-01),
+  2px 2px 0 var(--color-23),
+  1px -1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -1px -1px 0 var(--color-0),
+  1px 0 0 var(--color-0),
+  3px 3px 0 var(--color-0),
+  -1px 2px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -1px 2px 7px var(--color-0),
+  0 -1px 0 var(--color-0);
+}
+.project-links-list li a:hover {
+  text-shadow: 1px 1px 0 var(--color-3),
   2px 2px 0 var(--color-23),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -439,34 +453,34 @@
   top: -.25rem;
   left: 0;
   color: transparent;
-  text-shadow: 1px 1px 1px var(--color-1),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-00),
-  -1px 0 0 var(--color-00),
-  -1px -1px 0 var(--color-00),
-  1px 0 0 var(--color-00),
-  3px 3px 0 var(--color-00),
-  -1px 2px 0 var(--color-00),
-  -1px 0 0 var(--color-00),
-  1px 1px 2px var(--color-31),
-  0 -1px 0 var(--color-00);
+  text-shadow: 1px 1px 0 var(--color-00),
+  2px 2px 2px var(--color-4),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 3px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  2px 2px 5px var(--color-4-0),
+  0 -1px 0 var(--color-011);
 }
 
 .project-back .project-links-list li:before {
   content: "\1F517";
   font-size: 1rem;
   top: .25rem;
-  text-shadow: 1px 1px 1px var(--color-2),
-  2px 2px 0 var(--color-4),
-  1px -1px 0 var(--color-00),
-  -1px 0 0 var(--color-00),
-  -1px -1px 0 var(--color-00),
-  1px 0 0 var(--color-00),
-  3px 3px 0 var(--color-00),
-  -1px 2px 0 var(--color-00),
-  -1px 0 0 var(--color-00),
-  1px 1px 2px var(--color-31),
-  0 -1px 0 var(--color-00);
+  text-shadow: 1px 1px 0 var(--color-00),
+  2px 2px 2px var(--color-4),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 3px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  2px 2px 5px var(--color-4-0),
+  0 -1px 0 var(--color-011);
 }
 
 @media screen and (max-width: 768px) {
