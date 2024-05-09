@@ -168,7 +168,7 @@
 }
 
 .project-close-button-container {
-  position: fixed;
+  position: absolute;
   min-height: 2.5rem;
   max-height: 2.5rem;
   min-width: 4rem;
@@ -499,11 +499,12 @@
   }
 
   .projects-container h3 {
-    margin: 0 0 0 6vw;
+    margin: 1vh 0 0 6vw;
     font-size: 1.5rem;
   }
 
   .project {
+    background-color: var(--color-0);
     margin: 1.5rem .5rem;
     min-width: 78.5vw !important;
     max-width: 80vw !important;

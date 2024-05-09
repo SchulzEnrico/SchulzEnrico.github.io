@@ -55,6 +55,10 @@
   filter: brightness(85%);
 }
 
+.mobile-br-tag {
+  display: none;
+}
+
 .motivation-img {
   position: relative;
   height: 50vh;
@@ -72,7 +76,12 @@
   }
 
   .motivation-essence {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     letter-spacing: 5px;
+    line-height: 2rem;
+  }
+
+  .mobile-br-tag {
+    display: block;
   }
 }

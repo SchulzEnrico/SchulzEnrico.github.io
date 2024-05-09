@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*BUTTONS*/
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 .close-button {
@@ -135,7 +134,7 @@ nav {
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
-      text-shadow: 0 1px 1px var(--color-0), 1px 1px 0 var(--color-41), 1px -1px 0 var(--color-41), -1px 0 0 var(--color-41), -1px -1px 0 var(--color-41), 1px 0 0 var(--color-41), 2px 2px 0 var(--color-4-0), 2px 0 0 var(--color-41), -1px 1px 0 var(--color-41), -1px 2px 0 var(--color-41), 0 -1px 0 var(--color-41); }
+      text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4-0), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
     nav a.active {
       font-weight: bold;
       animation: mirrorRotate 1s forwards;
@@ -454,18 +453,18 @@ nav {
   .greeting {
     position: absolute;
     font-size: medium;
-    width: 35%;
+    font-weight: normal;
+    width: 39%;
     top: 15%;
-    left: 53%;
+    left: 50%;
     display: block;
     text-align: start;
     overflow: hidden;
-    background: linear-gradient(180deg, var(--color-0), var(--color-0), var(--color-4-0), var(--color-0), var(--color-0)) no-repeat;
+    background: linear-gradient(180deg, var(--color-0), var(--color-4-0), var(--color-0), var(--color-4-0), var(--color-0)) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    animation: animate 10s linear forwards;
-    line-height: 2.5;
-    /* Erhöht den Abstand zwischen den Zeilen */ }
+    animation: animate 7s linear infinite;
+    line-height: 2.5; }
 
   .es-container {
     top: 20vh; }
@@ -506,6 +505,9 @@ nav {
   text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 7px var(--color-3), 0 -1px 0 var(--color-0);
   filter: brightness(85%); }
 
+.mobile-br-tag {
+  display: none; }
+
 .motivation-img {
   position: relative;
   height: 50vh; }
@@ -521,8 +523,12 @@ nav {
     letter-spacing: 3px; }
 
   .motivation-essence {
-    font-size: 1.5rem;
-    letter-spacing: 5px; } }
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    line-height: 2rem; }
+
+  .mobile-br-tag {
+    display: block; } }
 .about-container {
   display: flex;
   flex-direction: column;
@@ -650,13 +656,13 @@ nav {
 .proficiency {
   position: fixed;
   bottom: 23%;
-  right: -2.5%;
+  right: -9%;
   font-family: var(--font-2);
   font-size: 1.7rem;
   letter-spacing: 3px;
   color: transparent;
   transform: translate(-50%, -50%) rotate(180deg) scaleY(-1);
-  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 2px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
 
 .skill-name {
   position: fixed;
@@ -942,7 +948,7 @@ nav {
     min-width: 98%; }
 
   .category-container h3 {
-    margin: 0 0 0 4.5vw;
+    margin: 1vh 0 0 4.5vw;
     font-size: 1.5rem; }
 
   .category-skills-container {
@@ -956,7 +962,8 @@ nav {
   .skill {
     margin: 1rem;
     max-width: 32vw;
-    padding-top: 10px; }
+    padding-top: 10px;
+    background-color: var(--color-0); }
 
   .skill-name {
     font-size: .9rem;
@@ -973,10 +980,6 @@ nav {
     bottom: -27.5%;
     right: -2.5%;
     scale: .55; }
-
-  .proficiency {
-    right: -4%;
-    font-size: 1.7rem; }
 
   .skill.flip {
     top: 9vh !important;
@@ -1234,7 +1237,7 @@ nav {
   transform: rotateY(180deg); }
 
 .project-close-button-container {
-  position: fixed;
+  position: absolute;
   min-height: 2.5rem;
   max-height: 2.5rem;
   min-width: 4rem;
@@ -1443,10 +1446,11 @@ nav {
     top: 3.5vh; }
 
   .projects-container h3 {
-    margin: 0 0 0 6vw;
+    margin: 1vh 0 0 6vw;
     font-size: 1.5rem; }
 
   .project {
+    background-color: var(--color-0);
     margin: 1.5rem .5rem;
     min-width: 78.5vw !important;
     max-width: 80vw !important; }
@@ -1746,7 +1750,7 @@ nav {
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
-      text-shadow: 0 1px 1px var(--color-0), 1px 1px 0 var(--color-41), 1px -1px 0 var(--color-41), -1px 0 0 var(--color-41), -1px -1px 0 var(--color-41), 1px 0 0 var(--color-41), 2px 2px 0 var(--color-4-0), 2px 0 0 var(--color-41), -1px 1px 0 var(--color-41), -1px 2px 0 var(--color-41), 0 -1px 0 var(--color-41); }
+      text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4-0), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
     nav a.active {
       font-weight: bold;
       animation: mirrorRotate 1s forwards;
@@ -2273,10 +2277,8 @@ h2 {
   body {
     max-width: 100vw; }
 
-  h1 {
-    scale: 0.7;
-    top: -91px;
-    left: -30px; }
+  .background-color-wrapper {
+    background-color: var(--color-23); }
 
   h2 {
     position: relative;

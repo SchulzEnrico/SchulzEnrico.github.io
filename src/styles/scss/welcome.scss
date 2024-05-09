@@ -72,23 +72,24 @@
   .greeting {
     position: absolute;
     font-size: medium;
-    width: 35%;
+    font-weight: normal;
+    width: 39%;
     top: 15%;
-    left: 53%;
+    left: 50%;
     display: block;
     text-align: start;
     overflow: hidden;
     background: linear-gradient(180deg,
             var(--color-0),
+            var(--color-4-0),
             var(--color-0),
             var(--color-4-0),
             var(--color-0),
-            var(--color-0)
     ) no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    animation: animate 10s linear forwards;
-    line-height: 2.5; /* Erhöht den Abstand zwischen den Zeilen */
+    animation: animate 7s linear infinite;
+    line-height: 2.5;
   }
 
   .es-container {

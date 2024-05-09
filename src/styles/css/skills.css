@@ -93,13 +93,13 @@
 .proficiency {
   position: fixed;
   bottom: 23%;
-  right: -2.5%;
+  right: -9%;
   font-family: var(--font-2);
   font-size: 1.7rem;
   letter-spacing: 3px;
   color: transparent;
   transform: translate(-50%, -50%) rotate(180deg) scaleY(-1);
-  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 2px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
 
 .skill-name {
   position: fixed;
@@ -385,7 +385,7 @@
     min-width: 98%; }
 
   .category-container h3 {
-    margin: 0 0 0 4.5vw;
+    margin: 1vh 0 0 4.5vw;
     font-size: 1.5rem; }
 
   .category-skills-container {
@@ -399,7 +399,8 @@
   .skill {
     margin: 1rem;
     max-width: 32vw;
-    padding-top: 10px; }
+    padding-top: 10px;
+    background-color: var(--color-0); }
 
   .skill-name {
     font-size: .9rem;
@@ -416,10 +417,6 @@
     bottom: -27.5%;
     right: -2.5%;
     scale: .55; }
-
-  .proficiency {
-    right: -4%;
-    font-size: 1.7rem; }
 
   .skill.flip {
     top: 9vh !important;

@@ -32,6 +32,9 @@
   text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 7px var(--color-3), 0 -1px 0 var(--color-0);
   filter: brightness(85%); }
 
+.mobile-br-tag {
+  display: none; }
+
 .motivation-img {
   position: relative;
   height: 50vh; }
@@ -47,7 +50,11 @@
     letter-spacing: 3px; }
 
   .motivation-essence {
-    font-size: 1.5rem;
-    letter-spacing: 5px; } }
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    line-height: 2rem; }
+
+  .mobile-br-tag {
+    display: block; } }
 
 /*# sourceMappingURL=motivation.css.map */
