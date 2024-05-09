@@ -408,7 +408,7 @@ nav {
     position: relative;
     display: flex;
     justify-content: end;
-    font-size: 1.1rem;
+    font-size: .85rem;
     font-weight: bold;
     letter-spacing: 5px;
     right: 3vw;
@@ -428,6 +428,7 @@ nav {
   }
 
   .about-link-label {
+    font-weight: normal;
     z-index: 0;
     text-shadow: 1px 1px 0 var(--color-21),
     2px 2px 0 var(--color-4),
@@ -443,8 +444,7 @@ nav {
   }
 
   a#es-nav-logo {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: .85rem;
     margin: 4vh 0 2vh 0;
     text-decoration: none;
     font-family: var(--font-1);
@@ -486,12 +486,12 @@ nav {
     font-size: 1rem;
     padding-bottom: 5px;
     border-radius: 20px;
-    width: 25vw;
+    width: 33vw;
     opacity: 1;
   }
 
   #credits-nav-link a {
-    font-size: 1rem;
+    font-size: .85rem;
     text-shadow: 1px 1px 0 var(--color-21),
     2px 2px 0 var(--color-4),
     1px -1px 0 var(--color-0),

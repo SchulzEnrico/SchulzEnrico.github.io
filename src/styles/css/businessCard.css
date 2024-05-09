@@ -53,21 +53,22 @@
 
 #business-card-contact-download {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 2.5rem;
+  right: 2rem;
   transform: none;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  font-family: var(--font-2);
   font-weight: bold;
   letter-spacing: 5px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
 
 #business-card-contact-download i {
-  margin-left: .5rem;
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
+  margin-left: .5rem; }
 
 #business-card-contact-download:hover {
-  scale: 1.15; }
+  scale: 1.15;
+  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
 
 .business-card-footer {
   position: fixed;
@@ -110,8 +111,7 @@
 
 .business-card-footer i {
   bottom: 0;
-  font-size: 1.5rem;
-  color: var(--color-4); }
+  font-size: 1.5rem; }
 
 .business-card-footer i:hover {
   scale: none; }
@@ -126,7 +126,7 @@
 #professions {
   position: fixed;
   bottom: 17vh;
-  right: 3vw;
+  right: -3vw;
   z-index: 2;
   text-align: right; }
 
@@ -140,10 +140,11 @@
 #professions span span {
   display: block;
   font-family: var(--font-2);
-  color: var(--color-3-11);
+  color: var(--color-3-2);
   transform: translateY(120%);
   animation: c 1s forwards;
   will-change: transform;
+  scale: .8;
   text-shadow: 1px -1px 1px var(--color-2), -1px 0 1px var(--color-00), -1px -1px 1px var(--color-4-0); }
 
 #professions span:nth-child(1) span {
@@ -211,6 +212,7 @@
   overflow: visible; }
 
 #branches {
+  font-family: var(--font-1);
   position: relative;
   top: 4vh;
   left: 12vw;
@@ -275,7 +277,7 @@
 
 #branches a {
   line-height: 8vh;
-  font-size: 12vh;
+  font-size: 9vh;
   text-decoration: none;
   position: relative;
   z-index: 2;

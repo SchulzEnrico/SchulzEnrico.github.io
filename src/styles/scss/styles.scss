@@ -147,34 +147,32 @@ h2 {
   text-align: start;
   justify-self: end;
   font-size: 4vmax;
-/*  font-weight: bold;*/
   font-family: var(--font-4);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-4),
+  text-shadow: 1px 1px 0 var(--color-23),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-22),
-  -1px 0 0 var(--color-22),
-  -1px -1px 0 var(--color-22),
-  1px 0 0 var(--color-22),
-  3px 3px 0 var(--color-22),
-  -1px 2px 0 var(--color-22),
-  -1px 0 0 var(--color-22),
+  1px -1px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
+  -1px -1px 0 var(--color-21),
+  1px 0 0 var(--color-21),
+  3px 3px 0 var(--color-21),
+  -1px 2px 0 var(--color-21),
+  -1px 0 0 var(--color-21),
   4px 4px 5px var(--color-3-1),
-  0 -1px 0 var(--color-22);
+  0 -1px 0 var(--color-21);
   letter-spacing: 10px;
-  filter: brightness(75%);
   z-index: 0;
 }
 
 .section-hashtag {
   position: relative;
-  top: -1vmax;
-  right: -2.25vmax;
+  top: -.75rem;
+  right: -3.5rem;
   font-size: 5.5vmax;
   font-family: var(--font-7);
   transform: perspective(1000px) rotateY(50deg);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-31),
+  text-shadow: 1px 1px 0 var(--color-3),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
@@ -192,7 +190,7 @@ h2 {
   position: fixed;
   margin: 0;
   left: 0;
-  bottom: 0;
+  bottom: 1rem;
   display: flex;
   height: fit-content;
   flex-direction: row;
@@ -203,7 +201,7 @@ h2 {
 #educations-dot {
   position: fixed;
   margin: 0;
-  left: .55rem;
+  left: 1.25rem;
   bottom: -.9rem;
   font-size: 4rem;
   animation: blink 2.5s infinite;
@@ -225,7 +223,7 @@ h2 {
 #educations {
   position: fixed;
   margin: 0;
-  bottom: 0;
+  bottom: .4rem;
   font-family: var(--font-2);
   font-size: 1.6rem;
   font-weight: bold;
@@ -278,10 +276,14 @@ h2 {
     width: 90vw;
     font-size: 2rem;
     top: 0;
-    left: 3vw;
+    left: 2.5vw;
     text-align: left;
-    margin: 0 6vw .3vh 0;
+    margin: 0 6vw -3rem 0;
   }
+
+  .section-hashtag {
+    right: -1.75rem;
+}
 
   .section {
     max-width: 90vw;
@@ -317,8 +319,8 @@ h2 {
 
   #educations-dot {
     margin: 0;
-    left: 2vw;
-    bottom: 9vh;
+    left: 1rem;
+    bottom: 8.75vh;
     font-size: 2rem;
   }
 
@@ -330,7 +332,7 @@ h2 {
 
   #educations {
     margin: 0;
-    font-size: 1rem;
+    font-size: .75rem;
     bottom: 10vh;
     text-shadow: 1px 1px 0 var(--color-2),
     2px 2px 0 var(--color-4),
