@@ -264,10 +264,8 @@ h2 {
     max-width: 100vw;
   }
 
-  h1 {
-    scale: 0.7;
-    top: -91px;
-    left: -30px;
+  .background-color-wrapper {
+    background-color: var(--color-23);
   }
 
   h2 {
