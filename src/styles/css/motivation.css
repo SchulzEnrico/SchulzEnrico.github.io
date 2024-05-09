@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  top: 2rem;
   left: 5vw;
   max-width: 90vw;
   font-size: 1.25rem;

@@ -26,7 +26,7 @@
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -386,7 +386,7 @@
 
   .category-container h3 {
     margin: 0 0 0 4.5vw;
-    font-size: 1.75rem; }
+    font-size: 1.5rem; }
 
   .category-skills-container {
     max-height: fit-content;
@@ -402,11 +402,14 @@
     padding-top: 10px; }
 
   .skill-name {
-    font-size: .975rem;
-    top: -30px; }
+    font-size: .9rem;
+    left: -10px;
+    top: -30px;
+    text-shadow: 1px 1px 0 var(--color-0), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-41), 0 -1px 0 var(--color-011); }
 
-  .skill.skill-back .skill-name {
-    font-size: .6rem; }
+  .skill-back .skill-name {
+    top: -25px !important;
+    font-size: 1.2rem; }
 
   .proficiency-chart {
     position: fixed;
@@ -419,7 +422,8 @@
     font-size: 1.7rem; }
 
   .skill.flip {
-    top: 10vh !important; }
+    top: 9vh !important;
+    left: -2vw; }
 
   .skill.flip .skill-front {
     transform: rotateY(0deg); }
@@ -480,13 +484,12 @@
     display: block;
     min-width: 75vw;
     max-width: 75vw;
-    background-color: var(--color-21);
-    box-shadow: inset 7px 7px 40px var(--color-0), inset -7px -7px 40px var(--color-0);
+    background-color: var(--color-11);
+    box-shadow: inset 5px 5px 10px var(--color-0), inset -5px -5px 10px var(--color-0);
     border: 1px solid var(--color-4);
     outline: 2px solid var(--color-3-11);
     border-radius: 7px;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+    font-size: 1rem; }
 
   .topics-container ul {
     margin: 2.75rem 0 0 .9rem;
@@ -509,7 +512,7 @@
     top: -1px;
     left: 0;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-2), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), -2px 0 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-00), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
 
   .skill-project-use-container {
     grid-column: 1;
@@ -534,7 +537,7 @@
     justify-content: start;
     align-items: start;
     flex-wrap: wrap;
-    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+    text-shadow: 1px 1px 0 var(--color-00), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
 
   .skill-project-use-container ul li {
     margin-top: 1rem;
@@ -549,7 +552,7 @@
 
   .usage-data {
     font-size: .8rem;
-    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
+    text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 2px 0 var(--color-23), -1px 0 0 var(--color-23), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-23); }
 
   .skill-bar-container {
     display: none; } }

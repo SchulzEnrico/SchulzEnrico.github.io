@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hoverBranchThrees = document.querySelectorAll('.hover-branch-three');
 
     // Variablen für Helligkeiten und Übergangszeiten
-    const brightnessHover = '175%';
+    const brightnessHover = '200%';
     const brightnessReset = '100%';
     const transitionTime = 450;
 
