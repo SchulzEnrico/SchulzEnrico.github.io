@@ -426,15 +426,14 @@ nav {
   width: 95%;
   top: 49%;
   left: 7%;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: var(--font-1);
-  font-size: 1.6em;
+  /*  text-transform: uppercase;*/
+  font-family: var(--font-4);
+  font-size: 2rem;
   letter-spacing: 6px;
   overflow: hidden;
-  background: linear-gradient(90deg, var(--color-0), var(--color-23), var(--color-41), var(--color-23), var(--color-0)) no-repeat;
+  background: linear-gradient(90deg, var(--color-0), var(--color-4), var(--color-4-0), var(--color-4), var(--color-0)) no-repeat;
   background-size: 80%;
-  animation: animate 6s linear infinite;
+  animation: animate 7s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   text-align: center; }
@@ -1477,9 +1476,14 @@ nav {
     min-height: 2.5rem;
     max-height: 2.5rem; }
 
+  #project-close-button {
+    position: absolute;
+    top: .6rem;
+    right: .85rem; }
+
   #project-close-button i {
     top: .5vh;
-    right: 1vw; }
+    right: .6rem; }
 
   .project-back h5 {
     position: relative;
@@ -1494,7 +1498,7 @@ nav {
   .name-affix {
     margin: 0 2vw;
     position: relative;
-    max-width: 80vw;
+    max-width: 5rem !important;
     top: .4rem;
     font-size: .65rem;
     flex-wrap: wrap;
@@ -1691,7 +1695,8 @@ h6 {
     transform: rotateX(25deg) translateZ(-2500px); } }
 @media only screen and (max-width: 768px) {
   #credits-h2 {
-    top: 4vh;
+    top: 11vh;
+    left: 0;
     font-size: 2rem;
     letter-spacing: 7px;
     text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-01), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-01); }
@@ -1704,18 +1709,20 @@ h6 {
     left: 7vw; }
 
   .star-wars {
+    top: 2.5vh;
     font-size: 300%;
     letter-spacing: 5px; }
 
   .credits-title {
-    font-size: 300%;
-    font-weight: 600; }
+    font-size: 600%;
+    font-weight: 600;
+    line-height: .7; }
 
   .episode-number {
-    font-size: 300%; }
+    font-size: 750%; }
 
   .credits-title > h6 {
-    font-size: 175%;
+    font-size: 212%;
     color: var(--color-3-1); }
 
   .menu-toggle {
@@ -2288,7 +2295,8 @@ h2 {
     top: 0;
     left: 2.5vw;
     text-align: left;
-    margin: 0 6vw -3rem 0; }
+    margin: 0 6vw -3rem 0;
+    filter: brightness(125%); }
 
   .section-hashtag {
     right: -1.75rem; }

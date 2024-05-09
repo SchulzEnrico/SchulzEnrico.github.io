@@ -110,7 +110,8 @@ h6 {
     transform: rotateX(25deg) translateZ(-2500px); } }
 @media only screen and (max-width: 768px) {
   #credits-h2 {
-    top: 4vh;
+    top: 11vh;
+    left: 0;
     font-size: 2rem;
     letter-spacing: 7px;
     text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-01), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-01); }
@@ -123,18 +124,20 @@ h6 {
     left: 7vw; }
 
   .star-wars {
+    top: 2.5vh;
     font-size: 300%;
     letter-spacing: 5px; }
 
   .credits-title {
-    font-size: 300%;
-    font-weight: 600; }
+    font-size: 600%;
+    font-weight: 600;
+    line-height: .7; }
 
   .episode-number {
-    font-size: 300%; }
+    font-size: 750%; }
 
   .credits-title > h6 {
-    font-size: 175%;
+    font-size: 212%;
     color: var(--color-3-1); }
 
   .menu-toggle {

@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const hoverBranchTwos = document.querySelectorAll('.hover-branch-two');
     const hoverBranchThrees = document.querySelectorAll('.hover-branch-three');
 
-    // Variablen für Helligkeiten und Übergangszeiten
     const brightnessHover = '200%';
     const brightnessReset = '100%';
     const transitionTime = 450;
