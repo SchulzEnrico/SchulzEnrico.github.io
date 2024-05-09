@@ -588,7 +588,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 2px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 2px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -754,7 +754,7 @@ nav {
   font-size: 2.25rem;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 1px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-011); }
 
 .topics-container ul {
   margin: 0; }
@@ -812,7 +812,7 @@ nav {
   font-weight: bold;
   color: transparent;
   letter-spacing: 3px;
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4), 1px -1px 0 var(--color-011), -1px 0 0 var(--color-011), -1px -1px 0 var(--color-011), 1px 0 0 var(--color-011), 3px 3px 0 var(--color-4), -1px 2px 0 var(--color-011), -1px 0 0 var(--color-011), 2px 2px 10px var(--color-4-0), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4), 1px -1px 0 var(--color-011), -1px 0 0 var(--color-011), -1px -1px 0 var(--color-011), 1px 0 0 var(--color-011), 3px 3px 0 var(--color-4), -1px 2px 0 var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
 
 .project-name {
   text-decoration: underline; }
@@ -821,7 +821,7 @@ nav {
   font-family: var(--font-7);
   font-weight: lighter;
   letter-spacing: 4px;
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-3), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-01); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-3), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 2px 2px 5px var(--color-31), 0 -1px 0 var(--color-01); }
 
 .skill-project-use-container ul ul {
   font-family: var(--font-5);
@@ -835,7 +835,7 @@ nav {
   font-weight: bold;
   letter-spacing: 2px;
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 1px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-011); }
 
 .skill-bar-container {
   position: relative;
@@ -895,7 +895,7 @@ nav {
   letter-spacing: 5px;
   color: transparent;
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 1px var(--color-41), 1px -1px 0 var(--color-011), -1px 0 0 var(--color-011), -1px -1px 0 var(--color-011), 1px 0 0 var(--color-011), 3px 3px 0 var(--color-4), -1px 2px 0 var(--color-011), -1px 0 0 var(--color-011), 2px 2px 10px var(--color-4-0), 0 -1px 0 var(--color-011);
+  text-shadow: 1px 1px 0 var(--color-21), 2px 2px 1px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-011);
   z-index: 4; }
 
 .skill-legend {
@@ -912,7 +912,7 @@ nav {
   color: transparent;
   letter-spacing: 4px;
   font-family: var(--font-7);
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-3), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-01); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px 0 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), 3px 3px 0 var(--color-3), -1px 2px 0 var(--color-01), -1px 0 0 var(--color-01), 2px 2px 5px var(--color-31), 0 -1px 0 var(--color-01); }
 
 .skill-legend-item {
   position: relative;
@@ -1145,7 +1145,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 2px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 2px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -1287,7 +1287,7 @@ nav {
   letter-spacing: 3px;
   color: transparent;
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21);
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 1px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-011);
   z-index: 3; }
 
 .project-description {
@@ -1382,10 +1382,10 @@ nav {
   font-weight: bold;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-21); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 1px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-011); }
 
 .project-links-container .details-header {
-  text-shadow: 1px 1px 0 var(--color-01), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-011), -1px 0 0 var(--color-011), -1px -1px 0 var(--color-011), 1px 0 0 var(--color-011), 3px 3px 0 var(--color-011), -1px 2px 0 var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-01), 2px 2px 1px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-011); }
 
 .project-requirements-list,
 .applied-skills-list,
@@ -1479,7 +1479,7 @@ nav {
   #project-close-button {
     position: absolute;
     top: .6rem;
-    right: .85rem; }
+    right: .5rem; }
 
   #project-close-button i {
     top: .5vh;
@@ -1503,8 +1503,7 @@ nav {
     font-size: .65rem;
     flex-wrap: wrap;
     font-weight: bold;
-    text-align: left;
-    text-shadow: 1px 1px 0 var(--color-3-2), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-22), -1px 0 0 var(--color-22), -1px -1px 0 var(--color-22), 1px 0 0 var(--color-22), 2px 2px 0 var(--color-22), -1px 2px 0 var(--color-22), -1px 0 0 var(--color-22), 3px 3px 5px var(--color-3), 0 -1px 0 var(--color-22); }
+    text-align: left; }
 
   .project-description {
     position: relative;
@@ -1557,8 +1556,7 @@ nav {
     font-size: 1.25rem;
     background-color: var(--color-0);
     box-shadow: inset 0 0 20px var(--color-2);
-    border: 3px solid var(--color-01);
-    text-shadow: 1px 1px 0 var(--color-3-11), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4), 0 -1px 0 var(--color-011); }
+    border: 3px solid var(--color-01); }
 
   .project-requirements-list li,
   .applied-skills-list li,

@@ -30,15 +30,15 @@
   letter-spacing: 8px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-22),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  -1px -1px 0 var(--color-0),
-  1px 0 0 var(--color-0),
-  3px 3px 0 var(--color-0),
-  -1px 2px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  3px 3px 3px var(--color-4),
+  2px 2px 0 var(--color-4),
+  1px -1px 1px var(--color-0),
+  -1px 0 1px var(--color-0),
+  -1px -1px 2px var(--color-0),
+  1px 0 1px var(--color-0),
+  3px 3px 2px var(--color-0),
+  -1px 2px 1px var(--color-0),
+  -1px 0 1px var(--color-0),
+  3px 3px 3px var(--color-41),
   0 -1px 0 var(--color-0);
 }
 
@@ -248,17 +248,17 @@
   font-size: 2.25rem;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  text-shadow: 1px 1px 0 var(--color-3-1),
+  2px 2px 1px var(--color-41),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 2px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  3px 3px 3px var(--color-41),
+  0 -1px 0 var(--color-011);
 }
 
 .topics-container ul {
@@ -339,7 +339,7 @@
   3px 3px 0 var(--color-4),
   -1px 2px 0 var(--color-011),
   -1px 0 0 var(--color-011),
-  2px 2px 10px var(--color-4-0),
+  2px 2px 5px var(--color-4-0),
   0 -1px 0 var(--color-011);
 }
 
@@ -352,7 +352,7 @@
   font-weight: lighter;
   letter-spacing: 4px;
   text-shadow: 1px 1px 0 var(--color-0),
-  2px 2px 0 var(--color-4-0),
+  2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-01),
   -1px 0 0 var(--color-01),
   -1px -1px 0 var(--color-01),
@@ -360,7 +360,7 @@
   3px 3px 0 var(--color-3),
   -1px 2px 0 var(--color-01),
   -1px 0 0 var(--color-01),
-  2px 2px 5px var(--color-4-0),
+  2px 2px 5px var(--color-31),
   0 -1px 0 var(--color-01);
 }
 
@@ -378,16 +378,16 @@
   letter-spacing: 2px;
   font-family: var(--font-1);
   text-shadow: 1px 1px 0 var(--color-3-1),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  2px 2px 1px var(--color-41),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 2px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  3px 3px 3px var(--color-4),
+  0 -1px 0 var(--color-011);
 }
 
 .skill-bar-container {
@@ -460,16 +460,16 @@
   letter-spacing: 5px;
   color: transparent;
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-00),
+  text-shadow: 1px 1px 0 var(--color-21),
   2px 2px 1px var(--color-41),
-  1px -1px 0 var(--color-011),
-  -1px 0 0 var(--color-011),
-  -1px -1px 0 var(--color-011),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 2px var(--color-011),
   1px 0 0 var(--color-011),
-  3px 3px 0 var(--color-4),
-  -1px 2px 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
   -1px 0 0 var(--color-011),
-  2px 2px 10px var(--color-4-0),
+  3px 3px 3px var(--color-41),
   0 -1px 0 var(--color-011);
   z-index: 4;
 }
@@ -490,7 +490,7 @@
   letter-spacing: 4px;
   font-family: var(--font-7);
   text-shadow: 1px 1px 0 var(--color-0),
-  2px 2px 0 var(--color-4-0),
+  2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-01),
   -1px 0 0 var(--color-01),
   -1px -1px 0 var(--color-01),
@@ -498,7 +498,7 @@
   3px 3px 0 var(--color-3),
   -1px 2px 0 var(--color-01),
   -1px 0 0 var(--color-01),
-  2px 2px 5px var(--color-4-0),
+  2px 2px 5px var(--color-31),
   0 -1px 0 var(--color-01);
 }
 

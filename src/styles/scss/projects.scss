@@ -32,15 +32,15 @@
   letter-spacing: 8px;
   color: transparent;
   text-shadow: 1px 1px 0 var(--color-22),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  -1px -1px 0 var(--color-0),
-  1px 0 0 var(--color-0),
-  3px 3px 0 var(--color-0),
-  -1px 2px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  3px 3px 3px var(--color-4),
+  2px 2px 0 var(--color-4),
+  1px -1px 1px var(--color-0),
+  -1px 0 1px var(--color-0),
+  -1px -1px 2px var(--color-0),
+  1px 0 1px var(--color-0),
+  3px 3px 2px var(--color-0),
+  -1px 2px 1px var(--color-0),
+  -1px 0 1px var(--color-0),
+  3px 3px 3px var(--color-41),
   0 -1px 0 var(--color-0);
 }
 
@@ -233,17 +233,17 @@
   letter-spacing: 3px;
   color: transparent;
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-3-11),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  text-shadow: 1px 1px 0 var(--color-3-1),
+  2px 2px 1px var(--color-41),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 2px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  3px 3px 3px var(--color-41),
+  0 -1px 0 var(--color-011);
   z-index: 3;
 }
 
@@ -355,30 +355,30 @@
   font-weight: bold;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-11),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  3px 3px 5px var(--color-3),
-  0 -1px 0 var(--color-21);
+  text-shadow: 1px 1px 0 var(--color-3-1),
+  2px 2px 1px var(--color-41),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 2px var(--color-011),
+  1px 0 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
+  -1px 0 0 var(--color-011),
+  3px 3px 3px var(--color-4),
+  0 -1px 0 var(--color-011);
 }
 
 .project-links-container .details-header {
   text-shadow: 1px 1px 0 var(--color-01),
-  2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-011),
-  -1px 0 0 var(--color-011),
-  -1px -1px 0 var(--color-011),
+  2px 2px 1px var(--color-41),
+  1px -1px 1px var(--color-011),
+  -1px 0 1px var(--color-011),
+  -1px -1px 2px var(--color-011),
   1px 0 0 var(--color-011),
-  3px 3px 0 var(--color-011),
-  -1px 2px 0 var(--color-011),
+  3px 3px 1px var(--color-4),
+  -1px 2px 1px var(--color-011),
   -1px 0 0 var(--color-011),
-  3px 3px 5px var(--color-3),
+  3px 3px 3px var(--color-4),
   0 -1px 0 var(--color-011);
 
 }
@@ -539,7 +539,7 @@
   #project-close-button {
     position: absolute;
     top: .6rem;
-    right: .85rem;
+    right: .5rem;
   }
 
   #project-close-button i{
@@ -577,17 +577,6 @@
     flex-wrap: wrap;
     font-weight: bold;
     text-align: left;
-    text-shadow: 1px 1px 0 var(--color-3-2),
-    2px 2px 0 var(--color-4),
-    1px -1px 0 var(--color-22),
-    -1px 0 0 var(--color-22),
-    -1px -1px 0 var(--color-22),
-    1px 0 0 var(--color-22),
-    2px 2px 0 var(--color-22),
-    -1px 2px 0 var(--color-22),
-    -1px 0 0 var(--color-22),
-    3px 3px 5px var(--color-3),
-    0 -1px 0 var(--color-22);
   }
 
   .project-description {
@@ -645,17 +634,6 @@
     background-color: var(--color-0);
     box-shadow: inset 0 0 20px var(--color-2);
     border: 3px solid var(--color-01);
-    text-shadow: 1px 1px 0 var(--color-3-11),
-    2px 2px 2px var(--color-4),
-    1px -1px 1px var(--color-011),
-    -1px 0 1px var(--color-011),
-    -1px -1px 3px var(--color-011),
-    1px 0 0 var(--color-011),
-    3px 3px 1px var(--color-4),
-    -1px 2px 1px var(--color-011),
-    -1px 0 0 var(--color-011),
-    3px 3px 5px var(--color-4),
-    0 -1px 0 var(--color-011);
   }
 
   .project-requirements-list li,
