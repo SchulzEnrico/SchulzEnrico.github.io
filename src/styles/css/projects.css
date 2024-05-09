@@ -359,9 +359,14 @@
     min-height: 2.5rem;
     max-height: 2.5rem; }
 
+  #project-close-button {
+    position: absolute;
+    top: .6rem;
+    right: .85rem; }
+
   #project-close-button i {
     top: .5vh;
-    right: 1vw; }
+    right: .6rem; }
 
   .project-back h5 {
     position: relative;
@@ -376,7 +381,7 @@
   .name-affix {
     margin: 0 2vw;
     position: relative;
-    max-width: 80vw;
+    max-width: 5rem !important;
     top: .4rem;
     font-size: .65rem;
     flex-wrap: wrap;

@@ -82,13 +82,12 @@ $(document).ready(function() {
     });
 });
 
-// Diese Funktion steuert die Sichtbarkeit der Projects-Sektion basierend auf dem Status der Skills-Sektion
 function toggleProjectsVisibility(isSkillsOpen) {
     const projectsSection = document.getElementById('projects');
     if (isSkillsOpen) {
-        projectsSection.style.display = 'none'; // Verstecke die Projects-Sektion, wenn die Skills-Sektion geöffnet ist
+        projectsSection.style.display = 'none';
     } else {
-        projectsSection.style.display = 'block'; // Zeige die Projects-Sektion, wenn die Skills-Sektion geschlossen ist
+        projectsSection.style.display = 'block';
     }
 }
 
@@ -96,32 +95,38 @@ function toggleProjectsVisibility(isSkillsOpen) {
 function toggleSkills(isOpen) {
     const skillsSection = document.getElementById('skills');
     if (isOpen) {
-        skillsSection.classList.add('open'); // Füge der Skills-Sektion die Klasse 'open' hinzu, um anzuzeigen, dass sie geöffnet ist
-        toggleProjectsVisibility(true); // Verstecke die Projects-Sektion, wenn die Skills-Sektion geöffnet wird
+        skillsSection.classList.add('open');
+        toggleProjectsVisibility(true);
     } else {
-        skillsSection.classList.remove('open'); // Entferne die Klasse 'open' von der Skills-Sektion, um anzuzeigen, dass sie geschlossen ist
-        toggleProjectsVisibility(false); // Zeige die Projects-Sektion, wenn die Skills-Sektion geschlossen wird
+        skillsSection.classList.remove('open');
+        toggleProjectsVisibility(false);
     }
 }
 
-// Füge einen Event-Listener hinzu, um zu überwachen, ob die Skills-Sektion geöffnet oder geschlossen wird
 const skillsSection = document.getElementById('skills');
 skillsSection.addEventListener('click', function() {
     const isOpen = this.classList.contains('open');
     toggleSkills(!isOpen);
 });
 
-// Initialisierung: Stelle sicher, dass die Projects-Sektion sichtbar ist, wenn die Seite geladen wird
 toggleProjectsVisibility(false);
 
-// Event-Listener für den "Close" Button in den Skills hinzufügen
 document.addEventListener('click', function(event) {
     const closeButton = event.target.closest('.close-button');
     if (closeButton) {
         const skillElement = closeButton.closest('.skill');
         if (skillElement) {
             flipCard(skillElement);
-            toggleProjectsVisibility(true); // Zeige die Projects-Sektion, wenn der "Close" Button in den Skills geklickt wird
+            toggleProjectsVisibility(true);
         }
     }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Nachdem die Seite vollständig geladen wurde
+
+    // Simuliere die Animation abgeschlossen
+    setTimeout(function() {
+        document.getElementById("credits").classList.add("animation-completed");
+    }, 5000); // Hier 5000 ms als Beispiel für die Dauer der Animation, bitte anpassen
 });
