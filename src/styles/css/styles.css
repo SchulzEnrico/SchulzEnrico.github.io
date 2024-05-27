@@ -129,15 +129,16 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    /*font-weight: bold;*/
-    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+    font-weight: bold;
+    text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
       text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4-0), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
     nav a.active {
       font-weight: bold;
-      animation: mirrorRotate 1s forwards;
+      /*      animation: mirrorRotate 1s forwards;*/
+      scale: 1.2;
       color: transparent;
       text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 5px 5px var(--color-31), 0 -1px 0 var(--color-0); }
   nav a:not(.active):focus {
@@ -431,7 +432,7 @@ nav {
   font-size: 2rem;
   letter-spacing: 6px;
   overflow: hidden;
-  background: linear-gradient(90deg, var(--color-0), var(--color-4), var(--color-4-0), var(--color-4), var(--color-0)) no-repeat;
+  background: linear-gradient(90deg, var(--color-01), var(--color-4), var(--color-4-0), var(--color-41), var(--color-4), var(--color-3-3)) no-repeat;
   background-size: 80%;
   animation: animate 7s linear infinite;
   -webkit-background-clip: text;
@@ -1583,7 +1584,7 @@ nav {
     font-size: .5rem; } }
 #credits {
   width: 100vw;
-  background-color: var(--color-00); }
+  background-color: var(--color-01); }
 
 #credits-h2 {
   top: 11vh;
@@ -1750,15 +1751,16 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    /*font-weight: bold;*/
-    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+    font-weight: bold;
+    text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
       text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4-0), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
     nav a.active {
       font-weight: bold;
-      animation: mirrorRotate 1s forwards;
+      /*      animation: mirrorRotate 1s forwards;*/
+      scale: 1.2;
       color: transparent;
       text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 5px 5px var(--color-31), 0 -1px 0 var(--color-0); }
   nav a:not(.active):focus {
@@ -2165,7 +2167,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px; }
 
 .background-color-wrapper {
-  background-color: var(--color-22); }
+  background-color: var(--color-01); }
 
 .body-scroll-lock {
   overflow: hidden; }
@@ -2204,26 +2206,29 @@ h2 {
   position: absolute;
   margin: 0 3vw 6vh 0;
   padding: 0;
-  top: 9vh;
+  top: 11.5vh;
   right: 0;
   text-align: start;
   justify-self: end;
   font-size: 4vmax;
   font-family: var(--font-4);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-23), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-21), -1px 0 0 var(--color-21), -1px -1px 0 var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-21), -1px 2px 0 var(--color-21), -1px 0 0 var(--color-21), 4px 4px 5px var(--color-3-1), 0 -1px 0 var(--color-21);
+  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 8px var(--color-31);
   letter-spacing: 10px;
-  z-index: 0; }
+  z-index: 0;
+  opacity: .25; }
 
 .section-hashtag {
+  display: none;
   position: relative;
-  top: -.75rem;
-  right: -3.5rem;
+  top: -1rem;
+  right: -1.5rem;
   font-size: 5.5vmax;
-  font-family: var(--font-7);
+  font-weight: bold;
+  font-family: var(--font-2);
   transform: perspective(1000px) rotateY(50deg);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 4px 4px 10px var(--color-3-2), 0 -1px 0 var(--color-0);
   z-index: -1; }
 
 .educations-container {
