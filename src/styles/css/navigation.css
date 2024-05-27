@@ -23,15 +23,16 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    /*font-weight: bold;*/
-    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+    font-weight: bold;
+    text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
     nav a:hover {
       transform: scale(1.2);
       color: transparent;
       text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4-0), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
     nav a.active {
       font-weight: bold;
-      animation: mirrorRotate 1s forwards;
+      /*      animation: mirrorRotate 1s forwards;*/
+      scale: 1.2;
       color: transparent;
       text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 5px 5px var(--color-31), 0 -1px 0 var(--color-0); }
   nav a:not(.active):focus {

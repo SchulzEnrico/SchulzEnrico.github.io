@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .background-color-wrapper {
-  background-color: var(--color-22);
+  background-color: var(--color-01);
 }
 
 .body-scroll-lock {
@@ -142,37 +142,36 @@ h2 {
   position: absolute;
   margin: 0 3vw 6vh 0;
   padding: 0;
-  top: 9vh;
+  top: 11.5vh;
   right: 0;
   text-align: start;
   justify-self: end;
   font-size: 4vmax;
   font-family: var(--font-4);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-23),
+  text-shadow: 1px 1px 0 var(--color-0),
   2px 2px 0 var(--color-41),
-  1px -1px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  -1px -1px 0 var(--color-21),
-  1px 0 0 var(--color-21),
-  3px 3px 0 var(--color-21),
-  -1px 2px 0 var(--color-21),
-  -1px 0 0 var(--color-21),
-  4px 4px 5px var(--color-3-1),
-  0 -1px 0 var(--color-21);
+  1px -1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  -1px -1px 0 var(--color-0),
+  -1px 0 0 var(--color-0),
+  2px 2px 8px var(--color-31);
   letter-spacing: 10px;
   z-index: 0;
+  opacity: .25;
 }
 
 .section-hashtag {
+  display: none;
   position: relative;
-  top: -.75rem;
-  right: -3.5rem;
+  top: -1rem;
+  right: -1.5rem;
   font-size: 5.5vmax;
-  font-family: var(--font-7);
+  font-weight: bold;
+  font-family: var(--font-2);
   transform: perspective(1000px) rotateY(50deg);
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3),
+  text-shadow: 1px 1px 0 var(--color-3-1),
   2px 2px 0 var(--color-4),
   1px -1px 0 var(--color-0),
   -1px 0 0 var(--color-0),
