@@ -17,13 +17,14 @@
   font-size: 1.15rem;
   font-weight: bold;
   letter-spacing: 4px;
-  color: transparent;
+  color: var(--color-21);
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-000), 2px 2px 3px var(--color-4), 1px -1px 3px var(--color-21), -1px 0 3px var(--color-21), -1px -1px 3px var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-4), -1px 2px 3px var(--color-21), -1px 0 0 var(--color-21), 2px 2px 5px var(--color-41), 0 -1px 0 var(--color-21); }
+  text-shadow: 0 0 10px var(--color-0); }
 
 .about-me-content a {
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-23), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), -1px 2px 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 0 0 var(--color-23), 0 0 10px var(--color-0), 0 -1px 0 var(--color-23);
+  filter: brightness(85%); }
 
 @media only screen and (max-width: 768px) {
   .about-me-content {
