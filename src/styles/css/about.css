@@ -32,6 +32,9 @@
   .about-me-content {
     left: 7.5vw;
     font-size: .85rem;
-    max-width: 87vw !important; } }
+    max-width: 87vw !important; }
+
+  .about-container {
+    padding-top: 7.5rem !important; } }
 
 /*# sourceMappingURL=about.css.map */
