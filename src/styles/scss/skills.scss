@@ -339,7 +339,7 @@
 }
 
 .project-name {
-  text-decoration: underline;
+  text-decoration: underline 3px var(--color-3-1);
 }
 
 .skill-project-use-container ul li li {
@@ -627,12 +627,22 @@
     min-width: 75vw;
     max-width: 75vw;
     background-color: var(--color-11);
-    box-shadow: inset 5px 5px 10px var(--color-0),
-                inset -5px -5px 10px var(--color-0);
+    box-shadow: inset 5px 5px 15px var(--color-000),
+                inset -5px -5px 15px var(--color-000);
     border: 1px solid var(--color-4);
     outline: 2px solid var(--color-3-11);
     border-radius: 7px;
     font-size: 1rem;
+    text-shadow: 1px 1px 0 var(--color-3-1),
+    2px 1px 0 var(--color-41),
+    1px -1px 0 var(--color-22),
+    -1px -1px 0 var(--color-22),
+    1px 0 0 var(--color-22),
+    -1px 2px 0 var(--color-22),
+    2px -1px 0 var(--color-22),
+    2px 2px 0 var(--color-22),
+    -1px 1px 0 var(--color-22),
+    -1px 0 0 var(--color-22);
   }
 
   .topics-container ul {
@@ -661,10 +671,7 @@
     text-shadow: 1px 1px 0 var(--color-3-2),
     2px 1px 0 var(--color-4),
     1px -1px 0 var(--color-22),
-    -1px -1px 0 var(--color-22),
-    1px 0 0 var(--color-22),
     -1px 2px 0 var(--color-22),
-    2px -1px 0 var(--color-22),
     2px 2px 0 var(--color-22),
     -1px 1px 0 var(--color-22),
     -1px 0 0 var(--color-22);
@@ -701,6 +708,10 @@
     font-size: 1.2rem;
   }
 
+  .skill-project-use-container ul li li {
+    text-shadow: 1px 1px 0 var(--color-4);
+  }
+
   .skill-project-use-container ul ul {
     margin-top: 0;
   }
@@ -712,6 +723,16 @@
 
   .usage-data {
     font-size: .8rem;
+    text-shadow: 1px 1px 0 var(--color-3-1),
+    2px 1px 0 var(--color-41),
+    1px -1px 0 var(--color-22),
+    -1px -1px 0 var(--color-22),
+    1px 0 0 var(--color-22),
+    -1px 2px 0 var(--color-22),
+    2px -1px 0 var(--color-22),
+    2px 2px 0 var(--color-22),
+    -1px 1px 0 var(--color-22),
+    -1px 0 0 var(--color-22);
   }
 
   .skill-bar-container {
