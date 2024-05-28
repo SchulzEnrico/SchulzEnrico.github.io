@@ -492,9 +492,9 @@ nav {
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 5px;
-  color: transparent;
+  color: var(--color-22);
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-000), 2px 2px 3px var(--color-4), 1px -1px 3px var(--color-21), -1px 0 3px var(--color-21), -1px -1px 3px var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-4), -1px 2px 3px var(--color-21), -1px 0 0 var(--color-21), 2px 2px 5px var(--color-41), 0 -1px 0 var(--color-21); }
+  text-shadow: 0 0 10px var(--color-0); }
 
 .motivation-essence {
   font-size: 1.75rem;
@@ -502,7 +502,7 @@ nav {
   letter-spacing: 8px;
   color: transparent;
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 7px var(--color-3), 0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), -1px 2px 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 0 0 var(--color-23), 0 0 10px var(--color-0), 0 -1px 0 var(--color-23);
   filter: brightness(85%); }
 
 .mobile-br-tag {
@@ -548,13 +548,14 @@ nav {
   font-size: 1.15rem;
   font-weight: bold;
   letter-spacing: 4px;
-  color: transparent;
+  color: var(--color-21);
   font-family: var(--font-1);
-  text-shadow: 1px 1px 0 var(--color-000), 2px 2px 3px var(--color-4), 1px -1px 3px var(--color-21), -1px 0 3px var(--color-21), -1px -1px 3px var(--color-21), 1px 0 0 var(--color-21), 3px 3px 0 var(--color-4), -1px 2px 3px var(--color-21), -1px 0 0 var(--color-21), 2px 2px 5px var(--color-41), 0 -1px 0 var(--color-21); }
+  text-shadow: 0 0 10px var(--color-0); }
 
 .about-me-content a {
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-23), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), -1px -1px 0 var(--color-3-11), 1px 0 0 var(--color-3-11), -1px 2px 0 var(--color-3-11), 2px 2px 0 var(--color-3-11), -1px 1px 0 var(--color-3-11), -1px 0 0 var(--color-3-11), 2px 2px 5px var(--color-3-11), 0 -1px 0 var(--color-3-11); }
+  text-shadow: 1px 1px 0 var(--color-3-11), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), -1px 2px 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 1px 0 var(--color-23), -1px 0 0 var(--color-23), 0 0 10px var(--color-0), 0 -1px 0 var(--color-23);
+  filter: brightness(85%); }
 
 @media only screen and (max-width: 768px) {
   .about-me-content {
@@ -589,7 +590,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 2px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 2px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-01), 2px 2px 0 var(--color-21), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .category-skills-container {
   position: relative;
@@ -673,7 +674,7 @@ nav {
   padding: 5px 5px 5px 15px;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 10px var(--color-41), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-3-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-22), -1px 0 0 var(--color-22), -1px -1px 0 var(--color-22), 2px -1px 0 var(--color-22), 1px 0 1px var(--color-22), -1px 2px 0 var(--color-22), -1px 0 0 var(--color-22), 0 -1px 0 var(--color-22); }
 
 .skill-back .skill-name {
   grid-row: 1;
@@ -1146,7 +1147,7 @@ nav {
   font-size: 2.5rem;
   letter-spacing: 8px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 2px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 2px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-01), 2px 2px 0 var(--color-21), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .project {
   perspective: 1000px;
@@ -2167,7 +2168,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px; }
 
 .background-color-wrapper {
-  background-color: var(--color-01); }
+  background-color: var(--color-000); }
 
 .body-scroll-lock {
   overflow: hidden; }
@@ -2287,9 +2288,9 @@ h2 {
   body {
     max-width: 100vw; }
 
-  .background-color-wrapper {
-    background-color: var(--color-23); }
-
+  /*  .background-color-wrapper {
+      background-color: var(--color-23);
+    }*/
   h2 {
     position: relative;
     display: block;
