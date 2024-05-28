@@ -309,16 +309,17 @@
   top: -.25rem;
   left: 0;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-22), -1px -1px 0 var(--color-22), 1px 0 0 var(--color-22), -1px 2px 0 var(--color-22), 2px -1px 0 var(--color-22), 2px 2px 0 var(--color-22), -1px 1px 0 var(--color-22), -1px 0 0 var(--color-22); }
 
 .project-back .project-links-list li:before {
   content: "\1F517";
   font-size: 1rem;
   top: .25rem;
-  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 2px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-1), -1px -1px 0 var(--color-1), 1px 0 0 var(--color-1), -1px 2px 0 var(--color-1), 2px -1px 0 var(--color-1), 2px 2px 0 var(--color-1), -1px 1px 0 var(--color-1), -1px 0 0 var(--color-1); }
 
 @media screen and (max-width: 768px) {
   .projects-container {
+    padding-top: 7.5rem !important;
     padding-bottom: 150px !important; }
 
   .project-management-container {
@@ -330,7 +331,7 @@
     top: 3.5vh; }
 
   .projects-container h3 {
-    margin: 1vh 0 0 6vw;
+    margin: 1vh 0 0 3vw;
     font-size: 1.5rem; }
 
   .project {
