@@ -78,52 +78,50 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    font-weight: bold;
-    text-shadow: 1px 1px 0 var(--color-000),
-    2px 2px 0 var(--color-41),
-    1px -1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    -1px -1px 0 var(--color-0),
-    1px 0 0 var(--color-0),
-    3px 3px 0 var(--color-0),
-    -1px 2px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    3px 3px 3px var(--color-4),
-    0 -1px 0 var(--color-0);
+    text-shadow: 1px 1px 0 var(--color-21),
+    2px 1px 0 var(--color-41),
+    1px -1px 0 var(--color-01),
+    -1px -1px 0 var(--color-01),
+    1px 0 0 var(--color-01),
+    -1px 2px 0 var(--color-01),
+    2px -1px 0 var(--color-01),
+    2px 2px 0 var(--color-01),
+    -1px 1px 0 var(--color-01),
+    -1px 0 0 var(--color-01);
 
     &:hover {
       transform: scale(1.2);
+      font-weight: bold;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-0),
-      2px 2px 1px var(--color-4-0),
-      1px -1px 1px var(--color-011),
-      -1px 0 1px var(--color-011),
-      -1px -1px 2px var(--color-011),
-      1px 0 0 var(--color-011),
-      3px 3px 1px var(--color-4),
-      -1px 2px 1px var(--color-011),
-      -1px 0 0 var(--color-011),
-      3px 3px 5px var(--color-4-0),
-      0 -1px 0 var(--color-011);
+      text-shadow: 1px 1px 0 var(--color-3),
+      2px 1px 0 var(--color-4),
+      1px -1px 0 var(--color-0),
+      -1px -1px 0 var(--color-0),
+      1px 0 0 var(--color-0),
+      -1px 2px 0 var(--color-0),
+      2px -1px 0 var(--color-0),
+      2px 2px 0 var(--color-0),
+      -1px 1px 0 var(--color-0),
+      -1px 0 0 var(--color-0);
     }
 
     &.active {
       font-weight: bold;
-/*      animation: mirrorRotate 1s forwards;*/
       scale: 1.2;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-3-1),
-      0 0 0 var(--color-22),
+      text-decoration: underline 3px var(--color-3-1);
+      text-shadow: 1px 1px 0 var(--color-11),
       2px 2px 0 var(--color-4),
-      1px -1px 0 var(--color-0),
-      -1px 0 0 var(--color-0),
-      -1px -1px 0 var(--color-0),
-      1px 0 0 var(--color-0),
-      3px 3px 0 var(--color-0),
-      -1px 2px 0 var(--color-0),
-      -1px 0 0 var(--color-0),
-      2px 5px 5px var(--color-31),
-      0 -1px 0 var(--color-0);
+      1px -1px 1px var(--color-0),
+      -1px 0 1px var(--color-0),
+      -1px -1px 1px var(--color-0),
+      1px 0 1px var(--color-0),
+      3px 3px 1px var(--color-0),
+      -1px 2px 1px var(--color-0),
+      -1px 0 1px var(--color-0),
+      1px 1px 5px var(--color-0),
+      0 -1px 0 var(--color-0),
+      0 0 5px var(--color-4-0);
     }
   }
 
@@ -132,16 +130,16 @@ nav {
     @include animate(bounce, up, null, 1s, .5);
     font-weight: bold;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-3),
-    1px 2px 0 var(--color-4-0),
-    1px -1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    -1px -1px 0 var(--color-0),
-    1px 0 0 var(--color-0),
-    3px 3px 0 var(--color-0),
-    -1px 2px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    3px 3px 4px var(--color-4-0),
+    text-shadow: 1px 1px 0 var(--color-11),
+    2px 2px 0 var(--color-4),
+    1px -1px 1px var(--color-0),
+    -1px 0 1px var(--color-0),
+    -1px -1px 1px var(--color-0),
+    1px 0 1px var(--color-0),
+    3px 3px 1px var(--color-0),
+    -1px 2px 1px var(--color-0),
+    -1px 0 1px var(--color-0),
+    1px 1px 5px var(--color-0),
     0 -1px 0 var(--color-0);
   }
 
@@ -179,32 +177,31 @@ nav {
     z-index: 1;
     font-size: 1.2rem;
     font-weight: bold;
-    text-shadow: 1px 1px 0 var(--color-0),
-    2px 2px 0 var(--color-4),
-    1px -1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    -1px -1px 0 var(--color-0),
-    1px 0 0 var(--color-0),
-    3px 3px 0 var(--color-0),
-    -1px 2px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
+    text-shadow: 1px 1px 0 var(--color-1),
+    2px 2px 0 var(--color-23),
+    1px -1px 1px var(--color-0),
+    -1px 0 1px var(--color-0),
+    -1px -1px 1px var(--color-0),
+    1px 0 1px var(--color-0),
+    3px 3px 1px var(--color-0),
+    -1px 2px 1px var(--color-0),
+    -1px 0 1px var(--color-0),
+    1px 1px 5px var(--color-0),
     0 -1px 0 var(--color-0);
   }
 
   #es-nav-logo:hover .about-link-label,
   #es-nav-logo:focus .about-link-label,
   #es-nav-logo.active .about-link-label {
-    font-weight: lighter;
-    text-shadow: 1px 1px 0 var(--color-31),
-    1px 1px 0 var(--color-0),
-    1px -1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    -1px -1px 0 var(--color-0),
-    1px 0 0 var(--color-0),
-    2px 2px 0 var(--color-0),
-    -1px 1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    2px 2px 5px var(--color-0),
+    text-shadow: 1px 1px 0 var(--color-3),
+    1px -1px 1px var(--color-0),
+    -1px 0 1px var(--color-0),
+    -1px -1px 1px var(--color-0),
+    1px 0 1px var(--color-0),
+    3px 3px 1px var(--color-0),
+    -1px 2px 1px var(--color-0),
+    -1px 0 1px var(--color-0),
+    1px 1px 5px var(--color-0),
     0 -1px 0 var(--color-0);
   }
 
@@ -266,17 +263,16 @@ nav {
   top: 0;
   letter-spacing: 5px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-0),
-  2px 2px 0 var(--color-4-0),
-  1px -1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  -1px -1px 0 var(--color-0),
-  1px 0 0 var(--color-0),
-  3px 3px 0 var(--color-0),
-  -1px 2px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  0 0 6px var(--color-31),
-  0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-21),
+  2px 1px 0 var(--color-41),
+  1px -1px 0 var(--color-01),
+  -1px -1px 0 var(--color-01),
+  1px 0 0 var(--color-01),
+  -1px 2px 0 var(--color-01),
+  2px -1px 0 var(--color-01),
+  2px 2px 0 var(--color-01),
+  -1px 1px 0 var(--color-01),
+  -1px 0 0 var(--color-01);
 }
 
 #business-card-nav-link:focus a,
@@ -284,16 +280,16 @@ nav {
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-3),
-  2px 2px 0 var(--color-4),
+  text-shadow: 1px 1px 0 var(--color-31),
+  2px 1px 0 var(--color-4),
   1px -1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
   -1px -1px 0 var(--color-0),
   1px 0 0 var(--color-0),
-  3px 3px 0 var(--color-0),
   -1px 2px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  0 -1px 0 var(--color-0);
+  2px -1px 0 var(--color-0),
+  2px 2px 0 var(--color-0),
+  -1px 1px 0 var(--color-0),
+  -1px 0 0 var(--color-0);
   transform: none;
 }
 
@@ -361,7 +357,7 @@ nav {
   padding: 1vw;
   border-bottom-left-radius: 150px;
   border-top-left-radius: 150px;
-  background-color: var(--color-21);
+  background-color: var(--color-01);
   box-shadow: inset 5px 5px 35px var(--color-0),
               inset 5px -5px 35px var(--color-0);
   border: 2px solid var(--color-3);
@@ -375,18 +371,20 @@ nav {
 }
 
 .mobile-nav.nav-open a.active{
-  text-shadow: 1px 1px 0 var(--color-3-1),
-  1px 1px 0 var(--color-0),
-  1px -1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  -1px -1px 0 var(--color-0),
-  1px 0 0 var(--color-0),
-  2px 2px 0 var(--color-0),
-  -1px 1px 0 var(--color-0),
-  -1px 0 0 var(--color-0),
-  2px 2px 5px var(--color-0),
-  0 -1px 0 var(--color-0);
   animation: none;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--color-3-1),
+  2px 2px 0 var(--color-22),
+  1px -1px 1px var(--color-0),
+  -1px 0 1px var(--color-0),
+  -1px -1px 1px var(--color-0),
+  1px 0 1px var(--color-0),
+  3px 3px 1px var(--color-0),
+  -1px 2px 1px var(--color-0),
+  -1px 0 1px var(--color-0),
+  1px 1px 5px var(--color-0),
+  0 -1px 0 var(--color-0),
+  0 0 6px var(--color-01);
 }
 
 @media only screen and (min-height: 50vh) {
@@ -424,12 +422,13 @@ nav {
     3px 3px 0 var(--color-0),
     -1px 2px 0 var(--color-0),
     -1px 0 0 var(--color-0),
-    3px 3px 3px var(--color-41),
+    3px 3px 5px var(--color-0),
     0 -1px 0 var(--color-0);
   }
 
-  .about-link-label {
-    font-weight: normal;
+ .about-link-label {
+    font-weight: normal !important;
+    font-size: .95rem !important;
     z-index: 0;
     text-shadow: 1px 1px 0 var(--color-21),
     2px 2px 0 var(--color-4),
@@ -440,7 +439,7 @@ nav {
     3px 3px 0 var(--color-0),
     -1px 2px 0 var(--color-0),
     -1px 0 0 var(--color-0),
-    3px 3px 3px var(--color-41),
+    3px 3px 5px var(--color-0),
     0 -1px 0 var(--color-0) !important;
   }
 
@@ -458,17 +457,6 @@ nav {
   }
 
   a#es-nav-logo.active {
-    text-shadow: 1px 1px 0 var(--color-3-1),
-    1px 1px 0 var(--color-0),
-    1px -1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    -1px -1px 0 var(--color-0),
-    1px 0 0 var(--color-0),
-    2px 2px 0 var(--color-0),
-    -1px 1px 0 var(--color-0),
-    -1px 0 0 var(--color-0),
-    2px 2px 5px var(--color-0),
-    0 -1px 0 var(--color-0);
     animation: none;
     scale: none;
   }

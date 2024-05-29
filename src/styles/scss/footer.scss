@@ -29,17 +29,15 @@ footer i{
   color: transparent;
   font-size: 3rem;
   letter-spacing: 3px;
-  text-shadow: 1px 1px 0 var(--color-000),
-  2px 2px 2px var(--color-4),
-  1px -1px 1px var(--color-011),
-  -1px 0 1px var(--color-011),
-  -1px -1px 3px var(--color-011),
-  1px 0 0 var(--color-011),
-  3px 3px 1px var(--color-4),
-  -1px 2px 1px var(--color-011),
-  -1px 0 0 var(--color-011),
-  2px 2px 5px var(--color-4-0),
-  0 -1px 0 var(--color-011);
+  text-shadow: 1px 1px 0 var(--color-22),
+  2px 1px 0 var(--color-41),
+  1px -1px 0 var(--color-01),
+  -1px -1px 0 var(--color-01),
+  1px 0 0 var(--color-01),
+  -1px 2px 0 var(--color-01),
+  2px -1px 0 var(--color-01),
+  2px 2px 0 var(--color-01),
+  -1px 1px 0 var(--color-01);
 }
 
 #fa-square-phone-flip {
@@ -54,7 +52,7 @@ footer i{
 footer i:hover,
 footer a:hover {
   scale: 1.2;
-  color: var(--color-3-2);
+  filter: brightness(125%);
 }
 
 footer a:focus,
