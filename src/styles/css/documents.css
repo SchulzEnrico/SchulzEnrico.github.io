@@ -1,5 +1,5 @@
 .documents-background-color-wrapper {
-  background-color: var(--color-01); }
+  background-color: var(--color-00); }
 
 .documents-container {
   display: flex;
@@ -42,7 +42,7 @@
   font-size: 1.75rem;
   font-weight: bold;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-22), 2px 2px 0 var(--color-2), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .documents-wrapper {
   position: relative;
@@ -58,7 +58,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 5px;
-  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-3-1), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), -1px 2px 0 var(--color-0), 2px 2px 0 var(--color-0), -2px -1px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 0 0 10px var(--color-0); }
 
 .documents-wrapper a {
   display: flex;
@@ -67,11 +67,12 @@
 
 .documents-wrapper i {
   margin: .2rem 1rem 0 0;
-  text-shadow: 1px 1px 0 var(--color-00), 2px 2px 2px var(--color-41), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 3px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 2px 2px 5px var(--color-23), 0 -1px 0 var(--color-011); }
+  text-shadow: 1px 1px 0 var(--color-2), 2px 2px 0 var(--color-41), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 10px var(--color-0), 0 -1px 0 var(--color-0); }
 
 .documents-wrapper a:hover {
   opacity: 1;
-  scale: 1.15; }
+  scale: 1.15;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), -1px 2px 0 var(--color-0), 2px 2px 0 var(--color-0), -2px -1px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 0 0 10px var(--color-0); }
 
 @media screen and (max-width: 768px) {
   .docs-container {

@@ -1605,7 +1605,7 @@ nav {
     font-size: .5rem; } }
 #credits {
   width: 100vw;
-  background-color: var(--color-01); }
+  background-color: var(--color-00); }
 
 #credits-h2 {
   top: 11vh;
@@ -2066,7 +2066,7 @@ footer i {
   color: transparent;
   font-size: 3rem;
   letter-spacing: 3px;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01); }
+  text-shadow: 1px 1px 0 var(--color-2), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01); }
 
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg); }
@@ -2173,8 +2173,8 @@ body {
   transition: filter 0.5s ease; }
 
 body::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; }
+  width: 7px;
+  height: 7px; }
 
 body::-webkit-scrollbar-track {
   background-color: var(--color-00); }
@@ -2184,8 +2184,8 @@ body::-webkit-scrollbar-corner {
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-3-1);
-  border: 1px solid var(--color-41);
-  outline: 2px solid var(--color-2);
+  border: 1px solid var(--color-4);
+  outline: 1px solid var(--color-2);
   border-radius: 25px; }
 
 .background-color-wrapper {
