@@ -126,7 +126,8 @@
   left: -9px;
   background-color: var(--color-00);
   border-radius: 14px 1px 35px 1px;
-  box-shadow: inset -2px -2px 7px var(--color-011), 3px 3px 6px var(--color-011); }
+  box-shadow: inset -2px -2px 7px var(--color-011), 3px 3px 6px var(--color-011);
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
 
 .skill .skill-back {
   position: absolute;
@@ -153,7 +154,7 @@
   font-family: var(--font-1);
   justify-items: center;
   letter-spacing: 4px;
-  background-color: var(--color-00);
+  background-color: var(--color-0);
   border-radius: 1px 14px 1px 35px;
   box-shadow: inset 2px -2px 8px var(--color-011), -3px 3px 8px var(--color-011); }
 
@@ -181,8 +182,9 @@
   background-color: transparent; }
 
 .topics-container::-webkit-scrollbar-thumb {
-  background-color: var(--color-3);
-  border: 1px solid var(--color-4-0);
+  background-color: var(--color-3-1);
+  border: 1px solid var(--color-41);
+  outline: 2px solid var(--color-2);
   border-radius: 25px; }
 
 .topics-container h5,
@@ -192,7 +194,7 @@
   font-size: 2.25rem;
   letter-spacing: 3px;
   color: transparent;
-  text-shadow: 1px 1px 0 var(--color-3-2), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-22), -1px -1px 0 var(--color-22), 1px 0 0 var(--color-22), -1px 2px 0 var(--color-22), 2px -1px 0 var(--color-22), 2px 2px 0 var(--color-22), -1px 1px 0 var(--color-22), -1px 0 0 var(--color-22); }
+  text-shadow: 1px 1px 0 var(--color-0), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-1), -1px -1px 0 var(--color-1), 1px 0 0 var(--color-1), -1px 2px 0 var(--color-1), 2px -1px 0 var(--color-1), 2px 2px 0 var(--color-1), -1px 1px 0 var(--color-1), -1px 0 0 var(--color-1); }
 
 .topics-container ul {
   margin: 0; }
@@ -202,7 +204,7 @@
   margin-bottom: 5px;
   color: transparent;
   letter-spacing: 4px;
-  text-shadow: 1px 1px 0 var(--color-22), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
+  text-shadow: 1px 1px 0 var(--color-22), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
 
 .skill-project-use-container {
   position: relative;
@@ -233,8 +235,9 @@
   background-color: transparent; }
 
 .skill-project-use-container::-webkit-scrollbar-thumb {
-  background-color: var(--color-3);
-  border: 1px solid var(--color-4-0);
+  background-color: var(--color-3-1);
+  border: 1px solid var(--color-41);
+  outline: 2px solid var(--color-2);
   border-radius: 25px; }
 
 .skill-project-use-container ul {
@@ -249,15 +252,16 @@
   font-weight: bold;
   color: transparent;
   letter-spacing: 5px;
-  text-shadow: 1px 1px 0 var(--color-01), 2px 1px 0 var(--color-4-0), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), -1px 2px 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 1px 0 var(--color-23), 0 0 10px var(--color-0), 0 -1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-01), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-23), -1px 0 0 var(--color-23), -1px -1px 0 var(--color-23), 1px 0 0 var(--color-23), -1px 2px 0 var(--color-23), 2px 2px 0 var(--color-23), -1px 1px 0 var(--color-23), 0 0 10px var(--color-0), 0 -1px 0 var(--color-23); }
 
 .project-name {
   text-decoration: underline 3px var(--color-3-1); }
 
 .skill-project-use-container ul li li {
   font-family: var(--font-7);
+  font-size: 1.15rem;
   letter-spacing: 4px;
-  text-shadow: 1px 1px 0 var(--color-23); }
+  text-shadow: 1px 1px 0 var(--color-4); }
 
 .skill-project-use-container ul ul {
   font-family: var(--font-5);
@@ -293,8 +297,8 @@
   margin: 3px 0;
   width: 90%;
   height: 3.75rem;
-  border: 1px solid var(--color-41);
-  outline: 3px solid var(--color-00);
+  border: 3px solid var(--color-3-11);
+  outline: 1px solid var(--color-4);
   background-color: var(--color-011);
   border-radius: 25px;
   box-shadow: inset 0 8px 30px var(--color-0), inset 5px -8px 30px var(--color-0);
@@ -337,7 +341,7 @@
 .skill-legend {
   position: absolute;
   font-weight: bold;
-  top: 4rem;
+  top: 4.5rem;
   right: 8rem;
   width: 100%;
   display: flex;
@@ -358,7 +362,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin: 5px;
+  margin: 10px;
   padding: 3px; }
 
 .skill-legend-item .skill-bar-fill {

@@ -23,24 +23,24 @@ nav {
     transition: text-shadow 50ms ease, color 50ms ease;
     letter-spacing: 8px;
     color: transparent;
-    font-weight: bold;
-    text-shadow: 1px 1px 0 var(--color-000), 2px 2px 0 var(--color-41), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-4), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-21), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
     nav a:hover {
       transform: scale(1.2);
+      font-weight: bold;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-0), 2px 2px 1px var(--color-4-0), 1px -1px 1px var(--color-011), -1px 0 1px var(--color-011), -1px -1px 2px var(--color-011), 1px 0 0 var(--color-011), 3px 3px 1px var(--color-4), -1px 2px 1px var(--color-011), -1px 0 0 var(--color-011), 3px 3px 5px var(--color-4-0), 0 -1px 0 var(--color-011); }
+      text-shadow: 1px 1px 0 var(--color-3), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), -1px 2px 0 var(--color-0), 2px -1px 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0); }
     nav a.active {
       font-weight: bold;
-      /*      animation: mirrorRotate 1s forwards;*/
       scale: 1.2;
       color: transparent;
-      text-shadow: 1px 1px 0 var(--color-3-1), 0 0 0 var(--color-22), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 5px 5px var(--color-31), 0 -1px 0 var(--color-0); }
+      text-decoration: underline 3px var(--color-3-1);
+      text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0), 0 0 5px var(--color-4-0); }
   nav a:not(.active):focus {
     outline: none;
     animation: bounce 1s 0.5;
     font-weight: bold;
     color: transparent;
-    text-shadow: 1px 1px 0 var(--color-3), 1px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 4px var(--color-4-0), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-11), 2px 2px 0 var(--color-4), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 @keyframes bounce {
   0% {
     transform: translateY(0); }
@@ -75,12 +75,11 @@ nav {
     z-index: 1;
     font-size: 1.2rem;
     font-weight: bold;
-    text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-1), 2px 2px 0 var(--color-23), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0); }
   nav #es-nav-logo:hover .about-link-label,
   nav #es-nav-logo:focus .about-link-label,
   nav #es-nav-logo.active .about-link-label {
-    font-weight: lighter;
-    text-shadow: 1px 1px 0 var(--color-31), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-3), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0); }
   nav #es-nav-logo img {
     margin: 0; }
   nav #es-nav-logo:hover,
@@ -128,14 +127,14 @@ nav {
   top: 0;
   letter-spacing: 5px;
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-0), 2px 2px 0 var(--color-4-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 0 6px var(--color-31), 0 -1px 0 var(--color-0); }
+  text-shadow: 1px 1px 0 var(--color-21), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
 
 #business-card-nav-link:focus a,
 #business-card-nav-link:hover a,
 #credits-nav-link:focus a,
 #credits-nav-link:hover a {
   font-weight: bold;
-  text-shadow: 1px 1px 0 var(--color-3), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 0 -1px 0 var(--color-0);
+  text-shadow: 1px 1px 0 var(--color-31), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), -1px 2px 0 var(--color-0), 2px -1px 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0);
   transform: none; }
 
 #business-card-nav-link a.active,
@@ -195,7 +194,7 @@ nav {
   padding: 1vw;
   border-bottom-left-radius: 150px;
   border-top-left-radius: 150px;
-  background-color: var(--color-21);
+  background-color: var(--color-01);
   box-shadow: inset 5px 5px 35px var(--color-0), inset 5px -5px 35px var(--color-0);
   border: 2px solid var(--color-3);
   outline: 1px solid var(--color-23);
@@ -207,8 +206,9 @@ nav {
   transform: translateX(0); }
 
 .mobile-nav.nav-open a.active {
-  text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
-  animation: none; }
+  animation: none;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--color-3-1), 2px 2px 0 var(--color-22), 1px -1px 1px var(--color-0), -1px 0 1px var(--color-0), -1px -1px 1px var(--color-0), 1px 0 1px var(--color-0), 3px 3px 1px var(--color-0), -1px 2px 1px var(--color-0), -1px 0 1px var(--color-0), 1px 1px 5px var(--color-0), 0 -1px 0 var(--color-0), 0 0 6px var(--color-01); }
 
 @media only screen and (min-height: 50vh) {
   .scroll-to-top.show {
@@ -231,12 +231,13 @@ nav {
     right: 3vw;
     top: -5vh;
     width: fit-content;
-    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0); }
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 5px var(--color-0), 0 -1px 0 var(--color-0); }
 
   .about-link-label {
-    font-weight: normal;
+    font-weight: normal !important;
+    font-size: .95rem !important;
     z-index: 0;
-    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 3px var(--color-41), 0 -1px 0 var(--color-0) !important; }
+    text-shadow: 1px 1px 0 var(--color-21), 2px 2px 0 var(--color-4), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 3px 3px 0 var(--color-0), -1px 2px 0 var(--color-0), -1px 0 0 var(--color-0), 3px 3px 5px var(--color-0), 0 -1px 0 var(--color-0) !important; }
 
   a#es-nav-logo {
     font-size: .85rem;
@@ -251,7 +252,6 @@ nav {
     text-transform: capitalize; }
 
   a#es-nav-logo.active {
-    text-shadow: 1px 1px 0 var(--color-3-1), 1px 1px 0 var(--color-0), 1px -1px 0 var(--color-0), -1px 0 0 var(--color-0), -1px -1px 0 var(--color-0), 1px 0 0 var(--color-0), 2px 2px 0 var(--color-0), -1px 1px 0 var(--color-0), -1px 0 0 var(--color-0), 2px 2px 5px var(--color-0), 0 -1px 0 var(--color-0);
     animation: none;
     scale: none; }
 
