@@ -255,6 +255,7 @@ nav {
   opacity: 1;
 }
 
+.documents-close,
 #business-card-nav-link a,
 #credits-nav-link a {
   margin: 0;
@@ -263,6 +264,7 @@ nav {
   top: 0;
   letter-spacing: 5px;
   font-weight: bold;
+  color: transparent;
   text-shadow: 1px 1px 0 var(--color-21),
   2px 1px 0 var(--color-41),
   1px -1px 0 var(--color-01),

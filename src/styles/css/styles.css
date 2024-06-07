@@ -7,9 +7,9 @@
 
 /*ICONS*/
 .i-close {
-  font-size: 2rem;
+  font-size: 3rem;
   color: transparent;
-  text-shadow: 1px -2px 1px var(--color-3), 1px 0 1px var(--color-1), 2px -2px 1px var(--color-4-0); }
+  text-shadow: 1px -2px 1px var(--color-3-1), 1px 0 1px var(--color-1), 2px -2px 1px var(--color-4-0); }
 
 .i-close:hover {
   filter: brightness(125%);
@@ -225,6 +225,7 @@ nav {
   background-color: var(--color-3-11);
   opacity: 1; }
 
+.documents-close,
 #business-card-nav-link a,
 #credits-nav-link a {
   margin: 0;
@@ -233,6 +234,7 @@ nav {
   top: 0;
   letter-spacing: 5px;
   font-weight: bold;
+  color: transparent;
   text-shadow: 1px 1px 0 var(--color-21), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
 
 #business-card-nav-link:focus a,
@@ -1868,6 +1870,7 @@ nav {
   background-color: var(--color-3-11);
   opacity: 1; }
 
+.documents-close,
 #business-card-nav-link a,
 #credits-nav-link a {
   margin: 0;
@@ -1876,6 +1879,7 @@ nav {
   top: 0;
   letter-spacing: 5px;
   font-weight: bold;
+  color: transparent;
   text-shadow: 1px 1px 0 var(--color-21), 2px 1px 0 var(--color-41), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01), -1px 0 0 var(--color-01); }
 
 #business-card-nav-link:focus a,
@@ -2066,7 +2070,7 @@ footer i {
   color: transparent;
   font-size: 3rem;
   letter-spacing: 3px;
-  text-shadow: 1px 1px 0 var(--color-2), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01); }
+  text-shadow: 1px 1px 0 var(--color-23), 2px 1px 0 var(--color-4), 1px -1px 0 var(--color-01), -1px -1px 0 var(--color-01), 1px 0 0 var(--color-01), -1px 2px 0 var(--color-01), 2px -1px 0 var(--color-01), 2px 2px 0 var(--color-01), -1px 1px 0 var(--color-01); }
 
 #fa-square-phone-flip {
   transform: scaleX(-1) rotate(90deg); }
