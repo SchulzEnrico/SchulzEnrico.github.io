@@ -28,7 +28,8 @@
 
 .documents-close {
   position: fixed;
-  left: 3vw;
+  left: 2rem;
+  top: 2rem;
   transform: none; }
 
 .documents-close > i {
