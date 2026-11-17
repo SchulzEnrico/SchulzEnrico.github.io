@@ -1,0 +1,713 @@
+/* ==========================================================
+   Enrico Schulz – Portfolio · Glas-Design
+   Schrift: Open Sans (Dateien in assets/fonts/, sonst Systemschrift)
+   Kontraste nach WCAG 2.2 AA geprüft (Fließtext ≥ 4,5 : 1)
+   ========================================================== */
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/OpenSans-SemiBold.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 800; font-display: swap;
+  src: url("../fonts/OpenSans-ExtraBold.woff") format("woff"); }
+
+:root {
+  --bg: #0c0c0f;
+  --text: #e6e6ea;        /* 15,7 : 1 */
+  --muted: #b4b4bc;       /*  9,5 : 1 */
+  --accent: #d86a5c;      /*  5,7 : 1 auf Seite, 5,0 : 1 auf Glas */
+  --accent-hover: #e8806f;
+  --glow: rgba(224, 96, 80, .30);
+  --accent-deco: #a8473b; /* Linien, Punkte (nur Dekoration) */
+  --label-bg: #5f1d15;    /* Weiß darauf 10 : 1 */
+  --glass: rgba(255, 255, 255, .045);
+  --glass-strong: rgba(255, 255, 255, .07);
+  --glass-line: rgba(255, 255, 255, .10);
+  --glass-shine: rgba(255, 255, 255, .14);
+  --radius: 18px;
+  --max: 1080px;
+  --font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg);
+  /* weiche Farbflächen hinter dem Glas */
+  background-image:
+    radial-gradient(40vw 40vw at 85% 20%, rgba(122, 35, 24, 0.1400) 0%, rgba(122, 35, 24, 0.1148) 10%, rgba(122, 35, 24, 0.0868) 22%, rgba(122, 35, 24, 0.0588) 36%, rgba(122, 35, 24, 0.0350) 50%, rgba(122, 35, 24, 0.0168) 64%, rgba(122, 35, 24, 0.0070) 78%, rgba(122, 35, 24, 0.0021) 90%, rgba(122, 35, 24, 0.0000) 100%),
+    radial-gradient(45vw 45vw at 5% 65%, rgba(70, 78, 98, 0.2200) 0%, rgba(70, 78, 98, 0.1804) 10%, rgba(70, 78, 98, 0.1364) 22%, rgba(70, 78, 98, 0.0924) 36%, rgba(70, 78, 98, 0.0550) 50%, rgba(70, 78, 98, 0.0264) 64%, rgba(70, 78, 98, 0.0110) 78%, rgba(70, 78, 98, 0.0033) 90%, rgba(70, 78, 98, 0.0000) 100%),
+    radial-gradient(35vw 35vw at 70% 95%, rgba(122, 35, 24, 0.0800) 0%, rgba(122, 35, 24, 0.0656) 10%, rgba(122, 35, 24, 0.0496) 22%, rgba(122, 35, 24, 0.0336) 36%, rgba(122, 35, 24, 0.0200) 50%, rgba(122, 35, 24, 0.0096) 64%, rgba(122, 35, 24, 0.0040) 78%, rgba(122, 35, 24, 0.0012) 90%, rgba(122, 35, 24, 0.0000) 100%);
+  background-attachment: fixed;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(var(--max), 100% - 40px); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Glas ---------- */
+.glass {
+  background: linear-gradient(145deg, var(--glass-strong), var(--glass));
+  border: 1px solid var(--glass-line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow:
+    inset 1px 1px 0 var(--glass-shine),        /* Lichtkante oben links */
+    inset -1px -1px 0 rgba(0, 0, 0, .35),      /* Schattenkante unten rechts */
+    -8px -8px 22px rgba(255, 255, 255, .025),  /* weiches Licht (Neumorph) */
+    14px 16px 36px rgba(0, 0, 0, .55);         /* Tiefe */
+}
+
+/* ---------- Kopfleiste ---------- */
+.topbar { position: fixed; top: 12px; left: 0; right: 0; z-index: 50; }
+.topbar .bar { display: flex; align-items: center; gap: 28px; height: 60px; padding: 0 14px 0 18px; border-radius: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-weight: 600; letter-spacing: .02em; }
+.brand img { height: 32px; width: auto; }
+.nav { display: flex; gap: 6px; margin-left: auto; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 15px; padding: 6px 12px; border-radius: 10px; }
+.nav a:hover, .nav a.active { color: #fff; background: rgba(255, 255, 255, .07); }
+.lang { display: flex; gap: 4px; font-size: 14px; font-weight: 600; padding: 3px; border-radius: 10px; background: rgba(0, 0, 0, .25); }
+.lang a, .lang span { padding: 4px 10px; border-radius: 8px; text-decoration: none; }
+.lang span { background: rgba(255, 255, 255, .12); color: #fff; }
+.lang a { color: var(--muted); }
+.lang a:hover { color: #fff; }
+
+/* ---------- Deckblatt ---------- */
+.cover {
+  position: relative; isolation: isolate;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center; overflow: hidden;
+  background: var(--bg) radial-gradient(60vw 60vh at 15% 70%, rgba(70, 78, 98, 0.1800) 0%, rgba(70, 78, 98, 0.1476) 10%, rgba(70, 78, 98, 0.1116) 22%, rgba(70, 78, 98, 0.0756) 36%, rgba(70, 78, 98, 0.0450) 50%, rgba(70, 78, 98, 0.0216) 64%, rgba(70, 78, 98, 0.0090) 78%, rgba(70, 78, 98, 0.0027) 90%, rgba(70, 78, 98, 0.0000) 100%);
+}
+.cover::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(38vw 34vw at 68% 52%, rgba(122, 35, 24, 0.2200) 0%, rgba(122, 35, 24, 0.1804) 10%, rgba(122, 35, 24, 0.1364) 22%, rgba(122, 35, 24, 0.0924) 36%, rgba(122, 35, 24, 0.0550) 50%, rgba(122, 35, 24, 0.0264) 64%, rgba(122, 35, 24, 0.0110) 78%, rgba(122, 35, 24, 0.0033) 90%, rgba(122, 35, 24, 0.0000) 100%),
+    radial-gradient(30vw 30vw at 12% 85%, rgba(70, 78, 98, 0.1600) 0%, rgba(70, 78, 98, 0.1312) 10%, rgba(70, 78, 98, 0.0992) 22%, rgba(70, 78, 98, 0.0672) 36%, rgba(70, 78, 98, 0.0400) 50%, rgba(70, 78, 98, 0.0192) 64%, rgba(70, 78, 98, 0.0080) 78%, rgba(70, 78, 98, 0.0024) 90%, rgba(70, 78, 98, 0.0000) 100%);
+}
+.cover-photo {
+  position: absolute; left: 0; bottom: 0; z-index: 1;
+  height: 90%; width: auto; max-width: none;
+  transform: scaleX(-1);
+  filter: brightness(45%) grayscale(100%);
+  transition: filter 1.2s ease;
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, #000 45%);
+          mask-image: linear-gradient(to left, transparent 0%, #000 45%);
+}
+.cover-photo:hover { filter: brightness(80%) grayscale(100%); }
+/* Textbereich rechts (nur Layout) */
+.ripple-zone {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 64%; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  padding: 90px 6vw 40px;
+}
+.cover-content {
+  width: min(580px, 100%); padding: 40px 40px 36px;
+  backdrop-filter: blur(5px) saturate(130%); -webkit-backdrop-filter: blur(5px) saturate(130%);
+  background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+}
+.label { display: inline-block; background: var(--label-bg); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .22em; padding: 5px 12px; border-radius: 6px; margin-bottom: 22px; }
+.cover h1 { margin: 0 0 4px; font-size: clamp(40px, 6vw, 62px); line-height: 1.05; color: #fff; font-weight: 700; letter-spacing: -.01em; }
+.cover .subtitle { margin: 0 0 30px; color: var(--muted); font-size: 18px; }
+.teaser { margin: 0 0 30px; padding-left: 20px; border-left: 3px solid var(--accent-deco); }
+.teaser strong { display: block; font-size: clamp(21px, 2.6vw, 27px); line-height: 1.35; color: #fff; font-weight: 600; margin-bottom: 8px; }
+.teaser span { color: var(--muted); }
+.scroll-cue { display: inline-flex; align-items: center; gap: 12px; color: var(--muted); text-decoration: none; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; }
+.scroll-cue::after { content: ""; width: 9px; height: 9px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(45deg); animation: nudge 1.8s ease-in-out infinite; }
+@keyframes nudge { 0%, 100% { translate: 0 -3px; } 50% { translate: 0 3px; } }
+
+/* ---------- Abschnitte ---------- */
+section.block { padding: 96px 0; }
+.eyebrow { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; margin: 0 0 8px; }
+h2 { margin: 0 0 36px; font-size: clamp(28px, 3.6vw, 38px); line-height: 1.2; color: #fff; font-weight: 700; }
+h3 { margin: 0; color: #fff; font-size: 19px; font-weight: 600; line-height: 1.35; }
+
+/* Listen mit gut sichtbaren Punkten */
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { position: relative; padding-left: 22px; margin-bottom: 8px; }
+.list li::before { content: ""; position: absolute; left: 2px; top: .68em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
+
+/* Profil */
+.profile { display: grid; grid-template-columns: 1fr 380px; align-items: end; overflow: hidden; }
+.profile-text { padding: 44px 20px 44px 44px; }
+.motto { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0 0 26px; font-weight: 700; letter-spacing: .14em; color: #fff; font-size: 15px; }
+.motto span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--accent-deco); margin-right: 10px; vertical-align: 2px; }
+.profile-text p { margin: 0 0 16px; }
+.focus { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--glass-line); }
+.focus h3 { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 14px; }
+.focus .list { columns: 2; column-gap: 28px; }
+.focus .list li { break-inside: avoid; color: #fff; }
+.portrait { margin: 0; align-self: end; position: relative; }
+.portrait::before { content: ""; position: absolute; inset: 20% 0 0 0; background: radial-gradient(ellipse at 55% 75%, rgba(122, 35, 24, 0.1600) 0%, rgba(122, 35, 24, 0.1312) 10%, rgba(122, 35, 24, 0.0992) 22%, rgba(122, 35, 24, 0.0672) 36%, rgba(122, 35, 24, 0.0400) 50%, rgba(122, 35, 24, 0.0192) 64%, rgba(122, 35, 24, 0.0080) 78%, rgba(122, 35, 24, 0.0024) 90%, rgba(122, 35, 24, 0.0000) 100%); }
+.portrait img {
+  position: relative; width: 100%;
+  filter: brightness(72%) grayscale(20%) contrast(105%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+          mask-image: linear-gradient(to right, transparent 0, #000 22%);
+}
+
+/* Stationen */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 36px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 9px; top: 18px; bottom: 18px; width: 2px; background: linear-gradient(var(--accent-deco), rgba(236, 95, 72, .12)); }
+.station { position: relative; padding: 28px 32px 22px; margin-bottom: 20px; }
+.station::before { content: ""; position: absolute; left: -34px; top: 34px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+.station .period { font-size: 14px; color: var(--muted); font-weight: 600; letter-spacing: .04em; margin: 0 0 2px; }
+.station .org { color: var(--accent); font-weight: 600; margin: 2px 0 14px; }
+
+/* Weiterbildung */
+.certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+.cert { display: flex; flex-direction: column; gap: 6px; padding: 26px 26px 22px; text-decoration: none; color: var(--text); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.cert:hover, .contact a:hover { transform: translateY(-3px); color: var(--text); border-color: rgba(224, 110, 95, .60);
+  box-shadow: inset 1px 1px 0 var(--glass-shine), 0 0 0 1px rgba(224, 110, 95, .25), 0 0 26px var(--glow), 0 0 60px rgba(224, 96, 80, .12), 14px 16px 36px rgba(0, 0, 0, .55); }
+.cert:hover .more, .contact a:hover .k { color: var(--accent-hover); text-shadow: 0 0 10px rgba(232, 128, 111, .55); }
+.cert .meta { color: var(--muted); font-size: 15px; }
+.cert .more { margin-top: auto; padding-top: 14px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.cert .more::after { content: " →"; }
+
+/* Kontakt */
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.contact a { display: block; padding: 22px 24px; text-decoration: none; transition: transform .25s, border-color .25s; }
+.contact .k { display: block; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+.contact .v { color: #fff; word-break: break-word; }
+
+footer { padding: 34px 0 40px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer .brand img { height: 26px; }
+footer a { color: var(--muted); }
+
+/* ---------- Einblenden ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .scroll-cue::after { animation: none; }
+}
+/* Ohne Glas-Unterstützung: dunkle, gut lesbare Flächen */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: #17171c; }
+}
+
+/* ---------- Tablet & Handy ---------- */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .lang { margin-left: auto; }
+  .profile { grid-template-columns: 1fr; }
+  .profile-text { padding: 36px 32px 8px; }
+  .portrait { max-width: 420px; margin-left: auto; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .cover { flex-direction: column; align-items: stretch; justify-content: flex-start; padding-top: 84px; }
+  .cover-photo {
+    position: relative; left: auto; bottom: auto; height: 52vh; height: 52svh; align-self: flex-start;
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 22%);
+            mask-image: linear-gradient(to top, transparent 0%, #000 22%);
+  }
+  .ripple-zone { position: relative; width: 100%; padding: 0 16px 36px; margin-top: -40px; }
+  .cover-content { padding: 28px 24px 26px; }
+  section.block { padding: 64px 0; }
+  .station { padding: 26px 22px; }
+  .profile-text { padding: 28px 22px 4px; }
+  .focus .list { columns: 1; }
+  .timeline { padding-left: 26px; }
+  .timeline::before { left: 5px; }
+  .station::before { left: -27px; }
+  .certs { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================
+   Haptik-Ebene: Neumorph (Inhaltsflächen) + Liquid Glass (schwebende Elemente)
+   ========================================================== */
+:root {
+  --neu-top: #17171c;
+  --neu-bottom: #0d0d10;
+  --neu-light: rgba(255, 255, 255, .045);
+  --neu-dark: rgba(0, 0, 0, .75);
+  --raised: -9px -9px 22px var(--neu-light), 12px 12px 28px var(--neu-dark), inset 1px 1px 0 rgba(255, 255, 255, .06), inset -1px -1px 0 rgba(0, 0, 0, .4);
+  --raised-sm: -4px -4px 10px var(--neu-light), 6px 6px 14px var(--neu-dark), inset 1px 1px 0 rgba(255, 255, 255, .07);
+  --pressed: inset 5px 5px 12px rgba(0, 0, 0, .75), inset -4px -4px 10px rgba(255, 255, 255, .04);
+}
+
+/* Neumorph: erhabene Flächen aus dem Hintergrund geformt */
+.neu {
+  position: relative;
+  background: linear-gradient(145deg, var(--neu-top), var(--neu-bottom));
+  border: 1px solid rgba(255, 255, 255, .05);
+  border-radius: 22px;
+  box-shadow: var(--raised);
+}
+
+/* Liquid Glass: Lichtkante, Glanz von oben, starke Unschärfe */
+.glass { position: relative; }
+.glass {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .11) 0%, rgba(255, 255, 255, 0) 38%),
+    radial-gradient(120% 70% at 15% 0%, rgba(255, 255, 255, .07), transparent 60%),
+    linear-gradient(145deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .015));
+  backdrop-filter: blur(18px) saturate(170%) brightness(1.05);
+  -webkit-backdrop-filter: blur(18px) saturate(170%) brightness(1.05);
+  border: 1px solid transparent;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06) inset, 0 20px 50px rgba(0, 0, 0, .5), 0 2px 6px rgba(0, 0, 0, .35);
+}
+.glass::before { /* Lichtrand wie geschliffenes Glas */
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .08) 35%, rgba(255, 255, 255, .02) 60%, rgba(255, 255, 255, .28));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.cover-content.glass { border-radius: 26px; }
+.topbar .bar.glass { border-radius: 18px; }
+
+/* Sprachumschalter: eingelassene Spur mit erhabenem Knopf */
+.lang { background: linear-gradient(145deg, #0b0b0e, #141418); box-shadow: var(--pressed); padding: 4px; border-radius: 12px; }
+.lang span { background: linear-gradient(145deg, #222228, #18181d); box-shadow: var(--raised-sm); }
+
+/* Navigation: aktiver Punkt wirkt eingedrückt */
+.nav a.active { background: linear-gradient(145deg, #0e0e11, #16161a); box-shadow: var(--pressed); }
+
+/* Knopf "Genauer hinsehen" */
+.scroll-cue {
+  padding: 12px 22px; border-radius: 999px; color: var(--text);
+  background: linear-gradient(145deg, #1d1d23, #121216);
+  box-shadow: var(--raised-sm);
+  transition: box-shadow .2s, color .2s;
+}
+.scroll-cue:hover { color: #fff; box-shadow: var(--raised-sm), 0 0 22px var(--glow); }
+.scroll-cue:active { box-shadow: var(--pressed); }
+
+/* Zeitleiste: erhabene Knöpfe statt Ringe */
+.station::before {
+  width: 20px; height: 20px; left: -37px; top: 32px; border: 0;
+  background: radial-gradient(circle at 50% 50%, var(--accent) 0 3.5px, transparent 4.5px), linear-gradient(145deg, #1e1e24, #0f0f12);
+  box-shadow: -3px -3px 7px var(--neu-light), 4px 4px 9px var(--neu-dark);
+}
+.timeline::before { width: 4px; left: 8px; border-radius: 4px; background: linear-gradient(145deg, #0a0a0c, #141418); box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .8), inset -1px -1px 2px rgba(255, 255, 255, .04); }
+
+/* Kacheln: anheben, leuchten, beim Klicken eindrücken */
+.cert, .contact a { border-radius: 20px; }
+.cert:hover, .contact a:hover {
+  transform: translateY(-4px);
+  border-color: rgba(224, 110, 95, .45);
+  box-shadow: var(--raised), 0 0 0 1px rgba(224, 110, 95, .22), 0 0 30px var(--glow);
+}
+.cert:active, .contact a:active { transform: translateY(0); box-shadow: var(--pressed); }
+
+/* Symbol-Mulden */
+.well {
+  display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; flex: none;
+  background: linear-gradient(145deg, #0b0b0e, #16161a); box-shadow: var(--pressed); color: var(--accent);
+  transition: color .2s, box-shadow .2s;
+}
+.well svg { width: 22px; height: 22px; }
+.cert:hover .well, .contact a:hover .well { color: var(--accent-hover); box-shadow: var(--pressed), 0 0 16px var(--glow); }
+.cert-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.contact a { display: flex; align-items: center; gap: 16px; }
+
+/* Profil-Schwerpunkte als kleine erhabene Marken */
+.focus .list li::before { width: 9px; height: 9px; border-radius: 3px; box-shadow: 0 0 6px rgba(216, 106, 92, .35); }
+
+
+/* ==========================================================
+   Liquid Glass: dicke Glasscheibe mit geschliffener Doppelkante
+   (Deckblatt-Kasten und Kopfleiste)
+   ========================================================== */
+.liquid {
+  isolation: isolate;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, .13) 0%, rgba(255, 255, 255, .035) 42%, rgba(255, 255, 255, .02) 70%, rgba(255, 214, 196, .06) 100%);
+  backdrop-filter: blur(22px) saturate(165%) brightness(1.06);
+  -webkit-backdrop-filter: blur(22px) saturate(165%) brightness(1.06);
+  box-shadow:
+    inset 0 2px 1px rgba(255, 255, 255, .22),          /* geschliffene Oberkante */
+    inset 0 -3px 8px rgba(255, 180, 150, .10),         /* warmes Licht in der Unterkante */
+    inset -3px 0 8px rgba(255, 180, 150, .06),
+    0 6px 0 -1px rgba(40, 30, 28, .95),                /* Glasdicke */
+    0 7px 0 -1px rgba(255, 196, 170, .16),             /* Lichtkante der Dicke */
+    0 34px 70px rgba(0, 0, 0, .62),
+    0 0 50px rgba(216, 106, 92, .08);                  /* warmer Lichthof */
+}
+.liquid::before {               /* äußere Lichtkante */
+  background: linear-gradient(135deg, rgba(255, 255, 255, .70), rgba(255, 255, 255, .10) 28%, rgba(255, 255, 255, .03) 55%, rgba(255, 196, 170, .45) 100%);
+  padding: 1.5px;
+}
+.liquid::after {                /* innere zweite Kante wie bei einer dicken Scheibe */
+  content: ""; position: absolute; inset: 9px; border-radius: calc(var(--liquid-r, 26px) - 8px); pointer-events: none; z-index: -1;
+  border: 1px solid rgba(255, 255, 255, .09);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10), 0 1px 0 rgba(255, 196, 170, .08);
+}
+.cover-content.liquid { --liquid-r: 28px; border-radius: 28px; }
+.topbar .bar.liquid { --liquid-r: 20px; border-radius: 20px; }
+.topbar .bar.liquid::after { inset: 5px; }
+
+/* Neumorph kräftiger: tiefer aus der Fläche geformt */
+:root {
+  --neu-light: rgba(255, 255, 255, .055);
+  --neu-dark: rgba(0, 0, 0, .8);
+  --raised: -10px -10px 24px var(--neu-light), 14px 14px 32px var(--neu-dark), inset 1px 1px 0 rgba(255, 255, 255, .08), inset -1px -1px 0 rgba(0, 0, 0, .45);
+}
+.neu { background: linear-gradient(145deg, #19191f, #0e0e11); }
+.label {
+  background: linear-gradient(145deg, #6e2219, #4f170f);
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .04), 3px 3px 8px rgba(0, 0, 0, .6), inset 1px 1px 0 rgba(255, 255, 255, .15);
+}
+
+/* ==========================================================
+   Haptik verstärkt + gemeinsame Formensprache für alle Flächen
+   ========================================================== */
+:root {
+  --raised:
+    -14px -14px 30px rgba(255, 255, 255, .07),
+    18px 20px 42px rgba(0, 0, 0, .92),
+    inset 2px 2px 1px rgba(255, 255, 255, .11),
+    inset -2px -3px 3px rgba(0, 0, 0, .6);
+  --raised-sm:
+    -6px -6px 14px rgba(255, 255, 255, .07),
+    8px 9px 18px rgba(0, 0, 0, .85),
+    inset 1px 1px 1px rgba(255, 255, 255, .12);
+  --pressed: inset 7px 7px 14px rgba(0, 0, 0, .88), inset -5px -5px 12px rgba(255, 255, 255, .065);
+}
+.neu {
+  isolation: isolate;
+  background: linear-gradient(145deg, #202027 0%, #15151a 45%, #0e0e12 100%);
+  border: 1px solid transparent;
+  box-shadow: var(--raised), 0 8px 0 -2px #09090b, 0 9px 0 -2px rgba(255, 196, 170, .07);  /* Materialstärke */
+}
+.neu::after {                   /* innere Kante – dieselbe Sprache wie die Glasscheibe */
+  content: ""; position: absolute; inset: 8px; border-radius: 15px; pointer-events: none; z-index: -1;
+  border: 1px solid rgba(255, 255, 255, .045);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.cert:hover, .contact a:hover {
+  box-shadow: var(--raised), 0 10px 0 -2px #09090b, 0 11px 0 -2px rgba(255, 196, 170, .12), 0 0 0 1px rgba(224, 110, 95, .3), 0 0 34px var(--glow);
+}
+.cert:active, .contact a:active { box-shadow: var(--pressed); }
+
+/* Glasscheibe: kräftiger, dicker */
+.liquid {
+  box-shadow:
+    inset 0 2px 1px rgba(255, 255, 255, .32),
+    inset 0 -4px 10px rgba(255, 180, 150, .14),
+    inset -4px 0 10px rgba(255, 180, 150, .08),
+    inset 4px 0 10px rgba(255, 255, 255, .05),
+    0 10px 0 -2px rgba(34, 26, 24, .98),
+    0 11px 0 -2px rgba(255, 196, 170, .22),
+    0 40px 80px rgba(0, 0, 0, .7),
+    0 0 60px rgba(216, 106, 92, .10);
+}
+.liquid::before { padding: 2px; background: linear-gradient(135deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, .14) 26%, rgba(255, 255, 255, .03) 55%, rgba(255, 196, 170, .55) 100%); }
+.liquid::after { border-color: rgba(255, 255, 255, .14); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 1px 0 rgba(255, 196, 170, .12); }
+.topbar .bar.liquid { box-shadow: inset 0 2px 1px rgba(255, 255, 255, .3), inset 0 -3px 8px rgba(255, 180, 150, .12), 0 6px 0 -2px rgba(34, 26, 24, .98), 0 7px 0 -2px rgba(255, 196, 170, .2), 0 22px 44px rgba(0, 0, 0, .7); }
+.well { box-shadow: var(--pressed), 1px 1px 0 rgba(255, 255, 255, .06); }
+
+/* ==========================================================
+   Klares Liquid Glass statt Milchglas
+   ========================================================== */
+.liquid {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .16) 0%, rgba(255, 255, 255, .04) 7%, rgba(255, 255, 255, 0) 22%),   /* Glanz oben */
+    linear-gradient(0deg, rgba(255, 200, 175, .08) 0%, rgba(255, 200, 175, 0) 14%),                                    /* Licht in der Unterkante */
+    radial-gradient(140% 90% at 20% -10%, rgba(255, 255, 255, .07), transparent 55%),
+    rgba(255, 255, 255, .018);
+  backdrop-filter: blur(3px) saturate(140%) brightness(1.02);
+  -webkit-backdrop-filter: blur(3px) saturate(140%) brightness(1.02);
+}
+/* Chrome & Edge: echte Lichtbrechung an den Kanten */
+.lens .liquid { backdrop-filter: url(#liquid-lens) blur(2px) saturate(140%) brightness(1.02); }
+.lens .topbar .bar.liquid { backdrop-filter: url(#liquid-lens) blur(1px) saturate(170%) brightness(1.08); }
+/* Lesbarkeit auf klarem Glas */
+.liquid h1, .liquid .teaser strong { text-shadow: 0 2px 14px rgba(0, 0, 0, .55); }
+.liquid .subtitle, .liquid .teaser span { color: #c4c4cc; text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
+
+
+/* Glass-1: so klar wie möglich, Wirkung über Kanten und Licht */
+.liquid {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .12) 0%, rgba(255, 255, 255, .02) 5%, rgba(255, 255, 255, 0) 16%),
+    linear-gradient(0deg, rgba(255, 210, 190, .06) 0%, rgba(255, 210, 190, 0) 10%),
+    rgba(255, 255, 255, .008);
+  backdrop-filter: blur(1px) saturate(125%);
+  -webkit-backdrop-filter: blur(1px) saturate(125%);
+  box-shadow:
+    inset 0 2px 1px rgba(255, 255, 255, .38),
+    inset 0 -3px 6px rgba(255, 200, 175, .14),
+    inset 3px 0 6px rgba(255, 255, 255, .06),
+    inset -3px 0 6px rgba(255, 200, 175, .08),
+    0 10px 0 -2px rgba(255, 255, 255, .05),         /* Glasdicke – durchsichtig */
+    0 11px 0 -2px rgba(255, 210, 190, .30),         /* hell leuchtende Unterkante */
+    0 40px 80px rgba(0, 0, 0, .6);
+}
+.liquid::before { padding: 2px; background: linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .25) 22%, rgba(255, 255, 255, .06) 50%, rgba(255, 220, 200, .35) 78%, rgba(255, 230, 215, .75) 100%); }
+.liquid::after { border-color: rgba(255, 255, 255, .20); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .18), 0 1px 0 rgba(255, 220, 200, .14); }
+.lens .liquid { backdrop-filter: url(#liquid-lens) blur(.6px) saturate(125%); }
+.lens .topbar .bar.liquid { backdrop-filter: url(#liquid-lens) blur(4px) saturate(140%); }
+.topbar .bar.liquid { background: linear-gradient(180deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .02) 40%), rgba(14, 14, 18, .55); }
+
+/* Handy: Deckblatt aufgeräumt – Foto und Kasten ohne Überlagerung */
+@media (max-width: 640px) {
+  .cover { padding-top: 92px; min-height: auto; }
+  .cover::after { background: radial-gradient(90vw 60vw at 50% 85%, rgba(122, 35, 24, 0.1400) 0%, rgba(122, 35, 24, 0.1148) 10%, rgba(122, 35, 24, 0.0868) 22%, rgba(122, 35, 24, 0.0588) 36%, rgba(122, 35, 24, 0.0350) 50%, rgba(122, 35, 24, 0.0168) 64%, rgba(122, 35, 24, 0.0070) 78%, rgba(122, 35, 24, 0.0021) 90%, rgba(122, 35, 24, 0.0000) 100%); }
+  .cover-photo { height: 40vh; height: 40svh; align-self: flex-start; filter: brightness(60%) grayscale(100%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 30%); mask-image: linear-gradient(to top, transparent 0%, #000 30%); }
+  .ripple-zone { margin-top: 0; padding: 8px 16px 48px; }
+  .cover-content .teaser span { display: none; }
+}
+
+/* ==========================================================
+   Schatten eleganter: weich statt Kante
+   ========================================================== */
+:root {
+  --raised:
+    -8px -8px 22px rgba(255, 255, 255, .04),
+    12px 14px 34px rgba(0, 0, 0, .7),
+    inset 1px 1px 0 rgba(255, 255, 255, .09),
+    inset -1px -1px 0 rgba(0, 0, 0, .45);
+  --raised-sm:
+    -4px -4px 12px rgba(255, 255, 255, .045),
+    6px 7px 16px rgba(0, 0, 0, .65),
+    inset 1px 1px 0 rgba(255, 255, 255, .10);
+  --pressed: inset 5px 5px 12px rgba(0, 0, 0, .75), inset -4px -4px 10px rgba(255, 255, 255, .05);
+}
+.neu { box-shadow: var(--raised), 0 3px 6px -2px rgba(255, 196, 170, .05); }
+.cert:hover, .contact a:hover { box-shadow: var(--raised), 0 0 0 1px rgba(224, 110, 95, .28), 0 0 30px var(--glow); }
+.liquid {
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, .34),
+    inset 0 -2px 6px rgba(255, 200, 175, .12),
+    inset 2px 0 6px rgba(255, 255, 255, .05),
+    0 3px 2px -1px rgba(255, 215, 195, .16),
+    0 30px 60px rgba(0, 0, 0, .5);
+}
+.topbar .bar.liquid { box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, .3), inset 0 -2px 6px rgba(255, 200, 175, .1), 0 3px 2px -1px rgba(255, 215, 195, .14), 0 16px 34px rgba(0, 0, 0, .55); }
+
+/* Name-Block im Profil: nur auf dem Handy */
+.profile-intro { display: none; }
+.profile-intro .intro-name { margin: 0 0 2px; font-size: 32px; line-height: 1.1; font-weight: 700; color: #fff; }
+.profile-intro .label { margin-bottom: 16px; }
+.profile-intro .subtitle { margin: 0 0 24px; color: var(--muted); }
+
+/* Handy: Deckblatt zweigeteilt – Foto links mittig, Slogan + Knopf rechts */
+@media (max-width: 640px) {
+  .cover { flex-direction: row; align-items: center; justify-content: flex-start; padding: 84px 0 24px; min-height: 100vh; min-height: 100svh; }
+  .cover-photo { position: relative; flex: 0 0 auto; width: auto; height: 62vh; height: 62svh; align-self: center;
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, #000 35%); mask-image: linear-gradient(to left, transparent 0%, #000 35%); }
+  .ripple-zone { position: relative; flex: 1 1 auto; width: auto; margin: 0 0 0 -18px; padding: 0 14px 0 0; display: flex; align-items: center; }
+  .cover-content { width: 100%; padding: 22px 18px 20px; }
+  .cover-content .label, .cover-content .subtitle, .cover-content .teaser span { display: none; }
+  .cover-content h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cover-content .teaser { margin: 0 0 20px; padding-left: 14px; }
+  .cover-content .teaser strong { font-size: 20px; margin: 0; }
+  .scroll-cue { padding: 10px 14px; font-size: 11px; letter-spacing: .06em; gap: 8px; white-space: nowrap; }
+  .ripple-zone { margin-left: -28px; }
+  .liquid::after { inset: 6px; }
+  .profile-intro { display: block; }
+}
+
+/* Deckblatt ohne Container: Text steht frei */
+.cover-content { background: none; border: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; padding: 0; }
+.cover-content h1, .cover-content .teaser strong { text-shadow: 0 2px 18px rgba(0, 0, 0, .7); }
+.cover-content .subtitle, .cover-content .teaser span { color: #c4c4cc; text-shadow: 0 1px 10px rgba(0, 0, 0, .8); }
+@media (max-width: 640px) {
+  .cover-content { padding: 0; }
+  .ripple-zone { margin-left: 6px; padding-right: 18px; }
+  .cover-content .teaser strong { font-size: 20px; }
+  .cover-content .teaser strong { font-size: 22px; line-height: 1.3; }
+}
+
+/* ==========================================================
+   Deckblatt überall reduziert: nur Slogan + Knopf (Name & Label im Profil)
+   ========================================================== */
+.cover-content .label, .cover-content .subtitle, .cover-content .teaser span { display: none; }
+.cover-content h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.cover-content { width: min(520px, 100%); }
+.cover-content .teaser { margin: 0 0 34px; padding-left: 24px; border-left-width: 4px; }
+.cover-content .teaser strong { font-size: clamp(34px, 4vw, 54px); line-height: 1.12; letter-spacing: -.01em; font-weight: 700; margin: 0; }
+.profile-intro { display: block; margin-bottom: 8px; }
+.profile-intro .intro-name { font-size: clamp(30px, 3vw, 38px); }
+
+/* Handy: wie eine Titelseite – großes Halbporträt, Slogan unten rechts */
+@media (max-width: 640px) {
+  .cover { display: block; position: relative; padding: 0; min-height: 100vh; min-height: 100svh; }
+  .cover-photo { position: absolute; left: 0; top: 76px; bottom: auto; height: 76vh; height: 76svh; width: auto; max-width: none;
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 28%); mask-image: linear-gradient(to top, transparent 0%, #000 28%); }
+  .ripple-zone { position: absolute; left: auto; right: 20px; bottom: 9vh; bottom: 9svh; top: auto; width: 62%; margin: 0; padding: 0; display: block; }
+  .cover-content { width: 100%; }
+  .cover-content .teaser { margin: 0 0 22px; padding-left: 16px; border-left-width: 3px; }
+  .cover-content .teaser strong { font-size: 27px; line-height: 1.16; }
+  .profile-intro .intro-name { font-size: 30px; }
+}
+
+@media (max-width: 640px) {
+  .station::before { left: -30px; }
+  .timeline::before { left: 4px; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: #17171c; }
+}
+
+/* Feines Korn gegen harte Farbstufen in den dunklen Verläufen */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .045; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Deckblatt läuft nahtlos in die Seite über – keine Kante am unteren Rand */
+.cover { background: transparent; }
+.cover::after {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,.6) 78%, rgba(0,0,0,.25) 90%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,.6) 78%, rgba(0,0,0,.25) 90%, transparent 100%);
+}
+
+/* ==========================================================
+   Stationen als Treppe: von links unten (2004) nach rechts oben (2026)
+   Ohne JavaScript: alle Stationen offen untereinander
+   ========================================================== */
+.stairs { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.step-h { margin: 0; font: inherit; }
+.step-head {
+  display: flex; flex-direction: column; align-items: flex-start; width: 100%;
+  padding: 24px 24px 22px; text-align: left; font: inherit; color: var(--text); cursor: pointer;
+  transition: box-shadow .25s, border-color .25s, transform .25s;
+}
+.step-num { font-size: 64px; font-weight: 800; line-height: .9; color: #fff; letter-spacing: -.02em; margin-bottom: 16px; transition: color .25s; }
+.step-icon {
+  display: grid; place-items: center; width: 58px; height: 58px; border-radius: 16px;
+  background: linear-gradient(145deg, #0b0b0e, #16161a); box-shadow: var(--pressed), 1px 1px 0 rgba(255, 255, 255, .06); color: var(--accent);
+}
+.step-icon svg { width: 30px; height: 30px; }
+.step-period { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
+.step-title { font-size: 17px; font-weight: 600; line-height: 1.3; color: #fff; margin: 4px 0; }
+.step-org { font-size: 14.5px; font-weight: 600; color: var(--accent); }
+.step-chev {
+  position: absolute; right: 22px; top: 28px; width: 9px; height: 9px;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg); transition: transform .25s, border-color .25s;
+}
+.step-head:hover { border-color: rgba(224, 110, 95, .35); }
+.step-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.step-head[aria-expanded="true"] { box-shadow: var(--pressed); }
+.step-head[aria-expanded="true"] .step-num { color: var(--accent); }
+.step-head[aria-expanded="true"] .step-chev { transform: rotate(-135deg); border-color: var(--accent); }
+
+.step-body { padding: 28px 32px 20px; }
+.step-part + .step-part { margin-top: 18px; padding-top: 20px; border-top: 1px dashed rgba(216, 106, 92, .28); }
+.part-head { margin: 0 0 12px; color: #fff; font-weight: 600; }
+.part-period { margin-right: 8px; font-size: 13px; letter-spacing: .04em; color: var(--muted); }
+.part-org { color: var(--accent); }
+
+/* Computer: waagerechte Treppe, Details darunter */
+@media (min-width: 901px) {
+  .stairs.stairs-on { grid-template-columns: repeat(4, 1fr); column-gap: 20px; row-gap: 0; align-items: end; }
+  .stairs-on .step { display: contents; }
+  .stairs-on .step-h { grid-row: 1; align-self: end; }
+  .stairs-on .step-head { min-height: calc(200px + var(--i) * 48px); }
+  .stairs-on .step-body { grid-row: 2; grid-column: 1 / -1; margin-top: 30px; }
+  .stairs-on .step-body::before {           /* kleine rote Markierung unter der gewählten Stufe */
+    content: ""; position: absolute; top: -1px; height: 3px; width: 56px; border-radius: 3px;
+    left: calc(var(--a, 3) * ((100% - 60px) / 4 + 20px) + (100% - 60px) / 8 - 28px);
+    background: var(--accent); box-shadow: 0 0 10px var(--glow);
+  }
+}
+
+/* Tablet & Handy: Balken wachsen nach rechts, Details direkt darunter */
+@media (max-width: 900px) {
+  .step + .step { margin-top: 0; }
+  .step-head {
+    width: calc(76% + var(--i) * 8%); min-width: 270px; max-width: 100%;
+    display: grid; grid-template-columns: auto 1fr; column-gap: 18px; padding: 20px 46px 18px 20px;
+  }
+  .step-num { grid-row: 1 / 4; align-self: center; margin: 0; font-size: 48px; }
+  .step-icon { width: 50px; height: 50px; }
+  .step-period, .step-title, .step-org { grid-column: 2; }
+  .step-chev { top: 50%; margin-top: -7px; right: 20px; }
+  .step-head[aria-expanded="true"] .step-chev { margin-top: -2px; }
+  .step-body { margin-top: 12px; padding: 24px 22px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .step-head, .step-num, .step-chev { transition: none; }
+}
+
+/* ---------- Kontakt: Aktionen statt Adressen ---------- */
+.contact { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); max-width: 760px; }
+.contact-alt { margin: 26px 0 0; }
+.pill {
+  display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border-radius: 999px;
+  color: var(--muted); text-decoration: none; font-size: 15px;
+  background: linear-gradient(145deg, #1d1d23, #121216); box-shadow: var(--raised-sm);
+  transition: color .2s, box-shadow .2s;
+}
+.pill svg { width: 18px; height: 18px; color: var(--accent); }
+.pill:hover { color: #fff; box-shadow: var(--raised-sm), 0 0 18px var(--glow); }
+.pill:active { box-shadow: var(--pressed); }
+.pill:focus-visible, .foot-icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.foot-links { display: flex; align-items: center; gap: 14px; }
+.foot-icon {
+  display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 12px;
+  background: linear-gradient(145deg, #1d1d23, #121216); box-shadow: var(--raised-sm); color: var(--muted);
+  transition: color .2s, box-shadow .2s;
+}
+.foot-icon svg { width: 18px; height: 18px; }
+.foot-icon:hover { color: var(--accent-hover); box-shadow: var(--raised-sm), 0 0 14px var(--glow); }
+.foot-links a:last-child { margin-left: 6px; }
+
+/* ---------- Treppe: Feinschliff ---------- */
+.step-head:hover { border-color: rgba(255, 255, 255, .05); }
+@media (hover: hover) { .step-head:hover { border-color: rgba(224, 110, 95, .35); } }
+
+/* Handy: volle Breite, ruhige Spalte für Zahl/Symbol, rote Punktlinie verbindet die Stationen */
+@media (max-width: 900px) {
+  .stairs { gap: 0; }
+  .step { position: relative; }
+  .step + .step { padding-top: 22px; }
+  .step + .step::before {
+    content: ""; position: absolute; top: 2px; left: 47px; height: 18px; width: 0;
+    border-left: 2px dotted var(--accent-deco);
+  }
+  .step-head { width: 100%; min-width: 0; grid-template-columns: 56px 1fr; column-gap: 16px; padding: 18px 44px 16px 18px; }
+  .step-num { justify-self: center; font-size: 44px; }
+  .step-icon { width: 44px; height: 44px; border-radius: 13px; }
+  .step-icon svg { width: 24px; height: 24px; }
+  .step-title { font-size: 16px; }
+  .step-org { font-size: 14px; }
+}
+
+/* "Mehr entdecken": Schrift rot, Pfeil weiß */
+.scroll-cue { color: var(--accent); }
+.scroll-cue::after { border-color: #fff; }
+.scroll-cue:hover { color: var(--accent-hover); }
+
+/* ---------- Impressum & Datenschutz ---------- */
+.legal-page { padding-top: 140px; }
+.legal-title { margin: 0 0 32px; font-size: clamp(28px, 3.6vw, 38px); line-height: 1.2; color: #fff; font-weight: 700; }
+.legal { max-width: 860px; padding: 40px 44px 30px; }
+.legal h2 { margin: 0 0 14px; font-size: 24px; }
+.legal h2 + p { margin-top: 0; }
+.legal p + h2, .legal address + p + h2 { margin-top: 44px; }
+.legal h3 { margin: 28px 0 8px; font-size: 17px; }
+.legal p, .legal address { margin: 0 0 12px; color: #c9c9d0; font-style: normal; }
+.legal a { color: var(--accent); }
+.legal a:hover { color: var(--accent-hover); }
+.legal-date { font-size: 14px; }
+.legal-back { margin: 30px 0 0; }
+.foot-links { flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .legal-page { padding-top: 110px; }
+  .legal { padding: 28px 22px 18px; }
+}
+
+/* Navigation in der Kopfleiste: Schrift rot */
+.nav a { color: #ef4f3c; }                 /* kräftigeres Rot, ca. 4,8 : 1 auf der Glasleiste */
+.nav a:hover, .nav a.active { color: #ff6a55; }
