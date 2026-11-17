@@ -39,3 +39,6 @@ jspm_packages
 
 # Demo files
 /demo/
+
+# Lokales Archiv alter Dateien (nicht veröffentlichen)
+/_Archiv_Repository/
