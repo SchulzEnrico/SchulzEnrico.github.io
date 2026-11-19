@@ -1291,3 +1291,257 @@ section[tabindex="-1"]:focus { outline: none; }
 .fm-qr.fm-glass { flex-direction: column; gap: 6px; }
 .fm-qr svg { display: block; }
 .fm-a4 .fm-qr { right: 33px; top: 33px; }
+
+/* 19.11.2026 (abends): PDF-Auswahl auf Touch-Geräten */
+.ds { position: fixed; inset: auto 0 0 0; margin: 0 auto; width: min(100%, 520px); max-width: 100%; padding: 22px 20px calc(18px + env(safe-area-inset-bottom)); border: 0; border-radius: 22px 22px 0 0; color: var(--text); background: linear-gradient(160deg, #202027, #15151a 55%, #0e0e12); box-shadow: 0 -1px 0 rgba(255,255,255,.08), 0 -18px 40px rgba(0,0,0,.55); }
+.ds::backdrop { background: rgba(6, 6, 8, .62); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.ds-k { margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b4b4bc; }
+.ds-title { margin: 0 0 16px; font-size: 18px; line-height: 1.3; font-weight: 700; color: #fff; }
+.ds-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.ds-btn { display: flex; flex-direction: column; align-items: center; gap: 6px; min-height: 68px; padding: 12px 6px; border: 0; border-radius: 14px; font: inherit; font-size: 14px; font-weight: 600; color: #fff; text-decoration: none; background: linear-gradient(145deg, #1b1b21, #111115); box-shadow: 4px 4px 10px rgba(0,0,0,.55), -3px -3px 8px rgba(255,255,255,.04), inset 0 0 0 1px rgba(255,255,255,.05); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.ds-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ds-btn:active { box-shadow: inset 2px 2px 6px rgba(0,0,0,.6), inset 0 0 0 1px rgba(162, 43, 14, .7); }
+.ds-hint { margin: 14px 2px 0; font-size: 13px; line-height: 1.45; color: #b4b4bc; }
+.ds-status { margin: 6px 2px 0; min-height: 1em; font-size: 13px; color: #fff; }
+.ds-close { display: block; width: 100%; margin-top: 10px; min-height: 48px; border: 0; border-radius: 14px; font: inherit; font-size: 15px; font-weight: 600; color: #e6e6ea; background: transparent; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); cursor: pointer; }
+@media (prefers-reduced-motion: no-preference) {
+  .ds[open] { animation: ds-up .22s ease-out; }
+  @keyframes ds-up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+}
+@media (max-width: 370px) { .ds-btn { font-size: 12.5px; } }
+
+/* 19.11.2026 (abends): LinkedIn + GitHub als halbe Kacheln unter den Kontakt-Kacheln */
+.contact-alt { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 18px 0 0; }
+.contact-alt a.half { display: flex; align-items: center; gap: 12px; padding: 10px 16px; min-height: 50px; border-radius: 16px; text-decoration: none; }
+.contact-alt .well { width: 32px; height: 32px; border-radius: 10px; flex: none; }
+.contact-alt .well svg { width: 16px; height: 16px; }
+.contact-alt .k { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 1px; }
+.contact-alt .v { display: block; font-size: 14px; line-height: 1.3; }
+.contact-alt a.half:hover .k { color: var(--accent-hover); }
+@media (min-width: 901px) {
+  /* je eine halbe Kachel mittig unter den beiden Lücken der drei Kacheln */
+  .contact-alt { --cw: calc((100% - 36px) / 3); position: relative; display: block; height: 56px; }
+  .contact-alt a.half { position: absolute; top: 0; width: calc(var(--cw) / 2); height: 52px; min-height: 0; box-sizing: border-box; }
+  .contact-alt a.half:nth-child(1) { left: calc(var(--cw) + 9px - var(--cw) / 4); }
+  .contact-alt a.half:nth-child(2) { left: calc(var(--cw) * 2 + 27px - var(--cw) / 4); }
+}
+/* Lebenslauf-Knopf: Computer neben dem Foto, Handy/Tablet unter dem Foto */
+.cv-mobile { display: none; }
+@media (max-width: 900px) {
+  .profile-lower .cv-link { display: none; }
+  .cv-link.cv-mobile { display: block; margin: 18px 0 0; text-align: center; }
+}
+
+/* 19.11.2026 (abends): angedeutete Station „Ideas?!“ – zurückgenommen, Schrift bleibt lesbar (≥ 4,5 : 1) */
+.step-future .step-head.neu { background: rgba(255, 255, 255, .012); box-shadow: none; border: 1px dashed rgba(255, 255, 255, .16); }
+.step-future .step-num { color: #8e8e98; }
+.step-future .step-period, .step-future .step-title { color: #b4b4bc; }
+.step-future .step-org { color: #b4b4bc; font-weight: 400; }
+.step-future .step-head:hover, .step-future .step-head[aria-expanded="true"] { border-color: rgba(162, 43, 14, .75); }
+.step-future .step-head:hover .step-title, .step-future .step-head[aria-expanded="true"] .step-title { color: #fff; }
+.step-future .step-head[aria-expanded="true"] .step-num { color: var(--accent); }
+.step-future .step-body p { margin: 0 0 12px; max-width: 760px; }
+.step-future .idea-cta { margin: 18px 0 4px; }
+.idea-cta .pill { gap: 10px; }
+.idea-cta .pill svg { width: 16px; height: 16px; flex: none; }
+@media (min-width: 901px) {
+  /* schmaler Balken nach „Aktuell“; Markierung unter der gewählten Stufe passend zu den neuen Spaltenbreiten */
+  .stairs.stairs-on { grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(0, .55fr); }
+  .stairs-on .step-title, .stairs-on .step-org { -webkit-hyphens: auto; hyphens: auto; overflow-wrap: break-word; }
+  .stairs-on .step-body::before { left: calc(var(--a, 4) * ((100% - 80px) / 5.55 + 16px) + (100% - 80px) / 11.1 - 28px); }
+  .stairs-on #sb-idee::before { left: calc(5 * ((100% - 80px) / 5.55 + 16px) + (100% - 80px) * .275 / 5.55 - 28px); width: 40px; margin-left: 8px; }
+  .stairs-on .step-future .step-head { padding: 22px 12px 20px; }
+  /* am Computer nur „?“ und „Ideas?!“ zeigen; Zusatztexte bleiben für Screenreader */
+  .stairs-on .step-future .step-period, .stairs-on .step-future .step-org { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .stairs-on .step-future .step-chev { right: 10px; }
+}
+
+/* 19.11.2026 (später): „Ideas?!“ sieht aus wie die anderen Stufen, nur sehr zurückgenommen (Rücknahme der gestrichelten Fassung) */
+.step-future .step-head.neu { background: linear-gradient(145deg, #1b1b21, #111115); border: 0; box-shadow: var(--raised); }
+.step-future .step-num, .step-future .step-period, .step-future .step-title { color: #fff; }
+.step-future .step-head { opacity: .45; transition: opacity .25s; }   /* weiße Schrift bleibt so bei ≥ 4,5 : 1 */
+.step-future .step-head:hover, .step-future .step-head:focus-visible, .step-future .step-head[aria-expanded="true"] { opacity: 1; }
+.step-future .step-head[aria-expanded="true"] .step-num { color: var(--accent); }
+/* nur „?“ und „Ideas?!“ sichtbar (auch am Handy), Zusatztexte für Screenreader */
+.step-future .step-period, .step-future .step-org { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 900px) { .step-future .step-head { min-height: 0; } }
+
+/* Kontakt: LinkedIn/GitHub größer, im Verhältnis der Kacheln darüber (≈ 80 %) */
+.contact-alt a.half { padding: 16px 19px; gap: 13px; border-radius: 18px; min-height: 64px; }
+.contact-alt .well { width: 37px; height: 37px; border-radius: 11px; }
+.contact-alt .well svg { width: 18px; height: 18px; }
+.contact-alt .k { font-size: 12px; letter-spacing: .18em; margin-bottom: 3px; }
+.contact-alt .v { font-size: 15px; }
+@media (min-width: 901px) {
+  .contact-alt { height: 86px; }
+  .contact-alt a.half { width: calc(var(--cw) * .8); height: 81px; }
+  .contact-alt a.half:nth-child(1) { left: calc(var(--cw) + 9px - var(--cw) * .4); }
+  .contact-alt a.half:nth-child(2) { left: calc(var(--cw) * 2 + 27px - var(--cw) * .4); }
+}
+
+/* Menü am Handy: statt Slogan die Rubrik „Aktuelles“ mit Link; „Multipotenzial / Enrico Schulz“ ohne Link */
+.fm:not(.fm-a4) .fm-name { pointer-events: none; }
+.fm:not(.fm-a4) .fm-slogan { display: none; }
+.fm:not(.fm-a4) .fm-r.fm-r-akt { display: flex; flex-direction: column; align-items: flex-start; position: relative; margin-top: 20px; padding-left: 16px; border-left: 3px solid var(--accent-deco); text-decoration: none; max-width: min(320px, 100%); }
+.fm:not(.fm-a4) .fm-r-akt .fm-rt { font-size: 24px; line-height: 1.1; }
+.fm:not(.fm-a4) .fm-r-akt .fm-rs { font-size: 14px; margin-top: 4px; }
+
+/* 19.11.2026 (später): Rot der Schriften gedämpft (Terrakotta statt Signalrot), Kontrast ≥ 4,5 : 1 auf Grund und Karten */
+:root { --accent: #c27059; --accent-hover: #d0806a; --glow: rgba(194, 112, 89, .26); }
+.nav a { color: #c27059; }
+.nav a:hover, .nav a.active { color: #d0806a; }
+.fm { --accent: #c27059; --accent-hover: #d0806a; }
+
+/* Abschnittsüberschriften: grau, wie in die Fläche graviert (TEST) */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  color: #8f8f98;                                   /* 6 : 1 auf dem Seitengrund */
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .85), 0 1px 0 rgba(255, 255, 255, .09);
+}
+
+/* „Ideas?!“ bleibt immer gleich schwach – auch beim Überfahren und geöffnet */
+.step-future .step-head:hover, .step-future .step-head:focus-visible, .step-future .step-head[aria-expanded="true"] { opacity: .45; }
+
+/* Kontakt: LinkedIn/GitHub noch einmal ca. 20 % größer */
+.contact-alt a.half { padding: 19px 22px; gap: 15px; border-radius: 20px; min-height: 76px; }
+.contact-alt .well { width: 44px; height: 44px; border-radius: 13px; }
+.contact-alt .well svg { width: 21px; height: 21px; }
+.contact-alt .k { font-size: 13px; }
+.contact-alt .v { font-size: 17px; }
+@media (min-width: 901px) {
+  .contact-alt { height: 102px; }
+  .contact-alt a.half { width: calc(var(--cw) * .94); height: 96px; }
+  .contact-alt a.half:nth-child(1) { left: calc(var(--cw) + 9px - var(--cw) * .47); }
+  .contact-alt a.half:nth-child(2) { left: calc(var(--cw) * 2 + 27px - var(--cw) * .47); }
+}
+
+/* 19.11.2026 (später): Abschnittsüberschriften erhaben geprägt („Emboss“) statt graviert */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  color: #8f8f98;                                   /* 6 : 1 auf dem Seitengrund */
+  background: linear-gradient(180deg, #a3a3ac 0%, #8a8a93 55%, #7c7c85 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(-1px -1px 0 rgba(255, 255, 255, .10)) drop-shadow(2px 3px 3px rgba(0, 0, 0, .75));
+}
+@media (forced-colors: active) { #profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { -webkit-text-fill-color: CanvasText; background: none; filter: none; } }
+
+/* 19.11.2026 (später): Überschriften „Emboss“ – fast Ton in Ton, Wirkung nur über Licht (oben links) und Schatten (unten rechts); 3,3 : 1 (Großtext) */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  color: #63636b; -webkit-text-fill-color: #63636b; background: none; filter: none;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, .16), 1px 1px 0 rgba(0, 0, 0, .9), 2px 3px 5px rgba(0, 0, 0, .7);
+}
+
+/* 19.11.2026 (später): Emboss verstärkt – deutliche Lichtkante oben links, harte + weiche Schattenkante unten rechts */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  color: #66666e; -webkit-text-fill-color: #66666e;
+  text-shadow:
+    -1px -1px 0 rgba(255, 255, 255, .32),
+    -2px -2px 1px rgba(255, 255, 255, .08),
+    1px 1px 0 rgba(0, 0, 0, 1),
+    2px 2px 0 rgba(0, 0, 0, .85),
+    4px 5px 8px rgba(0, 0, 0, .75);
+}
+
+/* 19.11.2026 (später): Überschriften „Emboss“ nach dem CodePen-Prinzip: Füllung über background-clip, ein versetzter Schatten (1px/2px) erzeugt die Kante im Buchstaben; Buchstabenmitte ≈ 3,2 : 1 (Großtext) */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  background: #a4a4ad; -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent; filter: none;
+  text-shadow: rgba(0, 0, 0, .42) 1px 2px 1px;
+}
+/* Variante Engrave (bei Bedarf statt der obigen): background: #4c4c54; text-shadow: rgba(255, 255, 255, .22) 1px 2px 1px; */
+@media (forced-colors: active) { #profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; text-shadow: none; } }
+
+/* ==========================================================
+   19.11.2026 (abends): Neumorph im Stil des CodePen-Vorbilds
+   – Flächen haben die Farbe des Grundes, geformt nur durch zwei weiche Schatten
+   – keine Ränder, keine Innenlinien, keine Verläufe, kein Leuchten
+   – gewählt/gedrückt = eingedrückt (inset); Hover = feiner roter Innenrahmen + Schrift tauscht die Farbe
+   – Farben bleiben: Anthrazit, LL-Rot (Deko), Terrakotta (Schrift)
+   ========================================================== */
+:root {
+  --bg: #15151a;
+  --surf: #15151a;
+  --nm-d: rgba(0, 0, 0, .62);
+  --nm-l: rgba(255, 255, 255, .045);
+  --raised: 7px 7px 16px var(--nm-d), -6px -6px 14px var(--nm-l);
+  --raised-sm: 4px 4px 9px var(--nm-d), -3px -3px 8px var(--nm-l);
+  --pressed: inset 4px 4px 9px var(--nm-d), inset -3px -3px 8px var(--nm-l);
+  --ring: inset 0 0 0 1px rgba(162, 43, 14, .8);
+}
+html body { background-color: var(--bg); }
+
+/* Flächen */
+html body .neu { background: var(--surf); border: 0; box-shadow: var(--raised); }
+html body .neu::after, html body .neu::before { display: none; }
+html body .well { background: var(--surf); box-shadow: var(--pressed); }
+html body .pill, html body .fm-pill, html body .cv-link .pill, html body .skill-toggle { background: var(--surf); border: 0; box-shadow: var(--raised-sm); }
+
+/* Hover / Fokus: kein Anheben, kein Leuchten – feiner roter Innenrahmen */
+html body .cert:hover, html body .contact a:hover, html body .step-head:hover {
+  transform: none; border-color: transparent; box-shadow: var(--raised), var(--ring);
+}
+html body .pill:hover, html body .fm-pill:hover, html body .skill-toggle:hover { box-shadow: var(--raised-sm), var(--ring); }
+html body .cert:hover .well, html body .contact a:hover .well { box-shadow: var(--pressed); }
+/* Schrift tauscht die Farbe: Rot wird Weiß, Weiß wird Rot */
+html body .cert:hover h3 { color: var(--accent); }
+html body .cert:hover .more, html body .contact a:hover .k { color: #fff; text-shadow: none; }
+html body .contact a:hover .v { color: var(--accent); }
+html body .step-head:hover .step-title { color: var(--accent); }
+html body .step-head:hover .step-org { color: #fff; }
+html body .cv-link .pill:hover, html body .skill-toggle:hover { color: #fff; }
+html body .idea-cta .pill:hover { color: var(--accent); }
+
+/* gewählt / gedrückt: eingedrückt */
+html body .step-head[aria-expanded="true"] { box-shadow: var(--pressed); }
+html body .step-head[aria-expanded="true"]:hover { box-shadow: var(--pressed), var(--ring); }
+html body .cert:active, html body .contact a:active, html body .pill:active, html body .step-head:active { box-shadow: var(--pressed); }
+
+/* Überschriften: Engrave (CodePen-Prinzip: Füllung per background-clip, ein heller versetzter Schatten); Buchstabenmitte ≈ 4 : 1 */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  background: #4f4f57; -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent; filter: none;
+  text-shadow: rgba(255, 255, 255, .22) 1px 2px 1px;
+}
+
+/* 19.11.2026 (abends): Überschriften „Engrave“ mit echtem Innenschatten (SVG-Filter #es-engrave im HTML):
+   dunkle Innenkante oben links, feine helle Lippe unten; Füllung #6a6a72 ≈ 3,6 : 1 (Großtext) */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  background: none; color: #6a6a72; -webkit-text-fill-color: #6a6a72; text-shadow: none; filter: url(#es-engrave);
+}
+@media (forced-colors: active) { #profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { filter: none; color: CanvasText; -webkit-text-fill-color: CanvasText; } }
+
+/* 19.11.2026 (abends): Feinschliff Engrave + Hover */
+/* Überschriften kräftiger und etwas breiter, damit der Innenschatten zur Strichstärke passt */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { font-weight: 800; letter-spacing: .025em; }
+/* Silber-goldener Schein wieder als Leuchtfarbe (war versehentlich auf Rot gestellt) */
+:root { --glow: rgba(214, 202, 178, .32); --ring: inset 0 0 0 .5px rgba(162, 43, 14, .95); }
+/* Hover: silber-goldener Rahmen + Schein wie vorher, dazu ein sehr feiner roter Innenrahmen */
+html body .cert:hover, html body .contact a:hover, html body .step-head:hover {
+  box-shadow: var(--raised), 0 0 0 1px rgba(var(--gold), .38), 0 0 18px rgba(var(--gold), .30), var(--ring);
+}
+html body .step-head[aria-expanded="true"]:hover { box-shadow: var(--pressed), 0 0 0 1px rgba(var(--gold), .38), 0 0 18px rgba(var(--gold), .30), var(--ring); }
+html body .pill:hover, html body .fm-pill:hover, html body .skill-toggle:hover {
+  box-shadow: var(--raised-sm), 0 0 0 1px rgba(var(--gold), .38), 0 0 14px rgba(var(--gold), .28), var(--ring);
+}
+html body .cert:hover .more, html body .contact a:hover .k { text-shadow: 0 0 10px rgba(var(--gold), .45); }
+
+/* 19.11.2026 (abends): Engrave nach CRAFT-Proportionen – tieferer Innenschatten, helle Kante rundherum, etwas breiter gesetzt */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { letter-spacing: .04em; }
+
+/* 19.11.2026 (abends): Engrave in den Proportionen des Vorbilds – größer, kräftiger, breiter; tieferer Innenschatten + helle Kante rundum (SVG-Filter) */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { font-size: clamp(32px, 4.3vw, 46px); font-weight: 800; letter-spacing: .035em; line-height: 1.15; }
+/* „Ideas?!“: Hover wie bei den anderen Stufen (die ältere Balken-Regel war stärker); Deckkraft bleibt 45 % */
+html body .step-future .step-head.neu:hover { box-shadow: var(--raised), 0 0 0 1px rgba(var(--gold), .38), 0 0 18px rgba(var(--gold), .30), var(--ring); }
+html body .step-future .step-head.neu[aria-expanded="true"] { box-shadow: var(--pressed); }
+html body .step-future .step-head.neu[aria-expanded="true"]:hover { box-shadow: var(--pressed), 0 0 0 1px rgba(var(--gold), .38), 0 0 18px rgba(var(--gold), .30), var(--ring); }
+
+/* 19.11.2026 (abends): Überschriften vorerst schlicht grau (Engrave/Emboss wird im nächsten Chat neu gestaltet; Filter #es-engrave bleibt im HTML, ungenutzt) */
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 {
+  filter: none; background: none; text-shadow: none;
+  color: #9a9aa3; -webkit-text-fill-color: #9a9aa3;          /* 6,6 : 1 auf dem Grund */
+  font-size: clamp(28px, 3.6vw, 38px); font-weight: 700; letter-spacing: normal; line-height: 1.2;
+}
+@media (min-width: 901px) { #profil h2 { font-size: clamp(26px, 2.6vw, 32px); } }
+
+/* 19.11.2026 (abends): „Mehr anzeigen“ rund wie die übrigen Knöpfe (bekam durch die Neumorph-Fläche sichtbare Ecken) */
+html body .skill-toggle { border-radius: 999px; padding: 10px 20px; }
+html body .skill-toggle:focus-visible { outline-offset: 4px; border-radius: 999px; }

@@ -62,13 +62,28 @@
   heads.forEach(function (h, i) {
     h.addEventListener('click', function () {
       var isOpen = h.getAttribute('aria-expanded') === 'true';
-      if (isOpen && !desktop.matches) {          // Handy: zuklappen erlaubt
+      if (isOpen) {                              // zuklappen erlaubt (seit 19.11.2026 auch am Computer)
         h.setAttribute('aria-expanded', 'false');
         document.getElementById(h.getAttribute('aria-controls')).hidden = true;
       } else if (!isOpen) { open(i); }
     });
   });
-  open(heads.length - 1);
+  // 19.11.2026: beim Laden ist keine Stufe offen – nur ein direkter Link (#aktuell, #sh-…, #sb-…) öffnet die passende Station
+  function fromHash() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id && document.getElementById(id);
+    if (!el || !stairs.contains(el)) return;
+    var step = el.closest('.step');
+    var head = step && step.querySelector('.step-head');
+    var i = heads.indexOf(head);
+    if (i >= 0 && head.getAttribute('aria-expanded') !== 'true') open(i);
+  }
+  heads.forEach(function (h) {               // alle Stufen geschlossen (ohne JavaScript bleibt alles offen)
+    h.setAttribute('aria-expanded', 'false');
+    document.getElementById(h.getAttribute('aria-controls')).hidden = true;
+  });
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
 
   // Handy/Tablet: neueste Station oben (DOM-Reihenfolge, damit Tastatur und Screenreader passen)
   var steps = Array.prototype.slice.call(stairs.querySelectorAll(':scope > .step'));
@@ -84,9 +99,10 @@
 // E-Mail-Adresse erst im Browser zusammensetzen (Schutz vor Adress-Sammlern)
 (function () {
   document.querySelectorAll('.js-mail').forEach(function (a) {
-    var subj = a.getAttribute('data-s');
-    a.href = 'mailto:' + a.getAttribute('data-u') + '@' + a.getAttribute('data-d') +
-      (subj ? '?subject=' + encodeURIComponent(subj) : '');
+    var subj = a.getAttribute('data-s'), body = a.getAttribute('data-b'), q = [];
+    if (subj) q.push('subject=' + encodeURIComponent(subj));
+    if (body) q.push('body=' + encodeURIComponent(body));
+    a.href = 'mailto:' + a.getAttribute('data-u') + '@' + a.getAttribute('data-d') + (q.length ? '?' + q.join('&') : '');
   });
 })();
 
@@ -135,6 +151,23 @@
       }
       dlg.style.setProperty('--ns', ns.toFixed(4));
     }
+    centerAkt(a4);
+  }
+  // 19.11.2026: am Handy steht „Aktuelles“ mittig zwischen „Enrico Schulz“ und der Menüleiste
+  function centerAkt(a4) {
+    var akt = dlg.querySelector('.fm-r-akt'), name = dlg.querySelector('.fm-name'), nav = dlg.querySelector('.fm-nav');
+    if (!akt || !name || !nav) return;
+    akt.style.marginTop = '';
+    if (a4 || !dlg.open) return;
+    function diff(m) {                         // Abstand oben minus Abstand unten bei Rand m
+      akt.style.marginTop = m + 'px';
+      var nb = name.getBoundingClientRect().bottom, nt = nav.getBoundingClientRect().top, ab = akt.getBoundingClientRect();
+      return (ab.top - nb) - (nt - ab.bottom);
+    }
+    var lo = 20, hi = 600;                     // schrittweise eingrenzen (die Menüleiste kann sich mit dem Inhalt verschieben)
+    if (diff(lo) >= 0) { akt.style.marginTop = lo + 'px'; return; }
+    for (var k = 0; k < 14; k++) { var mid = (lo + hi) / 2; if (diff(mid) < 0) lo = mid; else hi = mid; }
+    akt.style.marginTop = Math.round(lo) + 'px';
   }
   // aktuellen Seitenabschnitt im Menü hervorheben (wie beim Hover)
   function markCurrent() {
@@ -164,6 +197,7 @@
     var first = dlg.querySelector('.fm-nav .is-current') || dlg.querySelector('.fm-pill');
     if (first) first.focus();
     dlg.scrollTop = 0;
+    requestAnimationFrame(function () { fit(); });   // nach dem ersten Zeichnen noch einmal ausrichten
   }
   btn.addEventListener('click', open);
   dlg.querySelector('.fm-close').addEventListener('click', function () { dlg.close(); });
@@ -176,11 +210,11 @@
     if (target) {
       var el = document.getElementById(target);
       if (el) {
-        var head = el.querySelector('.step-head');                    // Sprung auf eine Station öffnet sie
+        var head = el.classList.contains('step') ? el.querySelector('.step-head') : null;   // nur ein Sprung auf eine Station öffnet sie
         if (head && head.getAttribute('aria-expanded') !== 'true') head.click();
         var to = head || el;                                          // Stufen haben am Computer kein eigenes Layout
         if (to === el && !el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
-        if (head) window.scrollTo({ top: to.getBoundingClientRect().top + window.scrollY - 100 });
+        if (head) window.scrollTo({ top: (window.esAbsTop ? window.esAbsTop(to) : to.getBoundingClientRect().top + window.scrollY) - (window.esJumpOffset ? window.esJumpOffset() : 100) });
         else to.scrollIntoView();
         to.focus({ preventScroll: true });
         if (history.pushState) history.pushState(null, '', '#' + target);
@@ -209,4 +243,128 @@
       dlg.close();
     });
   });
+})();
+
+// 19.11.2026 (abends): PDF-Auswahl auf Touch-Geräten (iPhone): Ansehen im selben Tab (Zurück funktioniert), Teilen, Herunterladen
+(function () {
+  var touch = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  var links = document.querySelectorAll('a[href$=".pdf"]');
+  if (!touch || !links.length) return;
+  var en = (document.documentElement.lang || '').indexOf('en') === 0;
+  var T = en
+    ? { view: 'View', share: 'Share', save: 'Download', close: 'Close', hint: 'Opens in this tab – swipe from the left edge to come back.', copied: 'Link copied', doc: 'Document' }
+    : { view: 'Ansehen', share: 'Teilen', save: 'Herunterladen', close: 'Schließen', hint: 'Öffnet in diesem Tab – zurück zur Seite: vom linken Rand wischen.', copied: 'Link kopiert', doc: 'Dokument' };
+  var ico = {
+    view: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    share: '<path d="M12 3v12"/><path d="M7.5 7.5 12 3l4.5 4.5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>',
+    save: '<path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19h14"/>'
+  };
+  function btn(cls, key, tag) {
+    var el = document.createElement(tag || 'button');
+    if (!tag) el.type = 'button';
+    el.className = 'ds-btn ' + cls;
+    el.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24">' + ico[key] + '</svg><span>' + T[key] + '</span>';
+    return el;
+  }
+  var dlg = document.createElement('dialog');
+  dlg.className = 'ds';
+  dlg.setAttribute('aria-labelledby', 'ds-title');
+  dlg.innerHTML = '<p class="ds-k">' + T.doc + ' · PDF</p><h2 id="ds-title" class="ds-title"></h2>';
+  var bView = btn('ds-view', 'view', 'a'), bShare = btn('ds-share', 'share'), bSave = btn('ds-save', 'save', 'a');
+  var row = document.createElement('div'); row.className = 'ds-row';
+  row.appendChild(bView); row.appendChild(bShare); row.appendChild(bSave);
+  var hint = document.createElement('p'); hint.className = 'ds-hint'; hint.textContent = T.hint;
+  var status = document.createElement('p'); status.className = 'ds-status'; status.setAttribute('role', 'status');
+  var bClose = document.createElement('button'); bClose.type = 'button'; bClose.className = 'ds-close'; bClose.textContent = T.close;
+  dlg.appendChild(row); dlg.appendChild(hint); dlg.appendChild(status); dlg.appendChild(bClose);
+  document.body.appendChild(dlg);
+  if (typeof dlg.showModal !== 'function') { dlg.remove(); return; }
+
+  var cur = null, file = null;
+  function name(a) {
+    var f = a.getAttribute('href');
+    if (/Lebenslauf/.test(f)) return en ? 'CV – Enrico Schulz' : 'Lebenslauf – Enrico Schulz';
+    if (/Profil/.test(f)) return en ? 'Profile – Enrico Schulz' : 'Profil – Enrico Schulz';
+    var h = a.querySelector('h3, .k');
+    if (h) return h.textContent.trim();
+    var t = (a.textContent || '').replace(/\(PDF[^)]*\)/, '').trim();
+    return t || decodeURIComponent(a.getAttribute('href').split('/').pop());
+  }
+  function openFor(a) {
+    var href = a.href, fn = decodeURIComponent(href.split('/').pop());
+    cur = { href: href, fn: fn, title: name(a), opener: a };
+    dlg.querySelector('.ds-title').textContent = cur.title;
+    bView.href = href;
+    bSave.href = href; bSave.setAttribute('download', fn);
+    status.textContent = '';
+    file = null;
+    // Datei vorab laden, damit „Teilen“ sie ohne Wartezeit übergeben kann (iOS verlangt eine direkte Nutzeraktion)
+    if (window.fetch && window.File) {
+      fetch(href).then(function (r) { return r.ok ? r.blob() : null; }).then(function (b) {
+        if (b && cur && cur.href === href) file = new File([b], fn, { type: 'application/pdf' });
+      }).catch(function () {});
+    }
+    dlg.showModal();
+    bView.focus();
+  }
+  links.forEach(function (a) {
+    a.setAttribute('aria-haspopup', 'dialog');
+    a.addEventListener('click', function (e) { e.preventDefault(); openFor(a); });
+  });
+  bShare.addEventListener('click', function () {
+    if (!cur) return;
+    var data = { title: cur.title, url: cur.href };
+    if (file && navigator.canShare && navigator.canShare({ files: [file] })) data = { title: cur.title, files: [file] };
+    if (navigator.share) {
+      navigator.share(data).catch(function (err) {
+        if (err && err.name === 'AbortError') return;
+        if (data.files) navigator.share({ title: cur.title, url: cur.href }).catch(function () {});
+      });
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(cur.href).then(function () { status.textContent = T.copied; });
+    }
+  });
+  bClose.addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });   // Tippen neben das Fenster schließt
+  dlg.addEventListener('close', function () { if (cur && cur.opener && cur.opener.isConnected) cur.opener.focus({ preventScroll: true }); });
+})();
+
+// 19.11.2026 (abends): Sprungziele ausrichten – die Abschnittsüberschrift steht nach einem Sprung knapp unter Kopfleiste und Logo
+(function () {
+  var root = document.documentElement;
+  function offset() {
+    var bar = document.querySelector('.topbar'), logo = document.querySelector('.brand-mark');
+    var bottom = 0;
+    [bar, logo].forEach(function (el) { if (el) bottom = Math.max(bottom, el.getBoundingClientRect().bottom); });
+    return Math.round(bottom + (window.innerWidth > 900 ? 28 : 22));
+  }
+  window.esJumpOffset = offset;
+  // Lage auf der Seite ohne Einblend-Verschiebung (transform) messen
+  function absTop(el) { var y = 0; while (el) { y += el.offsetTop; el = el.offsetParent; } return y; }
+  window.esAbsTop = absTop;
+  function apply() {
+    var pad = parseFloat(getComputedStyle(root).scrollPaddingTop) || 0, off = offset();
+    document.querySelectorAll('section[id]').forEach(function (sec) {
+      if (sec.id === 'start') return;
+      var inner = parseFloat(getComputedStyle(sec).paddingTop) || 0;   // Überschrift steht direkt am oberen Innenabstand
+      sec.style.scrollMarginTop = Math.round(off - inner - pad) + 'px';
+    });
+    var akt = document.getElementById('aktuell');
+    if (akt) akt.style.scrollMarginTop = Math.round(off - pad) + 'px';
+  }
+  apply();
+  window.addEventListener('resize', apply);
+  window.addEventListener('load', function () {
+    apply();
+    jumpHash();
+  });
+  // Stationen haben am Computer kein eigenes Layout (display: contents) → zum Kopf der Station springen
+  function jumpHash() {
+    var t = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (!t) return;
+    var head = t.classList.contains('step') ? t.querySelector('.step-head') : null;
+    if (head) window.scrollTo({ top: absTop(head) - offset(), behavior: 'auto' });
+    else t.scrollIntoView();
+  }
+  window.addEventListener('hashchange', function () { setTimeout(jumpHash, 0); });
 })();
