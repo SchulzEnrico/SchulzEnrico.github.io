@@ -89,3 +89,94 @@
       (subj ? '?subject=' + encodeURIComponent(subj) : '');
   });
 })();
+
+// Skills: zuerst das Wichtigste, der Rest lässt sich aufklappen (ohne JavaScript ist alles offen)
+(function () {
+  document.querySelectorAll('.skill-toggle').forEach(function (btn) {
+    var more = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!more) return;
+    var text = btn.querySelector('.st-text'), count = btn.querySelector('.st-count');
+    function set(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      more.hidden = !open;
+      text.textContent = open ? btn.getAttribute('data-less') : btn.getAttribute('data-more');
+      count.textContent = open ? '' : '+' + btn.getAttribute('data-count');
+    }
+    set(false);
+    btn.hidden = false;
+    btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+  });
+})();
+
+// Vollbild-Menü: Dialog mit Fokus im Menü, Escape schließt, Fokus zurück auf den Knopf
+(function () {
+  var dlg = document.getElementById('menu');
+  var btn = document.querySelector('.burger');
+  if (!dlg || !btn || typeof dlg.showModal !== 'function') return;   // ohne Dialog-Unterstützung bleibt die normale Navigation
+  btn.hidden = false;
+  var root = document.documentElement;
+  root.classList.add('has-fm');            // Kopfleiste: nur noch Menü-Knopf statt Textnavigation
+  var target = null;
+
+  function fit() {
+    var vw = window.innerWidth, vh = window.innerHeight;
+    var a4 = vw >= 700 && vh >= 560;
+    dlg.classList.toggle('fm-a4', a4);
+    if (a4) {
+      var s = Math.min((vh - 32) / 1123, (vw - 160) / 794, 1);
+      dlg.style.setProperty('--s', s.toFixed(4));
+      dlg.style.setProperty('--ns', Math.max(s, 0.9).toFixed(4));
+    }
+  }
+  function open() {
+    fit();
+    target = null;
+    dlg.showModal();
+    root.classList.add('fm-open');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', btn.getAttribute('data-close'));
+    var first = dlg.querySelector('.fm-pill');
+    if (first) first.focus();
+    dlg.scrollTop = 0;
+  }
+  btn.addEventListener('click', open);
+  dlg.querySelector('.fm-close').addEventListener('click', function () { dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) fit(); });
+
+  dlg.addEventListener('close', function () {
+    root.classList.remove('fm-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', btn.getAttribute('data-open'));
+    if (target) {
+      var el = document.getElementById(target);
+      if (el) {
+        if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+        el.scrollIntoView();
+        el.focus({ preventScroll: true });
+        if (history.pushState) history.pushState(null, '', '#' + target);
+      }
+      target = null;
+    } else {
+      btn.focus();
+    }
+  });
+
+  // Tab bleibt im Menü (von hinten nach vorn und umgekehrt)
+  dlg.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var f = Array.prototype.filter.call(dlg.querySelectorAll('a[href], button'), function (el) { return el.tabIndex >= 0 && el.getClientRects().length > 0; });
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  // Links innerhalb der Seite schließen das Menü und springen zum Abschnitt
+  dlg.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      target = a.getAttribute('href').slice(1);
+      dlg.close();
+    });
+  });
+})();
