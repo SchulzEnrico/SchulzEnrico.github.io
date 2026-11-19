@@ -125,17 +125,43 @@
     if (a4) {
       var s = Math.min((vh - 32) / 1123, (vw - 160) / 794, 1);
       dlg.style.setProperty('--s', s.toFixed(4));
-      dlg.style.setProperty('--ns', Math.max(s, 0.9).toFixed(4));
+      // Bedienleiste mind. 90 % groß – aber nie so groß, dass sie den Profil-Block berührt
+      var ns = Math.max(s, 0.9);
+      var nav = dlg.querySelector('.fm-nav'), prof = dlg.querySelector('.fm-r-profil');
+      if (nav && prof) {
+        var frameH = 1123 * s, profBottom = (prof.offsetTop + prof.offsetHeight) * s;
+        var avail = frameH - 18 * s - profBottom - 14;
+        ns = Math.max(s, Math.min(ns, avail / nav.offsetHeight));
+      }
+      dlg.style.setProperty('--ns', ns.toFixed(4));
     }
   }
+  // aktuellen Seitenabschnitt im Menü hervorheben (wie beim Hover)
+  function markCurrent() {
+    var ids = ['start', 'profil', 'stationen', 'skills', 'weiterbildung', 'kontakt'], cur = 'start';
+    ids.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.4) cur = id;
+    });
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4) cur = 'kontakt';
+    dlg.querySelectorAll('.is-current').forEach(function (el) { el.classList.remove('is-current'); });
+    dlg.querySelectorAll('[aria-current="location"]').forEach(function (el) { el.removeAttribute('aria-current'); });
+    dlg.querySelectorAll('a[href="#' + cur + '"]').forEach(function (a) {
+      if (!a.closest('.fm-nav')) return;   // nur die Bedienleiste zeigt den aktuellen Abschnitt; Schlagzeilen nur beim Hover
+      a.classList.add('is-current');
+      if (a.classList.contains('fm-pill') || a.classList.contains('fm-home')) a.setAttribute('aria-current', 'location');
+    });
+  }
   function open() {
+    markCurrent();
     fit();
     target = null;
     dlg.showModal();
+    fit();                                   // nach dem Öffnen messen (Größen erst jetzt bekannt)
     root.classList.add('fm-open');
     btn.setAttribute('aria-expanded', 'true');
     btn.setAttribute('aria-label', btn.getAttribute('data-close'));
-    var first = dlg.querySelector('.fm-pill');
+    var first = dlg.querySelector('.fm-nav .is-current') || dlg.querySelector('.fm-pill');
     if (first) first.focus();
     dlg.scrollTop = 0;
   }
@@ -150,9 +176,13 @@
     if (target) {
       var el = document.getElementById(target);
       if (el) {
-        if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
-        el.scrollIntoView();
-        el.focus({ preventScroll: true });
+        var head = el.querySelector('.step-head');                    // Sprung auf eine Station öffnet sie
+        if (head && head.getAttribute('aria-expanded') !== 'true') head.click();
+        var to = head || el;                                          // Stufen haben am Computer kein eigenes Layout
+        if (to === el && !el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+        if (head) window.scrollTo({ top: to.getBoundingClientRect().top + window.scrollY - 100 });
+        else to.scrollIntoView();
+        to.focus({ preventScroll: true });
         if (history.pushState) history.pushState(null, '', '#' + target);
       }
       target = null;

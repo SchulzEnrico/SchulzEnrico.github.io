@@ -975,7 +975,7 @@ section[tabindex="-1"]:focus { outline: none; }
 /* Feinschliff 19.11.: Rahmen-Schein Richtung Gold, roter Hover dezenter (lesbarer) */
 .fm-a4 .fm-page {
   box-shadow: inset 1.5px 1.5px 0 rgba(255, 255, 255, .16), inset -1.5px -1.5px 0 rgba(0, 0, 0, .55),
-    0 0 0 1px rgba(214, 168, 100, .30), 0 0 26px rgba(214, 168, 100, .26), 0 0 60px rgba(214, 168, 100, .10), 14px 16px 36px rgba(0, 0, 0, .55);
+    0 0 0 1px rgba(200, 204, 214, .30), 0 0 26px rgba(200, 204, 214, .26), 0 0 60px rgba(200, 204, 214, .10), 14px 16px 36px rgba(0, 0, 0, .55);
 }
 .fm-brand:hover svg { filter: drop-shadow(0 0 8px rgba(228, 82, 44, .28)) brightness(1.06); }
 .fm-r:hover, .fm-name:hover, .fm-motto:hover, .fm-qr a:hover { filter: drop-shadow(0 0 8px rgba(228, 82, 44, .28)) brightness(1.06); }
@@ -1019,7 +1019,7 @@ section[tabindex="-1"]:focus { outline: none; }
    Gold-Touch für alle Hover-Effekte (Schein, Ring, Lichthof warm-golden;
    Schriftfarben bleiben unverändert)
    ========================================================== */
-:root { --gold: 214, 168, 100; --glow: rgba(214, 168, 100, .30); }
+:root { --gold: 200, 204, 214; --glow: rgba(200, 204, 214, .30); }
 .cert:hover, .contact a:hover {
   border-color: rgba(var(--gold), .45);
   box-shadow: var(--raised), 0 0 0 1px rgba(var(--gold), .32), 0 0 30px rgba(var(--gold), .26);
@@ -1064,3 +1064,230 @@ section[tabindex="-1"]:focus { outline: none; }
    große Wörter tief (#bf4022, ≥ 3,3 : 1 – Großtext), kleine Schrift #d05f43 (≥ 4,5 : 1) */
 .fm { --accent: #d05f43; --accent-hover: #da6d52; }
 .fm-rt em, .fm-motto span:nth-child(odd) { color: #bf4022; }
+
+/* ==========================================================
+   Menü-Anordnung 19.11. (2): Motto + Profil als ein Block links,
+   Bedienleiste links unten, Kontakt rechts unten (kleiner), Foto weiter rechts
+   ========================================================== */
+.fm-a4 .fm-motto { top: 430px; }
+.fm-a4 .fm-r-profil { top: 574px; width: 200px; }
+.fm-a4 .fm-r-kontakt { left: auto; right: 18px; bottom: 34px; width: 172px; align-items: flex-end; text-align: right; }
+.fm-a4 .fm-r-kontakt .fm-rt { font-size: 22px; line-height: 1.1; }
+.fm-a4 .fm-r-kontakt .fm-rs { font-size: 13px; }
+.fm-a4 .fm-fig { left: 232px; }
+.fm-a4 .fm-nav { right: auto; left: calc(18px * var(--s, 1)); transform-origin: 0 100%; }
+/* Handy: Bedienleiste links, Foto rechts */
+.fm:not(.fm-a4) .fm-fig { left: auto; right: 0; }
+.fm:not(.fm-a4) .fm-nav { right: auto; left: 14px; }
+
+/* Motto + Profil = ein Block (ein Link), mit rotem Strich wie beim Slogan */
+.fm-a4 .fm-r-profil { left: 20px; top: 424px; width: 290px; padding-left: 18px; border-left: 3px solid var(--accent-deco); gap: 4px; }
+.fm-r-profil .fm-motto { display: flex; margin: 0 0 16px; }
+.fm-a4 .fm-r-profil .fm-motto { font-size: 26px; }
+.fm-a4 .fm-r-profil .fm-motto span:nth-child(2) { font-size: 34px; }
+/* Foto größer, endet unten an der inneren Rahmenlinie */
+.fm-a4 .fm-fig { left: 214px; bottom: 13px; width: 422px; height: 830px; }
+.fm-a4 .fm-r-profil { width: 236px; } .fm-a4 .fm-r-profil .fm-rs { max-width: 190px; }
+.fm-r-wb .fm-rt em { font-size: 1.38em; line-height: .8; }
+.fm-a4 .fm-r-wb { top: 671px; }
+
+/* Feinschliff 19.11. (3) */
+/* Profil-Block tiefer */
+.fm-a4 .fm-r-profil { top: 470px; }
+/* Foto noch etwas größer (unten weiter an der inneren Rahmenlinie) */
+.fm-a4 .fm-fig { left: 200px; width: 450px; height: 885px; }
+/* Hover-Schein: Silber mit Gold-Hauch (Champagner) */
+:root { --gold: 214, 202, 178; --glow: rgba(214, 202, 178, .32); }
+.fm-a4 .fm-page {
+  box-shadow: inset 1.5px 1.5px 0 rgba(255, 255, 255, .16), inset -1.5px -1.5px 0 rgba(0, 0, 0, .55),
+    0 0 0 1px rgba(214, 202, 178, .30), 0 0 26px rgba(214, 202, 178, .26), 0 0 60px rgba(214, 202, 178, .10), 14px 16px 36px rgba(0, 0, 0, .55);
+}
+/* Rahmen der Kopfleiste schmaler (ca. 60 %) */
+.topbar .bar.liquid::before { padding: 1.2px; }
+.topbar .bar.liquid::after { inset: 3px; border-radius: 17px; }
+.topbar .bar.liquid { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), inset 0 -1px 4px rgba(255, 200, 175, .1), 0 2px 1px -1px rgba(255, 215, 195, .14), 0 16px 34px rgba(0, 0, 0, .55); }
+
+/* Kopfleiste: Rahmen nochmals schmaler, Name in der Farbe des Rahmens (Silber mit warmem Schimmer), größer */
+.topbar .bar.liquid::before { padding: .75px; }
+.topbar .bar.liquid::after { inset: 2px; border-radius: 18px; }
+.bar-name {
+  font-size: 20px; font-weight: 700; letter-spacing: .03em; color: #e9e7ea;
+  background: linear-gradient(135deg, #ffffff 0%, #d6d4da 35%, #b9b7be 55%, #f2ded3 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+@media (max-width: 640px) { .bar-name { font-size: 15.5px; } }
+@media (max-width: 380px) { .bar-name { font-size: 14.5px; } }
+@media (max-width: 400px) {
+  .bar-name { position: static; transform: none; flex: 1; text-align: center; font-size: 15px; }
+  .has-fm .topbar .burger { margin-left: 0; }
+}
+
+/* Menü/PDF-Rahmen scharf wie die Kopfleiste: feine Lichtkante (weiß → warm), kaum Weichzeichnung */
+.fm-a4 .fm-page {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(145deg, rgba(32, 32, 39, .55) 0%, rgba(21, 21, 26, .35) 45%, rgba(14, 14, 18, .2) 100%) padding-box,
+    linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .25) 22%, rgba(255, 255, 255, .06) 50%, rgba(255, 220, 200, .35) 78%, rgba(255, 230, 215, .75) 100%) border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10), 0 0 12px rgba(var(--gold), .12), 14px 16px 36px rgba(0, 0, 0, .55);
+}
+.fm-a4 .fm-page::after { border-color: rgba(255, 255, 255, .08); box-shadow: none; }
+
+.fm-a4 .fm-page {
+  border: 0;
+  background: linear-gradient(145deg, rgba(32, 32, 39, .55) 0%, rgba(21, 21, 26, .35) 45%, rgba(14, 14, 18, .2) 100%);
+}
+.fm-a4 .fm-page::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .25) 22%, rgba(255, 255, 255, .06) 50%, rgba(255, 220, 200, .35) 78%, rgba(255, 230, 215, .75) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+
+/* Profilfoto gespiegelt: Blick zum Text (Text bleibt links, Foto rechts) */
+.portrait img {
+  transform: scaleX(-1);
+  -webkit-mask-image: linear-gradient(to left, transparent 0, #000 22%); mask-image: linear-gradient(to left, transparent 0, #000 22%);
+}
+
+/* Menü: aktueller Seitenabschnitt dauerhaft wie beim Hover hinterlegt */
+.fm-r.is-current, .fm-brand.is-current svg, .fm-name.is-current { filter: drop-shadow(0 0 6px rgba(var(--gold), .55)) drop-shadow(0 0 18px rgba(var(--gold), .35)) brightness(1.05); }
+.fm-pill.is-current { color: var(--accent-hover) !important; box-shadow: var(--raised-sm), 0 0 0 1px rgba(var(--gold), .38), 0 0 18px rgba(var(--gold), .34); }
+.fm-pill.is-current svg { stroke: var(--accent-hover); }
+.fm-home.is-current { box-shadow: 0 0 0 1px rgba(var(--gold), .38), 0 0 14px rgba(var(--gold), .30); }
+.fm-home.is-current svg { stroke: #fff; }
+
+/* Kopfleiste: nur noch EINE feine Lichtkante (innere Zweitlinie und helle Unterkante entfernt) */
+.topbar .bar.liquid::after { display: none; }
+.topbar .bar.liquid { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 16px 34px rgba(0, 0, 0, .55); }
+/* Logo und Name: Hover nur dezent (kein großer Lichthof) */
+.fm-brand:hover svg, .brand-es:hover .brand-mark, .brand-es:focus-visible .brand-mark { filter: drop-shadow(0 0 3px rgba(var(--gold), .30)) brightness(1.08); }
+.fm-name:hover { filter: drop-shadow(0 0 4px rgba(var(--gold), .30)) brightness(1.05); }
+
+/* Stationen: fünf Stufen (neu: „Aktuell“) */
+@media (min-width: 901px) {
+  .stairs.stairs-on { grid-template-columns: repeat(5, 1fr); column-gap: 16px; }
+  .stairs-on .step-head { min-height: calc(190px + var(--i) * 40px); padding: 22px 20px 20px; }
+  .stairs-on .step-num { font-size: 56px; }
+  .stairs-on .step-body::before { left: calc(var(--a, 4) * ((100% - 64px) / 5 + 16px) + (100% - 64px) / 10 - 28px); }
+}
+#aktuell .step-icon svg { width: 28px; height: 28px; }
+
+/* Menü: Back2School höher, darunter „Aktuelles“ */
+.fm-a4 .fm-r-wb { top: 536px; }
+.fm-a4 .fm-r-akt { right: 18px; top: 712px; width: 150px; align-items: flex-end; text-align: right; }
+.fm-a4 .fm-r-akt .fm-rt { font-size: 24px; line-height: 1.08; }
+.fm-a4 .fm-r-akt .fm-rs { font-size: 13px; line-height: 1.38; }
+@media (max-width: 900px) { .portrait { width: 100%; } }   /* Platz fürs Foto vorab reservieren (sonst springt die Seite beim Nachladen) */
+/* „Aktuelles“ als Label wie „Sonderausgabe“ */
+.fm-r-akt .fm-lab { margin: 0 0 6px; }
+.fm-r:hover .fm-lab { box-shadow: 0 0 16px rgba(var(--gold), .40); }
+/* rechte Spalte gleichmäßig verteilt (je 50 px Abstand), Motto-Block etwas höher */
+.fm-a4 .fm-r-skills { top: 345px; }
+.fm-a4 .fm-r-wb { top: 557px; }
+.fm-a4 .fm-r-akt { top: 750px; }
+.fm-a4 .fm-r-profil { top: 447px; }
+/* „Sonderausgabe“ ca. 1/3 größer */
+.fm-name > .label { font-size: 17px; padding: 7px 16px; border-radius: 8px; }
+.fm-a4 .fm-nav { bottom: calc(18px * var(--s, 1)); }
+.fm-lab { text-transform: uppercase; }
+
+/* ==========================================================
+   Profil-Karte kompakter: Absätze über die ganze Breite (auch über dem Foto),
+   Schwerpunkte + Lebenslauf links neben dem Foto unten rechts
+   ========================================================== */
+@media (min-width: 901px) {
+  .profile { display: block; position: relative; }
+  .profile-text { padding: 38px 44px 30px; }
+  .profile-text > p:not(.motto) { max-width: 940px; }
+  .profile .portrait { position: absolute; right: 0; bottom: 0; width: 300px; margin: 0; z-index: 0; }
+  .profile-lower { position: relative; z-index: 1; margin-right: 320px; min-height: 296px; }
+  .profile-lower .focus { margin-top: 22px; padding-top: 20px; }
+  .profile-text .profile-lower .cv-link { margin: 26px 0 0; }
+  .profile-intro { margin-bottom: 4px; }
+  .profile-intro .subtitle { margin-bottom: 18px; }
+  .motto { margin-bottom: 20px; }
+}
+/* Profil passt mit Überschrift in ein Fenster (ab ca. 900 px Höhe) */
+@media (min-width: 901px) {
+  #profil { padding-top: 40px; }
+  #profil h2 { font-size: clamp(26px, 2.6vw, 32px); margin-bottom: 22px; }
+  .profile-text > p:not(.motto) { max-width: none; line-height: 1.62; margin-bottom: 12px; }
+  .profile .portrait { width: 250px; }
+  .profile-lower { margin-right: 270px; min-height: 238px; }
+  .profile-lower .focus { margin-top: 18px; padding-top: 16px; }
+  .profile-lower .focus h3 { margin-bottom: 10px; }
+  .profile-lower .focus .list { columns: 3; column-gap: 24px; }
+  .profile-lower .focus .list li { margin-bottom: 6px; }
+  .profile-text .profile-lower .cv-link { margin: 18px 0 0; }
+}
+@media (min-width: 901px) {
+  .profile { --pw: clamp(260px, 22vw, 320px); }
+  .profile .portrait { width: var(--pw); }
+  .profile-lower { margin-right: calc(var(--pw) + 16px); min-height: calc(var(--pw) * 1.088 - 30px); }
+  .profile-lower .focus .list { columns: 2; }
+}
+/* rechte Spalte nach dem Kürzen neu verteilt (gleiche Abstände) */
+.fm-a4 .fm-r-skills { top: 364px; }
+.fm-a4 .fm-r-wb { top: 536px; }
+.fm-a4 .fm-r-akt { top: 748px; }
+
+/* Download links oben neben dem Blatt – rund wie das X; beide Symbole im Verlauf der Rahmenkante der Kopfleiste */
+.fm-pdf, .fm-close {
+  width: 46px; height: 46px; padding: 0; display: inline-grid; place-items: center; border-radius: 50%;
+  background: linear-gradient(145deg, #18181d, #111115); box-shadow: var(--raised-sm);
+}
+.fm-pdf svg, .fm-close svg { width: 24px; height: 24px; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.fm-close svg path, .fm-pdf svg path { stroke: inherit; }
+.fm-close:hover svg, .fm-pdf:hover svg { stroke: url(#fmIcoX); filter: brightness(1.15); }
+.fm-pdf:hover svg { stroke: url(#fmIcoD); }
+.fm-a4 .fm-pdf { position: absolute; top: 0; left: auto; right: calc(100% + 12px); transform: none; }
+.fm:not(.fm-a4) .fm-pdf { position: fixed; top: 14px; right: 70px; margin: 0; z-index: 5; }
+.fm-close svg { stroke: url(#fmIcoX); }
+.fm-pdf svg { stroke: url(#fmIcoD); }
+/* Menü: Schrift der Schlagzeilen wird beim Hover rot */
+.fm-rt, .fm-n, .fm-slogan, .fm-r-profil .fm-motto span { transition: color .2s; }
+.fm-r:hover .fm-rt, .fm-r:hover .fm-rt em, .fm-r-profil:hover .fm-motto span, .fm-name:hover .fm-n, .fm-name:hover .fm-slogan { color: var(--accent-hover) !important; }
+@media (prefers-reduced-motion: reduce) { .fm-rt, .fm-n, .fm-slogan, .fm-r-profil .fm-motto span { transition: none; } }
+/* „Sonderausgabe“ so breit wie das ES-Logo, „Multipotenzial“ etwas tiefer */
+.fm-a4 .fm-name > .label { display: block; width: 286px; text-align: center; letter-spacing: .32em; padding-left: 0; padding-right: 0; text-indent: .32em; }
+.fm-a4 .fm-mp { margin-top: 22px; }
+.fm-a4 .fm-name > .label { font-size: 21px; line-height: 1.15; padding-top: 13.5px; padding-bottom: 13.5px; letter-spacing: .26em; text-indent: .26em; }
+/* Korrektur: „Sonderausgabe“ wieder in der vorherigen Größe, dafür näher am Logo */
+.fm-a4 .fm-name > .label { font-size: 17px; line-height: normal; padding-top: 7px; padding-bottom: 7px; letter-spacing: .32em; text-indent: .32em; }
+.fm-a4 .fm-name { top: 186px; }
+/* ohne „Sonderausgabe“: Name-Block direkt unter dem Logo */
+.fm-a4 .fm-name { top: 196px; }
+.fm-a4 .fm-mp, .fm:not(.fm-a4) .fm-mp { margin-top: 0; }
+.fm-a4 .fm-name { top: 218px; }
+
+/* Würfel-Logo: schmaler als der alte Schriftzug */
+.fm-a4 .fm-brand { width: 389px; }
+.fm:not(.fm-a4) .fm-brand { width: min(230px, calc(100% - 130px)); }
+
+/* 19.11.2026: Logo größer – Menü/PDF +20 %, Kopfleiste ca. +60 % und unten über den Rand hinaus */
+.fm-a4 .fm-brand { width: 467px; }
+.fm:not(.fm-a4) .fm-brand { width: min(276px, calc(100% - 130px)); }
+.fm-a4 .fm-name { top: 250px; }
+.brand-es { position: relative; z-index: 2; }
+.brand-mark { height: 74px; transform: translateY(11px); }
+@media (max-width: 640px) { .brand-mark { height: 48px; transform: translateY(8px); } }
+@media (max-width: 380px) { .brand-mark { height: 43px; transform: translateY(7px); } }
+
+/* 19.11.2026: Menü unten links und QR-Code mit gleichem Randabstand wie „Kontakt“; „pecially“ steht auf der Kopfleisten-Linie */
+.fm-a4 .fm-nav { bottom: calc(33px * var(--s, 1)); }
+.fm-a4 .fm-qr { top: 33px; }
+.brand-mark { transform: translateY(12.5px); }
+@media (max-width: 640px) { .brand-mark { transform: translateY(18.5px); } }
+@media (max-width: 380px) { .brand-mark { transform: translateY(19.7px); } }
+
+/* 19.11.2026: Lichthof der Schlagzeilen um 30 % schwächer */
+.fm-r:hover, .fm-motto:hover, .fm-qr a:hover { filter: drop-shadow(0 0 6px rgba(var(--gold), .385)) drop-shadow(0 0 18px rgba(var(--gold), .245)) brightness(1.035); }
+.fm-name:hover { filter: drop-shadow(0 0 4px rgba(var(--gold), .21)) brightness(1.035); }
+.fm-r:hover .fm-lab { box-shadow: 0 0 16px rgba(var(--gold), .28); }
+
+/* 19.11.2026: QR-Code als Glaskarte wie das Menü, Module silbern statt reinweiß */
+.fm-qr.fm-glass { flex-direction: row; align-items: stretch; gap: 5px; padding: 9px; border-radius: 16px; }
+
+/* 19.11.2026: QR-Karte – Ort/Jahr unter dem Code, oben und rechts gleicher Randabstand */
+.fm-qr.fm-glass { flex-direction: column; gap: 6px; }
+.fm-qr svg { display: block; }
+.fm-a4 .fm-qr { right: 33px; top: 33px; }
