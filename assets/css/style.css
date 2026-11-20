@@ -1683,3 +1683,19 @@ html body .fm :is(.fm-n, .fm-slogan span, .fm-motto span, .fm-rt, .lang .on, .la
 /* 20.11.2026 (17) Suchbegriffe in der Fußzeile */
 html body footer .foot-tags { margin: 0; color: var(--muted); font-size: 13px; letter-spacing: .02em; }
 html body footer .foot-tags span { color: #b0b0b5; font-weight: 600; }
+
+/* 20.11.2026 (18) Ideas: eigenes ?!-Logo statt ?-Symbol */
+html body .step-future .step-num.step-num-img { line-height: 0; }
+html body .step-future .step-num.step-num-img img { display: block; height: 1em; width: auto; margin: -.04em 0 0 -.04em; }
+
+/* 20.11.2026 (19) Ideas: Logo geht beim Hover langsam an wie eine Idee */
+html body .step-future .step-num.step-num-img { position: relative; display: inline-block; justify-self: start; }
+html body .step-future .step-num.step-num-img .qe-an { position: absolute; left: 0; top: 0; opacity: 0;
+  filter: drop-shadow(0 0 6px rgba(var(--gold), .35));
+  transition: opacity .7s ease-out; }
+html body .step-future .step-head:is(:hover, :focus-visible, [aria-expanded="true"]) .step-num-img .qe-an { opacity: 1; transition: opacity 1.6s cubic-bezier(.55, 0, .35, 1) .1s; }
+html body .step-future .step-head { transition: opacity .7s ease-out; }
+html body .step-future .step-head:is(:hover, :focus-visible, [aria-expanded="true"]) { transition: opacity 1.4s cubic-bezier(.55, 0, .35, 1); }
+@media (prefers-reduced-motion: reduce) {
+  html body .step-future .step-num.step-num-img .qe-an, html body .step-future .step-head { transition: opacity .2s linear !important; }
+}
