@@ -1595,11 +1595,11 @@ html body .skill-toggle:focus-visible { outline-offset: 4px; border-radius: 999p
 @media (min-width: 901px) {
   html body .profile-text .profile-lower .cv-link { margin-left: -24.5px; }
 }
-:root { --accent: #d36145; --accent-hover: #e07357; --glow: rgba(211, 97, 69, .26); }
-.fm { --accent: #d36145; --accent-hover: #e07357; }
-.nav a { color: #d36145; }
-.nav a:hover, .nav a.active { color: #e07357; }
-#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { color: #c4c4cb; -webkit-text-fill-color: #c4c4cb; }
+:root { --accent: #d04823; --accent-hover: #dc532d; --glow: rgba(208, 72, 35, .26); }   /* seit 20.11. nachmittags: Rot aus dem Label, aufgehellt (Stufe 4, 4,0 : 1) */
+.fm { --accent: #d04823; --accent-hover: #dc532d; }
+.nav a { color: #d04823; }
+.nav a:hover, .nav a.active { color: #dc532d; }
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { color: #88888d; -webkit-text-fill-color: #88888d; }   /* 20.11. nachmittags: grauer, 5,2 : 1 (vorher #c4c4cb, kurz #b0b0b5, #9c9ca1) */
 
 /* 20.11.2026 (4): Kopfleiste Handy ohne Zusatzabstand (das größere Logo schiebt den Namen schon nach rechts; sonst rutscht der Menü-Knopf aus der Leiste); Menübild Handy größer */
 @media (max-width: 640px) {
@@ -1657,3 +1657,13 @@ html body .fm:not(.fm-a4) .fm-nav .fm-row .lang { grid-column: 4 / 6; justify-se
   html body .fm:not(.fm-a4) .fm-nav .fm-row .lang { margin: 0; }
   html body .fm:not(.fm-a4) .fm-frame { min-height: 0; height: 100%; }
 }
+
+/* 20.11.2026 (13): Helle Schriften auf der Seite gedämpft auf #B0B0B5 (8,4 : 1) – statt Weiß/#E6E6EA/#D6D6DC/#C4C4CC.
+   Ausgenommen: weiße Schrift auf dem roten Label, Vollbild-Menü/PDF. Überschriften h2 bleiben #88888D. */
+html body :is(.bar-name, .topbar .lang span, .brand span, .cover-content h1, .cover-content .subtitle, .teaser strong, .teaser span,
+  .intro-name, .motto span, .profile-text > p:not([class]), .list li, .step-num, .step-title, .step-head .step-period, .part-head,
+  .step-body > p:not([class]), .skill h3, .chips li, .cert h3, .contact .v, .contact .v span) { color: #b0b0b5; }
+html body .cert:is(:hover, :focus-visible, :focus-within) h3 { color: var(--accent); }   /* Hover-Rot der Zertifikate bleibt */
+
+/* 20.11.2026 (14): Vollbild-Menü wie die Seite – helle Schriften #B0B0B5 (Hover bleibt rot, steht dort mit !important) */
+html body .fm :is(.fm-n, .fm-slogan span, .fm-motto span, .fm-rt, .lang .on, .lang a) { color: #b0b0b5; }
