@@ -1595,10 +1595,10 @@ html body .skill-toggle:focus-visible { outline-offset: 4px; border-radius: 999p
 @media (min-width: 901px) {
   html body .profile-text .profile-lower .cv-link { margin-left: -24.5px; }
 }
-:root { --accent: #d04823; --accent-hover: #dc532d; --glow: rgba(208, 72, 35, .26); }   /* seit 20.11. nachmittags: Rot aus dem Label, aufgehellt (Stufe 4, 4,0 : 1) */
-.fm { --accent: #d04823; --accent-hover: #dc532d; }
-.nav a { color: #d04823; }
-.nav a:hover, .nav a.active { color: #dc532d; }
+:root { --accent: #bd4120; --accent-hover: #d04823; --glow: rgba(189, 65, 32, .26); }   /* seit 20.11. 16:05: Rot aus dem Label, Stufe 3 (3,7 : 1 auf #0c0c0f), Hover Stufe 4 */
+.fm { --accent: #bd4120; --accent-hover: #d04823; }
+.nav a { color: #bd4120; }
+.nav a:hover, .nav a.active { color: #d04823; }
 #profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { color: #88888d; -webkit-text-fill-color: #88888d; }   /* 20.11. nachmittags: grauer, 5,2 : 1 (vorher #c4c4cb, kurz #b0b0b5, #9c9ca1) */
 
 /* 20.11.2026 (4): Kopfleiste Handy ohne Zusatzabstand (das größere Logo schiebt den Namen schon nach rechts; sonst rutscht der Menü-Knopf aus der Leiste); Menübild Handy größer */
@@ -1667,3 +1667,15 @@ html body .cert:is(:hover, :focus-visible, :focus-within) h3 { color: var(--acce
 
 /* 20.11.2026 (14): Vollbild-Menü wie die Seite – helle Schriften #B0B0B5 (Hover bleibt rot, steht dort mit !important) */
 html body .fm :is(.fm-n, .fm-slogan span, .fm-motto span, .fm-rt, .lang .on, .lang a) { color: #b0b0b5; }
+
+/* 20.11.2026 (15): Seitengrund zurück auf das ursprüngliche Anthrazit #0c0c0f (wie bis 19.11.); Flächen gleich, damit das Neumorph stimmt */
+:root { --bg: #0c0c0f; --surf: #0c0c0f; }
+
+/* 20.11.2026 (16): Karten auf dunklem Grund wieder sichtbar (Variante H): Fläche #17171c, größere weiche Schatten,
+   1-px-Lichtkante oben links und Schattenkante unten rechts. Grund bleibt #0c0c0f (Block 15). */
+:root {
+  --surf: #17171c;
+  --nm-d: rgba(0, 0, 0, .95);
+  --nm-l: rgba(255, 255, 255, .06);
+  --raised: 11px 11px 26px var(--nm-d), -9px -9px 22px var(--nm-l), inset 1px 1px 0 rgba(255, 255, 255, .06), inset -1px -1px 0 rgba(0, 0, 0, .45);
+}
