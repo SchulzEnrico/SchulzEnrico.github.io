@@ -1643,3 +1643,17 @@ html body .fm:not(.fm-a4) .fm-nav .fm-home svg { display: block; margin: 0; }
 html body .fm:not(.fm-a4) .fm-nav .fm-row { display: grid; grid-template-columns: 1fr 1.05fr .85fr 1.4fr 1fr; gap: 4px; padding: 0; align-items: center; }
 html body .fm:not(.fm-a4) .fm-nav .fm-row .fm-home { justify-self: center; grid-column: 1; }
 html body .fm:not(.fm-a4) .fm-nav .fm-row .lang { grid-column: 4 / 6; justify-self: end; margin: 0; }
+
+/* 20.11.2026 (12): Handy im Querformat – links Logo, Name, „Aktuelles“; Mitte Bild (Blick zu „Aktuelles“); rechts die Menüleiste senkrecht */
+@media (orientation: landscape) and (max-height: 559px) {
+  .fm:not(.fm-a4) .fm-brand { width: min(200px, 30vw); }
+  .fm:not(.fm-a4) .fm-name { margin-top: 6px; }
+  .fm:not(.fm-a4) .fm-nav { left: auto; right: 14px; top: 72px; bottom: 12px; width: 200px; justify-content: center; }
+  .fm:not(.fm-a4) .fm-nav ul { display: flex; flex-direction: column; gap: 5px; }
+  html body .fm:not(.fm-a4) .fm-nav .fm-pill { flex-direction: row; justify-content: space-between; gap: 8px; padding: 6px 12px; min-height: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-align: left; }
+  html body .fm:not(.fm-a4) .fm-nav .fm-pill span { letter-spacing: inherit; text-transform: uppercase; }
+  .fm:not(.fm-a4) .fm-nav .fm-pill svg { width: 15px; height: 15px; }
+  html body .fm:not(.fm-a4) .fm-nav .fm-row { order: 1; display: flex; justify-content: space-between; margin-top: 4px; }
+  html body .fm:not(.fm-a4) .fm-nav .fm-row .lang { margin: 0; }
+  html body .fm:not(.fm-a4) .fm-frame { min-height: 0; height: 100%; }
+}

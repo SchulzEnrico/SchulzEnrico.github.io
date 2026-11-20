@@ -170,7 +170,7 @@
     function diff(m) {                         // Abstand oben minus Abstand unten bei Rand m
       akt.style.marginTop = m + 'px';
       // 20.11.2026: Menüleiste ist am Handy flach unten → „Aktuelles“ bleibt im oberen Bereich (Mitte zwischen Name und 60 % der Höhe)
-      var nb = name.getBoundingClientRect().bottom, nt = Math.min(nav.getBoundingClientRect().top, dlg.getBoundingClientRect().top + dlg.clientHeight * 0.6), ab = akt.getBoundingClientRect();
+      var nb = name.getBoundingClientRect().bottom, nt = (dlg.clientWidth > dlg.clientHeight) ? dlg.getBoundingClientRect().bottom : Math.min(nav.getBoundingClientRect().top, dlg.getBoundingClientRect().top + dlg.clientHeight * 0.6), ab = akt.getBoundingClientRect();
       return (ab.top - nb) - (nt - ab.bottom);
     }
     var lo = 20, hi = 600;                     // schrittweise eingrenzen (die Menüleiste kann sich mit dem Inhalt verschieben)
@@ -195,7 +195,8 @@
     }
     var all = box(akt), txt = box(akt.querySelector('.fm-rs')), hd = box(akt.querySelector('.fm-rt'));
     var head = 0.33, eye = 0.16;                    // Anteile im Bild: Kopf ab 33 % der Breite, Augen bei 16 % der Höhe
-    var nr = nav.getBoundingClientRect(), floor = Math.min(vh, nr.top - fr.top + nr.height * 0.7);
+    var nr = nav.getBoundingClientRect(), floor = Math.min(vh, nr.top - fr.top + nr.height * 0.7), full = vw;
+    if (vw > vh) { vw = nr.left - fr.left - 10; floor = vh; }   // 20.11.2026: Querformat – Bild steht links neben der Menüleiste, unten bis zum Rand
     var target = (hd.t + hd.b) / 2, right = Math.max(hd.r, txt.r) + 10, crop, w, H, top;
     // Augen auf „Was gerade läuft“; reicht das Bild dann nicht bis zur Menüleiste, rechts etwas mehr anschneiden (max. 18 %)
     for (crop = 0.10; crop <= 0.181; crop += 0.02) {
@@ -207,7 +208,8 @@
     fig.style.height = Math.round(H) + 'px';
     fig.style.top = Math.round(top) + 'px';
     fig.style.bottom = 'auto';
-    fig.style.right = (-crop * w) + 'px';
+    // Querformat: Bild mittig zwischen „Aktuelles“ und Menüleiste (Wunsch 20.11.2026)
+    fig.style.right = (full > vw ? full - ((right + vw) / 2 + w / 2) : -crop * w) + 'px';
   }
   // aktuellen Seitenabschnitt im Menü hervorheben (wie beim Hover)
   function markCurrent() {
