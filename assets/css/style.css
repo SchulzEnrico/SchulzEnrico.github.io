@@ -1679,3 +1679,7 @@ html body .fm :is(.fm-n, .fm-slogan span, .fm-motto span, .fm-rt, .lang .on, .la
   --nm-l: rgba(255, 255, 255, .06);
   --raised: 11px 11px 26px var(--nm-d), -9px -9px 22px var(--nm-l), inset 1px 1px 0 rgba(255, 255, 255, .06), inset -1px -1px 0 rgba(0, 0, 0, .45);
 }
+
+/* 20.11.2026 (17) Suchbegriffe in der Fußzeile */
+html body footer .foot-tags { margin: 0; color: var(--muted); font-size: 13px; letter-spacing: .02em; }
+html body footer .foot-tags span { color: #b0b0b5; font-weight: 600; }
