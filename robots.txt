@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+# Lebenslauf, Zertifikate und Visitenkarte nicht in Suchmaschinen (Links funktionieren weiter)
+Disallow: /src/documents/
+# Profil-PDF darf gefunden werden
+Allow: /src/documents/Enrico_Schulz_Profil.pdf
+
+Sitemap: https://schulzenrico.github.io/sitemap.xml
