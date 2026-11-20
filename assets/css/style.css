@@ -1545,3 +1545,101 @@ html body .step-future .step-head.neu[aria-expanded="true"]:hover { box-shadow: 
 /* 19.11.2026 (abends): „Mehr anzeigen“ rund wie die übrigen Knöpfe (bekam durch die Neumorph-Fläche sichtbare Ecken) */
 html body .skill-toggle { border-radius: 999px; padding: 10px 20px; }
 html body .skill-toggle:focus-visible { outline-offset: 4px; border-radius: 999px; }
+
+/* ==========================================================
+   20.11.2026: Rückmeldungen vom iPhone-Test
+   ========================================================== */
+/* PDF-Fenster iPhone: nur Ansehen + Teilen */
+.ds-row.ds-row-2 { grid-template-columns: repeat(2, 1fr); }
+/* Menü am Handy bei wenig Höhe (Safari mit Leisten): stufenweise kompakter */
+.fm.fm-tight:not(.fm-a4) .fm-brand { width: min(250px, calc(100% - 120px)); }
+.fm.fm-tight:not(.fm-a4) .fm-name { margin-top: 10px; }
+.fm.fm-tight:not(.fm-a4) .fm-nav ul { gap: 4px; }
+.fm.fm-tight:not(.fm-a4) .fm-pill { padding-top: 7px; padding-bottom: 7px; }
+.fm.fm-tight2:not(.fm-a4) .fm-brand { width: min(190px, calc(100% - 120px)); }
+.fm.fm-tight2:not(.fm-a4) .fm-pill { padding-top: 5px; padding-bottom: 5px; }
+.fm.fm-tight2:not(.fm-a4) .fm-r-akt .fm-rs { font-size: 13px; }
+/* LinkedIn/GitHub: nur der Name, mittig in der Kachel */
+.contact-alt .k { margin-bottom: 0; }
+/* Lebenslauf-Knopf: Computer unten in der Textspalte (Höhe Fotounterkante), Handy mit Abstand zum Kartenrand */
+@media (min-width: 901px) {
+  .profile-lower { display: flex; flex-direction: column; }
+  html body .profile-text .profile-lower .cv-link { margin: auto 0 0; padding-top: 28px; }
+}
+@media (max-width: 900px) {
+  html body .cv-link.cv-mobile { margin: 22px 0 30px; }
+}
+
+/* 20.11.2026 (2): Rückmeldungen Runde 2 */
+/* LinkedIn/GitHub: Symbol + Name mittig in der Kachel */
+.contact-alt a.half { justify-content: center; }
+/* Kopfleiste Handy: Logo ca. 50 % größer, „pecially“ bleibt auf der unteren Linie; Name rückt nach rechts */
+@media (max-width: 640px) {
+  html body .brand-mark { height: 72px; transform: translateY(13.5px); }
+  html body .bar-name { padding-left: 46px; }
+}
+@media (max-width: 380px) {
+  html body .brand-mark { height: 64px; transform: translateY(14.3px); }
+}
+/* Menü Handy: eigenes Bild (Blick zu „Aktuelles“), Menüleiste überdeckt weniger */
+.fm-fig-m { display: none; }
+.fm:not(.fm-a4) .fm-fig { display: none; }
+.fm:not(.fm-a4) .fm-fig-m { display: block; position: absolute; right: -6%; bottom: 0; left: auto; width: auto; height: min(50%, 420px); max-width: none; pointer-events: none; }
+/* Startseite Handy: Slogan nach rechts, der rote Strich liegt nicht mehr im Gesicht */
+@media (max-width: 700px) {
+  html body .cover-content .teaser { margin-left: 52px; }
+  html body .cover-content .teaser strong { font-size: 24px; }
+}
+
+/* 20.11.2026 (3): Lebenslauf-Symbol genau unter den Aufzählungspunkten; Schrift-Rot B (#d36145, 5,0 : 1) und hellere Überschriften (#c4c4cb, 10,5 : 1) */
+@media (min-width: 901px) {
+  html body .profile-text .profile-lower .cv-link { margin-left: -24.5px; }
+}
+:root { --accent: #d36145; --accent-hover: #e07357; --glow: rgba(211, 97, 69, .26); }
+.fm { --accent: #d36145; --accent-hover: #e07357; }
+.nav a { color: #d36145; }
+.nav a:hover, .nav a.active { color: #e07357; }
+#profil h2, #stationen h2, #skills h2, #weiterbildung h2, #kontakt h2 { color: #c4c4cb; -webkit-text-fill-color: #c4c4cb; }
+
+/* 20.11.2026 (4): Kopfleiste Handy ohne Zusatzabstand (das größere Logo schiebt den Namen schon nach rechts; sonst rutscht der Menü-Knopf aus der Leiste); Menübild Handy größer */
+@media (max-width: 640px) {
+  html body .bar-name { padding-left: 0; min-width: 0; }
+}
+.fm:not(.fm-a4) .fm-fig-m { height: min(58%, 520px); right: -8%; }
+@media (max-height: 720px) { .fm:not(.fm-a4) .fm-fig-m { height: min(50%, 420px); right: -6%; } }
+
+/* 20.11.2026 (5): LinkedIn/GitHub-Kacheln dürfen schmaler werden (bei 360–375 px ragte GitHub über den Rand und machte die ganze Seite breiter) */
+@media (max-width: 900px) {
+  html body .contact-alt { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  html body .contact-alt a.half { padding: 10px 12px; gap: 10px; min-width: 0; }
+  html body .contact-alt .k { letter-spacing: .12em; }
+}
+
+/* 20.11.2026 (6): Handy-Menü – Text „Aktuelles“ bricht früher um, damit der Kopf daneben Platz hat; Bildgröße setzt das Skript */
+.fm:not(.fm-a4) .fm-r-akt .fm-rs { display: block; max-width: 13.5em; }
+
+/* 20.11.2026 (7): Handy-Menü – Text unter „Was gerade läuft“ schmaler, damit der Kopf auf Augenhöhe daneben Platz hat */
+.fm:not(.fm-a4) .fm-r-akt .fm-rs { max-width: 10.5em; }
+
+/* 20.11.2026 (8): Handy-Menü – Menüleiste flach unten über die ganze Breite (Symbol + Wort), Haus und DE | EN darüber; das Bild bleibt frei */
+.fm:not(.fm-a4) .fm-nav { left: 10px; right: 10px; width: auto; bottom: 10px; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.fm:not(.fm-a4) .fm-nav .fm-row { order: -1; margin: 0; padding: 0 4px; }
+.fm:not(.fm-a4) .fm-nav .fm-web { display: none; }
+.fm:not(.fm-a4) .fm-nav ul { display: grid; grid-template-columns: 1fr 1.05fr .85fr 1.4fr 1fr; gap: 4px; }
+html body .fm:not(.fm-a4) .fm-nav .fm-pill { flex-direction: column-reverse; justify-content: center; gap: 5px; padding: 9px 2px 8px; font-size: 10.5px; letter-spacing: .01em; text-transform: none; text-align: center; border-radius: 14px; min-height: 52px; }
+.fm:not(.fm-a4) .fm-nav .fm-pill svg { width: 19px; height: 19px; }
+html body .fm:not(.fm-a4) .fm-nav .fm-pill span { letter-spacing: inherit; text-transform: none; }
+.fm:not(.fm-a4) .fm-nav .fm-home { width: 34px; height: 34px; }
+@media (max-width: 350px) { html body .fm:not(.fm-a4) .fm-nav .fm-pill { font-size: 9.5px; } }
+
+/* 20.11.2026 (9): Haus-Symbol im Handy-Menü mittig */
+html body .fm:not(.fm-a4) .fm-nav .fm-home { display: inline-flex; align-items: center; justify-content: center; padding: 0; box-sizing: border-box; line-height: 0; }
+html body .fm:not(.fm-a4) .fm-nav .fm-home svg { display: block; margin: 0; }
+
+/* 20.11.2026 (10): schmale Handys – „Was gerade läuft“ etwas kleiner, damit der Kopf auf Augenhöhe daneben passt */
+@media (max-width: 379px) { html body .fm:not(.fm-a4) .fm-r-akt .fm-rt { font-size: 21px; } }
+
+/* 20.11.2026 (11): Haus genau über dem Profil-Symbol – Zeile nutzt dieselben Spalten wie die Menüleiste */
+html body .fm:not(.fm-a4) .fm-nav .fm-row { display: grid; grid-template-columns: 1fr 1.05fr .85fr 1.4fr 1fr; gap: 4px; padding: 0; align-items: center; }
+html body .fm:not(.fm-a4) .fm-nav .fm-row .fm-home { justify-self: center; grid-column: 1; }
+html body .fm:not(.fm-a4) .fm-nav .fm-row .lang { grid-column: 4 / 6; justify-self: end; margin: 0; }

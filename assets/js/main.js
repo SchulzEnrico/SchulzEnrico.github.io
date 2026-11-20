@@ -158,16 +158,56 @@
     var akt = dlg.querySelector('.fm-r-akt'), name = dlg.querySelector('.fm-name'), nav = dlg.querySelector('.fm-nav');
     if (!akt || !name || !nav) return;
     akt.style.marginTop = '';
+    dlg.classList.remove('fm-tight', 'fm-tight2');
+    var fig = dlg.querySelector('.fm-fig-m');
+    if (fig) { fig.style.height = ''; fig.style.right = ''; fig.style.top = ''; fig.style.bottom = ''; }
     if (a4 || !dlg.open) return;
+    // 20.11.2026: wenig Höhe (Safari mit Leisten) → Logo und Menüleiste stufenweise kompakter, damit nichts überlappt
+    ['fm-tight', 'fm-tight2'].forEach(function (c) {
+      var free = nav.getBoundingClientRect().top - name.getBoundingClientRect().bottom - akt.offsetHeight;
+      if (free < 44) dlg.classList.add(c);
+    });
     function diff(m) {                         // Abstand oben minus Abstand unten bei Rand m
       akt.style.marginTop = m + 'px';
-      var nb = name.getBoundingClientRect().bottom, nt = nav.getBoundingClientRect().top, ab = akt.getBoundingClientRect();
+      // 20.11.2026: Menüleiste ist am Handy flach unten → „Aktuelles“ bleibt im oberen Bereich (Mitte zwischen Name und 60 % der Höhe)
+      var nb = name.getBoundingClientRect().bottom, nt = Math.min(nav.getBoundingClientRect().top, dlg.getBoundingClientRect().top + dlg.clientHeight * 0.6), ab = akt.getBoundingClientRect();
       return (ab.top - nb) - (nt - ab.bottom);
     }
     var lo = 20, hi = 600;                     // schrittweise eingrenzen (die Menüleiste kann sich mit dem Inhalt verschieben)
-    if (diff(lo) >= 0) { akt.style.marginTop = lo + 'px'; return; }
-    for (var k = 0; k < 14; k++) { var mid = (lo + hi) / 2; if (diff(mid) < 0) lo = mid; else hi = mid; }
-    akt.style.marginTop = Math.round(lo) + 'px';
+    if (diff(lo) >= 0) akt.style.marginTop = lo + 'px';
+    else {
+      for (var k = 0; k < 14; k++) { var mid = (lo + hi) / 2; if (diff(mid) < 0) lo = mid; else hi = mid; }
+      akt.style.marginTop = Math.round(lo) + 'px';
+    }
+    fitFig(fig, akt, nav);
+  }
+  // 20.11.2026: Handy-Bild so groß wie möglich, ohne dass Text („Aktuelles“) oder Menüleiste Kopf und Oberkörper verdecken.
+  // Umriss des Bildes (Anteile): Kopf oben 0–36 % der Höhe ab 33 % der Breite; Oberkörper ab 10 % der Breite (nur der Ellenbogen darf hinter die Leiste).
+  function fitFig(fig, akt, nav) {
+    // 20.11.2026: Augenhöhe auf „Aktuelles“ – Kopf rechts neben dem Text, Bild so groß wie möglich, unten darf es angeschnitten sein
+    if (!fig || !fig.naturalWidth) { if (fig) fig.onload = function () { fig.onload = null; fit(); }; return; }
+    var fr = fig.offsetParent ? fig.offsetParent.getBoundingClientRect() : dlg.getBoundingClientRect();
+    var vw = fr.width, vh = fr.height, ratio = fig.naturalWidth / fig.naturalHeight;
+    function box(el) {                              // tatsächliche Textzeilen (nicht die ganze Fläche)
+      var b = { r: 0, t: 1e9, b: 0 }, rg = document.createRange(); if (!el) return b; rg.selectNodeContents(el);
+      Array.prototype.forEach.call(rg.getClientRects(), function (r) { if (r.width) { b.r = Math.max(b.r, r.right - fr.left); b.t = Math.min(b.t, r.top - fr.top); b.b = Math.max(b.b, r.bottom - fr.top); } });
+      return b;
+    }
+    var all = box(akt), txt = box(akt.querySelector('.fm-rs')), hd = box(akt.querySelector('.fm-rt'));
+    var head = 0.33, eye = 0.16;                    // Anteile im Bild: Kopf ab 33 % der Breite, Augen bei 16 % der Höhe
+    var nr = nav.getBoundingClientRect(), floor = Math.min(vh, nr.top - fr.top + nr.height * 0.7);
+    var target = (hd.t + hd.b) / 2, right = Math.max(hd.r, txt.r) + 10, crop, w, H, top;
+    // Augen auf „Was gerade läuft“; reicht das Bild dann nicht bis zur Menüleiste, rechts etwas mehr anschneiden (max. 18 %)
+    for (crop = 0.10; crop <= 0.181; crop += 0.02) {
+      w = Math.min((vw - right) / (1 - crop - head), vh * 0.8 * ratio); H = w / ratio; top = target - eye * H;
+      if (top + H >= floor) break;
+    }
+    crop = Math.min(crop, 0.18);
+    if (top + H < floor) top = floor - H;
+    fig.style.height = Math.round(H) + 'px';
+    fig.style.top = Math.round(top) + 'px';
+    fig.style.bottom = 'auto';
+    fig.style.right = (-crop * w) + 'px';
   }
   // aktuellen Seitenabschnitt im Menü hervorheben (wie beim Hover)
   function markCurrent() {
@@ -251,9 +291,12 @@
   var links = document.querySelectorAll('a[href$=".pdf"]');
   if (!touch || !links.length) return;
   var en = (document.documentElement.lang || '').indexOf('en') === 0;
+  // 20.11.2026: iPhone/iPad erkennen und App-Modus (vom Home-Bildschirm) – dort gibt es keine Zurück-Geste
+  var ios = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var app = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
   var T = en
-    ? { view: 'View', share: 'Share', save: 'Download', close: 'Close', hint: 'Opens in this tab – swipe from the left edge to come back.', copied: 'Link copied', doc: 'Document' }
-    : { view: 'Ansehen', share: 'Teilen', save: 'Herunterladen', close: 'Schließen', hint: 'Öffnet in diesem Tab – zurück zur Seite: vom linken Rand wischen.', copied: 'Link kopiert', doc: 'Dokument' };
+    ? { view: 'View', share: 'Share', save: 'Download', close: 'Close', hint: 'Opens in this tab – swipe from the left edge to come back.', hintApp: 'Opens in its own window – tap “Done” to come back.', copied: 'Link copied', doc: 'Document' }
+    : { view: 'Ansehen', share: 'Teilen', save: 'Herunterladen', close: 'Schließen', hint: 'Öffnet in diesem Tab – zurück zur Seite: vom linken Rand wischen.', hintApp: 'Öffnet in einem eigenen Fenster – mit „Fertig“ zurück zur Seite.', copied: 'Link kopiert', doc: 'Dokument' };
   var ico = {
     view: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
     share: '<path d="M12 3v12"/><path d="M7.5 7.5 12 3l4.5 4.5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>',
@@ -273,7 +316,11 @@
   var bView = btn('ds-view', 'view', 'a'), bShare = btn('ds-share', 'share'), bSave = btn('ds-save', 'save', 'a');
   var row = document.createElement('div'); row.className = 'ds-row';
   row.appendChild(bView); row.appendChild(bShare); row.appendChild(bSave);
-  var hint = document.createElement('p'); hint.className = 'ds-hint'; hint.textContent = T.hint;
+  var hint = document.createElement('p'); hint.className = 'ds-hint'; hint.textContent = app ? T.hintApp : T.hint;
+  // iPhone: „Ansehen“ und „Herunterladen“ führen zum selben PDF-Fenster → nur Ansehen + Teilen
+  if (ios) { bSave.remove(); row.classList.add('ds-row-2'); }
+  // App-Modus: PDF in eigenem Fenster öffnen, sonst hängt man ohne Zurück fest
+  if (app) { bView.target = '_blank'; bView.rel = 'noopener'; }
   var status = document.createElement('p'); status.className = 'ds-status'; status.setAttribute('role', 'status');
   var bClose = document.createElement('button'); bClose.type = 'button'; bClose.className = 'ds-close'; bClose.textContent = T.close;
   dlg.appendChild(row); dlg.appendChild(hint); dlg.appendChild(status); dlg.appendChild(bClose);
