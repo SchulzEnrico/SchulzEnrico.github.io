@@ -1724,7 +1724,7 @@ html body .step-future .step-head:is(:hover, :focus-visible, [aria-expanded="tru
 html body .topbar { top: 24px; }
 .topbar .bar { container-type: inline-size; }
 html body .topbar .bar .bar-name {
-  --nm-shift: .87em; --nm-right: 28px;
+  --nm-shift: .87em; --nm-right: 20px;
   position: absolute; left: auto; right: var(--nm-right); top: 0; transform: translateY(calc(-1 * var(--nm-shift)));
   flex: none; padding: 0; min-width: 0; font-size: 17px; line-height: 1; z-index: 2; text-align: right;
   /* am gezeichneten Rahmen gemessen (obere Linie, links → rechts) */
@@ -1735,4 +1735,20 @@ html body .topbar .bar .bar-name {
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .6));
 }
-@media (max-width: 640px) { html body .topbar .bar .bar-name { --nm-right: 26px; font-size: 15px; } }
+@media (max-width: 640px) { html body .topbar .bar .bar-name { font-size: 15px; } }
+
+/* 21.11.: Menüblatt/PDF – E-Sources-Kachel links neben der QR-Karte, gleiche Glaskarte */
+.fm-es.fm-glass { flex-direction: column; gap: 6px; padding: 9px; border-radius: 16px; }
+.fm-es svg { display: block; }
+.fm-es-ico { width: 90px; height: 90px; }
+.fm-es svg text { font-family: var(--font); }
+.fm-a4 .fm-es { position: absolute; top: 33px; right: 155px; }
+.fm:not(.fm-a4) .fm-es { display: none; }
+.fm-es a { transition: filter .25s ease; }
+.fm-es a:hover { filter: drop-shadow(0 0 6px rgba(var(--gold), .385)) drop-shadow(0 0 18px rgba(var(--gold), .245)) brightness(1.035); }
+@media (prefers-reduced-motion: reduce) { .fm-es a { transition: none; } }
+
+/* 21.11.: Handy-Menü – E-Sources-Demo rechts neben dem Home-Knopf (im A4-Blatt steht die Kachel neben dem QR-Code) */
+.fm-a4 .fm-esd { display: none; }
+html body .fm:not(.fm-a4) .fm-nav .fm-row .fm-esd { grid-column: 2; justify-self: center; }
+@media (max-width: 640px) { html body .fm:not(.fm-a4) .fm-nav .fm-row .fm-esd { margin: 0 auto 0 8px; } }
