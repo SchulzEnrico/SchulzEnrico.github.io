@@ -1700,3 +1700,39 @@ html body .step-future .step-head:is(:hover, :focus-visible, [aria-expanded="tru
 @media (prefers-reduced-motion: reduce) {
   html body .step-future .step-num.step-num-img .qe-an, html body .step-future .step-head { transition: opacity .2s linear !important; }
 }
+
+/* Kopfleiste: Knopf zur E-Sources-Demo (21.11.) – nur Symbol: ein „E“ im Stil des ES-Logos */
+.bar-demo {
+  flex: none; display: grid; place-items: center; width: 42px; height: 42px; padding: 0;
+  border-radius: 12px; text-decoration: none;
+  background: linear-gradient(145deg, #1d1d23, #121216); box-shadow: var(--raised-sm);
+  transition: box-shadow .2s;
+}
+.bar-demo-ico { display: block; width: 24px; height: 24px; transition: filter .25s ease; }
+.bar-demo:hover, .bar-demo:focus-visible { box-shadow: var(--raised-sm), 0 0 0 1px rgba(228, 82, 44, .38), 0 0 12px rgba(228, 82, 44, .22); }
+.bar-demo:hover .bar-demo-ico, .bar-demo:focus-visible .bar-demo-ico { filter: drop-shadow(0 0 6px rgba(228, 82, 44, .35)) brightness(1.08); }
+.bar-demo:active { box-shadow: var(--pressed); }
+.bar-demo:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .has-fm .topbar .bar-demo { margin-left: auto; }
+  .has-fm .topbar .burger { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .bar-demo, .bar-demo-ico { transition: none; } }
+/* 21.11.: Name sitzt auf allen Geräten oben rechts exakt auf der Rahmenlinie der Kopfleiste (Grundlinie = Rahmen).
+   Verlauf = der Verlauf des Rahmens (.liquid::before, 135°) in derselben Geometrie wie die Leiste, nur deckend,
+   damit jeder Buchstabe die Farbe des Rahmens an seiner Stelle trägt. Leiste dafür etwas tiefer. */
+html body .topbar { top: 24px; }
+.topbar .bar { container-type: inline-size; }
+html body .topbar .bar .bar-name {
+  --nm-shift: .87em; --nm-right: 28px;
+  position: absolute; left: auto; right: var(--nm-right); top: 0; transform: translateY(calc(-1 * var(--nm-shift)));
+  flex: none; padding: 0; min-width: 0; font-size: 17px; line-height: 1; z-index: 2; text-align: right;
+  /* am gezeichneten Rahmen gemessen (obere Linie, links → rechts) */
+  background: linear-gradient(90deg, #d8d8da 0%, #bcbcbd 10%, #8d8d8f 19%, #6d6d6f 27%, #626265 35%, #595859 44%,
+    #514e4f 52%, #615958 60%, #716561 69%, #81716c 77%, #94827a 85%, #ae9b92 94%, #bca89e 100%);
+  background-size: calc(100cqw + 32px) 60px; background-repeat: no-repeat;
+  background-position: right calc(-1 * var(--nm-right)) top 0;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .6));
+}
+@media (max-width: 640px) { html body .topbar .bar .bar-name { --nm-right: 26px; font-size: 15px; } }
