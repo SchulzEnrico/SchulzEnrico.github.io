@@ -1342,6 +1342,7 @@ section[tabindex="-1"]:focus { outline: none; }
 .step-future .step-head[aria-expanded="true"] .step-num { color: var(--accent); }
 .step-future .step-body p { margin: 0 0 12px; max-width: 760px; }
 .step-future .idea-cta { margin: 18px 0 4px; }
+#aktuell .idea-cta { margin: 14px 0 4px; }
 .idea-cta .pill { gap: 10px; }
 .idea-cta .pill svg { width: 16px; height: 16px; flex: none; }
 @media (min-width: 901px) {
