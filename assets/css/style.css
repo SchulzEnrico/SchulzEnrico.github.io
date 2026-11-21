@@ -33,6 +33,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+/* Dunkle Seite: Scrollbalken dunkel, auch wenn die Seite eingebettet ist (z. B. in E-Sources) */
+html { color-scheme: dark; scrollbar-color: rgba(200, 204, 214, .28) transparent; }
 
 body {
   margin: 0;
