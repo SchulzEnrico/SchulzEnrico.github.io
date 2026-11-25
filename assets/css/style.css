@@ -607,6 +607,7 @@ body::before {
 .step-body { padding: 28px 32px 20px; }
 .step-part + .step-part { margin-top: 18px; padding-top: 20px; border-top: 1px dashed rgba(228, 82, 44, .28); }
 .part-head { margin: 0 0 12px; color: #fff; font-weight: 600; }
+.step-part .list li strong { color: #fff; font-weight: 600; }
 .part-period { margin-right: 8px; font-size: 13px; letter-spacing: .04em; color: var(--muted); }
 .part-org { color: var(--accent); }
 

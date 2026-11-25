@@ -84,7 +84,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png?v=20261121c">
   <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg?v=20261121c">
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png?v=20261121c">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20261121c">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261125a">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="es-engrave" x="-5%" y="-15%" width="110%" height="140%" color-interpolation-filters="sRGB"><feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer><feOffset in="inv" dx="3" dy="3.5" result="invo"/><feGaussianBlur in="invo" stdDeviation=".8" result="invb"/><feFlood flood-color="#000" flood-opacity=".88"/><feComposite in2="invb" operator="in" result="sh"/><feComposite in="sh" in2="SourceAlpha" operator="in" result="shadow"/><feOffset in="SourceAlpha" dx="1" dy="1.8" result="lo"/><feComposite in="lo" in2="SourceAlpha" operator="out" result="lip"/><feFlood flood-color="#fff" flood-opacity=".26"/><feComposite in2="lip" operator="in" result="lipc"/><feMerge><feMergeNode in="lipc"/><feMergeNode in="SourceGraphic"/><feMergeNode in="shadow"/></feMerge></filter></svg>
@@ -270,12 +270,28 @@
             <span class="step-chev" aria-hidden="true"></span>
           </button></h3>
           <div class="step-body neu" id="sb-akt" role="region" aria-labelledby="sh-akt">
-            <ul class="list">
-              <li>E-Sources – my own web app in development, based on my own requirements specification with around 190 requirements (about two thirds implemented): websites run as portals side by side on a desk, optionally spread across several screens; several portals can be stacked together. A traffic-light focus meter shows how much is open, and the cockpit gives an overview of all desks. Named layouts can be planned ahead for other devices and assigned to topics (spaces) and cases; a developer mode shows pages at other device sizes, with a ruler and a colour picker. On top: a personal library of favourite sites, a central search with help and guided tours, zoom per portal, pausing of unused pages, several designs, export and import (including single slots as templates), and automatic sync across all devices via a secret GitHub Gist. New: notes and tasks in freely floating windows (pads) above the desk or bundled in a dock at the edge – as a notepad, to-do list, Kanban board modelled on Trello and Eisenhower matrix, with every note staying the same note in every view. Add to that reminders, voice notes recognised only on your own device, images and sources down to the exact spot in a video or PDF, people and teams with capacity and absences plus a workload view modelled on MS Project, a main stage for the area you are working from right now, and a feedback function that lets users report bugs and wishes right where they occur. The project area following the IPMA standard (ICB4) has begun, checked against my own project report for certification: projects with a profile, work breakdown structure and a Gantt chart with predecessors, slack and critical path. A guiding principle of the app is a largely identical structure everywhere, with one consistent dial for every switch: know one view, know them all. That spares you the stress of getting used to a different menu layout in every program and leaves more headspace for the actual work. Next up: a weighted decision matrix as a working tool, milestones, baseline and network plan, risk and stakeholder analysis, a planning check that finds mistakes on its own, and the project report at the push of a button. Fully keyboard-operable, accessible, and runs on computer, tablet and phone. Built with React and TypeScript; a Java server with Spring Boot comes next. The demo always shows the current state.</li>
-              <li>My own bilingual portfolio website: concept, design and content – accessible (WCAG AA) and privacy-friendly.</li>
-              <li>Planned from December 2026: training as a Certified Key Account Manager (Hanse College, Hamburg).</li>
-              <li>Open to new challenges – available immediately.</li>
-            </ul>
+            <div class="step-part">
+              <p class="part-head">E-Sources · <span class="part-org">my own web app, in development</span></p>
+              <ul class="list">
+                <li><strong>The idea:</strong> one workspace where websites, notes, tasks and projects come together – instead of twenty open tabs and five different programs. It is built on my own requirements specification with around 190 requirements; about two thirds already work.</li>
+                <li><strong>One layout for everything:</strong> Every view is built the same way, and one consistent dial switches modes everywhere. Know one view, know them all – no more getting used to a new menu in every program, and more headspace for the actual work.</li>
+                <li><strong>Desk and portals:</strong> Websites run side by side as portals, across several screens if you like, and can be grouped into stacks. A traffic light shows how much is open right now, the cockpit gives an overview of all desks. Layouts can be planned ahead for other devices and assigned to topics (Spaces) or cases (Cases).</li>
+                <li><strong>Notes and tasks:</strong> in floating windows (pads) or bundled in the dock – as a notepad, to-do list, Kanban board modelled on Trello or Eisenhower matrix. Every note stays the same note in every view. Plus reminders, images, voice notes recognised only on your own device, and sources down to the exact spot in a video or PDF.</li>
+                <li><strong>Team and projects:</strong> people and teams with capacity, absences and workload as in MS Project. The project area follows the IPMA standard (ICB4), checked against my own project report for certification: project charter, work breakdown structure, Gantt chart with critical path, and a weighted decision matrix that calculates as you go and records decisions with their reasons.</li>
+                <li><strong>Feedback in place:</strong> Users report bugs and wishes right where they occur – inside a project also straight to the responsible body, such as the project lead or the steering committee.</li>
+                <li><strong>Little helpers:</strong> a library for favourite sites, central search with help and guided tours, zoom per portal, pausing unused pages, several themes, export and import, and automatic sync across all devices. For developers: view pages in other device sizes, with ruler and colour picker.</li>
+                <li><strong>Coming next:</strong> milestones, baseline and network plan, risk and stakeholder analysis, a planning check that finds mistakes on its own, and the project report at the push of a button.</li>
+                <li><strong>Made for everyone:</strong> fully keyboard-operable, accessible, on computer, tablet and phone. Built with React and TypeScript; a Java server with Spring Boot will follow. The demo always shows the current state.</li>
+              </ul>
+            </div>
+            <div class="step-part">
+              <p class="part-head">Also</p>
+              <ul class="list">
+                <li>My own bilingual portfolio website: concept, design and content – accessible (WCAG AA) and privacy-friendly.</li>
+                <li>Planned from December 2026: training as a Certified Key Account Manager (Hanse College, Hamburg).</li>
+                <li>Open to new challenges – available immediately.</li>
+              </ul>
+            </div>
             <p class="idea-cta"><a class="pill" href="../e-sources/" target="_blank" rel="noopener" hreflang="de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M3 12h9"/></svg><span>Try E-Sources (demo, in development, German)</span><span class="sr-only"> – opens in a new tab</span></a></p>
           </div>
         </li>

@@ -84,7 +84,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png?v=20261121c">
   <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg?v=20261121c">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png?v=20261121c">
-  <link rel="stylesheet" href="./assets/css/style.css?v=20261121c">
+  <link rel="stylesheet" href="./assets/css/style.css?v=20261125a">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="es-engrave" x="-5%" y="-15%" width="110%" height="140%" color-interpolation-filters="sRGB"><feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer><feOffset in="inv" dx="3" dy="3.5" result="invo"/><feGaussianBlur in="invo" stdDeviation=".8" result="invb"/><feFlood flood-color="#000" flood-opacity=".88"/><feComposite in2="invb" operator="in" result="sh"/><feComposite in="sh" in2="SourceAlpha" operator="in" result="shadow"/><feOffset in="SourceAlpha" dx="1" dy="1.8" result="lo"/><feComposite in="lo" in2="SourceAlpha" operator="out" result="lip"/><feFlood flood-color="#fff" flood-opacity=".26"/><feComposite in2="lip" operator="in" result="lipc"/><feMerge><feMergeNode in="lipc"/><feMergeNode in="SourceGraphic"/><feMergeNode in="shadow"/></feMerge></filter></svg>
@@ -270,12 +270,28 @@
             <span class="step-chev" aria-hidden="true"></span>
           </button></h3>
           <div class="step-body neu" id="sb-akt" role="region" aria-labelledby="sh-akt">
-            <ul class="list">
-              <li>E-Sources – eigene Web-Anwendung in Entwicklung, nach einem eigenen Lastenheft mit rund 190 Anforderungen (etwa zwei Drittel umgesetzt): Webseiten laufen als Portale nebeneinander auf einem Desk, auf Wunsch über mehrere Bildschirme verteilt; mehrere Portale lassen sich zu einem Stapel zusammenlegen. Eine Fokusanzeige im Ampel-Prinzip zeigt, wie viel gerade offen ist, und das Cockpit gibt den Überblick über alle Desks. Benannte Layouts lassen sich für andere Geräte vorab planen und Themen (Spaces) und Fällen (Cases) zuordnen; ein Entwickler-Modus zeigt Seiten in fremden Gerätegrößen, mit Lineal und Farbpipette. Dazu kommen eine eigene Bibliothek für Lieblingsseiten, eine zentrale Suche mit Hilfe und geführten Touren, Zoom je Portal, das Pausieren ungenutzter Seiten, mehrere Designs, Export und Import (auch einzelner Slots als Vorlage) sowie ein automatischer Abgleich zwischen allen Geräten über ein geheimes GitHub Gist. Neu sind Notizen und Aufgaben in frei schwebenden Fenstern (Pads) über dem Desk oder gebündelt im Dock am Rand – als Notizblock, To-do-Liste, Kanban-Board nach dem Vorbild von Trello und Eisenhower-Matrix, wobei jede Notiz in allen Ansichten dieselbe bleibt. Dazu kommen Erinnerungen, Sprachnotizen, die nur auf dem eigenen Gerät erkannt werden, Bilder und Quellen bis auf die Stelle im Video oder PDF, Personen und Teams mit Kapazität und Abwesenheiten samt Auslastungsanzeige nach dem Vorbild von MS Project, eine Main Stage für den Bereich, aus dem man gerade arbeitet, und eine Feedback-Funktion, mit der Anwender Fehler und Wünsche direkt an der Stelle melden, um die es geht. Begonnen hat der Projektbereich nach dem IPMA-Standard (ICB4), abgeglichen mit meinem eigenen Projektreport zur Zertifizierung: Projekte mit Steckbrief, Projektstrukturplan und Gantt-Diagramm mit Vorgängern, Puffer und kritischem Pfad. Ein Leitsatz der Anwendung ist ein weitestgehend gleicher Aufbau überall, mit einem einheitlichen Drehrad für alle Umschalter: Wer eine Ansicht kennt, kennt alle. Das spart den Stress, sich in jedem Programm an einen anderen Menüaufbau zu gewöhnen, und lässt mehr Kopf für die eigentliche Arbeit. Als Nächstes folgen eine Nutzwertanalyse als Werkzeug, Meilensteine, Basisplan und Netzplan, Risiko- und Stakeholder-Analyse, ein Planungs-Check, der Fehler von selbst findet, und der Projektbericht auf Knopfdruck. Die Anwendung ist komplett per Tastatur bedienbar, barrierearm und läuft auf Computer, Tablet und Handy. Gebaut mit React und TypeScript; ein Java-Server mit Spring Boot folgt. Die Demo zeigt immer den aktuellen Stand.</li>
-              <li>Eigene zweisprachige Portfolio-Webseite: Konzept, Gestaltung und Inhalte – barrierearm (WCAG AA) und datensparsam.</li>
-              <li>Geplant ab Dezember 2026: Weiterbildung zum Geprüften Key Account Manager (Hanse College, Hamburg).</li>
-              <li>Offen für neue Aufgaben – ab sofort verfügbar.</li>
-            </ul>
+            <div class="step-part">
+              <p class="part-head">E-Sources · <span class="part-org">eigene Web-Anwendung, in Entwicklung</span></p>
+              <ul class="list">
+                <li><strong>Die Idee:</strong> ein Arbeitsplatz, auf dem Webseiten, Notizen, Aufgaben und Projekte zusammenkommen – statt zwanzig offener Tabs und fünf verschiedener Programme. Grundlage ist mein eigenes Lastenheft mit rund 190 Anforderungen; etwa zwei Drittel davon laufen schon.</li>
+                <li><strong>Ein Aufbau für alles:</strong> Jede Ansicht ist gleich aufgebaut, ein einheitliches Drehrad schaltet überall um. Wer eine Ansicht kennt, kennt alle – das nimmt den Stress, sich ständig an neue Menüs zu gewöhnen, und lässt mehr Kopf für die eigentliche Arbeit.</li>
+                <li><strong>Desk und Portale:</strong> Webseiten laufen als Portale nebeneinander, auf Wunsch über mehrere Bildschirme, und lassen sich zu Stapeln zusammenlegen. Eine Ampel zeigt, wie viel gerade offen ist, das Cockpit den Überblick über alle Desks. Layouts plant man für andere Geräte vor und ordnet sie Themen (Spaces) oder Fällen (Cases) zu.</li>
+                <li><strong>Notizen und Aufgaben:</strong> in schwebenden Fenstern (Pads) oder gebündelt im Dock – als Notizblock, To-do-Liste, Kanban-Board nach dem Vorbild von Trello oder Eisenhower-Matrix. Jede Notiz bleibt in allen Ansichten dieselbe. Dazu Erinnerungen, Bilder, Sprachnotizen, die nur auf dem eigenen Gerät erkannt werden, und Quellen bis auf die Stelle im Video oder PDF.</li>
+                <li><strong>Team und Projekte:</strong> Personen und Teams mit Kapazität, Abwesenheit und Auslastung wie in MS Project. Der Projektbereich folgt dem IPMA-Standard (ICB4), abgeglichen mit meinem eigenen Projektreport zur Zertifizierung: Steckbrief, Projektstrukturplan, Gantt-Diagramm mit kritischem Pfad und eine Nutzwertanalyse, die mitrechnet und Entscheidungen begründet festhält.</li>
+                <li><strong>Feedback am Ort:</strong> Anwender melden Fehler und Wünsche genau dort, wo sie auftreten – im Projekt auch direkt an die zuständige Stelle, etwa die Projektleitung oder den Lenkungskreis.</li>
+                <li><strong>Kleine Helfer:</strong> Bibliothek für Lieblingsseiten, zentrale Suche mit Hilfe und geführten Touren, Zoom je Portal, Pausieren ungenutzter Seiten, mehrere Designs, Export und Import sowie ein automatischer Abgleich zwischen allen Geräten. Für Entwickler: Seiten in fremden Gerätegrößen ansehen, mit Lineal und Farbpipette.</li>
+                <li><strong>Als Nächstes:</strong> Meilensteine, Basis- und Netzplan, Risiko- und Stakeholder-Analyse, ein Planungs-Check, der Fehler von selbst findet, und der Projektbericht auf Knopfdruck.</li>
+                <li><strong>Für alle gemacht:</strong> komplett per Tastatur bedienbar, barrierearm, auf Computer, Tablet und Handy. Gebaut mit React und TypeScript, ein Java-Server mit Spring Boot folgt. Die Demo zeigt immer den aktuellen Stand.</li>
+              </ul>
+            </div>
+            <div class="step-part">
+              <p class="part-head">Außerdem</p>
+              <ul class="list">
+                <li>Eigene zweisprachige Portfolio-Webseite: Konzept, Gestaltung und Inhalte – barrierearm (WCAG AA) und datensparsam.</li>
+                <li>Geplant ab Dezember 2026: Weiterbildung zum Geprüften Key Account Manager (Hanse College, Hamburg).</li>
+                <li>Offen für neue Aufgaben – ab sofort verfügbar.</li>
+              </ul>
+            </div>
             <p class="idea-cta"><a class="pill" href="./e-sources/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M3 12h9"/></svg><span>E-Sources ausprobieren (Demo, in Entwicklung)</span><span class="sr-only"> – öffnet in neuem Tab</span></a></p>
           </div>
         </li>
